@@ -198,3 +198,29 @@ npm run dev      # Start both servers
 npm run build    # Build frontend
 npm start        # Production mode
 ```
+
+## MDX 注意事项
+
+**HTML 标签使用**:
+- ❌ 避免使用 `<p>` 标签（MDX 会自动包裹导致 `<p>` 嵌套）
+- ✅ 文本块使用 `<div>`
+- ✅ 列表内容使用 `<ul><li>`
+
+**样式规范**:
+- ⚠️ 避免内联 `style={{}}`（可能导致 Hydration 问题）
+- ✅ 使用 Tailwind `className`
+
+**示例**:
+```jsx
+// ❌ 错误 - 会导致 <p> 嵌套
+<p className="text-lg">描述文本</p>
+
+// ✅ 正确
+<div className="text-lg">描述文本</div>
+
+// ❌ 避免
+<div style={{ color: 'red' }}>错误</div>
+
+// ✅ 推荐
+<div className="text-red-500">正确</div>
+```
