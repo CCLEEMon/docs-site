@@ -1,0 +1,26 @@
+{
+  "id": "browser-plugin",
+  "title": "浏览器插件",
+  "description": "CCLHUB 浏览器插件 - 实时获取商品数据、价格监控、竞品分析",
+  "source": "@site/docs/browser-plugin.md",
+  "sourceDirName": ".",
+  "slug": "/browser-plugin",
+  "permalink": "/docs/browser-plugin",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "浏览器插件",
+    "description": "CCLHUB 浏览器插件 - 实时获取商品数据、价格监控、竞品分析"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI数据分析",
+    "permalink": "/docs/ai-analytics"
+  },
+  "next": {
+    "title": "AI客服",
+    "permalink": "/docs/customer-service"
+  }
+}
