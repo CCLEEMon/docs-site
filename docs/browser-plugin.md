@@ -181,4 +181,4 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 
 ---
 
-需要帮助？点击右下角智能咨询图标，或查看 [AI数据分析](/ai-analytics) 功能
+需要帮助？点击右下角智能咨询图标，或查看 [AI数据分析](/docs/ai-analytics) 功能

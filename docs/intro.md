@@ -18,7 +18,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
 
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full max-w-[500px] mx-auto mb-16">
       <a
-        href="/ai-analytics"
+        href="/docs/ai-analytics"
         className="animate-fadeIn group relative px-8 py-4 rounded-xl text-white text-base font-semibold inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden"
       >
         <span className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -28,7 +28,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         </span>
       </a>
       <a
-        href="/browser-plugin"
+        href="/docs/browser-plugin"
         className="animate-fadeIn group relative px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center justify-center gap-2 bg-white/10 border border-indigo-400/30 text-indigo-100 hover:text-white hover:border-indigo-400 hover:bg-white/20 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden"
       >
         <span className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -146,7 +146,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
     <a
-      href="/browser-plugin"
+      href="/docs/browser-plugin"
       className="animate-scaleIn group p-6 rounded-2xl bg-white/80 border border-white/20 text-inherit block shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] ring-1 ring-white/10 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)] hover:shadow-indigo-500/20 hover:-translate-y-2 hover:border-indigo-400 transition-all duration-300"
       style={{ animationDelay: '0.1s' }}
     >
@@ -167,7 +167,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
     </a>
 
     <a
-      href="/ai-analytics"
+      href="/docs/ai-analytics"
       className="animate-scaleIn group p-6 rounded-2xl bg-white/80 border border-white/20 text-inherit block shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] ring-1 ring-white/10 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)] hover:shadow-indigo-500/20 hover:-translate-y-2 hover:border-indigo-400 transition-all duration-300"
       style={{ animationDelay: '0.2s' }}
     >

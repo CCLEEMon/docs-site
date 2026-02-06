@@ -1,85 +1,42 @@
 {
-  "/__docusaurus/debug-5ff": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
+  "/en/docs-a36": {
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "aba21aa0"
     }
   },
-  "/__docusaurus/debug/config-5ba": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
+  "/en/docs-5d6": {
+    "__comp": "a7bd4aaa",
+    "__props": "0abf49b1"
   },
-  "/__docusaurus/debug/content-a2b": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
+  "/en/docs-1b1": {
+    "__comp": "a94703ab"
+  },
+  "/en/docs/ai-analytics-a9b": {
+    "__comp": "17896441",
+    "content": "00acca3d"
+  },
+  "/en/docs/browser-plugin-c2b": {
+    "__comp": "17896441",
+    "content": "bc957fd2"
+  },
+  "/en/docs/customer-service-6c7": {
+    "__comp": "17896441",
+    "content": "1227b036"
+  },
+  "/en/docs/guide-f4c": {
+    "__comp": "17896441",
+    "content": "a8bb5334"
+  },
+  "/en/docs/intro-b09": {
+    "__comp": "17896441",
+    "content": "0e384e19"
+  },
+  "/en/-6c2": {
+    "__comp": "1df93b7f",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "a7456010"
     },
-    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
-  },
-  "/__docusaurus/debug/globalData-c3c": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/metadata-156": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/registry-88c": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/routes-000": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/docs-e8e": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
-    "__context": {
-      "plugin": "plugin---docsaba-d7c"
-    }
-  },
-  "/docs-251": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-005-788"
-  },
-  "/docs-35b": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
-  },
-  "/docs/ai-analytics-8ef": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-analytics-00-a-d7c"
-  },
-  "/docs/browser-plugin-add": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-browser-pluginbc-9-31a"
-  },
-  "/docs/customer-service-d89": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-customer-service-122-f7d"
-  },
-  "/docs/guide-c42": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-guidea-8-b-967"
-  },
-  "/docs/intro-853": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
-  },
-  "/-e5f": {
-    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
-    "__context": {
-      "plugin": "plugin---a-74-9d6"
-    },
-    "config": "config---5-e-9-4f3"
+    "config": "5e9f5e1a"
   }
 }

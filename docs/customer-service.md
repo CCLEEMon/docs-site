@@ -202,4 +202,4 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
 
 ---
 
-需要更多帮助？查看 [浏览器插件](/browser-plugin) 或 [AI数据分析](/ai-analytics)
+需要更多帮助？查看 [浏览器插件](/docs/browser-plugin) 或 [AI数据分析](/docs/ai-analytics)

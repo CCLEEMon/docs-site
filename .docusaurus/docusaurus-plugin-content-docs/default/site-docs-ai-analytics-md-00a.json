@@ -5,7 +5,7 @@
   "source": "@site/docs/ai-analytics.md",
   "sourceDirName": ".",
   "slug": "/ai-analytics",
-  "permalink": "/docs/ai-analytics",
+  "permalink": "/en/docs/ai-analytics",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "User Guide",
-    "permalink": "/docs/guide"
+    "permalink": "/en/docs/guide"
   },
   "next": {
     "title": "浏览器插件",
-    "permalink": "/docs/browser-plugin"
+    "permalink": "/en/docs/browser-plugin"
   }
 }

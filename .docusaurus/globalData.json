@@ -1,45 +1,45 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/en/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/en/docs",
           "mainDocId": "guide",
           "docs": [
             {
               "id": "ai-analytics",
-              "path": "/docs/ai-analytics",
+              "path": "/en/docs/ai-analytics",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "browser-plugin",
-              "path": "/docs/browser-plugin",
+              "path": "/en/docs/browser-plugin",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "customer-service",
-              "path": "/docs/customer-service",
+              "path": "/en/docs/customer-service",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "guide",
-              "path": "/docs/guide",
+              "path": "/en/docs/guide",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "intro",
-              "path": "/docs/intro"
+              "path": "/en/docs/intro"
             }
           ],
           "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/guide",
+                "path": "/en/docs/guide",
                 "label": "guide"
               }
             }

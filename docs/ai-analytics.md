@@ -187,7 +187,7 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
 
 ### 方式三：浏览器插件同步
 
-配合 [CCLHUB浏览器插件](/browser-plugin) 使用，自动同步采集的数据到AI分析平台。
+配合 [CCLHUB浏览器插件](/docs/browser-plugin) 使用，自动同步采集的数据到AI分析平台。
 
 ## 分析报告示例
 
@@ -392,4 +392,4 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
 
 ---
 
-需要帮助？点击右下角智能咨询图标，或查看 [浏览器插件](/browser-plugin) 功能
+需要帮助？点击右下角智能咨询图标，或查看 [浏览器插件](/docs/browser-plugin) 功能

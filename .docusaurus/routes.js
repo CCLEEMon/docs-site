@@ -3,79 +3,44 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '5ff'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
-    exact: true
-  },
-  {
-    path: '/docs',
-    component: ComponentCreator('/docs', 'e8e'),
+    path: '/en/docs',
+    component: ComponentCreator('/en/docs', 'a36'),
     routes: [
       {
-        path: '/docs',
-        component: ComponentCreator('/docs', '251'),
+        path: '/en/docs',
+        component: ComponentCreator('/en/docs', '5d6'),
         routes: [
           {
-            path: '/docs',
-            component: ComponentCreator('/docs', '35b'),
+            path: '/en/docs',
+            component: ComponentCreator('/en/docs', '1b1'),
             routes: [
               {
-                path: '/docs/ai-analytics',
-                component: ComponentCreator('/docs/ai-analytics', '8ef'),
+                path: '/en/docs/ai-analytics',
+                component: ComponentCreator('/en/docs/ai-analytics', 'a9b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/browser-plugin',
-                component: ComponentCreator('/docs/browser-plugin', 'add'),
+                path: '/en/docs/browser-plugin',
+                component: ComponentCreator('/en/docs/browser-plugin', 'c2b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/customer-service',
-                component: ComponentCreator('/docs/customer-service', 'd89'),
+                path: '/en/docs/customer-service',
+                component: ComponentCreator('/en/docs/customer-service', '6c7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/guide',
-                component: ComponentCreator('/docs/guide', 'c42'),
+                path: '/en/docs/guide',
+                component: ComponentCreator('/en/docs/guide', 'f4c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/intro',
-                component: ComponentCreator('/docs/intro', '853'),
+                path: '/en/docs/intro',
+                component: ComponentCreator('/en/docs/intro', 'b09'),
                 exact: true
               }
             ]
@@ -85,8 +50,8 @@ export default [
     ]
   },
   {
-    path: '/',
-    component: ComponentCreator('/', 'e5f'),
+    path: '/en/',
+    component: ComponentCreator('/en/', '6c2'),
     exact: true
   },
   {

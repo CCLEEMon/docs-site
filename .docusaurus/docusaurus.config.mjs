@@ -8,7 +8,7 @@ export default {
   "tagline": "AI驱动的电商运营工具平台",
   "favicon": "img/favicon.ico",
   "url": "https://your-docusaurus-site.example.com",
-  "baseUrl": "/",
+  "baseUrl": "/en/",
   "organizationName": "CCLHUB",
   "projectName": "docs-site",
   "onBrokenLinks": "throw",
