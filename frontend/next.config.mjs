@@ -1,9 +1,8 @@
 import nextra from 'nextra'
 
-const withNextra = nextra({
+export default nextra({
   search: false,
-})
-
-export default withNextra({
+})({
   reactStrictMode: true,
+  transpilePackages: ['nextra', 'nextra-theme-docs']
 })
