@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { MessageSquareIcon } from './Icons'
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -174,9 +175,7 @@ export default function FloatingChat() {
         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-        </svg>
+        <MessageSquareIcon size={24} color="white" />
       </button>
     </div>
   )

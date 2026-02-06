@@ -1,69 +1,92 @@
 # AI Development Guide
 
-## Project Structure
-
-```
-docs-site/               ← 项目根目录
-├── frontend/           ← Nextra应用
-│   ├── app/           ← MDX页面
-│   │   ├── components/  ← 自定义组件
-│   │   ├── lib/         ← 工具函数
-│   │   └── messages/    ← i18n翻译文件
-│   ├── next.config.mjs
-│   └── package.json
-├── backend/            ← Express API
-│   ├── server.js
-│   └── package.json
-└── package.json        ← Monorepo
-```
-
 ## Tech Stack
 
 ```yaml
 nextra: 4.6.1
 nextjs: 15.1.9
 react: 19.2.4
+tailwindcss: 3.4.17
 router: App Router only
 ports:
   frontend: 3004
   backend: 3005
 ```
 
-## Nextra 4 Core API
+## Project Structure
 
-### layout.jsx (Required)
+```
+docs-site/
+├── frontend/
+│   ├── app/
+│   │   ├── layout.jsx              ← 根布局
+│   │   ├── mdx-components.jsx      ← MDX组件映射
+│   │   ├── globals.css             ← 全局样式
+│   │   ├── _meta.js                ← 导航配置
+│   │   ├── i18n.ts                 ← i18n类型定义
+│   │   ├── page.mdx                ← 首页
+│   │   ├── ai-analytics/
+│   │   │   └── page.mdx            ← AI分析页
+│   │   ├── browser-plugin/
+│   │   │   └── page.mdx            ← 浏览器插件页
+│   │   ├── customer-service/
+│   │   │   └── page.mdx            ← 客服页
+│   │   ├── guide/
+│   │   │   └── page.mdx            ← 指南页
+│   │   ├── chat/
+│   │   │   ├── page.jsx            ← 聊天页
+│   │   │   └── components/
+│   │   │       └── ChatWidget.jsx  ← 聊天组件
+│   │   ├── components/             ← 自定义组件
+│   │   │   ├── Icons.jsx           ← 图标库
+│   │   │   ├── CustomFooter.jsx    ← 页脚
+│   │   │   ├── FloatingChat.jsx    ← 悬浮聊天
+│   │   │   ├── NavbarMenu.jsx      ← 导航菜单
+│   │   │   ├── LocaleSwitch.jsx    ← 语言切换
+│   │   │   ├── TranslationProvider.jsx ← i18n Provider
+│   │   │   ├── HideCopyButton.jsx  ← 隐藏复制按钮
+│   │   │   ├── HoverCard.jsx       ← 悬停卡片
+│   │   │   ├── NavbarActions.jsx   ← 导航操作
+│   │   │   ├── ThemeSwitch.jsx     ← 主题切换
+│   │   │   └── page.mdx            ← 组件文档
+│   │   ├── lib/
+│   │   │   └── i18n.js             ← i18n工具函数
+│   │   └── messages/               ← i18n翻译文件
+│   │       ├── zh.json
+│   │       └── en.json
+│   ├── tailwind.config.js          ← Tailwind配置
+│   ├── postcss.config.js           ← PostCSS配置
+│   ├── next.config.mjs             ← Next.js配置
+│   └── package.json                ← 前端依赖
+├── backend/
+│   ├── server.js                   ← Express API
+│   └── package.json                ← 后端依赖
+├── package.json                    ← Monorepo根
+└── DEV.md                          ← 开发文档
+```
+
+## Nextra 4 Core APIs
 
 ```jsx
+// layout.jsx (必需)
 import { Layout, Navbar } from 'nextra-theme-docs'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 
 export default async function RootLayout({ children }) {
-  return (
-    <html suppressHydrationWarning>
-      <body>
-        <Layout
-          navbar={<Navbar logo={<b>Site</b>} />}
-          pageMap={await getPageMap()}
-        >
-          {children}
-        </Layout>
-      </body>
-    </html>
-  )
+  return <html suppressHydrationWarning><body>
+    <Layout navbar={<Navbar logo={<b>Logo</b>} />} pageMap={await getPageMap()}>
+      {children}
+    </Layout>
+  </body></html>
 }
-```
 
-### mdx-components.jsx
-
-```jsx
+// mdx-components.jsx (必需)
 import { useMDXComponents as getTheme } from 'nextra-theme-docs'
-export function useMDXComponents(components) {
-  return getTheme(components)
-}
+export function useMDXComponents(components) { return getTheme(components) }
 ```
 
-### MDX Frontmatter
+## MDX Frontmatter
 
 ```yaml
 ---
@@ -72,155 +95,130 @@ description: Description
 ---
 ```
 
-### _meta.global
+## Navigation Config (`_meta.js`)
 
 ```js
 export default {
-  docs: {
-    type: 'page',
-    items: { index: 'Start' }
-  }
+  docs: { type: 'page', items: { index: 'Start' } }
 }
 ```
 
-## Breaking Changes from v3
+## Custom Components
 
-| v3 | v4 |
-|----|-----|
-| `pages/` | `app/` |
-| `theme.config` | Component props |
-| FlexSearch | Pagefind |
-| `import { useRouter } from 'next/router'` | `import { useRouter } from 'next/navigation'` |
+| Component | Location | Purpose |
+|-----------|----------|---------|
+| Icons | `app/components/Icons.jsx` | Lucide React封装 |
+| NavbarMenu | `app/components/NavbarMenu.jsx` | 导航菜单 |
+| LocaleSwitch | `app/components/LocaleSwitch.jsx` | 语言切换 |
+| FloatingChat | `app/components/FloatingChat.jsx` | 客服聊天 |
+| CustomFooter | `app/components/CustomFooter.jsx` | 页脚 |
 
-## UI Components
+## i18n
 
-### Built-in (nextra-theme-docs)
-- Callout, Card, Steps, Tabs, FileTree
-- Code blocks with syntax highlighting
-
-### Compatible Libraries
-- Tailwind CSS (pre-configured)
-- shadcn/ui (Radix + Tailwind)
-- Radix UI Primitives
-- Headless UI
-- Lucide React (icons)
-
-### Layout Components
-```jsx
-import { Layout, Navbar, Sidebar } from 'nextra-theme-docs'
-```
-
-## UI Development Rules
-- ✅ Use Nextra theme components first
-- ✅ Add shadcn/ui for custom components
-- ✅ Tailwind for styling
-- ❌ Avoid CSS-in-JS libraries (RSC issues)
-
-## DO NOT
-
-- ❌ Create `pages/` directory
-- ❌ Create `theme.config.js`
-- ❌ Use `themeSwitch` prop on Layout (use `darkMode` instead)
-- ❌ Use `next/router`
-- ❌ Use Nextra 2/3 APIs
-- ❌ Access `document`/`window` outside `useEffect` (SSR error)
-
-## Project-Specific Components
-
-### Custom Components (`app/components/`)
-- **Icons** - 图标组件库 (使用 Lucide React)
-  - PluginIcon, AIIcon, ZapIcon, ShieldIcon 等
-- **NavbarMenu** - 导航菜单 + 语言切换入口
-- **LocaleSwitch** - 语言切换器 (zh/en)
-- **TranslationProvider** - i18n Context Provider
-- **FloatingChat** - 客服聊天悬浮窗
-- **HideCopyButton** - 隐藏代码块复制按钮
-
-### i18n Implementation
 ```yaml
 Locales: zh (default), en
-Storage: Cookie (locale=zh|en)
+Storage: Cookie (locale=zh\|en)
 Files: messages/{locale}.json
 Helper: app/lib/i18n.js
 Types: app/i18n.ts
 ```
 
-### Backend API (`backend/server.js`)
+## Backend API
+
 ```
 GET  /api/health           → { status: 'ok', timestamp }
 POST /api/customer-service → { success, data: { receivedMessage, timestamp } }
 ```
 
-## File Organization
-```yaml
-Pages:       app/{route}/page.mdx
-Components:  app/components/*.{jsx,js}
-Utils:       app/lib/*.{js,ts}
-i18n Types:  app/i18n.ts
-Translations: messages/{locale}.json
-Global Styles: app/globals.css
-Nav Config:  app/_meta.js
-```
+## Rules
 
-### Page Structure Example
-```
-app/
-├── page.mdx              → /
-├── browser-plugin/
-│   └── page.mdx          → /browser-plugin
-├── ai-analytics/
-│   └── page.mdx          → /ai-analytics
-├── customer-service/
-│   └── page.mdx          → /customer-service
-└── _meta.js              → Navigation menu config
-```
+### DO
+- Nextra theme组件优先
+- Tailwind CSS样式
+- `app/` 目录结构
+- `next/navigation` useRouter
+- 交互组件必须 `'use client'`
+- Canvas/动画组件必须 `'use client'`
 
-## Layout Props
+### DO NOT
+- `pages/` 目录
+- `theme.config.js`
+- `next/router`
+- CSS-in-JS库 (RSC问题)
+- `document`/`window` 在`useEffect`外
+- 服务端组件使用浏览器API
 
+## Client Components
+
+**必须添加 `'use client'` 的组件：**
+- Canvas渲染 (粒子、图表)
+- 动画 (IntersectionObserver、requestAnimationFrame)
+- 事件监听 (click、scroll、resize)
+- 浏览器API (window、document、localStorage)
+- React hooks (useState、useEffect、useRef)
+
+**示例：**
 ```jsx
-<Layout
-  darkMode={false}  // Hide theme switcher (default: true)
-  pageMap={pageMap}
->
+'use client'  // 文件第一行
+
+export default function AnimatedComponent() {
+  // 可以使用 hooks 和浏览器 API
+}
 ```
+
+**动态导入 (禁用SSR)：**
+```jsx
+// page.mdx
+import dynamic from 'next/dynamic'
+
+const ParticleBackground = dynamic(
+  () => import('./components/ParticleBackground'),
+  { ssr: false }
+)
+```
+
+## MDX Notes
+
+**HTML标签**:
+- AVOID `<p>` - MDX自动包裹导致嵌套
+- USE `<div>` - 文本块
+- USE `<ul><li>` - 列表
+
+**SVG**:
+- `d="..."` 属性值必须在单行内，无换行符
+
+**样式**:
+- USE Tailwind `className`
+- ACCEPT 静态 `style={{}}` (如 animationDelay)
+
+**JSX表达式**:
+- 所有 `{}` 内必须是合法JS表达式
+- AVOID 单独 `<` `>` 符号，用 `&lt;` `&gt;`
+- 模板字符串必须闭合 `` `...` ``
+- 对象/数组字面量必须完整: `{key: 'value'}` `[1, 2, 3]`
+
+**常见Acorn解析错误**:
+```
+Could not parse expression with acorn
+```
+原因: 
+- 未转义的 `<` `>` 符号
+- 不完整的模板字符串
+- 花括号不匹配 `{` `}`
+- 对象字面量语法错误
 
 ## Known Issues
 
-**Next.js 16 incompatible with Nextra 4**
-- Symptom: `Module not found: next-mdx-import-source-file`
-- Cause: Turbopack cannot parse Nextra MDX
-- Solution: Use Next.js 15.1.9 (not 16.x)
+| Issue | Solution |
+|-------|----------|
+| Next.js 16 + Nextra 4 | 使用 Next.js 15.1.9 |
+| Turbopack MDX解析失败 | 使用 webpack |
+| Hydration mismatch | 交互组件加 `'use client'` 或用 `dynamic(..., {ssr: false})` |
 
 ## Commands
 
 ```bash
-npm run dev      # Start both servers
-npm run build    # Build frontend
-npm start        # Production mode
-```
-
-## MDX 注意事项
-
-**HTML 标签使用**:
-- ❌ 避免使用 `<p>` 标签（MDX 会自动包裹导致 `<p>` 嵌套）
-- ✅ 文本块使用 `<div>`
-- ✅ 列表内容使用 `<ul><li>`
-
-**样式规范**:
-- ⚠️ 避免内联 `style={{}}`（可能导致 Hydration 问题）
-- ✅ 使用 Tailwind `className`
-
-**示例**:
-```jsx
-// ❌ 错误 - 会导致 <p> 嵌套
-<p className="text-lg">描述文本</p>
-
-// ✅ 正确
-<div className="text-lg">描述文本</div>
-
-// ❌ 避免
-<div style={{ color: 'red' }}>错误</div>
-
-// ✅ 推荐
-<div className="text-red-500">正确</div>
+npm run dev      # 启动开发服务器
+npm run build    # 构建生产版本
+npm start        # 生产模式运行
 ```

@@ -1,4 +1,4 @@
-import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock } from 'lucide-react'
+import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, MessageSquare, Github, Mail } from 'lucide-react'
 
 export const RocketIcon = ({ size = 24 }) => <Rocket size={size} />
 
@@ -32,6 +32,22 @@ export const DownloadIcon = ({ size = 24 }) => <Download size={size} />
 
 export const FileIcon = ({ size = 24 }) => <FileText size={size} />
 
-export const MessageCircleIcon = ({ size = 24 }) => <MessageCircle size={size} />
+export const MessageCircleIcon = ({ size = 24, color }) => (
+  <MessageCircle size={size} color={color} strokeWidth={2} />
+)
 
 export const ClockIcon = ({ size = 24 }) => <Clock size={size} />
+
+export const ArrowRightIcon = ({ size = 24 }) => <ArrowRight size={size} />
+
+export const MessageSquareIcon = ({ size = 24, color }) => (
+  <MessageSquare size={size} color={color} strokeWidth={2} />
+)
+
+export const GithubIcon = ({ size = 24, color }) => (
+  <Github size={size} color={color} />
+)
+
+export const MailIcon = ({ size = 24, color }) => (
+  <Mail size={size} color={color} strokeWidth={2} />
+)

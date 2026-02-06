@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { Menu, X } from 'lucide-react'
 import ThemeSwitch from './ThemeSwitch'
 import LocaleSwitch from './LocaleSwitch'
 import { useTranslations } from './TranslationProvider'
@@ -10,57 +11,71 @@ export default function NavbarMenu() {
   const { t } = useTranslations()
   const pathname = usePathname()
   const [locale, setLocale] = useState('zh')
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    // Get locale from cookie (client-side only)
     const match = document.cookie.match(/locale=([^;]+)/)
     setLocale((match?.[1] === 'en' || pathname.startsWith('/en')) ? 'en' : 'zh')
   }, [pathname])
 
+  const navItems = [
+    { href: '/', label: t('nav.home') },
+    { href: '/browser-plugin', label: t('nav.browserPlugin') },
+    { href: '/ai-analytics', label: t('nav.aiAnalytics') },
+    { href: '/customer-service', label: t('nav.customerService') },
+  ]
+
   return (
     <>
-      <a href="/" style={{
-        padding: '0 12px',
-        color: 'inherit',
-        textDecoration: 'none',
-        fontSize: '15px',
-        fontWeight: 500
-      }}>
-        {t('nav.home')}
-      </a>
-      <a href="/browser-plugin" style={{
-        padding: '0 12px',
-        color: 'inherit',
-        textDecoration: 'none',
-        fontSize: '15px',
-        fontWeight: 500
-      }}>
-        {t('nav.browserPlugin')}
-      </a>
-      <a href="/ai-analytics" style={{
-        padding: '0 12px',
-        color: 'inherit',
-        textDecoration: 'none',
-        fontSize: '15px',
-        fontWeight: 500
-      }}>
-        {t('nav.aiAnalytics')}
-      </a>
-      <a href="/customer-service" style={{
-        padding: '0 12px',
-        color: 'inherit',
-        textDecoration: 'none',
-        fontSize: '15px',
-        fontWeight: 500
-      }}>
-        {t('nav.customerService')}
-      </a>
-      <div style={{ padding: '0 12px' }}>
-        <LocaleSwitch currentLocale={locale} />
+      {/* Mobile hamburger button */}
+      <button
+        className="md:hidden p-2 -mr-2 text-gray-600 hover:text-gray-900"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Desktop navigation */}
+      <div className="hidden md:flex items-center">
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="px-3 text-gray-700 hover:text-indigo-600 no-underline text-sm font-medium"
+          >
+            {item.label}
+          </a>
+        ))}
+        <div className="px-3">
+          <LocaleSwitch currentLocale={locale} />
+        </div>
+        <div className="px-3">
+          <ThemeSwitch />
+        </div>
       </div>
-      <div style={{ padding: '0 12px' }}>
-        <ThemeSwitch />
-      </div>
+
+      {/* Mobile navigation menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 md:hidden shadow-lg">
+          <div className="flex flex-col p-4 space-y-3">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 hover:text-indigo-600 no-underline text-sm font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="flex items-center gap-4 pt-2 border-t border-gray-100">
+              <LocaleSwitch currentLocale={locale} />
+              <ThemeSwitch />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }
