@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "browserPlugin": "Browser Plugin",
+    "aiAnalytics": "AI Analytics",
+    "customerService": "AI Support"
+  },
+  "footer": {
+    "product": "Product",
+    "browserPlugin": "Browser Plugin",
+    "aiAnalytics": "AI Analytics",
+    "about": "About",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "joinUs": "Join Us",
+    "contact": "Contact",
+    "supportEmail": "support@cclhub.com",
+    "workTime": "Hours: 9:00-18:00",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "icp": "ICP License",
+    "copyright": "All rights reserved.",
+    "icpNumber": "ICP License: Jing ICP Bei 2024000000-1"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}

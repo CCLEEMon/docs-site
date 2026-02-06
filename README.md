@@ -1,50 +1,55 @@
 # docs-site
 
-这是一个文档站点项目。
+Documentation site with Nextra 4 + Express API.
 
-## 项目简介
+## Stack
 
-本项目用于构建和部署文档网站。
+| Frontend | Backend |
+|----------|---------|
+| Nextra 4.6.1 | Express 5.2.1 |
+| Next.js 15.1.9 | Port: 3005 |
+| React 19.2.4 | Customer service API |
+| Port: 3004 | |
 
-## 快速开始
-
-### 安装依赖
-
-```bash
-npm install
-# 或
-yarn install
-```
-
-### 开发模式
-
-```bash
-npm run dev
-# 或
-yarn dev
-```
-
-### 构建生产版本
-
-```bash
-npm run build
-# 或
-yarn build
-```
-
-## 项目结构
-
+## Structure
 ```
 docs-site/
-├── .gitignore       # Git 忽略文件配置
-├── README.md        # 项目说明文档
-└── ...              # 其他项目文件
+├── frontend/          # Nextra (App Router)
+│   ├── app/          # Pages (MDX)
+│   ├── next.config.mjs
+│   └── package.json
+│
+├── backend/          # Express API
+│   ├── server.js
+│   └── package.json
+│
+└── package.json      # Monorepo scripts
 ```
 
-## 贡献指南
+## Quick Start
 
-欢迎提交 Issue 和 Pull Request。
+```bash
+# Install all dependencies
+npm install && cd frontend && npm install && cd ../backend && npm install
 
-## 许可证
+# Development
+npm run dev
+# → Frontend: http://localhost:3004
+# → Backend:  http://localhost:3005
 
+# Build
+npm run build
+
+# Production
+npm start
+```
+
+## Configuration
+
+- **Frontend**: [next.config.mjs](frontend/next.config.mjs)
+- **Layout**: [app/layout.jsx](frontend/app/layout.jsx)
+- **Backend**: [server.js](backend/server.js)
+- **AI Instructions**: [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) (无歧义指令标准)
+
+## License
 MIT

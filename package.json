@@ -1,12 +1,27 @@
 {
   "name": "docs-site",
   "version": "1.0.0",
-  "description": "Documentation Site",
-  "main": "server.js",
+  "description": "Documentation site with frontend and backend architecture",
+  "private": true,
   "scripts": {
-    "start": "node server.js"
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:start": "cd frontend && npm start",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "dev": "concurrently \"npm run frontend:dev\" \"npm run backend:dev\"",
+    "build": "npm run frontend:build",
+    "start": "concurrently \"npm run frontend:start\" \"npm run backend:start\""
   },
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "documentation",
+    "nextra",
+    "nextjs",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT"
 }
