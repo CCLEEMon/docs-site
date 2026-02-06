@@ -42,7 +42,7 @@ export default function NavbarMenu() {
           <a
             key={item.href}
             href={item.href}
-            className="px-3 text-gray-700 hover:text-indigo-600 no-underline text-sm font-medium"
+            className="px-3 text-gray-700 hover:text-indigo-600 no-underline text-sm font-semibold"
           >
             {item.label}
           </a>
@@ -63,7 +63,7 @@ export default function NavbarMenu() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-indigo-600 no-underline text-sm font-medium py-2"
+                className="text-gray-700 hover:text-indigo-600 no-underline text-sm font-semibold py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

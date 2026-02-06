@@ -1,14 +1,14 @@
 {
   "nav": {
     "home": "首页",
-    "browserPlugin": "浏览器插件",
-    "aiAnalytics": "AI数据分析",
+    "browserPlugin": "电商工具箱",
+    "aiAnalytics": "AI运营",
     "customerService": "AI客服"
   },
   "footer": {
     "product": "产品",
-    "browserPlugin": "浏览器插件",
-    "aiAnalytics": "AI 数据分析",
+    "browserPlugin": "电商工具箱",
+    "aiAnalytics": "AI运营",
     "about": "关于",
     "aboutUs": "关于我们",
     "contactUs": "联系我们",

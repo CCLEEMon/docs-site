@@ -1,14 +1,14 @@
 {
   "nav": {
     "home": "Home",
-    "browserPlugin": "Browser Plugin",
-    "aiAnalytics": "AI Analytics",
+    "browserPlugin": "E-commerce Toolkit",
+    "aiAnalytics": "AI Operations",
     "customerService": "AI Support"
   },
   "footer": {
     "product": "Product",
-    "browserPlugin": "Browser Plugin",
-    "aiAnalytics": "AI Analytics",
+    "browserPlugin": "E-commerce Toolkit",
+    "aiAnalytics": "AI Operations",
     "about": "About",
     "aboutUs": "About Us",
     "contactUs": "Contact Us",

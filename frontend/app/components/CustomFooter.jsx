@@ -7,14 +7,7 @@ export default function CustomFooter() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <div
-      className="bg-gray-900 text-gray-400 py-8 px-5"
-      style={{
-        width: '100vw',
-        marginLeft: 'calc(-50vw + 50%)',
-        marginRight: 'calc(-50vw + 50%)'
-      }}
-    >
+    <div className="bg-gray-900 text-gray-400 py-8 px-5 w-screen -mx-[calc(50vw-50%)]">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* 产品链接 */}

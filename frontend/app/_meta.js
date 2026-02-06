@@ -7,7 +7,7 @@ export default {
       toc: false
     }
   },
-  'browser-plugin': '浏览器插件',
-  'ai-analytics': 'AI数据分析',
+  'browser-plugin': '电商工具箱',
+  'ai-analytics': 'AI运营',
   'customer-service': 'AI客服'
 }
