@@ -24,6 +24,16 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh',
     locales: ['zh', 'en'],
+    localeConfigs: {
+      zh: {
+        label: '简体中文',
+        htmlLang: 'zh-CN',
+      },
+      en: {
+        label: 'English',
+        htmlLang: 'en-US',
+      },
+    },
   },
 
   presets: [
@@ -50,7 +60,6 @@ const config: Config = {
         src: 'logo.png',
       },
       items: [
-        { type: 'doc', docId: 'guide', label: '用户指南', position: 'left' },
         { type: 'doc', docId: 'ai-analytics', label: 'AI分析', position: 'left' },
         { type: 'doc', docId: 'browser-plugin', label: '浏览器插件', position: 'left' },
         { type: 'doc', docId: 'customer-service', label: 'AI客服', position: 'left' },
@@ -59,24 +68,6 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: '产品',
-          items: [
-            { label: 'AI数据分析', to: '/docs/ai-analytics' },
-            { label: '浏览器插件', to: '/docs/browser-plugin' },
-            { label: 'AI客服', to: '/docs/customer-service' },
-          ],
-        },
-        {
-          title: '联系',
-          items: [
-            { label: '邮箱', to: 'mailto:leecc1531@gmail.com' },
-            { label: '微信/手机', to: 'tel:13005531531' },
-          ],
-        },
-      ],
-      copyright: `© 2026 caichen.lee. All rights reserved.`,
     },
   } satisfies Preset.ThemeConfig,
 };

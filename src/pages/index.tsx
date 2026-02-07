@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
               </a>
               <a
                 href="/docs/browser-plugin"
-                className="animate-fadeIn group relative px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center justify-center gap-2 bg-white/10 border border-indigo-400/30 text-indigo-100 hover:text-white hover:border-indigo-400 hover:bg-white/20 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden"
+                className="animate-fadeIn group relative px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center justify-center gap-2 bg-white border-2 border-indigo-500 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-600 hover:text-indigo-800 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative z-10 flex items-center gap-2">

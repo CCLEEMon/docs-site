@@ -1,11 +1,11 @@
 'use client'
 
-import { useTheme } from 'next-themes'
+import { useColorMode } from '@docusaurus/theme-common'
 import { useEffect, useState, useRef } from 'react'
 import { useTranslations } from './TranslationProvider'
 
 export default function ThemeSwitch() {
-  const { theme, setTheme } = useTheme()
+  const { colorMode, setColorMode } = useColorMode()
   const { t } = useTranslations()
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -29,13 +29,7 @@ export default function ThemeSwitch() {
     return null
   }
 
-  const themes = [
-    { value: 'light', label: t('theme.light'), icon: '☀️' },
-    { value: 'dark', label: t('theme.dark'), icon: '🌙' },
-    { value: 'system', label: t('theme.system'), icon: '💻' }
-  ]
-
-  const currentTheme = themes.find(t => t.value === theme) || themes[2]
+  const isDark = colorMode === 'dark'
 
   return (
     <div ref={dropdownRef} style={{ position: 'relative' }}>
@@ -52,19 +46,19 @@ export default function ThemeSwitch() {
           borderRadius: '8px',
           cursor: 'pointer',
           transition: 'all 0.2s',
-          color: '#374151',
+          color: isDark ? '#E5E7EB' : '#374151',
           fontSize: '18px',
           fontWeight: 500
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)'
+          e.currentTarget.style.backgroundColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)'
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.backgroundColor = 'transparent'
         }}
-        title={currentTheme.label}
+        title={isDark ? '切换到亮色模式' : '切换到暗色模式'}
       >
-        <span>{currentTheme.icon}</span>
+        <span>{isDark ? '🌙' : '☀️'}</span>
       </button>
 
       {isOpen && (
@@ -73,20 +67,23 @@ export default function ThemeSwitch() {
             position: 'absolute',
             top: 'calc(100% + 8px)',
             right: 0,
-            backgroundColor: '#fff',
-            border: '1px solid #e5e7eb',
+            backgroundColor: isDark ? '#1F2937' : '#fff',
+            border: isDark ? '1px solid #374151' : '1px solid #e5e7eb',
             borderRadius: '8px',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            boxShadow: isDark ? '0 4px 6px -1px rgba(0, 0, 0, 0.5)' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
             zIndex: 50,
             minWidth: '100px',
             overflow: 'hidden'
           }}
         >
-          {themes.map((t) => (
+          {[
+            { value: 'light', label: '亮色', icon: '☀️' },
+            { value: 'dark', label: '暗色', icon: '🌙' }
+          ].map((theme) => (
             <button
-              key={t.value}
+              key={theme.value}
               onClick={() => {
-                setTheme(t.value)
+                setColorMode(theme.value)
                 setIsOpen(false)
               }}
               style={{
@@ -96,27 +93,27 @@ export default function ThemeSwitch() {
                 gap: '8px',
                 width: '100%',
                 padding: '10px 12px',
-                backgroundColor: theme === t.value ? '#f3f4f6' : 'transparent',
+                backgroundColor: colorMode === theme.value ? (isDark ? '#374151' : '#f3f4f6') : 'transparent',
                 border: 'none',
-                color: '#374151',
+                color: isDark ? '#E5E7EB' : '#374151',
                 fontSize: '18px',
-                fontWeight: theme === t.value ? 600 : 400,
+                fontWeight: colorMode === theme.value ? 600 : 400,
                 cursor: 'pointer',
                 transition: 'background-color 0.2s'
               }}
               onMouseEnter={(e) => {
-                if (theme !== t.value) {
-                  e.currentTarget.style.backgroundColor = '#f9fafb'
+                if (colorMode !== theme.value) {
+                  e.currentTarget.style.backgroundColor = isDark ? '#37415120' : '#f9fafb'
                 }
               }}
               onMouseLeave={(e) => {
-                if (theme !== t.value) {
+                if (colorMode !== theme.value) {
                   e.currentTarget.style.backgroundColor = 'transparent'
                 }
               }}
-              title={t.label}
+              title={theme.label}
             >
-              <span>{t.icon}</span>
+              <span>{theme.icon}</span>
             </button>
           ))}
         </div>

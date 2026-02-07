@@ -1,9 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { useColorMode } from '@docusaurus/theme-common'
 import { MessageSquareIcon } from './Icons'
 
 export default function FloatingChat() {
+  const { colorMode } = useColorMode()
+  const isDark = colorMode === 'dark'
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState([
     { role: 'assistant', content: '您好！我是CCLHUB智能助手，有什么可以帮助您的吗？' }
@@ -44,13 +47,13 @@ export default function FloatingChat() {
           right: 0,
           width: '380px',
           height: '520px',
-          backgroundColor: '#fff',
+          backgroundColor: isDark ? '#1F2937' : '#fff',
           borderRadius: '12px',
-          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+          boxShadow: isDark ? '0 8px 32px rgba(0, 0, 0, 0.5)' : '0 8px 32px rgba(0, 0, 0, 0.12)',
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden',
-          border: '1px solid #e5e7eb'
+          border: isDark ? '1px solid #374151' : '1px solid #e5e7eb'
         }}>
           <div style={{
             padding: '16px',
@@ -82,7 +85,8 @@ export default function FloatingChat() {
             padding: '16px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '12px'
+            gap: '12px',
+            backgroundColor: isDark ? '#111827' : '#fff'
           }}>
             {messages.map((msg, idx) => (
               <div
@@ -91,8 +95,8 @@ export default function FloatingChat() {
                   maxWidth: '80%',
                   padding: '10px 14px',
                   borderRadius: '12px',
-                  backgroundColor: msg.role === 'user' ? '#4F46E5' : '#f3f4f6',
-                  color: msg.role === 'user' ? '#fff' : '#1f2937',
+                  backgroundColor: msg.role === 'user' ? '#4F46E5' : (isDark ? '#374151' : '#f3f4f6'),
+                  color: msg.role === 'user' ? '#fff' : (isDark ? '#E5E7EB' : '#1f2937'),
                   alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
                   fontSize: '14px',
                   lineHeight: '1.5'
@@ -105,8 +109,8 @@ export default function FloatingChat() {
               <div style={{
                 padding: '10px 14px',
                 borderRadius: '12px',
-                backgroundColor: '#f3f4f6',
-                color: '#6b7280',
+                backgroundColor: isDark ? '#374151' : '#f3f4f6',
+                color: isDark ? '#9CA3AF' : '#6b7280',
                 fontSize: '14px'
               }}>
                 正在输入...
@@ -116,9 +120,10 @@ export default function FloatingChat() {
 
           <div style={{
             padding: '12px',
-            borderTop: '1px solid #e5e7eb',
+            borderTop: isDark ? '1px solid #374151' : '1px solid #e5e7eb',
             display: 'flex',
-            gap: '8px'
+            gap: '8px',
+            backgroundColor: isDark ? '#1F2937' : '#fff'
           }}>
             <input
               type="text"
@@ -130,10 +135,12 @@ export default function FloatingChat() {
               style={{
                 flex: 1,
                 padding: '10px 14px',
-                border: '1px solid #d1d5db',
+                border: isDark ? '1px solid #4B5563' : '1px solid #d1d5db',
                 borderRadius: '8px',
                 fontSize: '14px',
-                outline: 'none'
+                outline: 'none',
+                backgroundColor: isDark ? '#374151' : '#fff',
+                color: isDark ? '#E5E7EB' : '#1f2937'
               }}
             />
             <button
@@ -166,7 +173,7 @@ export default function FloatingChat() {
           backgroundColor: '#4F46E5',
           border: 'none',
           cursor: 'pointer',
-          boxShadow: '0 4px 12px rgba(99, 102, 241, 0.3)',
+          boxShadow: isDark ? '0 4px 12px rgba(79, 70, 229, 0.5)' : '0 4px 12px rgba(99, 102, 241, 0.3)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

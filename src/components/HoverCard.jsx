@@ -9,7 +9,7 @@ export function HoverCard({ children, style }) {
     <div
       style={{
         ...style,
-        backgroundColor: isHovered ? 'rgba(255, 107, 53, 0.1)' : style?.background || 'rgba(255, 255, 255, 0.05)',
+        backgroundColor: isHovered ? 'rgba(79, 70, 229, 0.1)' : style?.background || 'rgba(255, 255, 255, 0.05)',
         transform: isHovered ? 'translateY(-5px)' : 'translateY(0)',
       }}
       onMouseEnter={() => setIsHovered(true)}
