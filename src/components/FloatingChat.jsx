@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { useColorMode } from '@docusaurus/theme-common'
 import { MessageSquareIcon } from './Icons'
