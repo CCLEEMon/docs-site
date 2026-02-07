@@ -91,8 +91,11 @@ export default function Home(): JSX.Element {
                 <PluginIcon size={28} color="#fff" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900">电商工具箱</h3>
-              <div className="text-base text-gray-600 leading-relaxed">
+              <div className="text-base text-gray-600 leading-relaxed mb-4">
                 实时获取商品数据、价格监控、竞品分析。支持淘宝、京东、拼多多等主流电商平台。
+              </div>
+              <div className="aspect-video rounded-lg overflow-hidden shadow-md bg-gray-100">
+                <img src="/images/plugin-sidebar-ecommerce.png" alt="电商工具箱" className="w-full h-full object-cover" />
               </div>
             </a>
 
@@ -105,8 +108,11 @@ export default function Home(): JSX.Element {
                 <AIIcon size={28} color="#fff" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900">AI运营</h3>
-              <div className="text-base text-gray-600 leading-relaxed">
+              <div className="text-base text-gray-600 leading-relaxed mb-4">
                 基于大语言模型的智能分析，自动洞察市场趋势、用户行为、销售数据，提供精准运营策略。
+              </div>
+              <div className="aspect-video rounded-lg overflow-hidden shadow-md bg-gray-100">
+                <img src="/images/saas-dashboard-main.png" alt="AI运营" className="w-full h-full object-cover" />
               </div>
             </a>
 
@@ -117,6 +123,9 @@ export default function Home(): JSX.Element {
               <h3 className="text-xl font-bold mb-3 text-gray-900">AI客服</h3>
               <div className="text-base text-gray-600 leading-relaxed mb-4">
                 7×24小时智能客服，快速解答产品使用问题，提供专业运营建议和最佳实践指导。
+              </div>
+              <div className="aspect-video rounded-lg overflow-hidden shadow-md bg-gray-100 mb-4">
+                <img src="/images/ai-chat-interface.jpg" alt="AI客服" className="w-full h-full object-cover" />
               </div>
               <div className="text-indigo-600 font-semibold text-sm flex items-center gap-1.5">
                 <ZapIcon size={16} />

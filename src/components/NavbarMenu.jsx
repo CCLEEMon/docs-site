@@ -1,22 +1,22 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import ThemeSwitch from './ThemeSwitch'
 import LocaleSwitch from './LocaleSwitch'
 import { useTranslations } from './TranslationProvider'
+import { useLocation } from '@docusaurus/router'
 
 export default function NavbarMenu() {
   const { t } = useTranslations()
-  const pathname = usePathname()
+  const location = useLocation()
   const [locale, setLocale] = useState('zh')
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const match = document.cookie.match(/locale=([^;]+)/)
-    setLocale((match?.[1] === 'en' || pathname.startsWith('/en')) ? 'en' : 'zh')
-  }, [pathname])
+    setLocale((match?.[1] === 'en' || location.pathname.startsWith('/en')) ? 'en' : 'zh')
+  }, [location.pathname])
 
   const navItems = [
     { href: '/', label: t('nav.home') },

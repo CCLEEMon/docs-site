@@ -38,6 +38,7 @@ yarn-error.log*
 .next/
 .nuxt/
 .vuepress/dist/
+.docusaurus/
 
 # Temporary files
 *.tmp

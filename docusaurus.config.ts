@@ -6,7 +6,7 @@ const config: Config = {
   tagline: 'AI驱动的电商运营工具平台',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://www.aigent.ren',
   baseUrl: '/',
 
   organizationName: 'CCLHUB',
@@ -47,7 +47,7 @@ const config: Config = {
       title: 'CCLHUB',
       logo: {
         alt: 'CCLHUB Logo',
-        src: 'img/logo.svg',
+        src: 'logo.png',
       },
       items: [
         { type: 'doc', docId: 'guide', label: '用户指南', position: 'left' },
@@ -69,21 +69,14 @@ const config: Config = {
           ],
         },
         {
-          title: '资源',
+          title: '联系',
           items: [
-            { label: '用户指南', to: '/docs/guide' },
-            { label: '关于我们', to: 'https://cclhub.com' },
-          ],
-        },
-        {
-          title: '更多',
-          items: [
-            { label: 'GitHub', to: 'https://github.com/cclhub' },
-            { label: '联系我们', to: 'mailto:contact@cclhub.com' },
+            { label: '邮箱', to: 'mailto:leecc1531@gmail.com' },
+            { label: '微信/手机', to: 'tel:13005531531' },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} CCLHUB. All rights reserved.`,
+      copyright: `© 2026 caichen.lee. All rights reserved.`,
     },
   } satisfies Preset.ThemeConfig,
 };

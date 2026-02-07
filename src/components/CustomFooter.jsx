@@ -26,9 +26,11 @@ export default function CustomFooter() {
             </a>
           </div>
 
-          {/* 版权信息 */}
-          <div className="text-xs text-gray-500">
-            © {currentYear} CCLHUB. {t('footer.copyright')}
+          {/* 联系信息 */}
+          <div className="flex flex-col items-center gap-2 text-xs text-gray-500">
+            <div>leecc1531@gmail.com</div>
+            <div>微信/手机: 13005531531</div>
+            <div>© 2026 caichen.lee. {t('footer.copyright')}</div>
           </div>
         </div>
       </div>
