@@ -72,12 +72,6 @@ docs-site/
 └── package.json
 ```
 
-## 联系方式
-
-- **邮箱**: leecc1531@gmail.com
-- **微信/手机**: 13005531531
-- **作者**: 财晨
-
 ## 许可证
 
 MIT © 2026 caichen.lee

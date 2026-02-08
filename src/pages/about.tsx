@@ -36,8 +36,6 @@ export default function AboutPage(): JSX.Element {
               <h2 style={{ marginTop: '2rem' }}>联系我们</h2>
               <ul>
                 <li>产品文档：<a href="/docs/intro">查看文档</a></li>
-                <li>微信/手机：13005531531</li>
-                <li>邮箱：leecc1531@gmail.com</li>
               </ul>
             </div>
           </div>

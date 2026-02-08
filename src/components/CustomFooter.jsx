@@ -78,8 +78,11 @@ export default function CustomFooter() {
               <Translate id="footer.contact">联系我们</Translate>
             </h4>
             <ul className="space-y-3 text-sm text-gray-500">
-              <li>微信/手机: 13005531531</li>
-              <li>邮箱: leecc1531@gmail.com</li>
+              <li>
+                <a href="/docs/intro" className="hover:text-white transition-colors">
+                  <Translate id="footer.guide">产品文档</Translate>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
