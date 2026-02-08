@@ -21,14 +21,17 @@ export default function FloatingChat() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:3005/api/customer-service', {
+      const response = await fetch('http://localhost:3003/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: input })
+        body: JSON.stringify({
+          collection: 'product_help',
+          question: input
+        })
       })
 
       const data = await response.json()
-      setMessages(prev => [...prev, { role: 'assistant', content: data.message }])
+      setMessages(prev => [...prev, { role: 'assistant', content: data.answer }])
     } catch (error) {
       setMessages(prev => [...prev, { role: 'assistant', content: '抱歉，服务暂时不可用，请稍后再试。' }])
     } finally {
