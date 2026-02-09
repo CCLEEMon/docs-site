@@ -358,5 +358,17 @@
   },
   "footer.icpNumber": {
     "message": "ICP License: Yue ICP Bei 2026015835"
+  },
+  "footer.privacy": {
+    "message": "Privacy Policy"
+  },
+  "footer.terms": {
+    "message": "Terms of Service"
+  },
+  "footer.compliance1": {
+    "message": "This website follows the MIT open source license, runs entirely locally, and does not collect any user data."
+  },
+  "footer.compliance2": {
+    "message": "For technical learning and research purposes only. Users are responsible for ensuring compliance with target platform rules and local laws and regulations."
   }
 }
