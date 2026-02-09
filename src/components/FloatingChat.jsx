@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import { useColorMode } from '@docusaurus/theme-common'
-import { useDocusaurusContext } from '@docusaurus/core'
 import { MessageSquareIcon } from './Icons'
 
 export default function FloatingChat() {
   const { colorMode } = useColorMode()
-  const { siteConfig } = useDocusaurusContext()
   const isDark = colorMode === 'dark'
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState([
@@ -14,8 +12,8 @@ export default function FloatingChat() {
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
-  // API 地址：从 siteConfig 读取（开发/生产自动适配）
-  const API_URL = siteConfig.customFields.ragApiUrl
+  // API 地址：Docusaurus 使用 DOCU_ 前缀的环境变量
+  const API_URL = process.env.DOCU_RAG_API_URL || 'http://localhost:3003/query'
 
   const handleSend = async () => {
     if (!input.trim()) return
