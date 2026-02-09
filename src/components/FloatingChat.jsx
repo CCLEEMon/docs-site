@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { useColorMode, useDocusaurusContext } from '@docusaurus/theme-common'
+import { useColorMode } from '@docusaurus/theme-common'
+import { useDocusaurusContext } from '@docusaurus/core'
 import { MessageSquareIcon } from './Icons'
 
 export default function FloatingChat() {
