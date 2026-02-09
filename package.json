@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 3004",
     "build": "docusaurus build",
-    "build:prod": "RAG_API_URL=https://rag.aigent.ren/query docusaurus build",
+    "build:prod": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
