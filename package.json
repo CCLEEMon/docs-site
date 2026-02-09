@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 3004",
     "build": "docusaurus build",
-    "build:prod": "docusaurus build",
+    "build:with-api": "sed -i \"s|__RAG_API_URL__|$RAG_API_URL|g\" src/rag-api-config.js && docusaurus build && git checkout src/rag-api-config.js",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
