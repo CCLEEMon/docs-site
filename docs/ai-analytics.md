@@ -1,6 +1,7 @@
 ---
 title: AI数据分析
-description: CCLHUB AI数据分析 - 智能分析市场趋势、用户行为、销售数据
+description: Analytics Platform - 智能分析市场趋势、用户行为、销售数据
+project: analytics-platform
 ---
 
 import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, LightbulbIcon, CheckIcon, RocketIcon } from '@site/src/components/Icons'

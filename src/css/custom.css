@@ -3,25 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --ifm-color-primary: #4F46E5;
-  --ifm-color-primary-dark: #4338CA;
-  --ifm-color-primary-darker: #3730A3;
-  --ifm-color-primary-darkest: #312E81;
-  --ifm-color-primary-light: #6366F1;
-  --ifm-color-primary-lighter: #818CF8;
-  --ifm-color-primary-lightest: #A5B4FC;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* 浅色模式 - 冷灰底 + 深紫点睛 */
+  --ifm-color-primary: #4C1D95;
+  --ifm-color-primary-dark: #3B0F8A;
+  --ifm-color-primary-darker: #2E0A6D;
+  --ifm-color-primary-darkest: #1F0547;
+  --ifm-color-primary-light: #6D28D9;
+  --ifm-color-primary-lighter: #8B5CF6;
+  --ifm-color-primary-lightest: #A78BFA;
+  --docusaurus-highlighted-code-line-bg: rgba(76, 29, 149, 0.1);
+
+  /* 背景系统 - 冷灰微调 */
+  --ifm-background-color: #FAFBFC;
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-hover-overlay: rgba(76, 29, 149, 0.08);
+
+  /* 边框与分割线 - 更精致 */
+  --ifm-border-color: #E2E8F0;
+  --ifm-toc-border-color: #E2E8F0;
+
+  /* 语义色 - 微调 */
+  --color-success: #059669;
+  --color-success-light: #10B981;
+  --color-warning: #D97706;
+  --color-warning-light: #F59E0B;
+  --color-error: #DC2626;
+  --color-error-light: #EF4444;
+  --color-info: #2563EB;
+  --color-info-light: #3B82F6;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #6366F1;
-  --ifm-color-primary-dark: #4F46E5;
-  --ifm-color-primary-darker: #4338CA;
-  --ifm-color-primary-darkest: #3730A3;
-  --ifm-color-primary-light: #818CF8;
-  --ifm-color-primary-lighter: #A5B4FC;
-  --ifm-color-primary-lightest: #C7D2FE;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* 深色模式 - 紫调底 + 亮紫点睛 */
+  --ifm-color-primary: #8B5CF6;
+  --ifm-color-primary-dark: #6D28D9;
+  --ifm-color-primary-darker: #5B21B6;
+  --ifm-color-primary-darkest: #4C1D95;
+  --ifm-color-primary-light: #A78BFA;
+  --ifm-color-primary-lighter: #C4B5FD;
+  --ifm-color-primary-lightest: #DDD6FE;
+  --docusaurus-highlighted-code-line-bg: rgba(139, 92, 246, 0.15);
+
+  /* 背景系统 - 紫调深色 */
+  --ifm-background-color: #0F0F1A;
+  --ifm-background-surface-color: #181824;
+  --ifm-hover-overlay: rgba(139, 92, 246, 0.12);
+
+  /* 边框与分割线 */
+  --ifm-border-color: #272735;
+  --ifm-toc-border-color: #272735;
+
+  /* 语义色 - 深色优化 */
+  --color-success: #10B981;
+  --color-success-light: #22C55E;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FBBF24;
+  --color-error: #EF4444;
+  --color-error-light: #F87171;
+  --color-info: #60A5FA;
+  --color-info-light: #93C5FD;
 }
 
 /* Background clip text */
@@ -131,41 +171,41 @@
   animation: fadeIn 0.6s ease-out;
 }
 
-/* 暗黑模式卡片样式 */
+/* 暗黑模式卡片样式 - 紫调配色 */
 [data-theme='dark'] .bg-white\/80 {
-  background-color: rgba(31, 41, 55, 0.8) !important;
+  background-color: rgba(24, 24, 36, 0.85) !important;
 }
 
 [data-theme='dark'] .border-white\/20 {
-  border-color: rgba(75, 85, 99, 0.5) !important;
+  border-color: rgba(39, 39, 53, 0.6) !important;
 }
 
 [data-theme='dark'] .ring-white\/10 {
-  --tw-ring-color: rgba(75, 85, 99, 0.3) !important;
+  --tw-ring-color: rgba(139, 92, 246, 0.2) !important;
 }
 
 [data-theme='dark'] .bg-white {
-  background-color: #1F2937 !important;
+  background-color: #181824 !important;
 }
 
 [data-theme='dark'] .border-indigo-500 {
-  border-color: #6366F1 !important;
+  border-color: #272735 !important;
 }
 
 [data-theme='dark'] .text-indigo-700 {
-  color: #A5B4FC !important;
+  color: #C4B5FD !important;
 }
 
 [data-theme='dark'] .hover\:bg-indigo-50:hover {
-  background-color: rgba(99, 102, 241, 0.2) !important;
+  background-color: rgba(139, 92, 246, 0.12) !important;
 }
 
 [data-theme='dark'] .hover\:border-indigo-600:hover {
-  border-color: #818CF8 !important;
+  border-color: #8B5CF6 !important;
 }
 
 [data-theme='dark'] .hover\:text-indigo-800:hover {
-  color: #C7D2FE !important;
+  color: #DDD6FE !important;
 }
 
 [data-theme='dark'] .text-gray-600 {
@@ -173,7 +213,7 @@
 }
 
 [data-theme='dark'] .text-gray-700 {
-  color: #D1D5DB !important;
+  color: #E5E7EB !important;
 }
 
 [data-theme='dark'] .text-gray-900 {
@@ -181,21 +221,21 @@
 }
 
 [data-theme='dark'] .bg-indigo-50\/30 {
-  background-color: rgba(79, 70, 229, 0.15) !important;
+  background-color: rgba(139, 92, 246, 0.12) !important;
 }
 
 [data-theme='dark'] .text-indigo-600 {
-  color: #818CF8 !important;
+  color: #A78BFA !important;
 }
 
 [data-theme='dark'] .bg-gray-100 {
-  background-color: #1F2937 !important;
+  background-color: #181824 !important;
 }
 
 [data-theme='dark'] .from-indigo-50 {
-  --tw-gradient-from: #1E293B !important;
+  --tw-gradient-from: #181824 !important;
 }
 
 [data-theme='dark'] .to-indigo-100 {
-  --tw-gradient-to: #374151 !important;
+  --tw-gradient-to: #1F1F2E !important;
 }

@@ -1,6 +1,7 @@
 ---
 title: AI客服
-description: CCLHUB AI智能客服 - 7×24小时在线，快速解答产品使用问题，提供专业运营建议
+description: RAG Service - 7×24小时智能问答，基于RAG的智能客服系统
+project: rag-service
 ---
 
 import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon } from '@site/src/components/Icons'
