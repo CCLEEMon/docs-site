@@ -34,8 +34,8 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 ### 安装步骤
 
 1. **下载插件**
-   - 访问 Chrome 网上应用店搜索 "CCLHUB"
-   - 或访问官网下载最新版本安装包
+   - 官网下载: https://cclhub-releases.oss-cn-shenzhen.aliyuncs.com/cclhub-latest.zip
+   - 或访问 Chrome 网上应用店搜索 "CCLHUB"
 
 2. **安装插件**
    - Chrome：拖拽 .crx 文件到扩展程序页面
