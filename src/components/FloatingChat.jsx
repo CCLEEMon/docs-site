@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { useColorMode } from '@docusaurus/theme-common'
-import { useDi } from '@docusaurus/theme-common/internal'
+import { useColorMode, useDocusaurusContext } from '@docusaurus/theme-common'
 import { MessageSquareIcon } from './Icons'
 
 export default function FloatingChat() {
   const { colorMode } = useColorMode()
-  const { siteConfig } = useDi()
+  const { siteConfig } = useDocusaurusContext()
   const isDark = colorMode === 'dark'
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState([
