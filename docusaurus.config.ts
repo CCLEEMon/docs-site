@@ -12,6 +12,11 @@ const config: Config = {
   organizationName: 'CCLHUB',
   projectName: 'docs-site',
 
+  // 自定义配置：API地址
+  customFields: {
+    ragApiUrl: process.env.RAG_API_URL || 'http://localhost:3003/query',
+  },
+
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'warn',
 
