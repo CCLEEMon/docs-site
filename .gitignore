@@ -28,9 +28,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment
-.env
 .env.local
 .env.*.local
+# .env.production 可提交（包含公开API地址）
 
 # Cache
 .cache/

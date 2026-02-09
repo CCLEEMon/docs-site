@@ -12,6 +12,9 @@ export default function FloatingChat() {
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
+  // API 地址：开发用 localhost，生产通过环境变量配置
+  const API_URL = process.env.RAG_API_URL || 'http://localhost:3003/query'
+
   const handleSend = async () => {
     if (!input.trim()) return
 
@@ -21,7 +24,7 @@ export default function FloatingChat() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:3003/query', {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
