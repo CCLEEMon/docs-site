@@ -21,7 +21,7 @@ export default function FloatingChat() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('https://rag.aigent.ren/query', {
+      const response = await fetch('http://localhost:3003/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
