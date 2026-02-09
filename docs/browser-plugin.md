@@ -12,16 +12,9 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 
 <div style={{ textAlign: 'center', margin: '24px 0' }}>
   <a href="https://cclhub-releases.oss-cn-shenzhen.aliyuncs.com/cclhub-latest.zip"
-     class="button button--primary button--lg"
-     style={{ marginRight: '12px' }}>
+     class="button button--primary button--lg">
     <DownloadIcon size={16} style={{ verticalAlign: 'middle', marginRight: '8px' }} />
     立即下载
-  </a>
-  <a href="https://chrome.google.com/webstore/detail/cclhub"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="button button--secondary button--lg">
-    Chrome 应用店
   </a>
 </div>
 
@@ -71,7 +64,6 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 
 1. **下载插件**
    - 官网下载: https://cclhub-releases.oss-cn-shenzhen.aliyuncs.com/cclhub-latest.zip
-   - 或访问 Chrome 网上应用店搜索 "CCLHUB"
 
 2. **安装插件**
    - Chrome：拖拽 .crx 文件到扩展程序页面
@@ -79,7 +71,7 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 
 3. **注册账号**
    - 首次使用需注册 CCLHUB 账号
-   - 支持手机号/邮箱快捷注册
+   - 支持手机号快捷注册
 
 ### 使用指南
 
@@ -129,65 +121,6 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 - <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> 拼多多
 - <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> 抖音电商
 - <ZapIcon size={16} style={{ color: '#F59E0B', verticalAlign: 'middle' }} /> 更多平台陆续接入中...
-
-## 功能对比
-
-<div style={{
-  overflow: 'auto',
-  marginTop: '32px',
-  marginBottom: '32px'
-}}>
-  <table style={{
-    width: '100%',
-    borderCollapse: 'collapse',
-    fontSize: '14px'
-  }}>
-    <thead>
-      <tr style={{ backgroundColor: '#f9fafb' }}>
-        <th style={{
-          padding: '12px',
-          textAlign: 'left',
-          border: '1px solid #e5e7eb',
-          fontWeight: 600
-        }}>功能</th>
-        <th style={{
-          padding: '12px',
-          textAlign: 'center',
-          border: '1px solid #e5e7eb',
-          fontWeight: 600
-        }}>免费版</th>
-        <th style={{
-          padding: '12px',
-          textAlign: 'center',
-          border: '1px solid #e5e7eb',
-          fontWeight: 600
-        }}>专业版</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>基础数据获取</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /></td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /></td>
-      </tr>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>价格历史追踪</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>7天</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>90天</td>
-      </tr>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>数据导出</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>10条/天</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>无限</td>
-      </tr>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>AI智能分析</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><span style={{ color: '#EF4444', fontSize: '18px', fontWeight: 'bold' }}>×</span></td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
 ## 更新日志
 
