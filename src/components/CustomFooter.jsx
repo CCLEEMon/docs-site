@@ -91,7 +91,11 @@ export default function CustomFooter() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600 mb-4">
             <div>© {currentYear} CCLHUB. <Translate id="footer.copyright">All rights reserved.</Translate></div>
-            <div><Translate id="footer.icpNumber">京ICP备2024000000号-1</Translate></div>
+            <div>
+              <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Translate id="footer.icpNumber">粤ICP备2026015835号</Translate>
+              </a>
+            </div>
           </div>
           <div className="text-xs text-gray-500 space-y-1">
             <p><Translate id="footer.compliance1">本网站遵循 MIT 开源协议，完全在本地运行，不收集任何用户数据。</Translate></p>

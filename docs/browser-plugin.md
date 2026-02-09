@@ -1,9 +1,10 @@
 ---
 title: 浏览器插件
 description: CCLHUB 浏览器插件 - 实时获取商品数据、价格监控、竞品分析
+project: CCLHub
 ---
 
-import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIcon, ZapIcon } from '@site/src/components/Icons'
+import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIcon, ZapIcon, AIIcon, ImageIcon, VideoIcon } from '@site/src/components/Icons'
 
 # <PluginIcon size={28} /> 浏览器插件
 
@@ -29,13 +30,33 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 - **图片批量下载**：批量下载商品主图、详情图
 - **数据可视化**：图表展示销售趋势
 
+## AI功能
+
+### <AIIcon size={20} /> AI对话
+
+- **智能问答**：集成大语言模型，随时解答产品使用问题
+- **文案生成**：自动生成商品描述、营销文案、客服回复
+- **模型切换**：支持多种文本模型自由切换
+
+### <ImageIcon size={20} /> 图像生成
+
+- **多平台支持**：Flux、Stable Diffusion、通义万相、Ideogram
+- **背景处理**：Remove.bg 智能移除背景
+- **商品素材**：一键生成商品展示图、营销海报
+
+### <VideoIcon size={20} /> 视频生成
+
+- **AI视频制作**：可灵AI、Pika、Vidu、Runway
+- **快速产出**：几分钟生成产品宣传视频
+- **多种风格**：支持不同视频风格和时长
+
 ## 安装使用
 
 ### 安装步骤
 
 1. **下载插件**
-   - 访问 Chrome 网上应用店搜索 "CCLHUB"
-   - 或访问官网下载最新版本安装包
+   - 官网下载: https://cclhub-releases.oss-cn-shenzhen.aliyuncs.com/cclhub-latest.zip
+   - 或访问 Chrome 网上应用店搜索 "CCLHUB"
 
 2. **安装插件**
    - Chrome：拖拽 .crx 文件到扩展程序页面

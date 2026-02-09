@@ -43,4 +43,9 @@ yarn-error.log*
 # Temporary files
 *.tmp
 .temp/
+
+# Root development docs (keep only README.md)
+AI-INSTRUCTIONS.md
+COLOR_PALETTE.md
+STATUS.md
 DEV.md
