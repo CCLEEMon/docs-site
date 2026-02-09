@@ -1,38 +1,39 @@
 ---
-title: AI客服
-description: CCLHUB AI智能客服 - 7×24小时在线，快速解答产品使用问题，提供专业运营建议
+title: AI Customer Service
+description: RAG Service - 24/7 intelligent Q&A, RAG-based intelligent customer service system
+project: rag-service
 ---
 
 import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon } from '@site/src/components/Icons'
 
-# <MessageCircleIcon size={28} /> AI客服
+# <MessageCircleIcon size={28} /> AI Customer Service
 
-7×24小时智能在线，秒级响应，让问题解决更高效
+24/7 intelligent online availability, second-level response, making problem resolution more efficient
 
-## 核心功能
+## Core Features
 
-### <ClockIcon size={20} /> 全天候在线
+### <ClockIcon size={20} /> Round-the-Clock Online
 
-- **7×24小时服务**：随时在线，无需等待
-- **秒级响应**：平均响应时间小于3秒
-- **多语言支持**：中文、英文无缝切换
+- **7×24 Service**: Always online, no waiting required
+- **Second-level Response**: Average response time less than 3 seconds
+- **Multi-language Support**: Seamless switching between Chinese and English
 
-### <ZapIcon size={20} /> 智能问答
+### <ZapIcon size={20} /> Intelligent Q&A
 
-- **产品使用指导**：快速解答功能操作问题
-- **运营策略建议**：基于数据提供专业建议
-- **最佳实践分享**：电商运营经验技巧
-- **问题诊断分析**：帮助定位并解决问题
+- **Product Usage Guidance**: Quick answers to functional operation questions
+- **Operational Strategy Recommendations**: Professional recommendations based on data
+- **Best Practice Sharing**: E-commerce operation experience and tips
+- **Problem Diagnosis and Analysis**: Help locate and resolve issues
 
-### <UserIcon size={20} /> 个性化服务
+### <UserIcon size={20} /> Personalized Service
 
-- **上下文记忆**：记住对话历史，提供连续服务
-- **智能推荐**：根据问题推荐相关解决方案
-- **案例库查询**：快速检索历史案例和文档
+- **Context Memory**: Remember conversation history and provide continuous service
+- **Smart Recommendations**: Recommend relevant solutions based on questions
+- **Case Database Query**: Quick retrieval of historical cases and documents
 
-## 使用方式
+## How to Use
 
-### 网页端使用
+### Web Usage
 
 <div style={{
   padding: '24px',
@@ -42,54 +43,54 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
   marginTop: '24px',
   marginBottom: '24px'
 }}>
-  <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px' }}>快速开始</h3>
+  <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px' }}>Quick Start</h3>
   <ol style={{ lineHeight: '1.8', paddingLeft: '20px' }}>
-    <li>点击页面右下角的聊天图标</li>
-    <li>输入您的问题或选择常见问题</li>
-    <li>AI即时给出答案或解决方案</li>
-    <li>支持连续提问，深入探讨问题</li>
+    <li>Click the chat icon in the bottom right corner of the page</li>
+    <li>Enter your question or select a common question</li>
+    <li>AI provides answers or solutions immediately</li>
+    <li>Supports continuous questioning for in-depth discussion</li>
   </ol>
 </div>
 
-### 适用场景
+### Applicable Scenarios
 
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **产品咨询**：功能介绍、使用方法
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **故障排查**：问题诊断、解决方案
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **数据分析**：运营策略、优化建议
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **最佳实践**：行业经验、操作技巧
+- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **Product Consultation**: Feature introduction, usage methods
+- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **Troubleshooting**: Problem diagnosis, solutions
+- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **Data Analysis**: Operational strategies, optimization suggestions
+- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **Best Practices**: Industry experience, operation tips
 
-## 常见问题
+## FAQ
 
-### AI客服能解决哪些问题？
+### What problems can AI customer service solve?
 
-**可以解决：**
-- 产品功能使用指导
-- 常见故障排查
-- 数据分析建议
-- 运营策略咨询
-- 文档内容查询
+**Can solve:**
+- Product feature usage guidance
+- Common troubleshooting
+- Data analysis recommendations
+- Operational strategy consultation
+- Document content queries
 
-**暂不支持：**
-- 复杂技术问题（会转接人工客服）
-- 账号权限管理
-- 支付相关问题
+**Not yet supported:**
+- Complex technical issues (will be transferred to human customer service)
+- Account permission management
+- Payment-related issues
 
-### 如何获得更精准的回答？
+### How to get more accurate answers?
 
-**建议技巧：**
-1. **描述清晰**：详细说明问题背景和需求
-2. **提供截图**：上传问题截图便于定位
-3. **分步提问**：复杂问题拆分成多个小问题
-4. **追问深入**：根据AI回答继续追问细节
+**Tips:**
+1. **Clear Description**: Explain problem background and requirements in detail
+2. **Provide Screenshots**: Upload problem screenshots to help locate issues
+3. **Step-by-step Questions**: Break down complex problems into multiple small questions
+4. **Follow-up Questions**: Continue asking details based on AI responses
 
-### 对话记录会保存吗？
+### Are conversation records saved?
 
-- ✅ 对话记录加密保存
-- ✅ 仅用户本人可查看
-- ✅ 支持历史记录查询
-- ✅ 支持清除对话历史
+- ✅ Conversation records are encrypted and saved
+- ✅ Only the user can view them
+- ✅ Supports historical record queries
+- ✅ Supports clearing conversation history
 
-## 服务优势
+## Service Advantages
 
 <div style={{
   display: 'grid',
@@ -105,10 +106,10 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
     border: '1px solid #e5e7eb'
   }}>
     <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <TrendIcon size={20} style={{ color: '#4F46E5' }} /> 高效响应
+      <TrendIcon size={20} style={{ color: '#4F46E5' }} /> Efficient Response
     </h3>
     <div style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6' }}>
-      平均响应时间小于3秒，快速解决问题
+      Average response time less than 3 seconds, quick problem resolution
     </div>
   </div>
 
@@ -119,10 +120,10 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
     border: '1px solid #e5e7eb'
   }}>
     <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <ZapIcon size={20} style={{ color: '#4F46E5' }} /> 智能学习
+      <ZapIcon size={20} style={{ color: '#4F46E5' }} /> Smart Learning
     </h3>
     <div style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6' }}>
-      持续学习产品知识，回答越来越精准
+      Continuously learning product knowledge, answers become increasingly accurate
     </div>
   </div>
 
@@ -133,15 +134,15 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
     border: '1px solid #e5e7eb'
   }}>
     <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <CheckIcon size={20} style={{ color: '#4F46E5' }} /> 专业可靠
+      <CheckIcon size={20} style={{ color: '#4F46E5' }} /> Professional and Reliable
     </h3>
     <div style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6' }}>
-      基于官方文档和知识库，确保信息准确
+      Based on official documentation and knowledge base, ensuring information accuracy
     </div>
   </div>
 </div>
 
-## 对比人工客服
+## Comparison with Human Customer Service
 
 <div style={{
   overflow: 'auto',
@@ -160,41 +161,41 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
           textAlign: 'left',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>对比项</th>
+        }}>Comparison Item</th>
         <th style={{
           padding: '12px',
           textAlign: 'center',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>AI客服</th>
+        }}>AI Customer Service</th>
         <th style={{
           padding: '12px',
           textAlign: 'center',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>人工客服</th>
+        }}>Human Customer Service</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>响应时间</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', color: '#10B981', fontWeight: 500 }}>&lt; 3秒</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>3-10分钟</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>Response Time</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', color: '#10B981', fontWeight: 500 }}>&lt; 3 seconds</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>3-10 minutes</td>
       </tr>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>服务时间</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>7×24小时</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>工作日 9:00-18:00</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>Service Hours</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>7×24 hours</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Weekdays 9:00-18:00</td>
       </tr>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>并发能力</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>无限</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>需排队</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>Concurrency Capacity</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Unlimited</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Queuing required</td>
       </tr>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>知识库</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>完整产品文档</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>依赖个人经验</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>Knowledge Base</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Complete product documentation</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Depends on individual experience</td>
       </tr>
     </tbody>
   </table>
@@ -202,4 +203,4 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
 
 ---
 
-需要更多帮助？查看 [浏览器插件](/docs/browser-plugin) 或 [AI数据分析](/docs/ai-analytics)
+Need more help? Check out [Browser Plugin](/docs/browser-plugin) or [AI Data Analysis](/docs/ai-analytics)

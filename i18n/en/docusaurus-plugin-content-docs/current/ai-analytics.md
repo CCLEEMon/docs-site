@@ -1,38 +1,39 @@
 ---
-title: AI数据分析
-description: CCLHUB AI数据分析 - 智能分析市场趋势、用户行为、销售数据
+title: AI Data Analytics
+description: Analytics Platform - Intelligently analyze market trends, user behavior, and sales data
+project: analytics-platform
 ---
 
 import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, LightbulbIcon, CheckIcon, RocketIcon } from '@site/src/components/Icons'
 
-# <AIIcon size={28} /> AI数据分析
+# <AIIcon size={28} /> AI Data Analytics
 
-智能分析市场趋势、用户行为、销售数据，提供精准的运营策略建议
+Intelligently analyze market trends, user behavior, and sales data to provide precise operational strategy recommendations
 
-## 核心能力
+## Core Capabilities
 
-### <TrendIcon size={20} /> 市场趋势分析
+### <TrendIcon size={20} /> Market Trend Analysis
 
-- **热门选品**：AI分析市场热销商品趋势
-- **类目洞察**：深入分析各品类发展态势
-- **季节性预测**：预测商品销售淡旺季
-- **竞品监控**：实时追踪竞品动态
+- **Trending Products**: AI analyzes market best-selling product trends
+- **Category Insights**: Deep analysis of development trends across categories
+- **Seasonal Forecasting**: Predict product sales peak and off-peak seasons
+- **Competitor Monitoring**: Real-time tracking of competitor dynamics
 
-### <UserIcon size={20} /> 用户行为分析
+### <UserIcon size={20} /> User Behavior Analysis
 
-- **用户画像**：构建目标客户群体特征
-- **购买路径**：分析用户决策流程
-- **流失分析**：识别用户流失原因
-- **复购预测**：预测客户复购概率
+- **User Profiling**: Build target customer group characteristics
+- **Purchase Journey**: Analyze user decision-making process
+- **Churn Analysis**: Identify user churn reasons
+- **Repurchase Prediction**: Predict customer repurchase probability
 
-### <ChartIcon size={20} /> 销售数据洞察
+### <ChartIcon size={20} /> Sales Data Insights
 
-- **销售预测**：基于历史数据预测未来销售
-- **库存优化**：AI建议最佳库存策略
-- **定价策略**：智能定价建议
-- **ROI分析**：广告投放效果评估
+- **Sales Forecasting**: Predict future sales based on historical data
+- **Inventory Optimization**: AI recommends optimal inventory strategies
+- **Pricing Strategy**: Intelligent pricing recommendations
+- **ROI Analysis**: Advertising campaign performance evaluation
 
-## 使用流程
+## Usage Process
 
 <div style={{
   display: 'grid',
@@ -61,9 +62,9 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
     }}>
       <FileIcon size={24} />
     </div>
-    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>数据接入</h3>
+    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>Data Integration</h3>
     <div style={{ color: '#6b7280', fontSize: '14px', lineHeight: '1.5' }}>
-      上传或连接销售数据源
+      Upload or connect sales data sources
     </div>
   </div>
 
@@ -87,9 +88,9 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
     }}>
       <AIIcon size={24} />
     </div>
-    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>AI分析</h3>
+    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>AI Analysis</h3>
     <div style={{ color: '#6b7280', fontSize: '14px', lineHeight: '1.5' }}>
-      AI自动分析数据模式
+      AI automatically analyzes data patterns
     </div>
   </div>
 
@@ -113,9 +114,9 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
     }}>
       <LightbulbIcon size={24} />
     </div>
-    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>策略建议</h3>
+    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>Strategy Recommendations</h3>
     <div style={{ color: '#6b7280', fontSize: '14px', lineHeight: '1.5' }}>
-      获得可执行的运营建议
+      Get actionable operational recommendations
     </div>
   </div>
 
@@ -139,16 +140,16 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
     }}>
       <TrendIcon size={24} />
     </div>
-    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>效果追踪</h3>
+    <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>Performance Tracking</h3>
     <div style={{ color: '#6b7280', fontSize: '14px', lineHeight: '1.5' }}>
-      持续监控优化效果
+      Continuously monitor and optimize performance
     </div>
   </div>
 </div>
 
-## 数据接入方式
+## Data Integration Methods
 
-### 方式一：手动上传
+### Method 1: Manual Upload
 
 <div style={{
   padding: '20px',
@@ -158,7 +159,7 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   marginTop: '16px',
   marginBottom: '16px'
 }}>
-  <h4 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>支持格式</h4>
+  <h4 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>Supported Formats</h4>
   <ul style={{ lineHeight: '1.8', paddingLeft: '20px', color: '#374151' }}>
     <li>Excel (.xlsx, .xls)</li>
     <li>CSV (.csv)</li>
@@ -166,7 +167,7 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   </ul>
 </div>
 
-### 方式二：API对接
+### Method 2: API Integration
 
 <div style={{
   padding: '20px',
@@ -176,22 +177,22 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   marginTop: '16px',
   marginBottom: '16px'
 }}>
-  <h4 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>支持平台</h4>
+  <h4 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>Supported Platforms</h4>
   <ul style={{ lineHeight: '1.8', paddingLeft: '20px', color: '#374151' }}>
-    <li>淘宝/天猫开放平台</li>
-    <li>京东宙斯开放平台</li>
-    <li>拼多多开放平台</li>
-    <li>抖音电商开放平台</li>
+    <li>Taobao/Tmall Open Platform</li>
+    <li>JD Zeus Open Platform</li>
+    <li>Pinduoduo Open Platform</li>
+    <li>Douyin E-commerce Open Platform</li>
   </ul>
 </div>
 
-### 方式三：浏览器插件同步
+### Method 3: Browser Plugin Sync
 
-配合 [CCLHUB浏览器插件](/docs/browser-plugin) 使用，自动同步采集的数据到AI分析平台。
+Use with [CCLHUB Browser Plugin](/docs/browser-plugin) to automatically sync collected data to the AI analytics platform.
 
-## 分析报告示例
+## Analysis Report Examples
 
-### 市场趋势报告
+### Market Trend Report
 
 <div style={{
   padding: '24px',
@@ -202,16 +203,16 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   marginBottom: '24px'
 }}>
   <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <TrendIcon size={20} style={{ color: '#FF6B35' }} /> 热门品类趋势
+    <TrendIcon size={20} style={{ color: '#FF6B35' }} /> Trending Categories
   </h4>
   <ul style={{ lineHeight: '1.8', color: '#374151' }}>
-    <li><strong>上升品类</strong>：智能家居 +32%、健康食品 +28%、户外运动 +25%</li>
-    <li><strong>下降品类</strong>：传统服装 -8%、纸质书籍 -5%</li>
-    <li><strong>价格趋势</strong>：中端价位商品占比提升，性价比成为主流</li>
+    <li><strong>Rising Categories</strong>: Smart Home +32%, Health Food +28%, Outdoor Sports +25%</li>
+    <li><strong>Declining Categories</strong>: Traditional Apparel -8%, Physical Books -5%</li>
+    <li><strong>Price Trends</strong>: Mid-range product share increasing, cost-effectiveness becoming mainstream</li>
   </ul>
 </div>
 
-### 用户画像报告
+### User Profile Report
 
 <div style={{
   padding: '24px',
@@ -222,16 +223,16 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   marginBottom: '24px'
 }}>
   <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <UserIcon size={20} style={{ color: '#FF6B35' }} /> 核心用户群体
+    <UserIcon size={20} style={{ color: '#FF6B35' }} /> Core User Groups
   </h4>
   <ul style={{ lineHeight: '1.8', color: '#374151' }}>
-    <li><strong>年龄分布</strong>：25-35岁（48%）、35-45岁（32%）</li>
-    <li><strong>地域分布</strong>：一二线城市（65%）、三四线城市（35%）</li>
-    <li><strong>消费习惯</strong>：注重品质、偏好品牌、复购率高</li>
+    <li><strong>Age Distribution</strong>: 25-35 years old (48%), 35-45 years old (32%)</li>
+    <li><strong>Geographic Distribution</strong>: Tier 1-2 cities (65%), Tier 3-4 cities (35%)</li>
+    <li><strong>Consumption Habits</strong>: Focus on quality, prefer brands, high repurchase rate</li>
   </ul>
 </div>
 
-### 运营策略建议
+### Operational Strategy Recommendations
 
 <div style={{
   padding: '24px',
@@ -242,17 +243,17 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   marginBottom: '24px'
 }}>
   <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <LightbulbIcon size={20} style={{ color: '#FF6B35' }} /> AI优化建议
+    <LightbulbIcon size={20} style={{ color: '#FF6B35' }} /> AI Optimization Recommendations
   </h4>
   <ul style={{ lineHeight: '1.8', color: '#374151' }}>
-    <li><strong>选品策略</strong>：增加智能家居品类，减少传统服装库存</li>
-    <li><strong>定价策略</strong>：中端定价为主，设置高性价比引流款</li>
-    <li><strong>营销策略</strong>：重点投放25-35岁人群，一二线城市精准投放</li>
-    <li><strong>库存策略</strong>：热销品类提前备货，避免缺货</li>
+    <li><strong>Product Selection Strategy</strong>: Increase smart home categories, reduce traditional apparel inventory</li>
+    <li><strong>Pricing Strategy</strong>: Focus on mid-range pricing, set high cost-effectiveness promotional items</li>
+    <li><strong>Marketing Strategy</strong>: Target 25-35 age group, precision advertising in tier 1-2 cities</li>
+    <li><strong>Inventory Strategy</strong>: Stock up on trending categories early to avoid shortages</li>
   </ul>
 </div>
 
-## 定价方案
+## Pricing Plans
 
 <div style={{
   overflow: 'auto',
@@ -271,48 +272,48 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
           textAlign: 'left',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>功能</th>
+        }}>Features</th>
         <th style={{
           padding: '12px',
           textAlign: 'center',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>基础版</th>
+        }}>Basic</th>
         <th style={{
           padding: '12px',
           textAlign: 'center',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>专业版</th>
+        }}>Professional</th>
         <th style={{
           padding: '12px',
           textAlign: 'center',
           border: '1px solid #e5e7eb',
           fontWeight: 600
-        }}>企业版</th>
+        }}>Enterprise</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>数据处理量</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>1万条/月</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>10万条/月</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>无限</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>Data Processing Volume</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>10K/month</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>100K/month</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Unlimited</td>
       </tr>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>AI分析报告</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>5份/月</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>50份/月</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>无限</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>AI Analysis Reports</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>5/month</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>50/month</td>
+        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>Unlimited</td>
       </tr>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>API对接</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>API Integration</td>
         <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><span style={{ color: '#EF4444', fontSize: '18px', fontWeight: 'bold' }}>×</span></td>
         <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /></td>
         <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /></td>
       </tr>
       <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>专属顾问</td>
+        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>Dedicated Advisor</td>
         <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><span style={{ color: '#EF4444', fontSize: '18px', fontWeight: 'bold' }}>×</span></td>
         <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><span style={{ color: '#EF4444', fontSize: '18px', fontWeight: 'bold' }}>×</span></td>
         <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}><CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /></td>
@@ -321,7 +322,7 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   </table>
 </div>
 
-## 技术优势
+## Technical Advantages
 
 <div style={{
   display: 'grid',
@@ -332,34 +333,34 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
 }}>
   <div>
     <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <AIIcon size={20} style={{ color: '#FF6B35' }} /> 先进算法
+      <AIIcon size={20} style={{ color: '#FF6B35' }} /> Advanced Algorithms
     </h4>
     <div style={{ color: '#6b7280', lineHeight: '1.6' }}>
-      基于大语言模型和机器学习算法，精准分析数据
+      Powered by large language models and machine learning algorithms for precise data analysis
     </div>
   </div>
   <div>
     <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <ZapIcon size={20} style={{ color: '#FF6B35' }} /> 实时处理
+      <ZapIcon size={20} style={{ color: '#FF6B35' }} /> Real-time Processing
     </h4>
     <div style={{ color: '#6b7280', lineHeight: '1.6' }}>
-      秒级数据处理，快速生成分析报告
+      Second-level data processing with rapid analysis report generation
     </div>
   </div>
   <div>
     <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <ShieldIcon size={20} style={{ color: '#FF6B35' }} /> 数据隐私
+      <ShieldIcon size={20} style={{ color: '#FF6B35' }} /> Data Privacy
     </h4>
     <div style={{ color: '#6b7280', lineHeight: '1.6' }}>
-      数据加密传输，严格保护商业隐私
+      Encrypted data transmission with strict business privacy protection
     </div>
   </div>
   <div>
     <h4 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <TrendIcon size={20} style={{ color: '#FF6B35' }} /> 持续学习
+      <TrendIcon size={20} style={{ color: '#FF6B35' }} /> Continuous Learning
     </h4>
     <div style={{ color: '#6b7280', lineHeight: '1.6' }}>
-      AI模型持续优化，分析准确度不断提升
+      AI models continuously optimize for improving analysis accuracy
     </div>
   </div>
 </div>
@@ -372,10 +373,10 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
   marginTop: '32px'
 }}>
   <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', color: '#1E40AF', display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <RocketIcon size={20} style={{ color: '#3B82F6' }} /> 开始使用
+    <RocketIcon size={20} style={{ color: '#3B82F6' }} /> Get Started
   </h3>
   <div style={{ color: '#1E3A8A', lineHeight: '1.6', marginBottom: '16px' }}>
-    立即体验AI数据分析，让数据驱动您的业务增长
+    Experience AI data analytics now and let data drive your business growth
   </div>
   <a href="#" style={{
     display: 'inline-block',
@@ -386,10 +387,10 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
     textDecoration: 'none',
     fontWeight: 600
   }}>
-    免费试用
+    Free Trial
   </a>
 </div>
 
 ---
 
-需要帮助？点击右下角智能咨询图标，或查看 [浏览器插件](/docs/browser-plugin) 功能
+Need help? Click the intelligent consultation icon in the bottom right corner, or check out the [Browser Plugin](/docs/browser-plugin) features

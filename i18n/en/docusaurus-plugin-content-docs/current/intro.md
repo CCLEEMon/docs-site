@@ -1,6 +1,6 @@
 ---
-title: 首页
-description: CCLHUB 电商运营工具平台 - AI驱动的AI运营与电商工具箱
+title: Home
+description: CCLHUB E-commerce Operations Tool Platform - AI-driven AI Operations and E-commerce Toolkit
 ---
 
 import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, ArrowRightIcon, MessageCircleIcon } from '@site/src/components/Icons'
@@ -9,11 +9,11 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
 <div className="relative min-h-[85vh] flex flex-col items-center justify-center px-5 pt-[100px] pb-[80px] text-center overflow-hidden">
   <div className="relative z-10 animate-fadeInUp">
     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent tracking-tight">
-      AI 驱动的电商运营工具
+      AI-Driven E-commerce Operations Tools
     </h1>
 
     <div className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-12 leading-relaxed max-w-[700px]">
-      AI运营 + 电商工具箱，让电商运营更高效
+      AI Operations + E-commerce Toolkit for More Efficient E-commerce Operations
     </div>
 
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full max-w-[500px] mx-auto mb-16">
@@ -23,7 +23,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       >
         <span className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         <span className="relative z-10 flex items-center gap-2">
-          免费试用
+          Free Trial
           <ArrowRightIcon size={18} />
         </span>
       </a>
@@ -34,7 +34,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         <span className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         <span className="relative z-10 flex items-center gap-2">
           <PluginIcon size={18} />
-          获取工具
+          Get Tools
         </span>
       </a>
     </div>
@@ -46,7 +46,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] ring-1 ring-white/10 border border-gray-200/50 bg-white p-3 group transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(99,102,241,0.3)]">
           <img
             src="/images/saas-dashboard-main.png"
-            alt="CCLHUB 数据分析仪表盘"
+            alt="CCLHUB Data Analytics Dashboard"
             className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-105"
           />
           {/* Floating Accuracy Card */}
@@ -57,7 +57,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
               </div>
               <div className="text-left">
                 <div className="text-xl font-black text-green-600">95%</div>
-                <div className="text-xs text-gray-600 font-medium">准确率</div>
+                <div className="text-xs text-gray-600 font-medium">Accuracy</div>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
           <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] ring-1 ring-white/10 border border-gray-200/50 bg-white p-3 group transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(99,102,241,0.3)]">
             <img
               src="/images/plugin-sidebar-ecommerce.png"
-              alt="电商工具箱界面"
+              alt="E-commerce Toolkit Interface"
               className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -78,15 +78,15 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
           <div className="grid grid-cols-3 gap-4">
             <div className="bg-gradient-to-br from-indigo-600 to-purple-600 p-5 rounded-2xl text-white text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-3xl font-black mb-1"><HeroCounter value="50K+" /></div>
-              <div className="text-xs opacity-90">活跃用户</div>
+              <div className="text-xs opacity-90">Active Users</div>
             </div>
             <div className="bg-gradient-to-br from-green-500 to-emerald-500 p-5 rounded-2xl text-white text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-3xl font-black mb-1"><HeroCounter value="95%" /></div>
-              <div className="text-xs opacity-90">准确率</div>
+              <div className="text-xs opacity-90">Accuracy</div>
             </div>
             <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-5 rounded-2xl text-white text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-3xl font-black mb-1">7×24</div>
-              <div className="text-xs opacity-90">智能客服</div>
+              <div className="text-xs opacity-90">AI Support</div>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
           </div>
           <div className="text-left">
             <div className="text-2xl font-black text-indigo-600">+<HeroCounter value="47%" /></div>
-            <div className="text-xs text-gray-600 font-medium">效率提升</div>
+            <div className="text-xs text-gray-600 font-medium">Efficiency Boost</div>
           </div>
         </div>
       </div>
@@ -113,19 +113,19 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       <div className="text-5xl lg:text-6xl font-black mb-2 text-indigo-600">
         <HeroCounter value="50K+" />
       </div>
-      <div className="text-base text-gray-600 font-medium">活跃用户</div>
+      <div className="text-base text-gray-600 font-medium">Active Users</div>
     </div>
     <div>
       <div className="text-5xl lg:text-6xl font-black mb-2 text-indigo-600">
         <HeroCounter value="95%" />
       </div>
-      <div className="text-base text-gray-600 font-medium">分析准确率</div>
+      <div className="text-base text-gray-600 font-medium">Analysis Accuracy</div>
     </div>
     <div>
       <div className="text-5xl lg:text-6xl font-black mb-2 text-indigo-600">
         7×24
       </div>
-      <div className="text-base text-gray-600 font-medium">智能客服</div>
+      <div className="text-base text-gray-600 font-medium">AI Support</div>
     </div>
   </div>
 </div>
@@ -133,14 +133,14 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
 {/* Transition Section */}
 <div className="bg-gradient-to-b from-indigo-50/30 to-transparent py-16 px-5 text-center">
   <div className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-[700px] mx-auto leading-relaxed">
-    一站式电商运营解决方案，从数据采集到智能分析，全方位提升运营效率
+    One-stop E-commerce Operations Solution, from Data Collection to Intelligent Analytics, Comprehensively Improving Operational Efficiency
   </div>
 </div>
 
 <div className="max-w-[1200px] mx-auto px-5 py-20">
   <div className="mb-20">
     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 text-gray-900">
-      核心产品
+      Core Products
     </h2>
   </div>
 
@@ -153,16 +153,16 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       <div className="rounded-xl overflow-hidden mb-6 border border-white/30 bg-gradient-to-br from-white/60 to-white/40 aspect-[4/3] shadow-inner">
         <img
           src="/images/plugin-sidebar-ecommerce.png"
-          alt="电商工具箱界面"
+          alt="E-commerce Toolkit Interface"
           className="w-full h-full object-cover"
         />
       </div>
       <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center mb-4 shadow-lg group-hover:rotate-12 transition-transform duration-300">
         <PluginIcon size={28} color="#fff" />
       </div>
-      <h3 className="text-xl font-bold mb-3 text-gray-900">电商工具箱</h3>
+      <h3 className="text-xl font-bold mb-3 text-gray-900">E-commerce Toolkit</h3>
       <div className="text-base text-gray-600 leading-relaxed">
-        实时获取商品数据、价格监控、竞品分析。支持淘宝、京东、拼多多等主流电商平台。
+        Real-time product data acquisition, price monitoring, competitor analysis. Supports major e-commerce platforms including Taobao, JD, Pinduoduo, and more.
       </div>
     </a>
 
@@ -174,16 +174,16 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       <div className="rounded-xl overflow-hidden mb-6 border border-white/30 bg-gradient-to-br from-white/60 to-white/40 aspect-[4/3] shadow-inner">
         <img
           src="/images/saas-dashboard-both.png"
-          alt="AI运营界面"
+          alt="AI Operations Interface"
           className="w-full h-full object-cover"
         />
       </div>
       <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center mb-4 shadow-lg group-hover:rotate-12 transition-transform duration-300">
         <AIIcon size={28} color="#fff" />
       </div>
-      <h3 className="text-xl font-bold mb-3 text-gray-900">AI运营</h3>
+      <h3 className="text-xl font-bold mb-3 text-gray-900">AI Operations</h3>
       <div className="text-base text-gray-600 leading-relaxed">
-        基于大语言模型的智能分析，自动洞察市场趋势、用户行为、销售数据，提供精准运营策略。
+        Intelligent analysis based on large language models, automatically revealing market trends, user behaviors, and sales data, providing precise operational strategies.
       </div>
     </a>
 
@@ -191,27 +191,27 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       <div className="rounded-xl overflow-hidden mb-6 border border-white/30 bg-gradient-to-br from-white/60 to-white/40 aspect-[4/3] shadow-inner">
         <img
           src="/images/ai-chat-interface.jpg"
-          alt="AI智能客服对话界面"
+          alt="AI Customer Service Chat Interface"
           className="w-full h-full object-cover"
         />
       </div>
       <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center mb-4 shadow-lg group-hover:rotate-12 transition-transform duration-300">
         <MessageCircleIcon size={28} color="#fff" />
       </div>
-      <h3 className="text-xl font-bold mb-3 text-gray-900">AI客服</h3>
+      <h3 className="text-xl font-bold mb-3 text-gray-900">AI Customer Service</h3>
       <div className="text-base text-gray-600 leading-relaxed mb-4">
-        7×24小时智能客服，快速解答产品使用问题，提供专业运营建议和最佳实践指导。
+        7×24 intelligent customer service, quickly answering product usage questions, providing professional operational advice and best practice guidance.
       </div>
       <div className="text-indigo-600 font-semibold text-sm flex items-center gap-1.5">
         <ZapIcon size={16} />
-        点击右下角图标开始咨询
+        Click the bottom-right icon to start consulting
       </div>
     </div>
   </div>
 
   <div className="border-t border-gray-200 pt-20 mb-20">
     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 text-gray-900">
-      为什么选择 CCLHUB
+      Why Choose CCLHUB
     </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -219,9 +219,9 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center mb-5 shadow-md">
           <ZapIcon size={24} className="text-indigo-600" />
         </div>
-        <h3 className="text-lg font-bold mb-2.5 text-gray-900">即时可用</h3>
+        <h3 className="text-lg font-bold mb-2.5 text-gray-900">Instant Ready</h3>
         <div className="text-base text-gray-600 leading-relaxed">
-          无需复杂配置，安装即用。5分钟即可完成数据接入并开始分析。
+          No complex configuration needed, install and use. Complete data integration in 5 minutes and start analyzing.
         </div>
       </div>
 
@@ -229,9 +229,9 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center mb-5 shadow-md">
           <TrendIcon size={24} className="text-indigo-600" />
         </div>
-        <h3 className="text-lg font-bold mb-2.5 text-gray-900">精准分析</h3>
+        <h3 className="text-lg font-bold mb-2.5 text-gray-900">Precise Analysis</h3>
         <div className="text-base text-gray-600 leading-relaxed">
-          AI驱动的数据分析，深度洞察市场趋势和用户行为，准确率高达95%以上。
+          AI-driven data analytics, deep insights into market trends and user behaviors, with accuracy rate over 95%.
         </div>
       </div>
 
@@ -239,9 +239,9 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center mb-5 shadow-md">
           <ShieldIcon size={24} className="text-indigo-600" />
         </div>
-        <h3 className="text-lg font-bold mb-2.5 text-gray-900">数据安全</h3>
+        <h3 className="text-lg font-bold mb-2.5 text-gray-900">Data Security</h3>
         <div className="text-base text-gray-600 leading-relaxed">
-          采用企业级加密技术，本地数据处理，严格保护商业隐私和数据安全。
+          Enterprise-grade encryption technology, local data processing, strictly protecting business privacy and data security.
         </div>
       </div>
 
@@ -249,9 +249,9 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center mb-5 shadow-md">
           <LightbulbIcon size={24} className="text-indigo-600" />
         </div>
-        <h3 className="text-lg font-bold mb-2.5 text-gray-900">持续更新</h3>
+        <h3 className="text-lg font-bold mb-2.5 text-gray-900">Continuous Updates</h3>
         <div className="text-base text-gray-600 leading-relaxed">
-          定期功能更新，AI模型持续优化，始终跟上电商发展趋势和技术前沿。
+          Regular feature updates, continuous AI model optimization, always keeping up with e-commerce development trends and technology frontiers.
         </div>
       </div>
     </div>
