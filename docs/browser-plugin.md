@@ -10,6 +10,21 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 
 一键安装，实时获取电商数据，让运营更高效
 
+<div style={{ textAlign: 'center', margin: '24px 0' }}>
+  <a href="https://cclhub-releases.oss-cn-shenzhen.aliyuncs.com/cclhub-latest.zip"
+     class="button button--primary button--lg"
+     style={{ marginRight: '12px' }}>
+    <DownloadIcon size={16} style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+    立即下载
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/cclhub"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="button button--secondary button--lg">
+    Chrome 应用店
+  </a>
+</div>
+
 ## 核心功能
 
 ### <ChartIcon size={20} /> 实时数据获取
