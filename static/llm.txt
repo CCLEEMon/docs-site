@@ -1,0 +1,27 @@
+# CCLHUB
+
+> AI驱动的电商运营工具平台 — AI运营 + 电商工具箱，让电商运营更高效
+
+## About
+
+CCLHUB is an AI-powered e-commerce operations platform that provides intelligent tools to make e-commerce operations more efficient.
+
+- Website: https://www.aigent.ren
+- Organization: CCLHUB
+- Author: caichen.lee
+
+## Key Pages
+
+- Homepage: https://www.aigent.ren/
+- AI数据分析: https://www.aigent.ren/docs/ai-analytics
+- 浏览器插件: https://www.aigent.ren/docs/browser-plugin
+- AI客服: https://www.aigent.ren/docs/customer-service
+- About: https://www.aigent.ren/about
+
+## Sitemap
+
+- https://www.aigent.ren/sitemap.xml
+
+## Contact
+
+- GitHub: https://github.com/CCLEEMon

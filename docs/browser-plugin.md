@@ -2,6 +2,8 @@
 title: 浏览器插件
 description: CCLHUB 浏览器插件 - 实时获取商品数据、价格监控、竞品分析
 project: CCLHub
+rag: true
+rag_tags: ["浏览器插件", "商品数据", "价格监控", "竞品分析", "电商工具"]
 ---
 
 import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIcon, ZapIcon, AIIcon, ImageIcon, VideoIcon } from '@site/src/components/Icons'

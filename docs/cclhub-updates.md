@@ -1,3 +1,9 @@
+---
+title: CCLHUB更新日志
+description: CCLHUB平台功能更新记录
+rag: true
+rag_tags: ["更新日志", "CCLHUB", "版本更新", "功能升级"]
+---
 # CCLHUB 更新日志
 
 ## AI 图像/视频生成

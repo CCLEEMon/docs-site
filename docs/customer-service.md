@@ -2,6 +2,8 @@
 title: AI客服
 description: RAG Service - 7×24小时智能问答，基于RAG的智能客服系统
 project: rag-service
+rag: true
+rag_tags: ["AI客服", "智能问答", "RAG", "7x24小时", "客户服务"]
 ---
 
 import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon } from '@site/src/components/Icons'

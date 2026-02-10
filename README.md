@@ -23,13 +23,13 @@ AI驱动的电商运营工具平台官方文档
 - **框架**: Docusaurus 3.x
 - **语言**: TypeScript
 - **样式**: TailwindCSS
-- **动画**: Framer Motion
+- **图标**: Lucide React
 
 ## 本地开发
 
 ### 环境要求
 
-- Node.js >= 18.0
+- Node.js >= 20.0
 - npm 或 yarn
 
 ### 安装依赖
@@ -44,7 +44,7 @@ npm install
 npm run start
 ```
 
-访问 http://localhost:3000 查看网站
+访问 http://localhost:3004 查看网站
 
 ### 构建生产版本
 
@@ -67,7 +67,8 @@ docs-site/
 │   ├── components/    # React 组件
 │   ├── css/           # 样式文件
 │   └── pages/         # 页面组件
-├── static/            # 静态资源
+├── static/            # 静态资源 (llm.txt, robots.txt)
+├── plugins/           # 自定义插件 (JSON-LD Schema)
 ├── docusaurus.config.ts
 └── package.json
 ```

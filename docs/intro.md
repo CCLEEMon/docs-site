@@ -1,6 +1,8 @@
 ---
 title: 首页
 description: CCLHUB 电商运营工具平台 - AI驱动的AI运营与电商工具箱
+rag: true
+rag_tags: ["CCLHUB", "电商运营", "平台介绍", "AI运营", "电商工具"]
 ---
 
 import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, ArrowRightIcon, MessageCircleIcon } from '@site/src/components/Icons'

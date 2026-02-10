@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: /404.html
+
+Sitemap: https://www.aigent.ren/sitemap.xml
+
+# AI Crawlers
+# llm.txt: https://www.aigent.ren/llm.txt

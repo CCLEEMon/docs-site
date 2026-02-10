@@ -36,6 +36,10 @@ const config: Config = {
     },
   },
 
+  plugins: [
+    './plugins/plugin-json-ld',
+  ],
+
   presets: [
     [
       'classic',

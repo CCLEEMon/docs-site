@@ -12,12 +12,15 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "sync-rag": "node scripts/sync-to-rag.js",
+    "sync-rag:dry": "node scripts/sync-to-rag.js --dry-run"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.0",
     "@docusaurus/preset-classic": "^3.9.0",
     "@mdx-js/react": "^3.0.0",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.563.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

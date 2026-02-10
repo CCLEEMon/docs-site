@@ -49,3 +49,6 @@ AI-INSTRUCTIONS.md
 COLOR_PALETTE.md
 STATUS.md
 DEV.md
+
+# RAG sync cache
+.rag-sync-hashes.json
