@@ -6,7 +6,6 @@ const sidebarsDev: SidebarsConfig = {
     'structure',
     'deployment',
     'theming',
-    'changelog',
   ],
 };
 
