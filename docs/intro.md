@@ -1,6 +1,7 @@
 ---
 title: 首页
 description: CCLHUB 电商运营工具平台 - AI驱动的AI运营与电商工具箱
+project: general
 rag: true
 rag_tags: ["CCLHUB", "电商运营", "平台介绍", "AI运营", "电商工具"]
 ---

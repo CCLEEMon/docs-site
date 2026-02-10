@@ -1,7 +1,9 @@
 ---
-title: AI数据分析
+title: AI运营
 description: Analytics Platform - 智能分析市场趋势、用户行为、销售数据
-project: analytics-platform
+project: ai-operations
+schema: Article
+date: 2026-02-10
 rag: true
 rag_tags: ["数据分析", "市场趋势", "用户行为", "销售数据", "AI运营"]
 ---

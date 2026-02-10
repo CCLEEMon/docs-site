@@ -1,22 +1,15 @@
-# CCLHUB 官方文档网站
+# CCLHUB 文档站点
 
-AI驱动的电商运营工具平台官方文档
+基于 Docusaurus 3.x 的官方文档网站
 
-## 网站信息
+## 快速开始
 
-- **官网**: [www.aigent.ren](https://www.aigent.ren)
-- **产品**: CCLHUB - AI驱动的电商运营工具平台
+```bash
+npm install
+npm run start
+```
 
-## 产品功能
-
-### 电商工具箱
-实时获取商品数据、价格监控、竞品分析。支持淘宝、京东、拼多多等主流电商平台。
-
-### AI运营
-基于大语言模型的智能分析，自动洞察市场趋势、用户行为、销售数据，提供精准运营策略。
-
-### AI客服
-7×24小时智能客服，快速解答产品使用问题，提供专业运营建议和最佳实践指导。
+访问 http://localhost:3004
 
 ## 技术栈
 
@@ -25,38 +18,14 @@ AI驱动的电商运营工具平台官方文档
 - **样式**: TailwindCSS
 - **图标**: Lucide React
 
-## 本地开发
+## 常用命令
 
-### 环境要求
-
-- Node.js >= 20.0
-- npm 或 yarn
-
-### 安装依赖
-
-```bash
-npm install
-```
-
-### 启动开发服务器
-
-```bash
-npm run start
-```
-
-访问 http://localhost:3004 查看网站
-
-### 构建生产版本
-
-```bash
-npm run build
-```
-
-### 预览构建结果
-
-```bash
-npm run serve
-```
+| 命令 | 说明 |
+|------|------|
+| `npm run start` | 启动开发服务器 |
+| `npm run build` | 构建生产版本 |
+| `npm run serve` | 预览构建结果 |
+| `npm run sync-rag:dry` | RAG 同步预览 |
 
 ## 项目结构
 
@@ -67,15 +36,23 @@ docs-site/
 │   ├── components/    # React 组件
 │   ├── css/           # 样式文件
 │   └── pages/         # 页面组件
-├── static/            # 静态资源 (llm.txt, robots.txt)
-├── plugins/           # 自定义插件 (JSON-LD Schema)
-├── docusaurus.config.ts
-└── package.json
+├── static/            # 静态资源
+├── plugins/           # 自定义插件
+├── scripts/           # 工具脚本
+└── docusaurus.config.ts
 ```
 
-## 许可证
+## 部署
+
+详见 [DEV.md](DEV.md)
+
+## 更新记录
+
+### 2026-02-10
+- 新增 JSON-LD Schema 插件
+- 新增 RAG 知识库同步脚本
+- 文档添加 SEO 优化字段
+
+---
 
 MIT © 2026 caichen.lee
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
-

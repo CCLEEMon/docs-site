@@ -159,6 +159,7 @@ async function main() {
       title: fm.title || file,
       section: c.heading || '概述',
       tags: (fm.rag_tags || []).join(','),
+      project: fm.project || 'general',
     }));
 
     const action = oldHashes[docId] ? '更新' : '新增';

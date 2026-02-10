@@ -6,7 +6,7 @@ export default function CustomFooter() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-gray-400">
+    <footer className="bg-gray-900 dark:bg-[#1e1e1e] text-gray-400">
       <div className="max-w-[1200px] mx-auto px-5 py-16">
         {/* 4列布局 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
@@ -52,6 +52,11 @@ export default function CustomFooter() {
               <li>
                 <a href="/docs/intro" className="hover:text-white transition-colors">
                   <Translate id="footer.guide">产品文档</Translate>
+                </a>
+              </li>
+              <li>
+                <a href="/developers/intro" className="hover:text-white transition-colors">
+                  <Translate id="footer.developer">开发者文档</Translate>
                 </a>
               </li>
               <li>

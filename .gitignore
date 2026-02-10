@@ -52,3 +52,6 @@ DEV.md
 
 # RAG sync cache
 .rag-sync-hashes.json
+
+# CHANGELOG (本地记录，不提交)
+CHANGELOG.md

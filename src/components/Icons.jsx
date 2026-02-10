@@ -18,13 +18,13 @@ export const SearchIcon = ({ size = 24 }) => <Search size={size} />
 
 export const CheckIcon = ({ size = 24 }) => <Check size={size} />
 
-export const ZapIcon = ({ size = 24 }) => <Zap size={size} />
+export const ZapIcon = ({ size = 24, className }) => <Zap size={size} className={className} />
 
-export const ShieldIcon = ({ size = 24 }) => <Shield size={size} />
+export const ShieldIcon = ({ size = 24, className }) => <Shield size={size} className={className} />
 
-export const LightbulbIcon = ({ size = 24 }) => <Lightbulb size={size} />
+export const LightbulbIcon = ({ size = 24, className }) => <Lightbulb size={size} className={className} />
 
-export const TrendIcon = ({ size = 24 }) => <TrendingUp size={size} />
+export const TrendIcon = ({ size = 24, className }) => <TrendingUp size={size} className={className} />
 
 export const UserIcon = ({ size = 24 }) => <User size={size} />
 

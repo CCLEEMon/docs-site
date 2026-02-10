@@ -1,6 +1,9 @@
 ---
 title: CCLHUB更新日志
 description: CCLHUB平台功能更新记录
+project: platform
+schema: Article
+date: 2026-02-10
 rag: true
 rag_tags: ["更新日志", "CCLHUB", "版本更新", "功能升级"]
 ---

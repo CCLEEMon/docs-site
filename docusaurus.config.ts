@@ -38,6 +38,16 @@ const config: Config = {
 
   plugins: [
     './plugins/plugin-json-ld',
+    // 开发者文档实例
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'developers',
+        path: 'developers',
+        routeBasePath: 'developers',
+        sidebarPath: './sidebarsDevelopers.ts',
+      },
+    ],
   ],
 
   presets: [

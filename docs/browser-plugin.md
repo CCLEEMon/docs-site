@@ -1,7 +1,9 @@
 ---
 title: 浏览器插件
 description: CCLHUB 浏览器插件 - 实时获取商品数据、价格监控、竞品分析
-project: CCLHub
+project: browser-plugin
+schema: Article
+date: 2026-02-10
 rag: true
 rag_tags: ["浏览器插件", "商品数据", "价格监控", "竞品分析", "电商工具"]
 ---
