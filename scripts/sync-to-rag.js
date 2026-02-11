@@ -175,6 +175,10 @@ async function main() {
     console.log(`${action === '新增' ? '➕' : '🔄'}  ${action}: ${docId} (${chunks.length} chunks)`);
 
     if (!CONFIG.dryRun) {
+      // 调试日志
+      console.log(`  [DEBUG] documents: ${documents.length}, metadatas: ${metadatas.length}`);
+      console.log(`  [DEBUG] first metadata:`, JSON.stringify(metadatas[0]));
+
       // 先删后增
       if (oldHashes[docId]) await ragDelete(docId);
       await ragIndex(documents, metadatas);
