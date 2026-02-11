@@ -98,8 +98,8 @@ async function ragDelete(docId) {
 }
 
 async function ragIndex(documents, metadatas) {
-  // DashScope API 限制每次最多 20 个 embeddings
-  const batchSize = 20;
+  // DashScope API 限制每次最多 10 个 embeddings
+  const batchSize = 10;
 
   for (let i = 0; i < documents.length; i += batchSize) {
     const batchDocs = documents.slice(i, i + batchSize);
