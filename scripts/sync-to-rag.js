@@ -98,17 +98,28 @@ async function ragDelete(docId) {
 }
 
 async function ragIndex(documents, metadatas) {
-  const res = await fetch(`${CONFIG.ragBaseUrl}/index`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      collection: CONFIG.collection,
-      documents,
-      metadatas,
-      api_key: CONFIG.apiKey,
-    }),
-  });
-  if (!res.ok) throw new Error(`INDEX failed: ${res.status}`);
+  // DashScope API 限制每次最多 20 个 embeddings
+  const batchSize = 20;
+
+  for (let i = 0; i < documents.length; i += batchSize) {
+    const batchDocs = documents.slice(i, i + batchSize);
+    const batchMetas = metadatas.slice(i, i + batchSize);
+
+    const res = await fetch(`${CONFIG.ragBaseUrl}/index`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        collection: CONFIG.collection,
+        documents: batchDocs,
+        metadatas: batchMetas,
+        api_key: CONFIG.apiKey,
+      }),
+    });
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`INDEX failed at batch ${Math.floor(i / batchSize) + 1}: ${res.status} - ${err}`);
+    }
+  }
 }
 
 // ============ 主流程 ============
