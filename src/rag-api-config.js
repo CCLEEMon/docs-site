@@ -1,2 +1,5 @@
-// API 配置文件（生产构建时会被替换）
-export const RAG_API_URL = '__RAG_API_URL__'
+// API 配置文件
+// 优先使用环境变量，回退到生产环境地址
+export const RAG_API_URL = typeof process !== 'undefined' && process.env?.RAG_API_URL
+  ? process.env.RAG_API_URL
+  : 'https://rag.aigent.ren/query'
