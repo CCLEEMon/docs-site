@@ -89,7 +89,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
             </div>
             <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-5 rounded-2xl text-white text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-3xl font-black mb-1">7×24</div>
-              <div className="text-xs opacity-90">智能客服</div>
+              <div className="text-xs opacity-90">AI客服</div>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       <div className="text-5xl lg:text-6xl font-black mb-2 text-indigo-600">
         7×24
       </div>
-      <div className="text-base text-gray-600 font-medium">智能客服</div>
+      <div className="text-base text-gray-600 font-medium">AI客服</div>
     </div>
   </div>
 </div>
@@ -194,7 +194,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       <div className="rounded-xl overflow-hidden mb-6 border border-white/30 bg-gradient-to-br from-white/60 to-white/40 aspect-[4/3] shadow-inner">
         <img
           src="/images/ai-chat-interface.jpg"
-          alt="AI智能客服对话界面"
+          alt="AI客服对话界面"
           className="w-full h-full object-cover"
         />
       </div>
@@ -203,7 +203,7 @@ import { HeroBackground, HeroCounter } from '@site/src/components/HeroSection'
       </div>
       <h3 className="text-xl font-bold mb-3 text-gray-900">AI客服</h3>
       <div className="text-base text-gray-600 leading-relaxed mb-4">
-        7×24小时智能客服，快速解答产品使用问题，提供专业运营建议和最佳实践指导。
+        7×24小时AI客服，快速解答产品使用问题，提供功能指导和最佳实践。
       </div>
       <div className="text-indigo-600 font-semibold text-sm flex items-center gap-1.5">
         <ZapIcon size={16} />

@@ -1,13 +1,13 @@
 ---
 title: AI客服
-description: CCLHUB AI智能客服 - 7×24小时在线，快速解答产品使用问题，提供专业运营建议
+description: CCLHUB AI客服 - 7×24小时在线，快速解答产品使用问题，提供功能指导和最佳实践
 ---
 
 import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon } from '@site/src/components/Icons'
 
 # <MessageCircleIcon size={28} /> AI客服
 
-7×24小时智能在线，秒级响应，让问题解决更高效
+7×24小时AI在线，秒级响应，让问题解决更高效
 
 ## 核心功能
 

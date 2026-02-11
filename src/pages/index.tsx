@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
               <div className="text-5xl lg:text-6xl font-black mb-2 bg-gradient-to-br from-purple-700 to-purple-900 bg-clip-text text-transparent">
                 7×24
               </div>
-              <div className="text-base text-gray-600 dark:text-gray-400 font-medium">智能客服</div>
+              <div className="text-base text-gray-600 dark:text-gray-400 font-medium">AI客服</div>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Home(): JSX.Element {
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">AI客服</h3>
               <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
-                7×24小时智能客服，快速解答产品使用问题，提供专业运营建议和最佳实践指导。
+                7×24小时AI客服，快速解答产品使用问题，提供功能指导和最佳实践。
               </div>
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 mb-4 border border-gray-200 dark:border-gray-700">
                 <img src="/images/ai-chat-interface.jpg" alt="AI客服" className="w-full h-full object-cover" />

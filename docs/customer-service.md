@@ -1,6 +1,6 @@
 ---
 title: AI客服
-description: RAG Service - 7×24小时智能问答，基于RAG的智能客服系统
+description: RAG Service - 7×24小时AI问答，基于RAG的AI客服系统
 project: customer-service
 schema: Article
 date: 2026-02-10
@@ -12,7 +12,7 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
 
 # <MessageCircleIcon size={28} /> AI客服
 
-7×24小时智能在线，秒级响应，让问题解决更高效
+7×24小时AI在线，秒级响应，让问题解决更高效
 
 ## 核心功能
 

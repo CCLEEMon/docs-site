@@ -1,14 +1,68 @@
-import { useState } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import { useLocation } from '@docusaurus/router'
 import { useColorMode } from '@docusaurus/theme-common'
 import { MessageSquareIcon } from './Icons'
 import { RAG_API_URL } from '@site/src/rag-api-config'
 
+// 配置：场景化欢迎语
+const WELCOME_MESSAGES = {
+  default: '您好！我是CCLHUB智能助手。我可以帮您：产品功能介绍、使用方法指导、常见问题解答',
+  'browser-plugin': '您好！关于浏览器插件，我可以帮您：安装问题、功能使用、数据导出、平台支持',
+  'ai-analytics': '您好！关于数据分析平台，我可以帮您：账户开通、功能操作、报告解读、API对接'
+}
+
+// 配置：快捷问题
+const QUICK_QUESTIONS = {
+  default: [
+    '如何开始使用？',
+    '支持哪些平台？'
+  ],
+  'browser-plugin': [
+    '如何安装插件？',
+    '插件无法显示数据？'
+  ],
+  'ai-analytics': [
+    '如何接入数据？',
+    '如何查看分析报告？'
+  ]
+}
+
+// 检测当前页面类型
+const getPageType = (pathname) => {
+  if (pathname.includes('/browser-plugin')) return 'browser-plugin'
+  if (pathname.includes('/ai-analytics')) return 'ai-analytics'
+  return 'default'
+}
+
 export default function FloatingChat() {
   const { colorMode } = useColorMode()
   const isDark = colorMode === 'dark'
+  const location = useLocation()
+
+  // 检测当前页面类型
+  const pageType = useMemo(() => getPageType(location.pathname), [location.pathname])
+
+  // 首次访问引导
+  const [showBadge, setShowBadge] = useState(false)
+  useEffect(() => {
+    const hasVisited = localStorage.getItem('floating-chat-visited')
+    if (!hasVisited) {
+      setShowBadge(true)
+      const timer = setTimeout(() => {
+        setShowBadge(false)
+        localStorage.setItem('floating-chat-visited', 'true')
+      }, 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [])
+
+  // 获取欢迎语和快捷问题
+  const welcomeMessage = WELCOME_MESSAGES[pageType]
+  const quickQuestions = QUICK_QUESTIONS[pageType]
+
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: '您好！我是CCLHUB智能助手，有什么可以帮助您的吗？' }
+    { role: 'assistant', content: welcomeMessage }
   ])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -16,10 +70,11 @@ export default function FloatingChat() {
   // API 地址：从配置文件读取
   const API_URL = RAG_API_URL
 
-  const handleSend = async () => {
-    if (!input.trim()) return
+  const handleSend = async (questionText) => {
+    const textToSend = questionText || input
+    if (!textToSend.trim()) return
 
-    const userMessage = { role: 'user', content: input }
+    const userMessage = { role: 'user', content: textToSend }
     setMessages(prev => [...prev, userMessage])
     setInput('')
     setIsLoading(true)
@@ -30,7 +85,7 @@ export default function FloatingChat() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           collection: 'product_help',
-          question: input
+          question: textToSend
         })
       })
 
@@ -43,6 +98,9 @@ export default function FloatingChat() {
     }
   }
 
+  // 移动端检测
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640
+
   return (
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 100, fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       {isOpen && (
@@ -50,8 +108,8 @@ export default function FloatingChat() {
           position: 'absolute',
           bottom: '70px',
           right: 0,
-          width: '380px',
-          height: '520px',
+          width: isMobile ? 'calc(100vw - 32px)' : '380px',
+          height: isMobile ? '60vh' : '520px',
           backgroundColor: isDark ? '#1F2937' : '#fff',
           borderRadius: '12px',
           boxShadow: isDark ? '0 8px 32px rgba(0, 0, 0, 0.5)' : '0 8px 32px rgba(0, 0, 0, 0.12)',
@@ -121,6 +179,40 @@ export default function FloatingChat() {
                 正在输入...
               </div>
             )}
+
+            {/* 快捷问题按钮 - 仅在第一条消息后显示 */}
+            {messages.length === 1 && !isLoading && quickQuestions && (
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '8px',
+                marginTop: '8px'
+              }}>
+                {quickQuestions.map((question, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleSend(question)}
+                    disabled={isLoading}
+                    style={{
+                      padding: '10px 14px',
+                      border: isDark ? '1px solid #4B5563' : '1px solid #d1d5db',
+                      borderRadius: '8px',
+                      backgroundColor: isDark ? '#374151' : '#fff',
+                      color: isDark ? '#E5E7EB' : '#1f2937',
+                      fontSize: '14px',
+                      cursor: isLoading ? 'not-allowed' : 'pointer',
+                      textAlign: 'left',
+                      transition: 'all 0.2s',
+                      opacity: isLoading ? 0.5 : 1
+                    }}
+                    onMouseEnter={(e) => !isLoading && (e.currentTarget.style.borderColor = '#4F46E5')}
+                    onMouseLeave={(e) => e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#d1d5db'}
+                  >
+                    {question}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <div style={{
@@ -149,7 +241,7 @@ export default function FloatingChat() {
               }}
             />
             <button
-              onClick={handleSend}
+              onClick={() => handleSend()}
               disabled={isLoading || !input.trim()}
               style={{
                 padding: '10px 16px',
@@ -169,26 +261,57 @@ export default function FloatingChat() {
         </div>
       )}
 
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          width: '56px',
-          height: '56px',
-          borderRadius: '50%',
-          backgroundColor: '#4F46E5',
-          border: 'none',
-          cursor: 'pointer',
-          boxShadow: isDark ? '0 4px 12px rgba(79, 70, 229, 0.5)' : '0 4px 12px rgba(99, 102, 241, 0.3)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          transition: 'transform 0.2s'
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-      >
-        <MessageSquareIcon size={24} color="white" />
-      </button>
+      {/* 浮窗按钮 */}
+      <div style={{ position: 'relative' }}>
+        {/* 首次访问红点提示 */}
+        {showBadge && (
+          <div style={{
+            position: 'absolute',
+            top: '-4px',
+            right: '-4px',
+            width: '14px',
+            height: '14px',
+            backgroundColor: '#EF4444',
+            borderRadius: '50%',
+            animation: 'pulse 1.5s ease-in-out infinite'
+          }} />
+        )}
+
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          style={{
+            width: '56px',
+            height: '56px',
+            borderRadius: '50%',
+            backgroundColor: '#4F46E5',
+            border: 'none',
+            cursor: 'pointer',
+            boxShadow: isDark ? '0 4px 12px rgba(79, 70, 229, 0.5)' : '0 4px 12px rgba(99, 102, 241, 0.3)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'transform 0.2s'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+          <MessageSquareIcon size={24} color="white" />
+        </button>
+      </div>
+
+      {/* 脉冲动画样式 */}
+      <style>{`
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.8;
+            transform: scale(1.2);
+          }
+        }
+      `}</style>
     </div>
   )
 }
