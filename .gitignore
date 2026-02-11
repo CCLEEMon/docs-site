@@ -55,3 +55,6 @@ DEV.md
 
 # CHANGELOG (本地记录，不提交)
 CHANGELOG.md
+
+# Private docs (不提交)
+docs-private/

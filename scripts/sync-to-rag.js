@@ -2,13 +2,13 @@
 
 /**
  * docs → RAG 知识库同步脚本
- * 
+ *
  * 用法：
  *   node scripts/sync-to-rag.js              # 正常同步
  *   node scripts/sync-to-rag.js --dry-run    # 预览变更，不执行
- * 
- * 依赖：npm install gray-matter
- * 
+ *
+ * 依赖：npm install gray-matter dotenv
+ *
  * 在 package.json 中添加：
  *   "sync-rag": "node scripts/sync-to-rag.js"
  *   "sync-rag:dry": "node scripts/sync-to-rag.js --dry-run"
@@ -19,6 +19,9 @@ const path = require('path');
 const crypto = require('crypto');
 const matter = require('gray-matter');
 
+// 加载环境变量
+require('dotenv').config({ path: path.resolve(__dirname, '..', '.env.local') });
+
 // ============ 配置 ============
 
 const CONFIG = {
@@ -26,6 +29,7 @@ const CONFIG = {
   hashFile: path.resolve(__dirname, '..', '.rag-sync-hashes.json'),
   ragBaseUrl: process.env.RAG_URL || 'http://localhost:3003',
   collection: process.env.RAG_COLLECTION || 'product_help',
+  apiKey: process.env.RAG_API_KEY || '',
   dryRun: process.argv.includes('--dry-run'),
 };
 
@@ -84,7 +88,11 @@ async function ragDelete(docId) {
   const res = await fetch(`${CONFIG.ragBaseUrl}/delete`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ collection: CONFIG.collection, doc_id: docId }),
+    body: JSON.stringify({
+      collection: CONFIG.collection,
+      doc_id: docId,
+      api_key: CONFIG.apiKey,
+    }),
   });
   if (!res.ok) throw new Error(`DELETE ${docId} failed: ${res.status}`);
 }
@@ -97,6 +105,7 @@ async function ragIndex(documents, metadatas) {
       collection: CONFIG.collection,
       documents,
       metadatas,
+      api_key: CONFIG.apiKey,
     }),
   });
   if (!res.ok) throw new Error(`INDEX failed: ${res.status}`);
