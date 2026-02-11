@@ -82,16 +82,26 @@ export default function FloatingChat() {
     try {
       const response = await fetch(API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8'
+        },
         body: JSON.stringify({
           collection: 'product_help',
           question: textToSend
-        })
+        }, undefined, 2) // 确保 Unicode 字符正确编码
       })
+
+      if (!response.ok) {
+        const errorText = await response.text()
+        console.error('API Error:', response.status, errorText)
+        setMessages(prev => [...prev, { role: 'assistant', content: '抱歉，服务暂时不可用，请稍后再试。' }])
+        return
+      }
 
       const data = await response.json()
       setMessages(prev => [...prev, { role: 'assistant', content: data.answer }])
     } catch (error) {
+      console.error('Request failed:', error)
       setMessages(prev => [...prev, { role: 'assistant', content: '抱歉，服务暂时不可用，请稍后再试。' }])
     } finally {
       setIsLoading(false)
