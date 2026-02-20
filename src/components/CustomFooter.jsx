@@ -6,7 +6,7 @@ export default function CustomFooter() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 dark:bg-[#1e1e1e] text-gray-400">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-400">
       <div className="max-w-[1200px] mx-auto px-5 py-16">
         {/* 4列布局 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">

@@ -86,7 +86,7 @@ export default function Home(): JSX.Element {
               style={{ animationDelay: '0.1s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
-                <PluginIcon size={32} color="#fff" />
+                <PluginIcon size={32} className="text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">电商工具箱</h3>
               <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
@@ -103,7 +103,7 @@ export default function Home(): JSX.Element {
               style={{ animationDelay: '0.2s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
-                <AIIcon size={32} color="#fff" />
+                <AIIcon size={32} className="text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">AI运营</h3>
               <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
@@ -116,7 +116,7 @@ export default function Home(): JSX.Element {
 
             <div className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300" style={{ animationDelay: '0.3s' }}>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
-                <MessageCircleIcon size={32} color="#fff" />
+                <MessageCircleIcon size={32} className="text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">AI客服</h3>
               <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">

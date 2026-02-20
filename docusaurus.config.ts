@@ -84,14 +84,14 @@ const config: Config = {
       style: 'dark',
     },
     // 允许前端连接到 RAG API
-    Head: () => {
-      return (
-        <>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content; reflected-xss: block; referrer no-referrer" />
-        </>
-      );
-    },
+    metadata: [
+      { charSet: 'utf-8' },
+      {
+        'http-equiv': 'Content-Security-Policy',
+        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content; reflected-xss: block; referrer no-referrer",
+      },
+    ],
   } satisfies Preset.ThemeConfig,
+};
 
 export default config;

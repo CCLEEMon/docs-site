@@ -6,6 +6,8 @@ const sidebarsDev: SidebarsConfig = {
     'structure',
     'deployment',
     'theming',
+    'changelog',
+    'docusaurus-config-issue',
   ],
 };
 

@@ -305,7 +305,7 @@ export default function FloatingChat() {
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          <MessageSquareIcon size={24} color="white" />
+          <MessageSquareIcon size={24} className="text-white" />
         </button>
       </div>
 

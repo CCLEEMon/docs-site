@@ -1,13 +1,13 @@
 import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, MessageSquare, Github, Mail, Image, Video } from 'lucide-react'
 
-export const RocketIcon = ({ size = 24 }) => <Rocket size={size} />
+export const RocketIcon = ({ size = 24, className }) => <Rocket size={size} className={className} />
 
-export const PluginIcon = ({ size = 24, color }) => (
-  <Puzzle size={size} color={color} strokeWidth={1.5} />
+export const PluginIcon = ({ size = 24, className }) => (
+  <Puzzle size={size} className={className} strokeWidth={1.5} />
 )
 
-export const AIIcon = ({ size = 24, color }) => (
-  <Brain size={size} color={color} strokeWidth={1.5} />
+export const AIIcon = ({ size = 24, className }) => (
+  <Brain size={size} className={className} strokeWidth={1.5} />
 )
 
 export const ChartIcon = ({ size = 24 }) => (
@@ -32,24 +32,24 @@ export const DownloadIcon = ({ size = 24 }) => <Download size={size} />
 
 export const FileIcon = ({ size = 24 }) => <FileText size={size} />
 
-export const MessageCircleIcon = ({ size = 24, color }) => (
-  <MessageCircle size={size} color={color} strokeWidth={2} />
+export const MessageCircleIcon = ({ size = 24, className }) => (
+  <MessageCircle size={size} className={className} strokeWidth={2} />
 )
 
 export const ClockIcon = ({ size = 24 }) => <Clock size={size} />
 
 export const ArrowRightIcon = ({ size = 24 }) => <ArrowRight size={size} />
 
-export const MessageSquareIcon = ({ size = 24, color }) => (
-  <MessageSquare size={size} color={color} strokeWidth={2} />
+export const MessageSquareIcon = ({ size = 24, className }) => (
+  <MessageSquare size={size} className={className} strokeWidth={2} />
 )
 
-export const GithubIcon = ({ size = 24, color }) => (
-  <Github size={size} color={color} />
+export const GithubIcon = ({ size = 24, className }) => (
+  <Github size={size} className={className} />
 )
 
-export const MailIcon = ({ size = 24, color }) => (
-  <Mail size={size} color={color} strokeWidth={2} />
+export const MailIcon = ({ size = 24, className }) => (
+  <Mail size={size} className={className} strokeWidth={2} />
 )
 
 export const ImageIcon = ({ size = 24 }) => <Image size={size} strokeWidth={1.5} />

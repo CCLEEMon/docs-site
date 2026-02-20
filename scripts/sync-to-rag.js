@@ -34,35 +34,33 @@ const CONFIG = {
 };
 
 // ============ Markdown 分块 ============
+// 对齐 rag-service: 固定 500 token/块 (约750字), 重叠 50 token
 
-function splitByHeadings(content) {
-  const lines = content.split('\n');
+function splitByTokens(content) {
+  const CHUNK_SIZE = 750;  // 约 500 token
+  const OVERLAP = 75;      // 约 50 token
+
   const chunks = [];
-  let currentHeading = '';
-  let currentLines = [];
+  let pos = 0;
 
-  for (const line of lines) {
-    const headingMatch = line.match(/^(#{2,3})\s+(.+)/);
-    if (headingMatch) {
-      // 保存上一个 chunk
-      if (currentLines.length > 0) {
-        const text = currentLines.join('\n').trim();
-        if (text) chunks.push({ heading: currentHeading, text });
+  while (pos < content.length) {
+    const end = Math.min(pos + CHUNK_SIZE, content.length);
+
+    // 尝试在句子边界切分
+    let splitPos = end;
+    if (end < content.length) {
+      // 寻找最近的句子结束符
+      const sentenceEnd = content.lastIndexOf('\n', end);
+      if (sentenceEnd > pos + CHUNK_SIZE / 2) {
+        splitPos = sentenceEnd + 1;
       }
-      currentHeading = headingMatch[2].trim();
-      currentLines = [];
-    } else {
-      currentLines.push(line);
     }
+
+    chunks.push(content.slice(pos, splitPos).trim());
+    pos = splitPos - OVERLAP;
   }
 
-  // 最后一个 chunk
-  if (currentLines.length > 0) {
-    const text = currentLines.join('\n').trim();
-    if (text) chunks.push({ heading: currentHeading, text });
-  }
-
-  return chunks;
+  return chunks.filter(c => c.length > 0);
 }
 
 // ============ Hash 管理 ============
@@ -85,40 +83,28 @@ function computeHash(content) {
 // ============ RAG API 调用 ============
 
 async function ragDelete(docId) {
-  const res = await fetch(`${CONFIG.ragBaseUrl}/delete`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      collection: CONFIG.collection,
-      doc_id: docId,
-      api_key: CONFIG.apiKey,
-    }),
+  const url = `${CONFIG.ragBaseUrl}/documents?collection=${CONFIG.collection}&doc_id=${docId}`;
+  const res = await fetch(url, {
+    method: 'DELETE',
+    headers: { 'X-API-Key': CONFIG.apiKey },
   });
   if (!res.ok) throw new Error(`DELETE ${docId} failed: ${res.status}`);
 }
 
 async function ragIndex(documents, metadatas) {
-  // DashScope API 限制每次最多 10 个 embeddings
-  const batchSize = 10;
-
-  for (let i = 0; i < documents.length; i += batchSize) {
-    const batchDocs = documents.slice(i, i + batchSize);
-    const batchMetas = metadatas.slice(i, i + batchSize);
-
-    const res = await fetch(`${CONFIG.ragBaseUrl}/index`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        collection: CONFIG.collection,
-        documents: batchDocs,
-        metadatas: batchMetas,
-        api_key: CONFIG.apiKey,
-      }),
-    });
-    if (!res.ok) {
-      const err = await res.text();
-      throw new Error(`INDEX failed at batch ${Math.floor(i / batchSize) + 1}: ${res.status} - ${err}`);
-    }
+  const res = await fetch(`${CONFIG.ragBaseUrl}/index`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      collection: CONFIG.collection,
+      documents: documents,
+      metadatas: metadatas,
+      api_key: CONFIG.apiKey,
+    }),
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`INDEX failed: ${res.status} - ${err}`);
   }
 }
 
@@ -163,21 +149,19 @@ async function main() {
     }
 
     // 分块
-    const chunks = splitByHeadings(content);
+    const chunks = splitByTokens(content);
     if (chunks.length === 0) {
       skipped++;
       continue;
     }
 
-    const documents = chunks.map(c =>
-      c.heading ? `## ${c.heading}\n\n${c.text}` : c.text
-    );
+    const documents = chunks;
 
-    const metadatas = chunks.map(c => ({
+    const metadatas = chunks.map((_, i) => ({
       doc_id: docId,
       source: file,
       title: fm.title || file,
-      section: c.heading || '概述',
+      section: `chunk_${i}`,
       tags: (fm.rag_tags || []).join(','),
       project: fm.project || 'general',
     }));
