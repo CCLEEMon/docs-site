@@ -20,7 +20,7 @@ E:\projects\docs-site\docusaurus.config.ts:89:8
 
 ## 问题配置
 
-[docusaurus.config.ts:87-94](docusaurus.config.ts#L87-L94)
+错误的 `docusaurus.config.ts` 配置：
 
 ```typescript
 Head: () => {
