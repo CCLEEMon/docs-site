@@ -12,9 +12,7 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "sync-rag": "node scripts/sync-to-rag.js",
-    "sync-rag:dry": "node scripts/sync-to-rag.js --dry-run"
+    "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.0",

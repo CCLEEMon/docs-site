@@ -14,6 +14,8 @@ import { AIIcon, TrendIcon, UserIcon, ChartIcon, FileIcon, ZapIcon, ShieldIcon, 
 
 智能分析市场趋势、用户行为、销售数据，提供精准的运营策略建议
 
+> 🚧 **规划开发中**：以下核心能力为产品规划方向，部分功能正在开发中
+
 ## 核心能力
 
 ### <TrendIcon size={20} /> 市场趋势分析
