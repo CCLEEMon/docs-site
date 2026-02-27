@@ -1,7 +1,8 @@
+import React from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-export default function AboutPage(): JSX.Element {
+export default function AboutPage(): React.ReactElement {
   return (
     <Layout title="关于我们" description="关于 CCLHUB">
       <main className="container margin-vert--lg">

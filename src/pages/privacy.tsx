@@ -1,7 +1,8 @@
+import React from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-export default function PrivacyPage(): JSX.Element {
+export default function PrivacyPage(): React.ReactElement {
   return (
     <Layout title="隐私政策" description="CCLHUB 隐私政策">
       <main className="container margin-vert--lg">

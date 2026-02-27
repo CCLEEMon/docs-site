@@ -1,8 +1,9 @@
+import React from 'react';
 import Layout from '@theme/Layout';
 import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, ArrowRightIcon, MessageCircleIcon } from '@site/src/components/Icons';
 import { HeroCounter, HeroBackground } from '@site/src/components/HeroSection';
 
-export default function Home(): JSX.Element {
+export default function Home(): React.ReactElement {
   return (
     <Layout title="CCLHUB - AI驱动的电商运营工具平台" description="CCLHUB 电商运营工具平台 - AI驱动的AI运营与电商工具箱">
       <main>
@@ -46,13 +47,13 @@ export default function Home(): JSX.Element {
           <div className="animate-enter grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative z-10 mt-20 max-w-4xl mx-auto px-4">
             <div>
               <div className="text-5xl lg:text-6xl font-black mb-2 bg-gradient-to-br from-purple-700 to-purple-900 bg-clip-text text-transparent">
-                <HeroCounter value="50K+" />
+                <HeroCounter value="50K+" duration={2000} suffix="" />
               </div>
               <div className="text-base text-gray-600 dark:text-gray-400 font-medium">活跃用户</div>
             </div>
             <div>
               <div className="text-5xl lg:text-6xl font-black mb-2 bg-gradient-to-br from-purple-700 to-purple-900 bg-clip-text text-transparent">
-                <HeroCounter value="95%" />
+                <HeroCounter value="95%" duration={2000} suffix="" />
               </div>
               <div className="text-base text-gray-600 dark:text-gray-400 font-medium">分析准确率</div>
             </div>

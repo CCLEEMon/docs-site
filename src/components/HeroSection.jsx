@@ -7,6 +7,6 @@ export function HeroBackground() {
   return <ParticleBackground />
 }
 
-export function HeroCounter({ value, duration, suffix }) {
+export function HeroCounter({ value, duration = 2000, suffix = '' }) {
   return <AnimatedCounter value={value} duration={duration} suffix={suffix} />
 }

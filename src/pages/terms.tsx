@@ -1,7 +1,8 @@
+import React from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-export default function TermsPage(): JSX.Element {
+export default function TermsPage(): React.ReactElement {
   return (
     <Layout title="服务条款" description="CCLHUB 服务条款">
       <main className="container margin-vert--lg">

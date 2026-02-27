@@ -9,6 +9,18 @@ const config: Config = {
   url: 'https://www.aigent.ren',
   baseUrl: '/',
 
+  // Umami 网站分析
+  scripts: [
+    {
+      src: 'https://umami.aigent.ren/script.js',
+      async: true,
+      'data-website-id': '21f40cb0-d661-4bc6-8d50-d3606aaf006c',
+    },
+  ],
+
+  // 静态资源目录，drafts/ 不在此列表中，不参与构建和发布
+  staticDirectories: ['static'],
+
   organizationName: 'CCLHUB',
   projectName: 'docs-site',
 
@@ -38,14 +50,13 @@ const config: Config = {
 
   plugins: [
     './plugins/plugin-json-ld',
-    // 开发者文档实例
+    // 技术博客
     [
-      '@docusaurus/plugin-content-docs',
+      '@docusaurus/plugin-content-blog',
       {
-        id: 'developers',
-        path: 'developers',
-        routeBasePath: 'developers',
-        sidebarPath: './sidebarsDevelopers.ts',
+        id: 'blog',
+        path: 'blog',
+        routeBasePath: 'blog',
       },
     ],
   ],
@@ -77,6 +88,7 @@ const config: Config = {
         { type: 'doc', docId: 'ai-analytics', label: 'AI分析', position: 'left' },
         { type: 'doc', docId: 'browser-plugin', label: '浏览器插件', position: 'left' },
         { type: 'doc', docId: 'customer-service', label: 'AI客服', position: 'left' },
+        { to: '/blog', label: '技术博客', position: 'left' },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
@@ -88,7 +100,7 @@ const config: Config = {
       { charSet: 'utf-8' },
       {
         'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content; reflected-xss: block; referrer no-referrer",
+        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren https://umami.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://umami.aigent.ren; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content; reflected-xss: block; referrer no-referrer",
       },
     ],
   } satisfies Preset.ThemeConfig,
