@@ -6,6 +6,8 @@ tags: [Claude, AI, 提示词]
 
 # Claude 提示词指南
 
+<!-- truncate -->
+
 ## 通用技巧
 
 ### 1. 清晰具体

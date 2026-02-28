@@ -6,6 +6,8 @@ tags: [RAG, AI, 知识库]
 
 # RAG 知识库与 AI 浮窗方案
 
+<!-- truncate -->
+
 ## 架构
 
 ```

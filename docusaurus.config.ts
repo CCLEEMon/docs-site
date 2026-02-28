@@ -27,6 +27,12 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'warn',
 
+  // Node 24 兼容性：使用 SWC 替代 Terser
+  future: {
+    v4: true,
+    experimental_faster: true,
+  },
+
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',

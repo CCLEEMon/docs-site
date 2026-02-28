@@ -54,10 +54,10 @@ DEV.md
 .rag-sync-hashes.json
 
 # CHANGELOG (本地记录，不提交)
-CHANGELOG.md
+/CHANGELOG.md
 
 # Private docs (不提交)
-docs-private/
+drafts/
 
 # AI 开发上下文 (本地开发用，不提交)
 CONTEXT.md

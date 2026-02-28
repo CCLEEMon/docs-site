@@ -6,6 +6,8 @@ tags: [Docusaurus, 架构]
 
 # 项目结构
 
+<!-- truncate -->
+
 ```
 docs-site/
 ├── docs/               # 产品文档内容

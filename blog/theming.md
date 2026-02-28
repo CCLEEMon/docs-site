@@ -6,6 +6,8 @@ tags: [Docusaurus, TailwindCSS, 样式]
 
 # 主题开发规范
 
+<!-- truncate -->
+
 ## 技术架构
 
 本项目混合使用 **Docusaurus CSS 变量** 和 **TailwindCSS**，两者通过 `data-theme` 属性协同工作。
