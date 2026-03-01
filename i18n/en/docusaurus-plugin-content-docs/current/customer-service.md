@@ -203,4 +203,4 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
 
 ---
 
-Need more help? Check out [Browser Plugin](/docs/browser-plugin) or [AI Data Analysis](/docs/ai-analytics)
+Need more help? Check out [Browser Plugin](./browser-plugin) or [AI Data Analysis](./ai-analytics)

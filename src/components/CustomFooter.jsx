@@ -1,6 +1,7 @@
 'use client'
 
 import Translate from '@docusaurus/Translate'
+import Link from '@docusaurus/Link'
 import { useLocation } from '@docusaurus/router'
 import { Zap, Shield, Rocket } from 'lucide-react'
 
@@ -53,12 +54,12 @@ export default function CustomFooter() {
                 { href: '/docs/customer-service', id: 'footer.aiService', label: 'AI客服' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-500 hover:text-white transition-colors duration-200"
                   >
                     <Translate id={link.id}>{link.label}</Translate>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -71,19 +72,19 @@ export default function CustomFooter() {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                { href: '/docs/intro', id: 'footer.guide', label: '产品文档' },
+                { href: '/docs/ai-analytics', id: 'footer.guide', label: '产品文档' },
                 { href: '/blog', id: 'footer.blog', label: '博客' },
                 { href: '/about', id: 'footer.aboutUs', label: '关于我们' },
                 { href: '/privacy', id: 'footer.privacy', label: '隐私政策' },
                 { href: '/terms', id: 'footer.terms', label: '服务条款' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-500 hover:text-white transition-colors duration-200"
                   >
                     <Translate id={link.id}>{link.label}</Translate>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -96,16 +97,16 @@ export default function CustomFooter() {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                { href: '/docs/intro', id: 'footer.getStarted', label: '快速开始' },
+                { href: '/docs/ai-analytics', id: 'footer.getStarted', label: '快速开始' },
                 { href: '/docs/customer-service', id: 'footer.helpCenter', label: '帮助中心' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-500 hover:text-white transition-colors duration-200"
                   >
                     <Translate id={link.id}>{link.label}</Translate>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

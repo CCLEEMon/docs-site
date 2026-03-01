@@ -188,7 +188,7 @@ Intelligently analyze market trends, user behavior, and sales data to provide pr
 
 ### Method 3: Browser Plugin Sync
 
-Use with [CCLHUB Browser Plugin](/docs/browser-plugin) to automatically sync collected data to the AI analytics platform.
+Use with [CCLHUB Browser Plugin](./browser-plugin) to automatically sync collected data to the AI analytics platform.
 
 ## Analysis Report Examples
 
@@ -393,4 +393,4 @@ Use with [CCLHUB Browser Plugin](/docs/browser-plugin) to automatically sync col
 
 ---
 
-Need help? Click the intelligent consultation icon in the bottom right corner, or check out the [Browser Plugin](/docs/browser-plugin) features
+Need help? Click the intelligent consultation icon in the bottom right corner, or check out the [Browser Plugin](./browser-plugin) features

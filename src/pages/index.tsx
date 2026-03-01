@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
+import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
 import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, ArrowRightIcon, MessageCircleIcon } from '@site/src/components/Icons';
 import { HeroCounter, HeroBackground } from '@site/src/components/HeroSection';
@@ -32,24 +33,24 @@ export default function Home(): React.ReactElement {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full max-w-[500px] mx-auto mb-16">
-              <a
-                href="/docs/ai-analytics"
+              <Link
+                to="/docs/ai-analytics"
                 className="animate-fadeIn group relative px-10 py-4 rounded-xl text-white text-lg font-semibold inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 border-b-4 border-purple-900 active:border-b-0 active:translate-y-1 transition-all duration-200 w-full sm:w-auto"
               >
                 <span className="flex items-center gap-2">
                   <Translate id="homepage.hero.freeTrial">免费试用</Translate>
                   <ArrowRightIcon size={18} />
                 </span>
-              </a>
-              <a
-                href="/docs/browser-plugin"
+              </Link>
+              <Link
+                to="/docs/browser-plugin"
                 className="animate-fadeIn group relative px-10 py-4 rounded-xl text-lg font-semibold inline-flex items-center justify-center gap-2 bg-white border-2 border-purple-500 text-purple-700 hover:bg-purple-50 hover:border-purple-600 hover:text-purple-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-auto"
               >
                 <span className="flex items-center gap-2">
                   <PluginIcon size={18} />
                   <Translate id="homepage.hero.getTools">获取工具</Translate>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -97,8 +98,8 @@ export default function Home(): React.ReactElement {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
-            <a
-              href="/docs/browser-plugin"
+            <Link
+              to="/docs/browser-plugin"
               className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300"
               style={{ animationDelay: '0.1s' }}
             >
@@ -114,10 +115,10 @@ export default function Home(): React.ReactElement {
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <img src="/images/plugin-sidebar-ecommerce.png" alt={toolkitAlt} className="w-full h-full object-cover" />
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/docs/ai-analytics"
+            <Link
+              to="/docs/ai-analytics"
               className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300"
               style={{ animationDelay: '0.2s' }}
             >
@@ -133,7 +134,7 @@ export default function Home(): React.ReactElement {
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <img src="/images/saas-dashboard-main.png" alt={aiOpsAlt} className="w-full h-full object-cover" />
               </div>
-            </a>
+            </Link>
 
             <div className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300" style={{ animationDelay: '0.3s' }}>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">

@@ -129,4 +129,4 @@ Currently supported:
 
 ---
 
-Need help? Click the smart consultation icon in the bottom right corner, or check the [AI Analytics](/docs/ai-analytics) feature
+Need help? Click the smart consultation icon in the bottom right corner, or check the [AI Analytics](./ai-analytics) feature
