@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class', '[data-theme="dark"]'],
+  darkMode: ['attribute', 'data-theme'],
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     './docs/**/*.{md,mdx}',
+    './blog/**/*.{md,mdx}',
+    './i18n/**/*.{md,mdx}',
   ],
   theme: {
     extend: {
@@ -33,5 +35,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

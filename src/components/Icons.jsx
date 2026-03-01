@@ -1,4 +1,4 @@
-import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, MessageSquare, Github, Mail, Image, Video } from 'lucide-react'
+import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, MessageSquare, Github, Mail, Image, Video, X } from 'lucide-react'
 
 export const RocketIcon = ({ size = 24, className = '' }) => <Rocket size={size} className={className} />
 
@@ -17,6 +17,8 @@ export const ChartIcon = ({ size = 24 }) => (
 export const SearchIcon = ({ size = 24 }) => <Search size={size} />
 
 export const CheckIcon = ({ size = 24 }) => <Check size={size} />
+
+export const XIcon = ({ size = 24 }) => <X size={size} />
 
 export const ZapIcon = ({ size = 24, className = '' }) => <Zap size={size} className={className} />
 

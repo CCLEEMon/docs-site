@@ -358,5 +358,17 @@
   },
   "footer.icpNumber": {
     "message": "粤ICP备2026015835号"
+  },
+  "theme.title": {
+    "message": "选择外观"
+  },
+  "theme.light": {
+    "message": "亮色"
+  },
+  "theme.dark": {
+    "message": "暗色"
+  },
+  "locale.title": {
+    "message": "选择语言"
   }
 }

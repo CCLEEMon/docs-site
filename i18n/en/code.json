@@ -370,5 +370,145 @@
   },
   "footer.compliance2": {
     "message": "For technical learning and research purposes only. Users are responsible for ensuring compliance with target platform rules and local laws and regulations."
+  },
+  "footer.developer": {
+    "message": "Blog",
+    "description": "Developer documentation link in footer"
+  },
+  "footer.blog": {
+    "message": "Blog",
+    "description": "Blog link in footer"
+  },
+  "homepage.title": {
+    "message": "CCLHUB - AI-Powered E-commerce Operations Platform",
+    "description": "Homepage title"
+  },
+  "homepage.description": {
+    "message": "CCLHUB E-commerce Operations Platform - AI-driven Operations and E-commerce Toolkit",
+    "description": "Homepage description"
+  },
+  "homepage.hero.title": {
+    "message": "AI-Powered E-commerce Operations Tools",
+    "description": "Hero section title"
+  },
+  "homepage.hero.subtitle": {
+    "message": "AI Operations + E-commerce Toolkit, Making E-commerce Operations More Efficient",
+    "description": "Hero section subtitle"
+  },
+  "homepage.hero.freeTrial": {
+    "message": "Free Trial",
+    "description": "Free trial button"
+  },
+  "homepage.hero.getTools": {
+    "message": "Get Tools",
+    "description": "Get tools button"
+  },
+  "homepage.stats.activeUsers": {
+    "message": "Active Users",
+    "description": "Active users stat"
+  },
+  "homepage.stats.accuracy": {
+    "message": "Analysis Accuracy",
+    "description": "Analysis accuracy stat"
+  },
+  "homepage.stats.aiSupport": {
+    "message": "AI Support",
+    "description": "AI support stat"
+  },
+  "homepage.transition": {
+    "message": "One-stop e-commerce operations solution, from data collection to intelligent analysis, comprehensively improving operational efficiency",
+    "description": "Transition section text"
+  },
+  "homepage.products.title": {
+    "message": "Core Products",
+    "description": "Products section title"
+  },
+  "homepage.products.toolkit.title": {
+    "message": "E-commerce Toolkit",
+    "description": "Toolkit product title"
+  },
+  "homepage.products.toolkit.description": {
+    "message": "Real-time product data retrieval, price monitoring, competitor analysis. Supports mainstream e-commerce platforms like Taobao, JD, and Pinduoduo.",
+    "description": "Toolkit product description"
+  },
+  "homepage.products.toolkit.alt": {
+    "message": "E-commerce Toolkit",
+    "description": "Toolkit image alt text"
+  },
+  "homepage.products.aiOps.title": {
+    "message": "AI Operations",
+    "description": "AI Operations product title"
+  },
+  "homepage.products.aiOps.description": {
+    "message": "Intelligent analysis powered by large language models, automatically uncovering market trends, user behavior, and sales data to provide precise operational strategies.",
+    "description": "AI Operations product description"
+  },
+  "homepage.products.aiOps.alt": {
+    "message": "AI Operations",
+    "description": "AI Operations image alt text"
+  },
+  "homepage.products.aiSupport.title": {
+    "message": "AI Support",
+    "description": "AI Support product title"
+  },
+  "homepage.products.aiSupport.description": {
+    "message": "24/7 AI customer support, quickly answering product usage questions, providing feature guidance and best practices.",
+    "description": "AI Support product description"
+  },
+  "homepage.products.aiSupport.alt": {
+    "message": "AI Support",
+    "description": "AI Support image alt text"
+  },
+  "homepage.products.aiSupport.cta": {
+    "message": "Click the icon in the bottom right corner to start",
+    "description": "AI Support CTA text"
+  },
+  "homepage.whyChoose.title": {
+    "message": "Why Choose CCLHUB",
+    "description": "Why choose section title"
+  },
+  "homepage.features.instant.title": {
+    "message": "Instant Setup",
+    "description": "Instant setup feature title"
+  },
+  "homepage.features.instant.description": {
+    "message": "No complex configuration required, ready to use after installation. Complete data integration and start analysis in 5 minutes.",
+    "description": "Instant setup feature description"
+  },
+  "homepage.features.precise.title": {
+    "message": "Precise Analysis",
+    "description": "Precise analysis feature title"
+  },
+  "homepage.features.precise.description": {
+    "message": "AI-driven data analysis, deep insights into market trends and user behavior, with accuracy rates exceeding 95%.",
+    "description": "Precise analysis feature description"
+  },
+  "homepage.features.secure.title": {
+    "message": "Data Security",
+    "description": "Data security feature title"
+  },
+  "homepage.features.secure.description": {
+    "message": "Enterprise-grade encryption technology, local data processing, strictly protecting business privacy and data security.",
+    "description": "Data security feature description"
+  },
+  "homepage.features.updates.title": {
+    "message": "Continuous Updates",
+    "description": "Continuous updates feature title"
+  },
+  "homepage.features.updates.description": {
+    "message": "Regular feature updates, continuous AI model optimization, always keeping up with e-commerce development trends and technology frontiers.",
+    "description": "Continuous updates feature description"
+  },
+  "theme.title": {
+    "message": "Appearance"
+  },
+  "theme.light": {
+    "message": "Light"
+  },
+  "theme.dark": {
+    "message": "Dark"
+  },
+  "locale.title": {
+    "message": "Language"
   }
 }

@@ -94,8 +94,6 @@ const config: Config = {
         { type: 'doc', docId: 'ai-analytics', label: 'AI分析', position: 'left' },
         { type: 'doc', docId: 'browser-plugin', label: '浏览器插件', position: 'left' },
         { type: 'doc', docId: 'customer-service', label: 'AI客服', position: 'left' },
-        { to: '/blog', label: '技术博客', position: 'left' },
-        { type: 'localeDropdown', position: 'right' },
       ],
     },
     footer: {

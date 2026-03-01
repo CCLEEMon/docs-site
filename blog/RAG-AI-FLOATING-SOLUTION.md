@@ -82,9 +82,9 @@ DELETE /documents?collection={collection}&doc_id={docId}
 
 | 文件 | 职责 |
 |------|------|
-| [FloatingChat.jsx](../src/components/FloatingChat.jsx) | 组件 |
-| [rag-api-config.js](../src/rag-api-config.js) | 配置 |
-| [Layout/index.js](../src/theme/Layout/index.js) | 挂载 |
+| `src/components/FloatingChat.jsx` | 组件 |
+| `src/rag-api-config.js` | 配置 |
+| `src/theme/Layout/index.js` | 挂载 |
 
 ### 状态
 

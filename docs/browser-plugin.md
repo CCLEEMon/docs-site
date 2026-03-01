@@ -9,15 +9,16 @@ rag_tags: ["浏览器插件", "商品数据", "价格监控", "竞品分析", "�
 ---
 
 import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIcon, ZapIcon, AIIcon, ImageIcon, VideoIcon } from '@site/src/components/Icons'
+import StatusTag from '@site/src/components/StatusTag'
 
 # <PluginIcon size={28} /> 浏览器插件
 
 一键安装，实时获取电商数据，让运营更高效
 
-<div style={{ textAlign: 'center', margin: '24px 0' }}>
+<div className="text-center my-6">
   <a href="https://cclhub-releases.oss-cn-shenzhen.aliyuncs.com/cclhub-latest.zip"
-     class="button button--primary button--lg">
-    <DownloadIcon size={16} style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+     className="button button--primary button--lg">
+    <DownloadIcon size={16} />
     立即下载
   </a>
 </div>
@@ -79,22 +80,12 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 
 ### 使用指南
 
-<div style={{
-  padding: '24px',
-  borderRadius: '12px',
-  backgroundColor: '#f9fafb',
-  border: '1px solid #e5e7eb',
-  marginTop: '24px',
-  marginBottom: '24px'
-}}>
-  <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px' }}>快速上手</h3>
-  <ol style={{ lineHeight: '1.8', paddingLeft: '20px' }}>
-    <li>打开目标电商网站（淘宝、天猫、京东、拼多多等）</li>
-    <li>浏览商品页面，插件会自动显示数据面板</li>
-    <li>点击插件图标，查看详细数据和分析结果</li>
-    <li>使用导出功能保存数据到本地</li>
-  </ol>
-</div>
+**快速上手：**
+
+1. 打开目标电商网站（淘宝、天猫、京东、拼多多等）
+2. 浏览商品页面，插件会自动显示数据面板
+3. 点击插件图标，查看详细数据和分析结果
+4. 使用导出功能保存数据到本地
 
 ## 常见问题
 
@@ -120,37 +111,28 @@ import { PluginIcon, ChartIcon, SearchIcon, DownloadIcon, CheckIcon, LightbulbIc
 ### 支持哪些网站？
 
 目前支持：
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> 淘宝、天猫
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> 京东
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> 拼多多
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> 抖音电商
-- <ZapIcon size={16} style={{ color: '#F59E0B', verticalAlign: 'middle' }} /> 更多平台陆续接入中...
+- <StatusTag type="success">淘宝、天猫</StatusTag>
+- <StatusTag type="success">京东</StatusTag>
+- <StatusTag type="success">拼多多</StatusTag>
+- <StatusTag type="success">抖音电商</StatusTag>
+- <StatusTag type="warning">更多平台陆续接入中...</StatusTag>
 
 ## 更新日志
 
 ### v2.5.0 (2024-01-15)
-- <ZapIcon size={16} style={{ color: '#3B82F6', verticalAlign: 'middle' }} /> 新增抖音电商支持
-- <ZapIcon size={16} style={{ color: '#3B82F6', verticalAlign: 'middle' }} /> 修复京东数据抓取问题
-- <ZapIcon size={16} style={{ color: '#3B82F6', verticalAlign: 'middle' }} /> 优化数据加载速度
+- <StatusTag type="info">新增抖音电商支持</StatusTag>
+- <StatusTag type="info">修复京东数据抓取问题</StatusTag>
+- <StatusTag type="info">优化数据加载速度</StatusTag>
 
 ### v2.4.0 (2024-01-01)
-- <ZapIcon size={16} style={{ color: '#3B82F6', verticalAlign: 'middle' }} /> 新增价格预警功能
-- <ZapIcon size={16} style={{ color: '#3B82F6', verticalAlign: 'middle' }} /> 修复导出格式问题
+- <StatusTag type="info">新增价格预警功能</StatusTag>
+- <StatusTag type="info">修复导出格式问题</StatusTag>
 
-<div style={{
-  padding: '24px',
-  borderRadius: '12px',
-  backgroundColor: '#FFFBEB',
-  border: '1px solid #FCD34D',
-  marginTop: '32px'
-}}>
-  <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', color: '#92400E', display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <LightbulbIcon size={20} style={{ color: '#F59E0B' }} /> 提示
-  </h3>
-  <div style={{ color: '#78716C', lineHeight: '1.6' }}>
-    插件会持续更新，添加更多平台支持和功能优化。建议开启自动更新以获得最佳体验。
-  </div>
-</div>
+:::tip 提示
+
+插件会持续更新，添加更多平台支持和功能优化。建议开启自动更新以获得最佳体验。
+
+:::
 
 ---
 

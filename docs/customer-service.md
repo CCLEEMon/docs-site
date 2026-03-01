@@ -9,6 +9,7 @@ rag_tags: ["AI客服", "智能问答", "RAG", "7x24小时", "客户服务"]
 ---
 
 import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon } from '@site/src/components/Icons'
+import StatusTag from '@site/src/components/StatusTag'
 
 # <MessageCircleIcon size={28} /> AI客服
 
@@ -39,29 +40,19 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
 
 ### 网页端使用
 
-<div style={{
-  padding: '24px',
-  borderRadius: '12px',
-  backgroundColor: '#f9fafb',
-  border: '1px solid #e5e7eb',
-  marginTop: '24px',
-  marginBottom: '24px'
-}}>
-  <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px' }}>快速开始</h3>
-  <ol style={{ lineHeight: '1.8', paddingLeft: '20px' }}>
-    <li>点击页面右下角的聊天图标</li>
-    <li>输入您的问题或选择常见问题</li>
-    <li>AI即时给出答案或解决方案</li>
-    <li>支持连续提问，深入探讨问题</li>
-  </ol>
-</div>
+**快速开始：**
+
+1. 点击页面右下角的聊天图标
+2. 输入您的问题或选择常见问题
+3. AI即时给出答案或解决方案
+4. 支持连续提问，深入探讨问题
 
 ### 适用场景
 
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **产品咨询**：功能介绍、使用方法
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **故障排查**：问题诊断、解决方案
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **数据分析**：运营策略、优化建议
-- <CheckIcon size={16} style={{ color: '#10B981', verticalAlign: 'middle' }} /> **最佳实践**：行业经验、操作技巧
+- <StatusTag type="success">**产品咨询**：功能介绍、使用方法</StatusTag>
+- <StatusTag type="success">**故障排查**：问题诊断、解决方案</StatusTag>
+- <StatusTag type="success">**数据分析**：运营策略、优化建议</StatusTag>
+- <StatusTag type="success">**最佳实践**：行业经验、操作技巧</StatusTag>
 
 ## 常见问题
 
@@ -96,114 +87,40 @@ import { MessageCircleIcon, ClockIcon, ZapIcon, CheckIcon, UserIcon, TrendIcon }
 
 ## 服务优势
 
-<div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-  gap: '24px',
-  marginTop: '32px',
-  marginBottom: '32px'
-}}>
-  <div style={{
-    padding: '24px',
-    borderRadius: '12px',
-    backgroundColor: '#f9fafb',
-    border: '1px solid #e5e7eb'
-  }}>
-    <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <TrendIcon size={20} style={{ color: '#4F46E5' }} /> 高效响应
-    </h3>
-    <div style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6' }}>
-      平均响应时间小于3秒，快速解决问题
-    </div>
-  </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  <FeatureCard
+    icon={<span className="text-indigo-500"><TrendIcon size={20} /></span>}
+    title="高效响应"
+  >
+    平均响应时间小于3秒，快速解决问题
+  </FeatureCard>
 
-  <div style={{
-    padding: '24px',
-    borderRadius: '12px',
-    backgroundColor: '#f9fafb',
-    border: '1px solid #e5e7eb'
-  }}>
-    <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <ZapIcon size={20} style={{ color: '#4F46E5' }} /> 智能学习
-    </h3>
-    <div style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6' }}>
-      持续学习产品知识，回答越来越精准
-    </div>
-  </div>
+  <FeatureCard
+    icon={<span className="text-indigo-500"><ZapIcon size={20} /></span>}
+    title="智能学习"
+  >
+    持续学习产品知识，回答越来越精准
+  </FeatureCard>
 
-  <div style={{
-    padding: '24px',
-    borderRadius: '12px',
-    backgroundColor: '#f9fafb',
-    border: '1px solid #e5e7eb'
-  }}>
-    <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <CheckIcon size={20} style={{ color: '#4F46E5' }} /> 专业可靠
-    </h3>
-    <div style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6' }}>
-      基于官方文档和知识库，确保信息准确
-    </div>
-  </div>
+  <FeatureCard
+    icon={<span className="text-indigo-500"><CheckIcon size={20} /></span>}
+    title="专业可靠"
+  >
+    基于官方文档和知识库，确保信息准确
+  </FeatureCard>
 </div>
 
 ## 对比人工客服
 
-<div style={{
-  overflow: 'auto',
-  marginTop: '32px',
-  marginBottom: '32px'
-}}>
-  <table style={{
-    width: '100%',
-    borderCollapse: 'collapse',
-    fontSize: '14px'
-  }}>
-    <thead>
-      <tr style={{ backgroundColor: '#f9fafb' }}>
-        <th style={{
-          padding: '12px',
-          textAlign: 'left',
-          border: '1px solid #e5e7eb',
-          fontWeight: 600
-        }}>对比项</th>
-        <th style={{
-          padding: '12px',
-          textAlign: 'center',
-          border: '1px solid #e5e7eb',
-          fontWeight: 600
-        }}>AI客服</th>
-        <th style={{
-          padding: '12px',
-          textAlign: 'center',
-          border: '1px solid #e5e7eb',
-          fontWeight: 600
-        }}>人工客服</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>响应时间</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', color: '#10B981', fontWeight: 500 }}>&lt; 3秒</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>3-10分钟</td>
-      </tr>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>服务时间</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>7×24小时</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>工作日 9:00-18:00</td>
-      </tr>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>并发能力</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>无限</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>需排队</td>
-      </tr>
-      <tr>
-        <td style={{ padding: '12px', border: '1px solid #e5e7eb' }}>知识库</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>完整产品文档</td>
-        <td style={{ padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>依赖个人经验</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<ComparisonTable
+  headers={['对比项', 'AI客服', '人工客服']}
+  rows={[
+    ['响应时间', <StatusTag type="success">&lt; 3秒</StatusTag>, '3-10分钟'],
+    ['服务时间', '7×24小时', '工作日 9:00-18:00'],
+    ['并发能力', '无限', '需排队'],
+    ['知识库', '完整产品文档', '依赖个人经验'],
+  ]}
+/>
 
 ---
 

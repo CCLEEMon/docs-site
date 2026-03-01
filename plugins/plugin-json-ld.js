@@ -76,11 +76,12 @@ function buildHowToSchema({ title, description, url, steps }) {
   };
 }
 
-function buildFAQSchema({ title, url, faqs }) {
+function buildFAQSchema({ title, description, url, faqs }) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "name": title,
+    "description": description || "",
     "url": url,
     "mainEntity": (faqs || []).map(faq => ({
       "@type": "Question",

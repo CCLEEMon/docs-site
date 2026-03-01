@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useLocation } from '@docusaurus/router'
-import { useColorMode } from '@docusaurus/theme-common'
 import { MessageSquareIcon } from './Icons'
 import { RAG_API_URL } from '@site/src/rag-api-config'
 
@@ -35,8 +34,6 @@ const getPageType = (pathname) => {
 }
 
 export default function FloatingChat() {
-  const { colorMode } = useColorMode()
-  const isDark = colorMode === 'dark'
   const location = useLocation()
 
   // 检测当前页面类型
@@ -120,17 +117,17 @@ export default function FloatingChat() {
           right: 0,
           width: isMobile ? 'calc(100vw - 32px)' : '380px',
           height: isMobile ? '60vh' : '520px',
-          backgroundColor: isDark ? '#1F2937' : '#fff',
+          backgroundColor: 'var(--ifm-background-surface-color)',
           borderRadius: '12px',
-          boxShadow: isDark ? '0 8px 32px rgba(0, 0, 0, 0.5)' : '0 8px 32px rgba(0, 0, 0, 0.12)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden',
-          border: isDark ? '1px solid #374151' : '1px solid #e5e7eb'
+          border: '1px solid var(--gray-200)'
         }}>
           <div style={{
             padding: '16px',
-            backgroundColor: '#4F46E5',
+            backgroundColor: 'var(--color-brand)',
             color: '#fff',
             display: 'flex',
             justifyContent: 'space-between',
@@ -159,7 +156,7 @@ export default function FloatingChat() {
             display: 'flex',
             flexDirection: 'column',
             gap: '12px',
-            backgroundColor: isDark ? '#111827' : '#fff'
+            backgroundColor: 'var(--gray-900)'
           }}>
             {messages.map((msg, idx) => (
               <div
@@ -168,8 +165,8 @@ export default function FloatingChat() {
                   maxWidth: '80%',
                   padding: '10px 14px',
                   borderRadius: '12px',
-                  backgroundColor: msg.role === 'user' ? '#4F46E5' : (isDark ? '#374151' : '#f3f4f6'),
-                  color: msg.role === 'user' ? '#fff' : (isDark ? '#E5E7EB' : '#1f2937'),
+                  backgroundColor: msg.role === 'user' ? 'var(--color-brand)' : 'var(--gray-700)',
+                  color: msg.role === 'user' ? '#fff' : 'var(--color-text-primary)',
                   alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
                   fontSize: '14px',
                   lineHeight: '1.5'
@@ -182,8 +179,8 @@ export default function FloatingChat() {
               <div style={{
                 padding: '10px 14px',
                 borderRadius: '12px',
-                backgroundColor: isDark ? '#374151' : '#f3f4f6',
-                color: isDark ? '#9CA3AF' : '#6b7280',
+                backgroundColor: 'var(--gray-700)',
+                color: 'var(--color-text-muted)',
                 fontSize: '14px'
               }}>
                 正在输入...
@@ -205,18 +202,18 @@ export default function FloatingChat() {
                     disabled={isLoading}
                     style={{
                       padding: '10px 14px',
-                      border: isDark ? '1px solid #4B5563' : '1px solid #d1d5db',
+                      border: '1px solid var(--gray-300)',
                       borderRadius: '8px',
-                      backgroundColor: isDark ? '#374151' : '#fff',
-                      color: isDark ? '#E5E7EB' : '#1f2937',
+                      backgroundColor: 'var(--ifm-background-surface-color)',
+                      color: 'var(--color-text-primary)',
                       fontSize: '14px',
                       cursor: isLoading ? 'not-allowed' : 'pointer',
                       textAlign: 'left',
                       transition: 'all 0.2s',
                       opacity: isLoading ? 0.5 : 1
                     }}
-                    onMouseEnter={(e) => !isLoading && (e.currentTarget.style.borderColor = '#4F46E5')}
-                    onMouseLeave={(e) => e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#d1d5db'}
+                    onMouseEnter={(e) => !isLoading && (e.currentTarget.style.borderColor = 'var(--color-brand)')}
+                    onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--gray-300)'}
                   >
                     {question}
                   </button>
@@ -227,10 +224,10 @@ export default function FloatingChat() {
 
           <div style={{
             padding: '12px',
-            borderTop: isDark ? '1px solid #374151' : '1px solid #e5e7eb',
+            borderTop: '1px solid var(--gray-200)',
             display: 'flex',
             gap: '8px',
-            backgroundColor: isDark ? '#1F2937' : '#fff'
+            backgroundColor: 'var(--ifm-background-surface-color)'
           }}>
             <input
               type="text"
@@ -242,12 +239,12 @@ export default function FloatingChat() {
               style={{
                 flex: 1,
                 padding: '10px 14px',
-                border: isDark ? '1px solid #4B5563' : '1px solid #d1d5db',
+                border: '1px solid var(--gray-300)',
                 borderRadius: '8px',
                 fontSize: '14px',
                 outline: 'none',
-                backgroundColor: isDark ? '#374151' : '#fff',
-                color: isDark ? '#E5E7EB' : '#1f2937'
+                backgroundColor: 'var(--gray-700)',
+                color: 'var(--color-text-primary)'
               }}
             />
             <button
@@ -255,7 +252,7 @@ export default function FloatingChat() {
               disabled={isLoading || !input.trim()}
               style={{
                 padding: '10px 16px',
-                backgroundColor: '#4F46E5',
+                backgroundColor: 'var(--color-brand)',
                 color: '#fff',
                 border: 'none',
                 borderRadius: '8px',
@@ -281,7 +278,7 @@ export default function FloatingChat() {
             right: '-4px',
             width: '14px',
             height: '14px',
-            backgroundColor: '#EF4444',
+            backgroundColor: 'var(--color-error-light)',
             borderRadius: '50%',
             animation: 'pulse 1.5s ease-in-out infinite'
           }} />
@@ -293,10 +290,10 @@ export default function FloatingChat() {
             width: '56px',
             height: '56px',
             borderRadius: '50%',
-            backgroundColor: '#4F46E5',
+            backgroundColor: 'var(--color-brand)',
             border: 'none',
             cursor: 'pointer',
-            boxShadow: isDark ? '0 4px 12px rgba(79, 70, 229, 0.5)' : '0 4px 12px rgba(99, 102, 241, 0.3)',
+            boxShadow: '0 4px 12px rgba(99, 102, 241, 0.3)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

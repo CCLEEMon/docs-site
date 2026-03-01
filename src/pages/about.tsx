@@ -36,7 +36,7 @@ export default function AboutPage(): React.ReactElement {
 
               <h2 style={{ marginTop: '2rem' }}>联系我们</h2>
               <ul>
-                <li>产品文档：<a href="/docs/intro">查看文档</a></li>
+                <li>产品文档：<a href="/docs">查看文档</a></li>
               </ul>
             </div>
           </div>

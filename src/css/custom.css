@@ -2,8 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========== 覆盖 Tailwind Preflight 标题重置 ========== */
+.markdown h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.markdown h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.markdown h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.markdown h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.markdown h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.markdown h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ========== 标题颜色（继承全局文字色，深色/浅色安全） ========== */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+article header h1,
+article header h2 {
+  color: var(--color-text-primary);
+}
+
+/* ========== 博客页标题 ========== */
+article header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+article header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ========== Navbar Logo ========== */
+.navbar__logo {
+  height: 2rem !important;
+  width: auto !important;
+}
+.navbar__logo img {
+  height: 100% !important;
+  width: auto !important;
+  max-height: 2rem !important;
+}
+
+/* ========== CSS 变量系统 ========== */
 :root {
-  /* 浅色模式 - 冷灰底 + 深紫点睛 */
+  /* 主题色 */
   --ifm-color-primary: #4C1D95;
   --ifm-color-primary-dark: #3B0F8A;
   --ifm-color-primary-darker: #2E0A6D;
@@ -13,28 +87,32 @@
   --ifm-color-primary-lightest: #A78BFA;
   --docusaurus-highlighted-code-line-bg: rgba(76, 29, 149, 0.1);
 
-  /* 背景系统 - 冷灰微调 */
+  /* 背景 */
   --ifm-background-color: #FAFBFC;
   --ifm-background-surface-color: #FFFFFF;
   --ifm-hover-overlay: rgba(76, 29, 149, 0.08);
 
-  /* 边框与分割线 - 更精致 */
+  /* 边框 */
   --ifm-border-color: #E2E8F0;
   --ifm-toc-border-color: #E2E8F0;
 
-  /* 语义色 - 微调 */
-  --color-success: #059669;
+  /* 语义色 - 浅色模式（深色调，对比度达标） */
+  --color-success: #16a34a;
   --color-success-light: #10B981;
-  --color-warning: #D97706;
+  --color-warning: #d97706;
   --color-warning-light: #F59E0B;
-  --color-error: #DC2626;
+  --color-error: #dc2626;
   --color-error-light: #EF4444;
-  --color-info: #2563EB;
+  --color-info: #2563eb;
   --color-info-light: #3B82F6;
+  --color-brand: #4F46E5;
 
-  /* ========== 精细色阶系统 ========== */
+  /* 文字色 - 浅色模式 */
+  --color-text-primary: #111827;   /* gray-900，对比度 16:1 */
+  --color-text-secondary: #4B5563; /* gray-600 */
+  --color-text-muted: #6B7280;     /* gray-500 */
 
-  /* 紫色色阶 - 8级层次 */
+  /* 紫色色阶 */
   --purple-50: #F5F3FF;
   --purple-100: #EDE9FE;
   --purple-200: #DDD6FE;
@@ -46,7 +124,7 @@
   --purple-800: #5B21B6;
   --purple-900: #4C1D95;
 
-  /* 中性灰阶 - 9级层次 */
+  /* 中性灰阶 */
   --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
   --gray-200: #E5E7EB;
@@ -60,7 +138,7 @@
 }
 
 [data-theme='dark'] {
-  /* 深色模式 - 紫调底 + 亮紫点睛 */
+  /* 主题色 */
   --ifm-color-primary: #8B5CF6;
   --ifm-color-primary-dark: #6D28D9;
   --ifm-color-primary-darker: #5B21B6;
@@ -70,39 +148,62 @@
   --ifm-color-primary-lightest: #DDD6FE;
   --docusaurus-highlighted-code-line-bg: rgba(139, 92, 246, 0.15);
 
-  /* 背景系统 - 紫调深色 */
+  /* 背景 */
   --ifm-background-color: #0F0F1A;
   --ifm-background-surface-color: #1e1e1e;
   --ifm-navbar-background-color: #1e1e1e;
   --ifm-hover-overlay: rgba(139, 92, 246, 0.12);
 
-  /* 边框与分割线 */
+  /* 边框 */
   --ifm-border-color: #272735;
   --ifm-toc-border-color: #272735;
 
-  /* 语义色 - 深色优化 */
-  --color-success: #10B981;
+  /* 语义色 - 深色模式（浅色调，对比度达标） */
+  --color-success: #4ade80;
   --color-success-light: #22C55E;
-  --color-warning: #F59E0B;
+  --color-warning: #fbbf24;
   --color-warning-light: #FBBF24;
-  --color-error: #EF4444;
+  --color-error: #f87171;
   --color-error-light: #F87171;
-  --color-info: #60A5FA;
+  --color-info: #60a5fa;
   --color-info-light: #93C5FD;
+  --color-brand: #4F46E5;
+
+  /* 文字色 - 深色模式 */
+  --color-text-primary: #F9FAFB;   /* gray-50，对比度 18:1 */
+  --color-text-secondary: #D1D5DB; /* gray-300 */
+  --color-text-muted: #9CA3AF;     /* gray-400 */
+
+  /* 卡片 */
+  --card-bg: rgba(24, 24, 36, 0.85);
+  --card-border: rgba(39, 39, 53, 0.6);
+
+  /* 品牌色 */
+  --purple-accent: #C4B5FD;
+  --purple-hover: #8B5CF6;
 }
 
-/* Background clip text */
+/* ========== 文字色 Utility 类 ========== */
+.text-primary   { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted     { color: var(--color-text-muted); }
+
+/* ========== Prism 代码高亮 - 深色模式安全色 ========== */
+[data-theme='dark'] .token.keyword  { color: #c792ea; }
+[data-theme='dark'] .token.string   { color: #c3e88d; }
+[data-theme='dark'] .token.comment  { color: #9CA3AF; }
+
+/* ========== Background clip ========== */
 .bg-clip-text {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Footer 响应式布局 */
+/* ========== Footer 响应式 ========== */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr !important;
   }
-
   .footer-bottom {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -115,119 +216,60 @@
   }
 }
 
-/* 浮动动画 */
+/* ========== 动画 ========== */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-20px); }
 }
 
 @keyframes float-reverse {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(20px); }
 }
 
 @keyframes bounce-subtle {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+@keyframes enter {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-float-reverse {
-  animation: float-reverse 6s ease-in-out infinite;
-}
-
-.animate-bounce-subtle {
-  animation: bounce-subtle 3s ease-in-out infinite;
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.animate-scaleIn {
-  animation: scaleIn 0.6s ease-out;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.6s ease-out;
-}
-
-/* ========== 深色模式样式 - 使用 Docusaurus CSS 变量 ========== */
-[data-theme='dark'] {
-  /* 卡片背景 */
-  --card-bg: rgba(24, 24, 36, 0.85);
-  --card-border: rgba(39, 39, 53, 0.6);
-
-  /* 文字颜色 */
-  --text-primary: #F9FAFB;
-  --text-secondary: #E5E7EB;
-  --text-tertiary: #9CA3AF;
-
-  /* 紫色主题色 */
-  --purple-accent: #C4B5FD;
-  --purple-hover: #8B5CF6;
-}
+.animate-float         { animation: float 6s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 6s ease-in-out infinite; }
+.animate-bounce-subtle { animation: bounce-subtle 3s ease-in-out infinite; }
+.animate-fadeInUp      { animation: fadeInUp 0.8s ease-out; }
+.animate-scaleIn       { animation: scaleIn 0.6s ease-out; }
+.animate-fadeIn        { animation: fadeIn 0.6s ease-out; }
+.animate-enter         { animation: enter 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
 
 /* ========== 阴影系统 ========== */
-
-/* 5级阴影层次 */
 .shadow-xs { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
 .shadow-sm { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); }
 .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
 .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
 .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
 
-/* 彩色阴影 - 增强品牌感 */
-.shadow-purple { box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.3); }
+.shadow-purple       { box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.3); }
 .shadow-purple-hover { box-shadow: 0 20px 50px -12px rgba(124, 58, 237, 0.4); }
 
-/* 悬停提升效果 */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -236,13 +278,67 @@
   box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.25);
 }
 
-/* ========== 优化动画 ========== */
-
-/* 入场动画 */
-.animate-enter {
-  animation: enter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+/* ========== 文档排版（docs + blog 全局生效） ========== */
+.markdown p {
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
 }
-@keyframes enter {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+
+.markdown ul,
+.markdown ol {
+  margin-bottom: 1rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.markdown li li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-hover-overlay);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.markdown pre {
+  margin: 1.5rem 0;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+.markdown table {
+  margin: 1.5rem 0;
+}
+
+.markdown th,
+.markdown td {
+  padding: 0.75rem 1rem;
+}
+
+.markdown hr {
+  margin: 2rem 0;
+  border-color: var(--ifm-border-color);
 }
