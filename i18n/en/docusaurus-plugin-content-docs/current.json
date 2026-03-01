@@ -1,18 +1,14 @@
 {
   "version.label": {
-    "message": "Next",
-    "description": "The label for version current"
+    "message": "Getting Started"
   },
   "sidebar.tutorialSidebar.category.AI运营": {
-    "message": "AI运营",
-    "description": "The label for category 'AI运营' in sidebar 'tutorialSidebar'"
+    "message": "AI Analytics"
   },
   "sidebar.tutorialSidebar.category.浏览器插件": {
-    "message": "浏览器插件",
-    "description": "The label for category '浏览器插件' in sidebar 'tutorialSidebar'"
+    "message": "Browser Plugin"
   },
   "sidebar.tutorialSidebar.category.AI客服": {
-    "message": "AI客服",
-    "description": "The label for category 'AI客服' in sidebar 'tutorialSidebar'"
+    "message": "AI Customer Service"
   }
 }

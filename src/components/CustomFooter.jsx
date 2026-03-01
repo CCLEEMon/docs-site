@@ -10,11 +10,17 @@ export default function CustomFooter() {
   const location = useLocation()
   const isEn = location.pathname.startsWith('/en')
 
-  const features = [
-    { icon: Zap, label: '高效' },
-    { icon: Shield, label: '安全' },
-    { icon: Rocket, label: '创新' },
-  ]
+  const features = isEn
+    ? [
+        { icon: Zap, label: 'Efficient' },
+        { icon: Shield, label: 'Secure' },
+        { icon: Rocket, label: 'Innovative' },
+      ]
+    : [
+        { icon: Zap, label: '高效' },
+        { icon: Shield, label: '安全' },
+        { icon: Rocket, label: '创新' },
+      ]
 
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-gray-400">
@@ -24,7 +30,7 @@ export default function CustomFooter() {
           {/* 品牌列 */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-xl font-bold text-white mb-3">CCLHUB</h3>
-            <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
               <Translate id="footer.tagline">AI驱动的电商运营工具平台</Translate>
             </p>
 
@@ -33,7 +39,7 @@ export default function CustomFooter() {
               {features.map((feature, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/5 text-[10px] text-gray-400"
+                  className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/5 dark:bg-gray-800/50 text-[10px] text-gray-400 dark:text-gray-500"
                 >
                   <feature.icon size={10} className="text-indigo-400" />
                   {feature.label}
@@ -56,7 +62,7 @@ export default function CustomFooter() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-500 hover:text-white transition-colors duration-200"
+                    className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                   >
                     <Translate id={link.id}>{link.label}</Translate>
                   </Link>
@@ -81,7 +87,7 @@ export default function CustomFooter() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-500 hover:text-white transition-colors duration-200"
+                    className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                   >
                     <Translate id={link.id}>{link.label}</Translate>
                   </Link>
@@ -103,7 +109,7 @@ export default function CustomFooter() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-500 hover:text-white transition-colors duration-200"
+                    className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                   >
                     <Translate id={link.id}>{link.label}</Translate>
                   </Link>
@@ -115,7 +121,7 @@ export default function CustomFooter() {
 
         {/* 分隔线 */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
             {/* 版权信息 */}
             <div>© {currentYear} CCLHUB. <Translate id="footer.copyright">All rights reserved.</Translate></div>
 
@@ -130,7 +136,7 @@ export default function CustomFooter() {
                 >
                   粤ICP备2026015835号
                 </a>
-                <span className="text-gray-700">•</span>
+                <span className="text-gray-700 dark:text-gray-500">•</span>
                 <a
                   href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44200102445864"
                   target="_blank"
@@ -150,7 +156,7 @@ export default function CustomFooter() {
 
           {/* 合规声明 - 仅中文版 */}
           {!isEn && (
-            <div className="mt-4 text-xs text-gray-600 space-y-1 text-center md:text-left">
+            <div className="mt-4 text-xs text-gray-600 dark:text-gray-400 space-y-1 text-center md:text-left">
               <p>
                 <Translate id="footer.compliance1">
                   本网站遵循 MIT 开源协议，完全在本地运行，不收集任何用户数据。

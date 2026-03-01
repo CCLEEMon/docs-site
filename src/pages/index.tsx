@@ -28,7 +28,7 @@ export default function Home(): React.ReactElement {
               <Translate id="homepage.hero.title">AI 驱动的电商运营工具</Translate>
             </h1>
 
-            <div className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-12 leading-relaxed max-w-[700px]">
+            <div className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed max-w-[700px] mx-auto text-center">
               <Translate id="homepage.hero.subtitle">AI运营 + 电商工具箱，让电商运营更高效</Translate>
             </div>
 
@@ -44,7 +44,7 @@ export default function Home(): React.ReactElement {
               </Link>
               <Link
                 to="/docs/browser-plugin"
-                className="animate-fadeIn group relative px-10 py-4 rounded-xl text-lg font-semibold inline-flex items-center justify-center gap-2 bg-white border-2 border-purple-500 text-purple-700 hover:bg-purple-50 hover:border-purple-600 hover:text-purple-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-auto"
+                className="animate-fadeIn group relative px-10 py-4 rounded-xl text-lg font-semibold inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 border-2 border-purple-500 dark:border-purple-500 text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/50 hover:border-purple-600 dark:hover:border-purple-400 hover:text-purple-800 dark:hover:text-purple-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-auto"
               >
                 <span className="flex items-center gap-2">
                   <PluginIcon size={18} />
@@ -85,14 +85,14 @@ export default function Home(): React.ReactElement {
 
         {/* Transition Section */}
         <div className="py-16 px-5 text-center">
-          <div className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-[700px] mx-auto leading-relaxed">
+          <div className="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-[700px] mx-auto leading-relaxed">
             <Translate id="homepage.transition">一站式电商运营解决方案，从数据采集到智能分析，全方位提升运营效率</Translate>
           </div>
         </div>
 
         <div className="max-w-[1200px] mx-auto px-5 py-20">
           <div className="mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
               <Translate id="homepage.products.title">核心产品</Translate>
             </h2>
           </div>
@@ -113,7 +113,7 @@ export default function Home(): React.ReactElement {
                 <Translate id="homepage.products.toolkit.description">实时获取商品数据、价格监控、竞品分析。支持淘宝、京东、拼多多等主流电商平台。</Translate>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                <img src="/images/plugin-sidebar-ecommerce.png" alt={toolkitAlt} className="w-full h-full object-cover" />
+                <img src={require('@site/static/images/plugin-sidebar-ecommerce.png').default} alt={toolkitAlt} className="w-full h-full object-cover" />
               </div>
             </Link>
 
@@ -132,7 +132,7 @@ export default function Home(): React.ReactElement {
                 <Translate id="homepage.products.aiOps.description">基于大语言模型的智能分析，自动洞察市场趋势、用户行为、销售数据，提供精准运营策略。</Translate>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                <img src="/images/saas-dashboard-main.png" alt={aiOpsAlt} className="w-full h-full object-cover" />
+                <img src={require('@site/static/images/saas-dashboard-main.png').default} alt={aiOpsAlt} className="w-full h-full object-cover" />
               </div>
             </Link>
 
@@ -147,7 +147,7 @@ export default function Home(): React.ReactElement {
                 <Translate id="homepage.products.aiSupport.description">7×24小时AI客服，快速解答产品使用问题，提供功能指导和最佳实践。</Translate>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 mb-4 border border-gray-200 dark:border-gray-700">
-                <img src="/images/ai-chat-interface.jpg" alt={aiSupportAlt} className="w-full h-full object-cover" />
+                <img src={require('@site/static/images/ai-chat-interface.jpg').default} alt={aiSupportAlt} className="w-full h-full object-cover" />
               </div>
               <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
                 <ZapIcon size={16} />

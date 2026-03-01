@@ -510,5 +510,14 @@
   },
   "locale.title": {
     "message": "Language"
+  },
+  "footer.support": {
+    "message": "Support"
+  },
+  "footer.getStarted": {
+    "message": "Quick Start"
+  },
+  "footer.helpCenter": {
+    "message": "Help Center"
   }
 }
