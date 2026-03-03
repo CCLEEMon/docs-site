@@ -150,7 +150,9 @@ export default function Home(): React.ReactElement {
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                   />
                 </div>
-                <div className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-2">外企入华 / 内容本地化</div>
+                <div className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-2">
+                  <Translate id="homepage.cases.case1.tags">外企入华 / 内容本地化</Translate>
+                </div>
                 <h3 className="text-base font-bold mb-2 text-gray-900 dark:text-gray-100">
                   <Translate id="homepage.cases.case1.title">土耳其律所 — 双语策略重构与中文网站落地</Translate>
                 </h3>
@@ -171,7 +173,9 @@ export default function Home(): React.ReactElement {
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                   />
                 </div>
-                <div className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-2">外企入华 / 技术实施</div>
+                <div className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-2">
+                  <Translate id="homepage.cases.case2.tags">外企入华 / 技术实施</Translate>
+                </div>
                 <h3 className="text-base font-bold mb-2 text-gray-900 dark:text-gray-100">
                   <Translate id="homepage.cases.case2.title">海外B2B机构 — 中国市场本地化重构与WordPress迁移</Translate>
                 </h3>

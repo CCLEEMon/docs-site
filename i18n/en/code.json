@@ -578,11 +578,17 @@
   "homepage.cases.case1.result": {
     "message": "All Chinese content approved by client team"
   },
+  "homepage.cases.case1.tags": {
+    "message": "Foreign Market Entry / Content Localization"
+  },
   "homepage.cases.case2.title": {
     "message": "Overseas B2B — China Market Localization & WordPress Migration"
   },
   "homepage.cases.case2.result": {
     "message": "Complete site restructuring and platform migration"
+  },
+  "homepage.cases.case2.tags": {
+    "message": "Foreign Market Entry / Technical Implementation"
   },
   "about.title": {
     "message": "About Me"
