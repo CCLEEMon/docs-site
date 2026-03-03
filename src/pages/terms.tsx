@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
 import { translate } from '@docusaurus/Translate';
-import { FileTextIcon } from '@site/src/components/Icons';
+import { FileIcon } from '@site/src/components/Icons';
 
 export default function TermsPage(): React.ReactElement {
   const title = translate({ id: 'terms.title', message: '服务条款' });
@@ -15,7 +15,7 @@ export default function TermsPage(): React.ReactElement {
         <div className="relative min-h-[30vh] flex flex-col items-center justify-center px-5 pt-[80px] pb-[40px] text-center">
           <div className="relative z-10 animate-fadeInUp">
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-6 mx-auto shadow-md">
-              <FileTextIcon size={32} className="text-white" />
+              <FileIcon size={32} className="text-white" />
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-4 text-gray-900 dark:text-white">
               <Translate id="terms.title">服务条款</Translate>

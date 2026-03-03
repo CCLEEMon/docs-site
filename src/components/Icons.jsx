@@ -32,7 +32,7 @@ export const UserIcon = ({ size = 24 }) => <User size={size} />
 
 export const DownloadIcon = ({ size = 24 }) => <Download size={size} />
 
-export const FileIcon = ({ size = 24 }) => <FileText size={size} />
+export const FileIcon = ({ size = 24, className = '' }) => <FileText size={size} className={className} />
 
 export const MessageCircleIcon = ({ size = 24, className = '' }) => (
   <MessageCircle size={size} className={className} strokeWidth={2} />
