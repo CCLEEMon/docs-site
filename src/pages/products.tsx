@@ -3,8 +3,8 @@ import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
-import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, ArrowRightIcon, MessageCircleIcon } from '@site/src/components/Icons';
-import { HeroCounter, HeroBackground } from '@site/src/components/HeroSection';
+import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon } from '@site/src/components/Icons';
+import { HeroBackground } from '@site/src/components/HeroSection';
 
 export default function Home(): React.ReactElement {
   const title = translate({ id: 'homepage.title', message: 'CCLHUB - AI驱动的电商运营工具平台' });
@@ -18,7 +18,7 @@ export default function Home(): React.ReactElement {
   return (
     <Layout title={title} description={description}>
       <main>
-        <div className="relative min-h-[85vh] flex flex-col items-center justify-center px-5 pt-[100px] pb-[80px] text-center overflow-hidden">
+        <div className="relative min-h-[45vh] flex flex-col items-center justify-center px-5 pt-[80px] pb-[40px] text-center overflow-hidden">
           {/* Particle Background */}
           <div className="absolute inset-0 z-0">
             <HeroBackground />
@@ -34,15 +34,6 @@ export default function Home(): React.ReactElement {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full max-w-[500px] mx-auto mb-16">
               <Link
-                to="/docs/ai-analytics"
-                className="animate-fadeIn group relative px-10 py-4 rounded-xl text-white text-lg font-semibold inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 border-b-4 border-purple-900 active:border-b-0 active:translate-y-1 transition-all duration-200 w-full sm:w-auto"
-              >
-                <span className="flex items-center gap-2">
-                  <Translate id="homepage.hero.freeTrial">免费试用</Translate>
-                  <ArrowRightIcon size={18} />
-                </span>
-              </Link>
-              <Link
                 to="/docs/browser-plugin"
                 className="animate-fadeIn group relative px-10 py-4 rounded-xl text-lg font-semibold inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 border-2 border-purple-500 dark:border-purple-500 text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/50 hover:border-purple-600 dark:hover:border-purple-400 hover:text-purple-800 dark:hover:text-purple-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-auto"
               >
@@ -54,33 +45,6 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="animate-enter grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative z-10 mt-20 max-w-4xl mx-auto px-4">
-            <div>
-              <div className="text-5xl lg:text-6xl font-black mb-2 bg-gradient-to-br from-purple-700 to-purple-900 bg-clip-text text-transparent">
-                <HeroCounter value="50K+" duration={2000} suffix="" />
-              </div>
-              <div className="text-base text-gray-600 dark:text-gray-400 font-medium">
-                <Translate id="homepage.stats.activeUsers">活跃用户</Translate>
-              </div>
-            </div>
-            <div>
-              <div className="text-5xl lg:text-6xl font-black mb-2 bg-gradient-to-br from-purple-700 to-purple-900 bg-clip-text text-transparent">
-                <HeroCounter value="95%" duration={2000} suffix="" />
-              </div>
-              <div className="text-base text-gray-600 dark:text-gray-400 font-medium">
-                <Translate id="homepage.stats.accuracy">分析准确率</Translate>
-              </div>
-            </div>
-            <div>
-              <div className="text-5xl lg:text-6xl font-black mb-2 bg-gradient-to-br from-purple-700 to-purple-900 bg-clip-text text-transparent">
-                7×24
-              </div>
-              <div className="text-base text-gray-600 dark:text-gray-400 font-medium">
-                <Translate id="homepage.stats.aiSupport">AI客服</Translate>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Transition Section */}
@@ -100,7 +64,8 @@ export default function Home(): React.ReactElement {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
             <Link
               to="/docs/browser-plugin"
-              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300"
+              id="browser-plugin"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
               style={{ animationDelay: '0.1s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
@@ -119,7 +84,8 @@ export default function Home(): React.ReactElement {
 
             <Link
               to="/docs/ai-analytics"
-              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300"
+              id="ai-analytics"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
               style={{ animationDelay: '0.2s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
@@ -136,7 +102,7 @@ export default function Home(): React.ReactElement {
               </div>
             </Link>
 
-            <div className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+            <div id="ai-support" className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20" style={{ animationDelay: '0.3s' }}>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
                 <MessageCircleIcon size={32} className="text-white" />
               </div>
@@ -156,12 +122,12 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
 
-          <div className="border-t-2 border-gray-300 dark:border-gray-700 pt-20 mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-12 text-gray-900 dark:text-gray-100">
+          <div className="border-t border-gray-200 dark:border-gray-700 pt-12 mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold mb-8 text-gray-900 dark:text-gray-100">
               <Translate id="homepage.whyChoose.title">为什么选择 CCLHUB</Translate>
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="animate-enter" style={{ animationDelay: '0.1s' }}>
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 dark:from-purple-900/50 dark:to-purple-800/50 flex items-center justify-center mb-5 shadow-md">
                   <ZapIcon size={24} className="text-white dark:text-purple-300" />

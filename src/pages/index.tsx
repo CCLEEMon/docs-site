@@ -140,12 +140,12 @@ export default function Home(): React.ReactElement {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Case 1 - 土耳其律所 */}
               <Link
-                to="/cases/legitlaw"
+                to="/cases/website-localization-turkey-law-firm"
                 className="group p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 block shadow-md hover:shadow-lg hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 text-inherit"
               >
                 <div className="h-56 rounded-xl overflow-hidden mb-4 bg-white dark:bg-gray-800 flex items-center justify-center p-4">
                   <img
-                    src="/images/case-legitlaw-cover.png"
+                    src={require('@site/static/images/cases/website-localization-turkey-law-firm/cover.png').default}
                     alt="LegitLaw 介绍册"
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                   />
@@ -161,12 +161,12 @@ export default function Home(): React.ReactElement {
 
               {/* Case 2 - 海外B2B机构 Linkexis */}
               <Link
-                to="/cases/linkexis"
+                to="/cases/china-market-localization-b2b-agency"
                 className="group p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 block shadow-md hover:shadow-lg hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 text-inherit"
               >
                 <div className="h-56 rounded-xl overflow-hidden mb-4 bg-white dark:bg-gray-800 flex items-center justify-center p-4">
                   <img
-                    src="/images/case-linkexis-desktop.png"
+                    src={require('@site/static/images/cases/china-market-localization-b2b-agency/mobile.png').default}
                     alt="Linkexis 莱客策略咨询"
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                   />

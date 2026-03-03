@@ -332,6 +332,12 @@
   "footer.products": {
     "message": "Products"
   },
+  "footer.services": {
+    "message": "Services"
+  },
+  "footer.cases": {
+    "message": "Cases"
+  },
   "footer.aiAnalytics": {
     "message": "AI Operations"
   },
@@ -380,12 +386,10 @@
     "description": "Blog link in footer"
   },
   "homepage.title": {
-    "message": "CCLHUB - AI-Powered E-commerce Operations Platform",
-    "description": "Homepage title"
+    "message": "CCLHUB - AI-Powered E-commerce Operations Platform"
   },
   "homepage.description": {
-    "message": "CCLHUB E-commerce Operations Platform - AI-driven Operations and E-commerce Toolkit",
-    "description": "Homepage description"
+    "message": "CCLHUB E-commerce Operations Platform - AI-driven Operations and E-commerce Toolkit"
   },
   "homepage.hero.title": {
     "message": "AI-Powered E-commerce Operations Tools",
@@ -432,8 +436,7 @@
     "description": "Toolkit product description"
   },
   "homepage.products.toolkit.alt": {
-    "message": "E-commerce Toolkit",
-    "description": "Toolkit image alt text"
+    "message": "E-commerce Toolkit"
   },
   "homepage.products.aiOps.title": {
     "message": "AI Operations",
@@ -444,8 +447,7 @@
     "description": "AI Operations product description"
   },
   "homepage.products.aiOps.alt": {
-    "message": "AI Operations",
-    "description": "AI Operations image alt text"
+    "message": "AI Operations"
   },
   "homepage.products.aiSupport.title": {
     "message": "AI Support",
@@ -456,8 +458,7 @@
     "description": "AI Support product description"
   },
   "homepage.products.aiSupport.alt": {
-    "message": "AI Support",
-    "description": "AI Support image alt text"
+    "message": "AI Support"
   },
   "homepage.products.aiSupport.cta": {
     "message": "Click the icon in the bottom right corner to start",
@@ -582,5 +583,206 @@
   },
   "homepage.cases.case2.result": {
     "message": "Complete site restructuring and platform migration"
+  },
+  "about.title": {
+    "message": "About Me"
+  },
+  "about.subtitle": {
+    "message": "Independent developer with 24 years of hands-on e-commerce experience, focused on bringing AI capabilities to real business scenarios. I develop practical tools and systems around business needs, avoiding technology for technology's sake."
+  },
+  "about.achievements.title": {
+    "message": "Key Achievements"
+  },
+  "about.achievements.item1": {
+    "message": "Led multi-platform e-commerce operations with annual sales exceeding 8 million RMB, successfully creating dozens of Top 10 products in national categories"
+  },
+  "about.achievements.item2": {
+    "message": "Managed enterprise 1688 omnichannel operations, achieving 200% month-over-month sales growth and 30% increase in independent website overseas inquiries"
+  },
+  "about.achievements.item3": {
+    "message": "In 2024, deployed 13 AI efficiency tools (covering customer service, product selection, advertising, copywriting, etc.), saving 70% of repetitive manual work"
+  },
+  "about.achievements.item4": {
+    "message": "As a consultant, led industrial products 1688 operations, achieving 3x sales growth in 4 months; \"Soldering Iron\" category sales consistently ranked #1 in the industry (Source: 1688 Platform, September 2025 to present)"
+  },
+  "about.focus.title": {
+    "message": "Current Focus"
+  },
+  "about.focus.item1": {
+    "message": "Building high-ROI custom AI efficiency tools for enterprises"
+  },
+  "about.focus.item2": {
+    "message": "Helping overseas brands efficiently enter and thrive in the Chinese market"
+  },
+  "about.focus.item3": {
+    "message": "Providing localized operational support for companies expanding overseas"
+  },
+  "about.cclhub.desc": {
+    "message": "CCLHUB is my continuously evolving product ecosystem, a comprehensive reflection of technical capabilities and business practices."
+  },
+  "about.contact.title": {
+    "message": "Contact"
+  },
+  "about.contact.wechat": {
+    "message": "Scan to add WeChat"
+  },
+  "services.page.title": {
+    "message": "Services"
+  },
+  "services.page.description": {
+    "message": "Professional AI tool development, China export, and foreign market entry services"
+  },
+  "services.hero.title": {
+    "message": "Professional Services"
+  },
+  "services.hero.subtitle": {
+    "message": "Customized solutions for enterprises with clear business needs"
+  },
+  "services.aiTools.title": {
+    "message": "AI Tool Development"
+  },
+  "services.aiTools.desc": {
+    "message": "Have repetitive, human-judgment-dependent business processes? I'll help you automate them with AI."
+  },
+  "services.aiTools.scopeTitle": {
+    "message": "Service Scope"
+  },
+  "services.aiTools.scope": {
+    "message": "From requirements analysis to delivery, covering customer service automation, data collection, copywriting generation, product selection analysis, advertising optimization, and more. With 24 years of business experience, I understand business logic beyond just technical implementation."
+  },
+  "services.aiTools.targetTitle": {
+    "message": "Who It's For"
+  },
+  "services.aiTools.target": {
+    "message": "Enterprises with clear business pain points needing custom AI tools or automated workflows"
+  },
+  "services.chinaExport.title": {
+    "message": "China Export"
+  },
+  "services.chinaExport.desc": {
+    "message": "Want to leverage China's supply chain to reduce costs, or enter Chinese platforms to expand your market?"
+  },
+  "services.chinaExport.scopeTitle": {
+    "message": "Service Scope"
+  },
+  "services.chinaExport.scope": {
+    "message": "Providing product selection strategy, platform operations, omnichannel marketing, independent website construction, connecting 1688, AliExpress, independent websites, and other channels. With real hands-on experience: 200% monthly sales growth, 30% increase in overseas inquiries for independent websites."
+  },
+  "services.chinaExport.targetTitle": {
+    "message": "Who It's For"
+  },
+  "services.chinaExport.target": {
+    "message": "Foreign enterprises looking to leverage China's supply chain or platform advantages to expand their business"
+  },
+  "services.chinaEntry.title": {
+    "message": "China Market Entry"
+  },
+  "services.chinaEntry.desc": {
+    "message": "Entering the Chinese market is not just translation—it's localization restructuring."
+  },
+  "services.chinaEntry.scopeTitle": {
+    "message": "Service Scope"
+  },
+  "services.chinaEntry.scope": {
+    "message": "Providing China market strategy, platform selection, localized marketing, content operations—helping you truly land rather than staying in the planning stage."
+  },
+  "services.chinaEntry.targetTitle": {
+    "message": "Who It's For"
+  },
+  "services.chinaEntry.target": {
+    "message": "Foreign enterprises with China entry intentions needing localized execution support"
+  },
+  "services.consulting.title": {
+    "message": "Consulting Service Note"
+  },
+  "services.consulting.desc": {
+    "message": "Consulting services use a deep engagement model with limited concurrent clients to ensure full dedication to each customer."
+  },
+  "services.cta": {
+    "message": "Contact for Collaboration"
+  },
+  "privacy.title": {
+    "message": "Privacy Policy"
+  },
+  "privacy.description": {
+    "message": "CC.L Privacy Policy"
+  },
+  "privacy.opensource.title": {
+    "message": "Open Source Project"
+  },
+  "privacy.opensource.desc": {
+    "message": "This website is an open source project under the MIT license. We do not collect, store, or transmit any visitor's personal information."
+  },
+  "privacy.local.title": {
+    "message": "Local Operation"
+  },
+  "privacy.local.desc": {
+    "message": "The website code is fully open source. You can host and deploy it yourself. All data processing is done locally in your browser."
+  },
+  "privacy.thirdparty.title": {
+    "message": "Third-Party Services"
+  },
+  "privacy.thirdparty.desc": {
+    "message": "This website does not use any analytics, advertising, or tracking services."
+  },
+  "privacy.source.title": {
+    "message": "Source Code"
+  },
+  "privacy.source.desc": {
+    "message": "You can view the complete source code on GitHub to understand how the website works."
+  },
+  "privacy.lastUpdate": {
+    "message": "Last Updated"
+  },
+  "terms.title": {
+    "message": "Terms of Service"
+  },
+  "terms.description": {
+    "message": "CC.L Terms of Service"
+  },
+  "terms.license.title": {
+    "message": "Open Source License"
+  },
+  "terms.license.desc": {
+    "message": "This website is released under the MIT license."
+  },
+  "terms.license.commercial": {
+    "message": "Commercial use permitted"
+  },
+  "terms.license.modify": {
+    "message": "Modification permitted"
+  },
+  "terms.license.distribute": {
+    "message": "Distribution permitted"
+  },
+  "terms.license.private": {
+    "message": "Private use permitted"
+  },
+  "terms.license.viewFull": {
+    "message": "View full license"
+  },
+  "terms.disclaimer.title": {
+    "message": "Disclaimer"
+  },
+  "terms.disclaimer.desc": {
+    "message": "This website is provided \"as is\" without any warranty. The developers are not liable for any damages caused by using this website's code."
+  },
+  "terms.usage.title": {
+    "message": "Usage Notice"
+  },
+  "terms.usage.desc": {
+    "message": "By accessing and using this website, you agree to:"
+  },
+  "terms.usage.item1": {
+    "message": "Comply with local laws and regulations"
+  },
+  "terms.usage.item2": {
+    "message": "Not use this website for illegal purposes"
+  },
+  "terms.usage.item3": {
+    "message": "Assume all risks associated with use"
+  },
+  "terms.lastUpdate": {
+    "message": "Last Updated"
   }
 }

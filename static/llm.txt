@@ -1,22 +1,35 @@
 # CCLHUB
 
-> AI驱动的电商运营工具平台 — AI运营 + 电商工具箱，让电商运营更高效
+> AI Tool Development · China Export · Market Entry — 24 years of e-commerce experience, helping businesses achieve measurable growth with AI and localization
 
 ## About
 
-CCLHUB is an AI-powered e-commerce operations platform that provides intelligent tools to make e-commerce operations more efficient.
+CCLHUB is an independent developer platform providing AI tool development, China export services, and foreign market entry support.
 
 - Website: https://www.aigent.ren
 - Organization: CCLHUB
-- Author: caichen.lee
+- Author: CC.L (caichen.lee)
+
+## Services
+
+- **AI Tool Development**: Custom AI workflows, automation systems and Agents for enterprises
+- **China Export**: Leverage China's supply chain and platform advantages to help foreign enterprises expand markets
+- **China Market Entry**: Localization promotion and platform operations for foreign enterprises entering Chinese market
 
 ## Key Pages
 
 - Homepage: https://www.aigent.ren/
-- AI数据分析: https://www.aigent.ren/docs/ai-analytics
-- 浏览器插件: https://www.aigent.ren/docs/browser-plugin
-- AI客服: https://www.aigent.ren/docs/customer-service
+- Services: https://www.aigent.ren/services
+- Products: https://www.aigent.ren/products
 - About: https://www.aigent.ren/about
+- Blog: https://www.aigent.ren/blog
+- Cases: https://www.aigent.ren/cases
+
+## Documentation
+
+- AI Analytics: https://www.aigent.ren/docs/ai-analytics
+- Browser Plugin: https://www.aigent.ren/docs/browser-plugin
+- AI Customer Service: https://www.aigent.ren/docs/customer-service
 
 ## Sitemap
 
@@ -25,3 +38,4 @@ CCLHUB is an AI-powered e-commerce operations platform that provides intelligent
 ## Contact
 
 - GitHub: https://github.com/CCLEEMon
+- Email: leecc1531@gmail.com

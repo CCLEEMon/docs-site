@@ -1,26 +1,38 @@
 {
   "title": {
-    "message": "CCLHUB",
+    "message": "",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "CCLHUB Logo",
+    "message": "CC.L Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.用户指南": {
-    "message": "用户指南",
-    "description": "Navbar item with label 用户指南"
+  "item.label.首页": {
+    "message": "首页",
+    "description": "Navbar item with label 首页"
   },
-  "item.label.AI分析": {
-    "message": "AI分析",
-    "description": "Navbar item with label AI分析"
+  "item.label.服务": {
+    "message": "服务",
+    "description": "Navbar item with label 服务"
   },
-  "item.label.浏览器插件": {
-    "message": "浏览器插件",
-    "description": "Navbar item with label 浏览器插件"
+  "item.label.产品": {
+    "message": "产品",
+    "description": "Navbar item with label 产品"
   },
-  "item.label.AI客服": {
-    "message": "AI客服",
-    "description": "Navbar item with label AI客服"
+  "item.label.案例": {
+    "message": "案例",
+    "description": "Navbar item with label 案例"
+  },
+  "item.label.关于": {
+    "message": "关于",
+    "description": "Navbar item with label 关于"
+  },
+  "item.label.博客": {
+    "message": "博客",
+    "description": "Navbar item with label 博客"
+  },
+  "item.label.合作咨询": {
+    "message": "合作咨询",
+    "description": "Navbar item with label 合作咨询"
   }
 }

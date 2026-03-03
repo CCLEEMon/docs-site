@@ -2,7 +2,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'CCLHUB',
+  title: 'CC.L',
   tagline: 'AI驱动的电商运营工具平台',
   favicon: 'img/favicon.ico',
 
@@ -65,6 +65,23 @@ const config: Config = {
         routeBasePath: 'blog',
       },
     ],
+    // 案例博客
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'cases-blog',
+        path: 'cases-blog',
+        routeBasePath: 'cases',
+        blogTitle: '项目案例',
+        blogDescription: '真实交付案例，覆盖AI工具开发、本地化策略、电商运营',
+        postsPerPage: 10,
+        blogListComponent: '@theme/BlogListPage',
+        blogPostComponent: '@theme/BlogPostPage',
+        tagsBasePath: 'cases-tags',
+        archiveBasePath: null, // 禁用归档
+        authorsMapPath: 'authors.yaml',
+      },
+    ],
   ],
 
   presets: [
@@ -85,15 +102,24 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'CCLHUB',
+      title: '',
       logo: {
-        alt: 'CCLHUB Logo',
+        alt: 'CC.L Logo',
         src: 'logo.png',
       },
       items: [
-        { type: 'doc', docId: 'ai-analytics', label: 'AI分析', position: 'left' },
-        { type: 'doc', docId: 'browser-plugin', label: '浏览器插件', position: 'left' },
-        { type: 'doc', docId: 'customer-service', label: 'AI客服', position: 'left' },
+        { to: '/', label: '首页', position: 'left' },
+        { to: '/services', label: '服务', position: 'left' },
+        { to: '/products', label: '产品', position: 'left' },
+        { to: '/cases', label: '案例', position: 'left' },
+        { to: '/about', label: '关于', position: 'left' },
+        { to: '/blog', label: '博客', position: 'left' },
+        {
+          to: '/about',
+          label: '合作咨询',
+          position: 'right',
+          className: 'navbar-cta',
+        },
       ],
     },
     footer: {
