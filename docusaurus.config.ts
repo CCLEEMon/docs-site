@@ -6,7 +6,7 @@ const config: Config = {
   tagline: 'AI驱动的电商运营工具平台',
   favicon: 'img/favicon.ico',
 
-  url: 'https://aidevhub.ai',
+  url: process.env.SITE === 'ai' ? 'https://aidevhub.ai' : 'https://www.aigent.ren',
   baseUrl: '/',
 
   // Umami 网站分析
@@ -30,7 +30,7 @@ const config: Config = {
   // Node 24 兼容性：使用 SWC 替代 Terser
   future: {
     v4: true,
-    experimental_faster: true,
+    experimental_faster: process.env.SITE !== 'ai',
   },
 
   markdown: {
@@ -40,7 +40,7 @@ const config: Config = {
   },
 
   i18n: {
-    defaultLocale: 'zh',
+    defaultLocale: process.env.SITE === 'ai' ? 'en' : 'zh',
     locales: ['zh', 'en'],
     localeConfigs: {
       zh: {
