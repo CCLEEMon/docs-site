@@ -14,7 +14,9 @@ const config: Config = {
     {
       src: 'https://umami.aigent.ren/script.js',
       async: true,
-      'data-website-id': '21f40cb0-d661-4bc6-8d50-d3606aaf006c',
+      'data-website-id': process.env.SITE === 'ai'
+        ? '806b27c0-695b-4e07-8b75-89a6b4aefc95'
+        : '21f40cb0-d661-4bc6-8d50-d3606aaf006c',
     },
   ],
 
