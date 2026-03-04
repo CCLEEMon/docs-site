@@ -10,6 +10,8 @@ schema: Article
 
 在 Docusaurus i18n 网站中，使用 `<a href="/docs/xxx">` 绝对路径会在英文版页面跳转到中文版。解决方案：页面内链接用 `<Link to="/docs/xxx">`，MD 文档内用相对路径 `./xxx`。
 
+<!-- truncate -->
+
 ## 问题现象
 
 Docusaurus 配置了中英文双语（默认语言中文），在英文版页面（`/en/` 路径下）点击导航或文档链接，URL 变成了 `/docs/xxx` 而不是 `/en/docs/xxx`，导致跳回中文版。

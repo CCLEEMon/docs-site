@@ -10,6 +10,8 @@ schema: Article
 
 After switching Docusaurus to Rspack build, the Navbar Logo may display at its original image size, covering the page. Add explicit CSS overrides for `.navbar__logo` in `custom.css` to fix this.
 
+<!-- truncate -->
+
 ## Symptoms
 
 After Rspack build, the website navigation bar logo displays at original image size, causing:

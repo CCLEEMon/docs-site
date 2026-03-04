@@ -10,6 +10,8 @@ schema: Article
 
 Docusaurus 3.9 has strict requirements for translation file format. Values in `code.json` and `current.json` must be `{ "message": "xxx" }` object format, not plain strings or nested objects.
 
+<!-- truncate -->
+
 ## Problem
 
 Starting the English dev server throws an error:

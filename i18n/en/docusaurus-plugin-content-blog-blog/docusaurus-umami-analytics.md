@@ -10,6 +10,8 @@ schema: Article
 
 Add the Umami script to the `scripts` array in `docusaurus.config.ts`, then update CSP `script-src` and `connect-src` to allow the Umami domain.
 
+<!-- truncate -->
+
 ## The Problem
 
 Google Analytics too heavy? Want to use Umami, a lightweight and privacy-friendly analytics tool, but not sure how to configure it in Docusaurus—especially when CSP (Content Security Policy) blocks the script.

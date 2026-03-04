@@ -10,6 +10,8 @@ schema: Article
 
 Docusaurus 3.9 对翻译文件格式有严格要求，`code.json` 和 `current.json` 中的值必须是 `{ "message": "xxx" }` 对象格式，不能是纯字符串或嵌套对象。
 
+<!-- truncate -->
+
 ## 问题现象
 
 启动英文版开发服务器时报错：

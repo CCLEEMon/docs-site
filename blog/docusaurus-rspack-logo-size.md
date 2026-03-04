@@ -10,6 +10,8 @@ schema: Article
 
 Docusaurus 切换 Rspack 构建后，Navbar Logo 可能显示原始图片尺寸覆盖页面。在 `custom.css` 中显式覆盖 `.navbar__logo` 样式即可解决。
 
+<!-- truncate -->
+
 ## 问题现象
 
 Rspack 构建后，网站导航栏的 Logo 以原始图片尺寸显示，导致：

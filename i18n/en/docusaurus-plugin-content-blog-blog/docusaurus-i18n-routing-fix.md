@@ -10,6 +10,8 @@ schema: Article
 
 In Docusaurus i18n sites, using `<a href="/docs/xxx">` absolute paths in English pages redirects to Chinese. Solution: Use `<Link to="/docs/xxx">` for page components, and relative paths `./xxx` in MD documents.
 
+<!-- truncate -->
+
 ## The Problem
 
 Docusaurus configured with Chinese (default) and English. On English pages (`/en/` path), clicking navigation or doc links changes URL to `/docs/xxx` instead of `/en/docs/xxx`, redirecting back to Chinese.

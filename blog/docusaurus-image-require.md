@@ -10,6 +10,8 @@ schema: Article
 
 在 Docusaurus 组件中使用 `/images/xxx.png` 直接引用图片，构建后可能 404。改用 `require('@site/static/images/xxx.png').default` 可确保图片被 Webpack 正确打包。
 
+<!-- truncate -->
+
 ## 问题现象
 
 开发环境下图片正常显示：

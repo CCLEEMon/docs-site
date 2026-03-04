@@ -10,6 +10,8 @@ schema: Article
 
 在 `docusaurus.config.ts` 的 `scripts` 数组中添加 Umami 脚本，同时更新 CSP 的 `script-src` 和 `connect-src` 允许 Umami 域名即可完成集成。
 
+<!-- truncate -->
+
 ## 问题现象
 
 Google Analytics 太重？想用 Umami 这类轻量级、隐私友好的分析工具，但不知道如何在 Docusaurus 中正确配置，尤其是遇到 CSP（内容安全策略）拦截的问题。

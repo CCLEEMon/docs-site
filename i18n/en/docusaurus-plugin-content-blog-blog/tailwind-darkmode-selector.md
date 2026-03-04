@@ -10,6 +10,8 @@ schema: Article
 
 Docusaurus uses the `data-theme` attribute to control themes. Tailwind's default `attribute` mode matches any `data-theme` value. Use `selector` mode to precisely match `data-theme="dark"`.
 
+<!-- truncate -->
+
 ## Problem
 
 Docusaurus sets the `data-theme` attribute on the `<html>` tag:

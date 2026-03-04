@@ -10,6 +10,8 @@ schema: Article
 
 Add multiple `@docusaurus/plugin-content-blog` instances in the `plugins` array, each with different `id`, `path`, and `routeBasePath`.
 
+<!-- truncate -->
+
 ## The Problem
 
 Your website needs a tech blog (for development tips) + a case studies section (for project showcases). Different content styles require independent list pages, tag pages, and routes. Docusaurus only supports one blog by default—what to do?

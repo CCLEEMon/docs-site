@@ -10,6 +10,8 @@ schema: Article
 
 Docusaurus 项目引入 Tailwind CSS 后，markdown 文档中的标题（h1-h6）会失去默认样式。原因是 Tailwind Preflight 重置了所有标题的 font-size 和 font-weight。在 `custom.css` 中使用 `.markdown` 选择器手动恢复即可。
 
+<!-- truncate -->
+
 ## 问题现象
 
 引入 Tailwind CSS 后，Docusaurus 站点的 markdown 文档出现样式异常：

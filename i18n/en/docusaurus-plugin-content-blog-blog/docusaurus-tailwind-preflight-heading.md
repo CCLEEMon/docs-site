@@ -10,6 +10,8 @@ schema: Article
 
 After adding Tailwind CSS to a Docusaurus project, markdown heading styles (h1-h6) lose their default formatting. This happens because Tailwind Preflight resets font-size and font-weight for all headings. Fix it by adding explicit styles in `custom.css` with the `.markdown` selector.
 
+<!-- truncate -->
+
 ## Problem
 
 After integrating Tailwind CSS, Docusaurus markdown documents show styling issues:

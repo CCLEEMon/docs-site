@@ -10,6 +10,8 @@ schema: Article
 
 Using `/images/xxx.png` directly in Docusaurus components works in dev but may return 404 after build. Use `require('@site/static/images/xxx.png').default` to ensure images are properly bundled by Webpack.
 
+<!-- truncate -->
+
 ## Problem
 
 Images display normally in development:

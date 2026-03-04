@@ -10,6 +10,8 @@ schema: Article
 
 Docusaurus 使用 `data-theme` 属性控制主题，Tailwind 默认的 `attribute` 模式会匹配任意 `data-theme` 值。改用 `selector` 模式可精确匹配 `data-theme="dark"`。
 
+<!-- truncate -->
+
 ## 问题现象
 
 Docusaurus 在 `<html>` 标签上设置 `data-theme` 属性：

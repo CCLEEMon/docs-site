@@ -10,6 +10,8 @@ schema: Article
 
 在 `plugins` 数组中添加多个 `@docusaurus/plugin-content-blog` 实例，每个实例使用不同的 `id`、`path` 和 `routeBasePath` 即可实现多个独立博客。
 
+<!-- truncate -->
+
 ## 问题现象
 
 官网需要一个技术博客（发布开发技巧）+ 一个案例展示（展示项目成果），两者内容风格不同，需要独立的列表页、标签页和路由。Docusaurus 默认只支持一个博客，怎么办？
