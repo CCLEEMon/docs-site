@@ -6,7 +6,7 @@ const config: Config = {
   tagline: 'AI驱动的电商运营工具平台',
   favicon: 'img/favicon.ico',
 
-  url: 'https://www.aigent.ren',
+  url: 'https://aidevhub.ai',
   baseUrl: '/',
 
   // Umami 网站分析
