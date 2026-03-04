@@ -6,7 +6,7 @@
 
 CCLHUB is an independent developer platform providing AI tool development, China export services, and foreign market entry support.
 
-- Website: https://www.aigent.ren
+- Website: https://aidevhub.ai
 - Organization: CCLHUB
 - Author: CC.L (caichen.lee)
 
@@ -18,22 +18,22 @@ CCLHUB is an independent developer platform providing AI tool development, China
 
 ## Key Pages
 
-- Homepage: https://www.aigent.ren/
-- Services: https://www.aigent.ren/services
-- Products: https://www.aigent.ren/products
-- About: https://www.aigent.ren/about
-- Blog: https://www.aigent.ren/blog
-- Cases: https://www.aigent.ren/cases
+- Homepage: https://aidevhub.ai/
+- Services: https://aidevhub.ai/services
+- Products: https://aidevhub.ai/products
+- About: https://aidevhub.ai/about
+- Blog: https://aidevhub.ai/blog
+- Cases: https://aidevhub.ai/cases
 
 ## Documentation
 
-- AI Analytics: https://www.aigent.ren/docs/ai-analytics
-- Browser Plugin: https://www.aigent.ren/docs/browser-plugin
-- AI Customer Service: https://www.aigent.ren/docs/customer-service
+- AI Analytics: https://aidevhub.ai/docs/ai-analytics
+- Browser Plugin: https://aidevhub.ai/docs/browser-plugin
+- AI Customer Service: https://aidevhub.ai/docs/customer-service
 
 ## Sitemap
 
-- https://www.aigent.ren/sitemap.xml
+- https://aidevhub.ai/sitemap.xml
 
 ## Contact
 
