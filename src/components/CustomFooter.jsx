@@ -2,13 +2,13 @@
 
 import Translate from '@docusaurus/Translate'
 import Link from '@docusaurus/Link'
-import { useLocation } from '@docusaurus/router'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { Zap, Shield, Rocket } from 'lucide-react'
 
 export default function CustomFooter() {
   const currentYear = new Date().getFullYear()
-  const location = useLocation()
-  const isEn = location.pathname.startsWith('/en')
+  const { i18n } = useDocusaurusContext()
+  const isEn = i18n.currentLocale === 'en'
 
   const features = isEn
     ? [
