@@ -83,7 +83,7 @@ export default function FloatingChat() {
           'Content-Type': 'application/json; charset=UTF-8'
         },
         body: JSON.stringify({
-          collection: 'product_help',
+          collection: 'system_product_help',
           question: textToSend
         }, undefined, 2) // 确保 Unicode 字符正确编码
       })
