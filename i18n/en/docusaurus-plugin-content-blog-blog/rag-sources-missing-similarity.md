@@ -1,0 +1,139 @@
+---
+title: Fix RAG Query Sources Missing Similarity Field
+description: RAG query endpoint returns sources array with only metadata, missing per-source similarity scores - merge distances field to fix
+date: 2026-03-08
+tags: [RAG, Python, Bug Fix, API Design]
+schema: Article
+---
+
+## TL;DR
+
+The `sources` field returned by RAG `/query` endpoint only contains metadata, without per-source `similarity` scores. Solution: merge `metadatas` and `distances` when assembling response, calculating `similarity = 1 - distance`.
+
+## Problem
+
+RAG query endpoint returns `sources` without similarity information:
+
+```json
+{
+  "answer": "Based on the documentation...",
+  "sources": [
+    {"doc_id": "doc_001", "title": "API Docs", "source": "github"},
+    {"doc_id": "doc_002", "title": "Dev Guide", "source": "github"}
+  ],
+  "similarity": 0.85
+}
+```
+
+Issues:
+- Each object in `sources` array lacks `similarity` field
+- Only top-level `similarity` (highest score) is available, can't determine per-source relevance
+- Frontend can't sort by similarity or highlight results
+
+## Root Cause
+
+Original code returns metadata directly, ignoring distances:
+
+```python
+# Problem code
+result = {
+    "answer": answer,
+    "sources": search_results.get("metadatas", [[]])[0],  # Only metadata
+    "collection": collection,
+    "similarity": max_similarity  # Only highest score
+}
+```
+
+Vector databases (Milvus, Chroma, etc.) typically return three arrays:
+- `documents`: text content
+- `metadatas`: metadata
+- `distances`: distance scores (lower = more similar)
+
+**Oversight**: Only metadata was passed, without converting distance to similarity and merging into sources.
+
+## Solution
+
+Merge `metadatas` and `distances`, calculating similarity for each source:
+
+```python
+# Fixed code
+metadatas = search_results.get("metadatas", [[]])[0]
+distances = search_results.get("distances", [[]])[0]
+
+sources = [
+    {**meta, "similarity": round(1 - dist, 3)}
+    for meta, dist in zip(metadatas, distances)
+]
+
+result = {
+    "answer": answer,
+    "sources": sources,  # Now includes similarity
+    "collection": collection,
+    "similarity": max_similarity
+}
+```
+
+After fix:
+
+```json
+{
+  "answer": "Based on the documentation...",
+  "sources": [
+    {"doc_id": "doc_001", "title": "API Docs", "similarity": 0.85},
+    {"doc_id": "doc_002", "title": "Dev Guide", "similarity": 0.72}
+  ],
+  "similarity": 0.85
+}
+```
+
+### Complete Code Example
+
+```python
+async def query_handler(request):
+    # 1. Execute vector search
+    search_results = await milvus_service.query(
+        collection_name=collection,
+        query_embeddings=[query_embedding],
+        n_results=5
+    )
+
+    # 2. Generate answer
+    answer = await llm.generate(context, question)
+
+    # 3. Assemble sources (merge metadata and similarity)
+    metadatas = search_results.get("metadatas", [[]])[0]
+    distances = search_results.get("distances", [[]])[0]
+
+    sources = [
+        {**meta, "similarity": round(1 - dist, 3)}
+        for meta, dist in zip(metadatas, distances)
+    ]
+
+    # 4. Calculate max similarity
+    max_similarity = max(s["similarity"] for s in sources) if sources else 0
+
+    return {
+        "answer": answer,
+        "sources": sources,
+        "similarity": max_similarity
+    }
+```
+
+## FAQ
+
+### Q: Why similarity = 1 - distance?
+
+A: Vector databases typically return distance, not similarity. For cosine distance, `cosine_distance = 1 - cosine_similarity`, so `similarity = 1 - distance`. For Euclidean distance, use `similarity = 1 / (1 + distance)` or similar formulas.
+
+### Q: What's the difference between top-level similarity and sources similarity?
+
+A: Top-level `similarity` is the highest score (most relevant source), used to judge overall answer quality. Per-source `similarity` in `sources` indicates each source's relevance, used for sorting, highlighting, or filtering.
+
+### Q: What if distance is not cosine distance?
+
+A: Adjust the formula based on distance type:
+- Cosine distance: `similarity = 1 - distance`
+- Euclidean distance: `similarity = 1 / (1 + distance)`
+- Inner product: `similarity = distance` (already similarity)
+
+Check your vector database configuration to confirm which distance metric is used.

@@ -1,0 +1,121 @@
+---
+title: Fix Milvus Hybrid Search RRF Score Incompatibility with Similarity Threshold
+description: Hybrid search weighted fusion scores typically don't exceed 0.7, using 0.7 threshold filters out all results - adjust threshold strategy
+date: 2026-03-08
+tags: [Milvus, RAG, Vector Search, Bug Fix]
+schema: Article
+---
+
+## TL;DR
+
+Milvus hybrid search weighted fusion score = `0.7 * dense_score + 0.3 * sparse_score`, with theoretical maximum around 0.7. Using `min_similarity=0.7` filters out almost all results. Solution: lower threshold to 0.3, or adjust dynamically based on fusion strategy.
+
+## Problem
+
+Hybrid search returns empty results even when relevant documents exist in the database:
+
+```python
+# Call hybrid search
+results = await milvus_service.hybrid_search(
+    collection_name="knowledge_base",
+    query_dense=dense_vector,
+    query_sparse=sparse_vector,
+    top_k=5,
+    min_similarity=0.7  # Root cause
+)
+
+# Returns empty array
+print(results)  # {"documents": [[]], "metadatas": [[]], "distances": [[]]}
+```
+
+Logs show results were retrieved but filtered out:
+
+```
+fused_results before filter: 10, scores: [0.52, 0.48, 0.45, ...]
+min_similarity threshold: 0.7
+fused_results after filter: 0, scores: []
+```
+
+## Root Cause
+
+Hybrid search uses **Weighted Fusion** instead of Reciprocal Rank Fusion (RRF):
+
+```python
+def _fuse_and_rank(self, dense_results, sparse_results, top_k):
+    semantic_weight = 0.7   # Semantic weight
+    keyword_weight = 0.3    # Keyword weight
+
+    for result in dense_results:
+        similarity = 1 - distance
+        score = similarity * semantic_weight  # 0.7 * score
+
+    for result in sparse_results:
+        similarity = 1 - distance
+        score = similarity * keyword_weight   # 0.3 * score
+
+    # Sum scores for same document
+    final_score = dense_score + sparse_score
+```
+
+**Mathematical analysis**:
+- Assuming max similarity for both dense and sparse is 1.0
+- Max fusion score = `0.7 * 1.0 + 0.3 * 1.0 = 1.0`
+- But in practice, sparse scores are typically lower (0.3-0.5) since keywords rarely match perfectly
+- **Actual max score is around 0.5-0.7**
+
+Using `min_similarity=0.7` effectively requires "perfect match", resulting in empty results.
+
+## Solution
+
+### Option 1: Lower Threshold (Recommended)
+
+```python
+# config.py
+class Settings(BaseSettings):
+    rag_min_similarity: float = 0.3  # Hybrid search threshold (weighted scores are typically lower)
+```
+
+### Option 2: Dynamic Threshold
+
+Use different thresholds based on search type:
+
+```python
+# Lower threshold for hybrid search
+if search_type == "hybrid":
+    min_similarity = 0.3
+else:
+    min_similarity = 0.7  # Pure semantic search can use higher threshold
+```
+
+### Option 3: Normalize Fusion Score
+
+Normalize fusion score to [0, 1]:
+
+```python
+def _fuse_and_rank(self, dense_results, sparse_results, top_k):
+    # ... fusion logic ...
+
+    # Normalize: divide by weight sum
+    max_possible_score = self.semantic_weight + self.keyword_weight  # 1.0
+    for doc in doc_scores.values():
+        doc["score"] = doc["score"] / max_possible_score
+
+    return sorted_docs[:top_k]
+```
+
+## FAQ
+
+### Q: Why are hybrid search scores lower than pure semantic search?
+
+A: Hybrid search scores are weighted sums, not pure similarity. Semantic search returns 0-1 cosine similarity, while hybrid search returns `0.7*dense + 0.3*sparse`. Even if both are 1.0, the final score is still 1.0. But in practice, sparse scores are typically lower, causing the total to be lower.
+
+### Q: What's the difference between RRF and Weighted Fusion?
+
+A: RRF calculates score based on rank position: `score = 1/(k+rank)`, independent of original similarity. Weighted fusion directly uses similarity scores with weights - more intuitive but requires threshold adjustment. Milvus natively supports weighted fusion; RRF needs custom implementation.
+
+### Q: Will setting threshold to 0.3 introduce low-quality results?
+
+A: Test with your business scenario. 0.3 is an empirical value. If quality drops:
+1. Raise to 0.4-0.5
+2. Add secondary filtering at application layer
+3. Use LLM to score result relevance
