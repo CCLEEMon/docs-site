@@ -1,0 +1,222 @@
+---
+title: Three Pitfalls When Integrating Supabase Auth with FastAPI
+description: Fix JWKS path 404, ES256 signature verification failure, and missing local user records on first login with complete JWT verification code.
+date: 2026-03-14
+tags: [FastAPI, Supabase, JWT, aigent, Authentication]
+schema: Article
+---
+
+## TL;DR
+
+Integrating Supabase Auth with FastAPI has three common pitfalls: non-standard JWKS path, ES256 signature requires DER conversion, and local database missing user on first login. This article provides complete solutions.
+
+## Problem Symptoms
+
+### Pitfall 1: JWKS Path 404
+
+```bash
+GET https://xxx.supabase.co/.well-known/jwks.json
+# 404 Not Found
+```
+
+All JWT verification requests return 401 Invalid Token.
+
+### Pitfall 2: ES256 Signature Verification Failed
+
+```python
+from jose import jwt
+payload = jwt.decode(token, key, algorithms=["ES256"])
+# JWTError: Signature verification failed
+```
+
+The public key is correct, but signature verification always fails.
+
+### Pitfall 3: No Local User Record on First Login
+
+```python
+# Creating an Agent
+agent = Agent(user_id=current_user["user_id"], ...)
+db.add(agent)
+# ForeignKeyViolation: user_id does not exist
+```
+
+User passed JWT verification via Supabase Auth, but local `agent_users` table has no record.
+
+## Root Causes
+
+### Pitfall 1: Non-Standard Supabase JWKS Path
+
+Standard OAuth/OIDC servers have JWKS at `/.well-known/jwks.json`, but Supabase places auth service under `/auth/v1/`:
+
+| Standard Path | Supabase Path |
+|--------------|---------------|
+| `/.well-known/jwks.json` | `/auth/v1/.well-known/jwks.json` |
+
+### Pitfall 2: ES256 Raw Signature vs DER Format
+
+Supabase JWT uses ES256 (P-256 curve) signing. JWT signatures are in **raw format** (r || s concatenated, 64 bytes), but Python `cryptography` library's `verify()` requires **DER-encoded ASN.1 format**.
+
+```
+Raw:     r (32 bytes) || s (32 bytes) = 64 bytes
+DER:     0x30 <len> 0x02 <r_len> <r> 0x02 <s_len> <s>
+```
+
+`python-jose`'s `jwt.decode()` has compatibility issues with ES256, requiring manual signature verification.
+
+### Pitfall 3: Auth and Data Separation
+
+Supabase Auth is a separate service. Users only exist in Supabase's `auth.users` table after registration/login. Local `agent_users` table needs manual synchronization.
+
+## Solution
+
+### 1. Correct JWKS URL
+
+```python
+# config.py
+class Settings(BaseSettings):
+    supabase_url: str = "https://xxx.supabase.co"
+
+    @property
+    def jwks_url(self) -> str:
+        # Key: /auth/v1/ prefix
+        return f"{self.supabase_url}/auth/v1/.well-known/jwks.json"
+```
+
+### 2. ES256 Signature Verification (Complete Code)
+
+```python
+import json
+import base64
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.asymmetric.utils import encode_dss_signature
+
+def _base64url_decode(data: str) -> bytes:
+    """Base64url decode with auto padding"""
+    rem = len(data) % 4
+    if rem > 0:
+        data += "=" * (4 - rem)
+    return base64.urlsafe_b64decode(data)
+
+def _raw_to_der_signature(raw_sig: bytes) -> bytes:
+    """Convert raw ECDSA signature (r||s) to DER format"""
+    # P-256: r and s are 32 bytes each
+    r = int.from_bytes(raw_sig[:32], "big")
+    s = int.from_bytes(raw_sig[32:], "big")
+    return encode_dss_signature(r, s)
+
+def verify_es256_signature(token: str, public_key_jwk: dict) -> dict:
+    """Verify ES256 JWT signature, return payload"""
+    parts = token.split(".")
+    if len(parts) != 3:
+        raise ValueError("Invalid JWT format")
+
+    header_b64, payload_b64, signature_b64 = parts
+
+    # 1. Build EC public key
+    x = _base64url_decode(public_key_jwk["x"])
+    y = _base64url_decode(public_key_jwk["y"])
+    x_int = int.from_bytes(x, "big")
+    y_int = int.from_bytes(y, "big")
+
+    public_key = ec.EllipticCurvePublicNumbers(
+        x_int, y_int, ec.SECP256R1()
+    ).public_key(default_backend())
+
+    # 2. Verify signature
+    message = f"{header_b64}.{payload_b64}".encode()
+    raw_signature = _base64url_decode(signature_b64)
+    der_signature = _raw_to_der_signature(raw_signature)
+
+    public_key.verify(
+        der_signature,
+        message,
+        ec.ECDSA(hashes.SHA256())
+    )
+
+    # 3. Return payload
+    return json.loads(_base64url_decode(payload_b64))
+```
+
+### 3. User Synchronization Service
+
+```python
+# app/services/user_service.py
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.models.user import AgentUser
+
+async def ensure_user_exists(
+    db: AsyncSession,
+    user_id: str,
+    email: str,
+    plan: str = "free"
+) -> AgentUser:
+    """Ensure user exists in local database (synced from Supabase Auth)"""
+    # Check if exists
+    result = await db.execute(
+        select(AgentUser).where(AgentUser.user_id == user_id)
+    )
+    user = result.scalar_one_or_none()
+
+    if user:
+        return user
+
+    # Create new user
+    user = AgentUser(
+        user_id=user_id,
+        email=email,
+        plan=plan,
+        role="user"
+    )
+    db.add(user)
+    await db.commit()
+    await db.refresh(user)
+    return user
+```
+
+### 4. Call Before Creating Resources
+
+```python
+# app/routers/agents.py
+@router.post("/")
+async def create_agent(
+    input: CreateAgentInput,
+    db: AsyncSession = Depends(get_db),
+    current_user: dict = Depends(get_current_user)
+):
+    # Key: ensure user exists
+    user = await ensure_user_exists(
+        db,
+        user_id=current_user["user_id"],
+        email=current_user["email"],
+        plan=current_user["plan"]
+    )
+
+    # Now safe to create Agent
+    agent = Agent(
+        user_id=user.user_id,
+        name=input.name,
+        llm_config=input.llm_config.model_dump()
+    )
+    ...
+```
+
+## FAQ
+
+### Q: Why does Supabase JWT verification return 404?
+
+A: Supabase's JWKS path is `/auth/v1/.well-known/jwks.json`, not the standard `/.well-known/jwks.json`. Check your JWKS URL configuration.
+
+### Q: How to fix python-jose ES256 signature verification failure?
+
+A: `python-jose` has incomplete ES256 support. Use `cryptography` library for manual verification, converting JWT's raw signature (r||s 64 bytes) to DER format.
+
+### Q: How to sync Supabase Auth users to local database in FastAPI?
+
+A: Call `ensure_user_exists()` at API entry points that need user records, extracting user info from JWT and syncing to local table.
+
+### Q: Where is user_id in Supabase JWT?
+
+A: The `sub` field contains user UUID, `email` field contains email, and `app_metadata.plan` contains subscription plan (custom field).
