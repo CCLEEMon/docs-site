@@ -65,6 +65,7 @@ const config: Config = {
         id: 'blog',
         path: 'blog',
         routeBasePath: 'blog',
+        blogSidebarCount: 'ALL',
       },
     ],
     // 案例博客
