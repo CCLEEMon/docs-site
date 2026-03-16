@@ -1,0 +1,97 @@
+{
+  "categories": [
+    { "id": "all", "name": "全部", "nameEn": "All" },
+    { "id": "writing", "name": "写作与内容", "nameEn": "Writing & Content" },
+    { "id": "image-design", "name": "图像与设计", "nameEn": "Image & Design" },
+    { "id": "video-audio", "name": "视频与音频", "nameEn": "Video & Audio" },
+    { "id": "dev-coding", "name": "编程与开发", "nameEn": "Dev & Coding" },
+    { "id": "automation", "name": "自动化工作流", "nameEn": "Automation" },
+    { "id": "ecommerce", "name": "电商运营", "nameEn": "E-commerce" },
+    { "id": "ai-api", "name": "AI模型API", "nameEn": "AI Model API" }
+  ],
+  "regions": [
+    { "id": "china", "label": "🇨🇳国内", "labelEn": "🇨🇳 China" },
+    { "id": "overseas", "label": "🌍海外", "labelEn": "🌍 Overseas" },
+    { "id": "global", "label": "🌐全球", "labelEn": "🌐 Global" }
+  ],
+  "pricings": [
+    { "id": "tier1", "label": "💰日常", "labelEn": "💰 Budget" },
+    { "id": "tier2", "label": "💰💰专业", "labelEn": "💰💰 Pro" },
+    { "id": "tier3", "label": "💰💰💰高级", "labelEn": "💰💰💰 Premium" }
+  ],
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "logo": "chatgpt.png",
+      "description": "OpenAI 对话式 AI，写作编程全能助手",
+      "descriptionEn": "OpenAI conversational AI, all-in-one assistant for writing and coding",
+      "category": "writing",
+      "region": "global",
+      "pricing": "tier1",
+      "featured": true,
+      "affiliateUrl": "https://chat.openai.com"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "logo": "midjourney.png",
+      "description": "AI 图像生成，艺术创作首选工具",
+      "descriptionEn": "AI image generation, top choice for artistic creation",
+      "category": "image-design",
+      "region": "overseas",
+      "pricing": "tier2",
+      "featured": true,
+      "affiliateUrl": "https://midjourney.com"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "logo": "claude.png",
+      "description": "Anthropic 对话 AI，长文本理解出色",
+      "descriptionEn": "Anthropic conversational AI, excellent at long context",
+      "category": "writing",
+      "region": "overseas",
+      "pricing": "tier2",
+      "featured": false,
+      "affiliateUrl": "https://claude.ai"
+    },
+    {
+      "id": "wenxin",
+      "name": "文心一言",
+      "logo": "wenxin.png",
+      "description": "百度大模型，中文理解能力强",
+      "descriptionEn": "Baidu's LLM, strong Chinese language understanding",
+      "category": "writing",
+      "region": "china",
+      "pricing": "tier1",
+      "featured": false,
+      "affiliateUrl": "https://yiyan.baidu.com"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "logo": "cursor.png",
+      "description": "AI 代码编辑器，编程效率倍增",
+      "descriptionEn": "AI code editor, multiply your coding productivity",
+      "category": "dev-coding",
+      "region": "global",
+      "pricing": "tier2",
+      "featured": true,
+      "affiliateUrl": "https://cursor.sh"
+    },
+    {
+      "id": "hostinger",
+      "name": "Hostinger",
+      "logo": "hostinger.png",
+      "description": "高性价比云主机，新手建站首选",
+      "descriptionEn": "Affordable cloud hosting, best for beginners",
+      "category": "dev-coding",
+      "region": "global",
+      "pricing": "tier1",
+      "featured": true,
+      "affiliateUrl": "https://hostinger.com",
+      "reviewUrl": "/blog/hostinger-review"
+    }
+  ]
+}
