@@ -370,5 +370,41 @@
   },
   "locale.title": {
     "message": "选择语言"
+  },
+  "tool.page.title": {
+    "message": "AI 工具导航",
+    "description": "AI Tools page title"
+  },
+  "tool.page.subtitle": {
+    "message": "全球 AI 工具精选，发现国内外优质 AI 工具",
+    "description": "AI Tools page subtitle"
+  },
+  "tool.search.placeholder": {
+    "message": "搜索 AI 工具...",
+    "description": "Search input placeholder"
+  },
+  "tool.filter.region": {
+    "message": "地区",
+    "description": "Region filter label"
+  },
+  "tool.filter.pricing": {
+    "message": "成本",
+    "description": "Pricing filter label"
+  },
+  "tool.filter.pricing.all": {
+    "message": "全部",
+    "description": "All pricing option"
+  },
+  "tool.count.tools": {
+    "message": "个工具",
+    "description": "Tools count suffix"
+  },
+  "tool.noresults": {
+    "message": "没有找到匹配的工具",
+    "description": "No results message"
+  },
+  "tool.card.readReview": {
+    "message": "查看评测",
+    "description": "Read review button text"
   }
 }

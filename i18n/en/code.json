@@ -934,5 +934,41 @@
   "agntc.cta.button": {
     "message": "Try Free",
     "description": "Agntc CTA button"
+  },
+  "tool.page.title": {
+    "message": "AI Tools Directory",
+    "description": "AI Tools page title"
+  },
+  "tool.page.subtitle": {
+    "message": "Curated global AI tools, discover the best AI tools worldwide",
+    "description": "AI Tools page subtitle"
+  },
+  "tool.search.placeholder": {
+    "message": "Search AI tools...",
+    "description": "Search input placeholder"
+  },
+  "tool.filter.region": {
+    "message": "Region",
+    "description": "Region filter label"
+  },
+  "tool.filter.pricing": {
+    "message": "Pricing",
+    "description": "Pricing filter label"
+  },
+  "tool.filter.pricing.all": {
+    "message": "All",
+    "description": "All pricing option"
+  },
+  "tool.count.tools": {
+    "message": "tools",
+    "description": "Tools count suffix"
+  },
+  "tool.noresults": {
+    "message": "No matching tools found",
+    "description": "No results message"
+  },
+  "tool.card.readReview": {
+    "message": "Read Review",
+    "description": "Read review button text"
   }
 }
