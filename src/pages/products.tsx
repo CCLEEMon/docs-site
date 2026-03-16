@@ -138,7 +138,7 @@ export default function Home(): React.ReactElement {
               </div>
               <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
                 <ZapIcon size={16} />
-                <Translate id="homepage.products.agntc.cta">访问 app.agent.ren</Translate>
+                <Translate id="homepage.products.agntc.cta">访问 app.aigent.ren</Translate>
               </div>
             </Link>
           </div>
