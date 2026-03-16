@@ -155,4 +155,4 @@ The **Recent Tasks** section in the middle of Dashboard page also shows **all Ag
 ## Related Docs
 
 - 🚀 [Quick Start](./quick-start) - From registration to first conversation
-- ❓ [Help & Support](./help) - FAQ and troubleshooting
+- ❓ [Help & Support](./help-support) - FAQ and troubleshooting

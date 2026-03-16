@@ -201,4 +201,4 @@ When Agent wants to call a higher-risk tool:
 Congratulations on completing your first conversation! Next you can:
 
 - 📖 [Feature Guide](./feature-guide) - Learn about skills system, memory management, and other advanced features
-- ❓ [Help & Support](./help) - Having issues? Check the FAQ
+- ❓ [Help & Support](./help-support) - Having issues? Check the FAQ

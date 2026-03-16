@@ -148,7 +148,7 @@ MVP 阶段暂无在线客服，可通过以下方式获取帮助：
 
 ## 更新日志
 
-详见 [AI Agent 更新日志](/docs/agntc-updates)
+详见 [AI Agent 更新日志](/docs/agntc/updates)
 
 ---
 

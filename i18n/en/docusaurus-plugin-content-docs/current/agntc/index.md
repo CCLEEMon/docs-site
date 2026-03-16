@@ -148,7 +148,7 @@ No online support during MVP. Get help through:
 
 ## Changelog
 
-See [AI Agent Changelog](/docs/agntc-updates)
+See [AI Agent Changelog](/docs/agntc/updates)
 
 ---
 
