@@ -366,7 +366,7 @@ article header h1 {
 .markdown h2 {
   letter-spacing: -0.015em;
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
 .markdown h2::before {
@@ -382,6 +382,15 @@ article header h1 {
 
 .markdown h3 {
   letter-spacing: -0.01em;
+}
+
+/* --- 标题图标间距 --- */
+.markdown h1 svg,
+.markdown h2 svg,
+.markdown h3 svg,
+.markdown h4 svg {
+  margin-right: 0.75rem;
+  vertical-align: middle;
 }
 
 /* --- 引用块增强 --- */
@@ -488,6 +497,87 @@ article header h1 {
 
 .markdown a:hover::after {
   width: 100%;
+}
+
+/* ========== Docs 文档页样式 ========== */
+
+/* --- 文档容器 --- */
+.theme-doc-markdown {
+  padding: 2rem;
+  margin: -1rem -2rem 2rem;
+  border-radius: 1rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-border-color);
+}
+
+/* 文档页 h1 增加顶部和底部间距 */
+.theme-doc-markdown > h1:first-child {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* 文档页 h2 间距增加 */
+.theme-doc-markdown h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+/* 文档页 h3 间距增加 */
+.theme-doc-markdown h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 文档页 h4 间距增加 */
+.theme-doc-markdown h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* 文档页标题图标对齐 */
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-doc-markdown h1 svg,
+.theme-doc-markdown h2 svg,
+.theme-doc-markdown h3 svg,
+.theme-doc-markdown h4 svg {
+  margin-right: 0;
+  vertical-align: baseline;
+  flex-shrink: 0;
+}
+
+/* 文档页段落间距增加 */
+.theme-doc-markdown p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* 文档页列表间距增加 */
+.theme-doc-markdown ul,
+.theme-doc-markdown ol {
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.theme-doc-markdown li {
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
+}
+
+/* StatusTag 组件间距 */
+.status-tag {
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 /* ========== Blog 页面高级感样式 ========== */

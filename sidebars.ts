@@ -17,6 +17,11 @@ const sidebars: SidebarsConfig = {
       label: 'AI客服',
       items: ['customer-service', 'ai-customer-service-updates'],
     },
+    {
+      type: 'category',
+      label: 'AI Agent',
+      items: ['agntc', 'agntc-updates'],
+    },
   ],
 };
 

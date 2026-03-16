@@ -790,5 +790,17 @@
   },
   "terms.lastUpdate": {
     "message": "Last Updated"
+  },
+  "homepage.products.agntc.title": {
+    "message": "AI Agent",
+    "description": "AI Agent product title"
+  },
+  "homepage.products.agntc.description": {
+    "message": "Say it, done. No developers needed. Bring your own API Key, transparent execution, data sovereignty.",
+    "description": "AI Agent product description"
+  },
+  "homepage.products.agntc.cta": {
+    "message": "Visit app.agent.ren",
+    "description": "AI Agent CTA text"
   }
 }
