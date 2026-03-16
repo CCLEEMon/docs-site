@@ -1,6 +1,7 @@
 ---
 title: AI Agent 更新日志
 description: AI Agent Platform 版本更新记录
+sidebar_position: 5
 project: agntc
 schema: Article
 date: 2026-03-16

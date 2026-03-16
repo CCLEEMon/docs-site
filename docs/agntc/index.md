@@ -1,6 +1,7 @@
 ---
 title: AI Agent Platform
 description: 自然语言驱动的 AI Agent 平台 - 说出来就能做到，不用找开发者
+sidebar_position: 1
 project: agntc
 schema: Article
 date: 2026-03-16

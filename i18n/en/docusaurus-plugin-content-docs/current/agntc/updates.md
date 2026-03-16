@@ -1,6 +1,7 @@
 ---
 title: AI Agent Changelog
 description: AI Agent Platform version update records
+sidebar_position: 5
 project: agntc
 schema: Article
 date: 2026-03-16

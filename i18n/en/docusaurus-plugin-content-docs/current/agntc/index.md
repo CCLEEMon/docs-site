@@ -1,6 +1,7 @@
 ---
 title: AI Agent Platform
 description: Natural language driven AI Agent platform - Say it, done. No developers needed.
+sidebar_position: 1
 project: agntc
 schema: Article
 date: 2026-03-16

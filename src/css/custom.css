@@ -663,3 +663,24 @@ a.badge:hover,
   color: white;
   transform: scale(1.02);
 }
+
+/* ========== Breadcrumbs 面包屑 ========== */
+.theme-doc-breadcrumbs {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumbs {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
