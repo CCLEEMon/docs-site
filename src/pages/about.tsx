@@ -47,7 +47,7 @@ export default function AboutPage(): React.ReactElement {
             </div>
             <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
               <p className="text-gray-700 dark:text-gray-300 text-sm">
-                <Translate id="about.achievements.item2">负责企业1688全渠道运营，月均销售额环比增长200%,独立站海外询盘量提升30%</Translate>
+                <Translate id="about.achievements.item2">负责企业全渠道运营，月均销售额环比增长200%，独立站海外询盘量提升30%</Translate>
               </p>
             </div>
             <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
