@@ -802,5 +802,137 @@
   "homepage.products.agntc.cta": {
     "message": "Visit app.agent.ren",
     "description": "AI Agent CTA text"
+  },
+  "agntc.title": {
+    "message": "AI Agent Platform - Say It, Done",
+    "description": "Agntc page title"
+  },
+  "agntc.description": {
+    "message": "AI Agent Platform - Natural language driven, transparent execution, bring your own API Key, sandbox security",
+    "description": "Agntc page description"
+  },
+  "agntc.hero.title": {
+    "message": "AI Agent Platform",
+    "description": "Agntc hero title"
+  },
+  "agntc.hero.slogan": {
+    "message": "Say it, done. No developers needed.",
+    "description": "Agntc hero slogan"
+  },
+  "agntc.hero.cta": {
+    "message": "Try Now",
+    "description": "Agntc hero CTA"
+  },
+  "agntc.features.title": {
+    "message": "Core Features",
+    "description": "Agntc features section title"
+  },
+  "agntc.features.subtitle": {
+    "message": "Designed for secure, transparent, and efficient AI Agent experiences",
+    "description": "Agntc features section subtitle"
+  },
+  "agntc.features.natural.title": {
+    "message": "Natural Language Driven",
+    "description": "Agntc natural language feature title"
+  },
+  "agntc.features.natural.slogan": {
+    "message": "Say it, done",
+    "description": "Agntc natural language feature slogan"
+  },
+  "agntc.features.natural.description": {
+    "message": "Describe your needs in everyday language, Agent understands and executes automatically. Zero coding required.",
+    "description": "Agntc natural language feature description"
+  },
+  "agntc.features.transparent.title": {
+    "message": "Transparent Execution",
+    "description": "Agntc transparent feature title"
+  },
+  "agntc.features.transparent.slogan": {
+    "message": "Every step visible in real-time",
+    "description": "Agntc transparent feature slogan"
+  },
+  "agntc.features.transparent.description": {
+    "message": "Watch execution in real-time, pause anytime, stay in full control",
+    "description": "Agntc transparent feature description"
+  },
+  "agntc.features.byok.title": {
+    "message": "Bring Your Own API Key",
+    "description": "Agntc BYOK feature title"
+  },
+  "agntc.features.byok.slogan": {
+    "message": "Your Key, your control",
+    "description": "Agntc BYOK feature slogan"
+  },
+  "agntc.features.byok.description": {
+    "message": "Data never passes through our platform. Transparent costs, pay only for what you use",
+    "description": "Agntc BYOK feature description"
+  },
+  "agntc.features.sandbox.title": {
+    "message": "Sandbox Security",
+    "description": "Agntc sandbox feature title"
+  },
+  "agntc.features.sandbox.slogan": {
+    "message": "Three-layer protection",
+    "description": "Agntc sandbox feature slogan"
+  },
+  "agntc.features.sandbox.description": {
+    "message": "Isolated execution environment protects your system. Use with confidence",
+    "description": "Agntc sandbox feature description"
+  },
+  "agntc.features.memory.title": {
+    "message": "Smart Memory",
+    "description": "Agntc memory feature title"
+  },
+  "agntc.features.memory.slogan": {
+    "message": "Gets smarter with use",
+    "description": "Agntc memory feature slogan"
+  },
+  "agntc.features.memory.description": {
+    "message": "Remembers your preferences and habits. No need to repeat yourself, double your efficiency",
+    "description": "Agntc memory feature description"
+  },
+  "agntc.usecases.title": {
+    "message": "Use Cases",
+    "description": "Agntc use cases section title"
+  },
+  "agntc.usecases.subtitle": {
+    "message": "Multiple scenarios, one platform solution",
+    "description": "Agntc use cases section subtitle"
+  },
+  "agntc.usecases.automation.title": {
+    "message": "Daily Task Automation",
+    "description": "Agntc automation use case title"
+  },
+  "agntc.usecases.automation.description": {
+    "message": "Data organization, report generation, workflow orchestration—just say it and it executes",
+    "description": "Agntc automation use case description"
+  },
+  "agntc.usecases.cost.title": {
+    "message": "Transparent & Controllable Costs",
+    "description": "Agntc cost use case title"
+  },
+  "agntc.usecases.cost.description": {
+    "message": "Bring your own API Key. No middleman, pay only for what you use",
+    "description": "Agntc cost use case description"
+  },
+  "agntc.usecases.security.title": {
+    "message": "Secure Execution Environment",
+    "description": "Agntc security use case title"
+  },
+  "agntc.usecases.security.description": {
+    "message": "Sandbox isolation, real-time visibility, pause anytime",
+    "description": "Agntc security use case description"
+  },
+  "agntc.cta.title": {
+    "message": "Start Your AI Agent Journey",
+    "description": "Agntc CTA section title"
+  },
+  "agntc.cta.description": {
+    "message": "No complex setup required. Say it, done.",
+    "description": "Agntc CTA section description"
+  },
+  "agntc.cta.button": {
+    "message": "Try Free",
+    "description": "Agntc CTA button"
   }
 }
