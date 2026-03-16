@@ -135,6 +135,15 @@ export default function CustomFooter() {
             </a>
             <span className="text-gray-700 dark:text-gray-600">•</span>
             <a
+              href="https://app.aigent.ren/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
+            >
+              app.aigent.ren
+            </a>
+            <span className="text-gray-700 dark:text-gray-600">•</span>
+            <a
               href="https://aidevhub.ai/"
               target="_blank"
               rel="noopener noreferrer"
