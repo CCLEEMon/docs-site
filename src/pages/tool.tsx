@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
 import { translate } from '@docusaurus/Translate';
+import { useLocation } from '@docusaurus/router';
 import toolsData from '@site/src/data/tools.json';
 
 type Tool = typeof toolsData.tools[0];
@@ -13,8 +14,9 @@ export default function ToolPage(): React.ReactElement {
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [selectedPricing, setSelectedPricing] = useState<string>('');
 
-  // 获取当前语言
-  const isZh = typeof window !== 'undefined' && window.location.pathname.startsWith('/en') === false;
+  // 获取当前语言（使用 useLocation 避免 SSR hydration mismatch）
+  const { pathname } = useLocation();
+  const isZh = !pathname.startsWith('/en');
 
   // 筛选逻辑
   const filteredTools = useMemo(() => {
@@ -147,7 +149,7 @@ export default function ToolPage(): React.ReactElement {
               className="px-3 py-1 rounded text-sm bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 outline-none"
             >
               <option value="">
-                <Translate id="tool.filter.pricing.all">全部</Translate>
+                {translate({ id: 'tool.filter.pricing.all', message: '全部' })}
               </option>
               {toolsData.pricings.map((pricing) => (
                 <option key={pricing.id} value={pricing.id}>
