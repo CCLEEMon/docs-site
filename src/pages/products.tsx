@@ -122,7 +122,7 @@ export default function Home(): React.ReactElement {
             </div>
 
             <Link
-              to="/docs/agntc"
+              to="/agntc"
               id="agntc"
               className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
               style={{ animationDelay: '0.4s' }}
