@@ -664,6 +664,36 @@ a.badge:hover,
   transform: scale(1.02);
 }
 
+/* ========== Docusaurus 按钮样式修复 ========== */
+/* Tailwind preflight 重置了按钮文字色，需要显式设置 */
+.button--primary {
+  color: #ffffff !important;
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  color: #ffffff !important;
+}
+
+.button--secondary {
+  color: var(--ifm-color-primary) !important;
+  background-color: transparent;
+  border-color: var(--ifm-color-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-hover-overlay);
+  color: var(--ifm-color-primary) !important;
+}
+
+/* 确保按钮内 SVG 图标颜色继承 */
+.button svg {
+  color: inherit;
+}
+
 /* ========== Breadcrumbs 面包屑 ========== */
 .theme-doc-breadcrumbs {
   margin-bottom: 1.5rem;

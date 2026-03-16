@@ -113,7 +113,7 @@ const config: Config = {
         { to: '/', label: '首页', position: 'left' },
         { to: '/services', label: '服务', position: 'left' },
         { to: '/products', label: '产品', position: 'left' },
-        { to: '/tool', label: '工具', position: 'left' },
+        { to: '/tool', label: 'AI 工具', position: 'left' },
         { to: '/cases', label: '案例', position: 'left' },
         { to: '/about', label: '关于', position: 'left' },
         { to: '/blog', label: '博客', position: 'left' },

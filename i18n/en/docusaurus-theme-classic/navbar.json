@@ -19,6 +19,10 @@
     "message": "Products",
     "description": "Navbar item with label 产品"
   },
+  "item.label.AI 工具": {
+    "message": "AI Tools",
+    "description": "Navbar item with label AI 工具"
+  },
   "item.label.案例": {
     "message": "Cases",
     "description": "Navbar item with label 案例"
