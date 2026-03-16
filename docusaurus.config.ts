@@ -113,6 +113,7 @@ const config: Config = {
         { to: '/', label: '首页', position: 'left' },
         { to: '/services', label: '服务', position: 'left' },
         { to: '/products', label: '产品', position: 'left' },
+        { to: '/tool', label: '工具', position: 'left' },
         { to: '/cases', label: '案例', position: 'left' },
         { to: '/about', label: '关于', position: 'left' },
         { to: '/blog', label: '博客', position: 'left' },
@@ -126,6 +127,19 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: '网址',
+          items: [
+            { label: '首页', to: '/' },
+            { label: '服务', to: '/services' },
+            { label: '产品', to: '/products' },
+            { label: 'AI 工具', to: '/tool' },
+            { label: '案例', to: '/cases' },
+            { label: '关于', to: '/about' },
+          ],
+        },
+      ],
     },
     // 允许前端连接到 RAG API
     metadata: [
