@@ -3,7 +3,7 @@ title: 在 Docusaurus 中集成 Umami 网站分析
 description: 一步步教你如何在 Docusaurus 网站中集成 Umami 隐私友好的网站分析工具，包括脚本配置和 CSP 安全策略设置。
 date: 2026-03-03
 tags: [Docusaurus, Umami, 网站分析]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

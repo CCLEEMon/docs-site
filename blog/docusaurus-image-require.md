@@ -3,7 +3,7 @@ title: Docusaurus 中使用 require 引入静态图片资源
 description: 解决 Docusaurus 图片路径在构建时 404 的问题，使用 require 确保图片被正确打包
 date: 2026-03-01
 tags: [Docusaurus, Webpack, 构建问题]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

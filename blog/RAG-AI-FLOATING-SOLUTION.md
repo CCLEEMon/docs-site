@@ -2,7 +2,7 @@
 title: RAG 知识库与 AI 浮窗方案
 date: 2026-02-11
 tags: [RAG, AI, 知识库, enterprise-ai]
-authors: [ccl]
+authors: [cclee]
 ---
 
 # RAG 知识库与 AI 浮窗方案

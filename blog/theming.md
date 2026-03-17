@@ -2,7 +2,7 @@
 title: 主题开发规范
 date: 2026-02-10
 tags: [Docusaurus, TailwindCSS, 样式]
-authors: [ccl]
+authors: [cclee]
 ---
 
 # 主题开发规范

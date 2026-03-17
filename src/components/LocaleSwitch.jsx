@@ -3,19 +3,24 @@
 import { useState, useRef, useEffect } from 'react'
 import { Globe, Languages } from 'lucide-react'
 import Translate from '@docusaurus/Translate'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { locales, localeNames } from '../i18n'
 
 export default function LocaleSwitch({ currentLocale }) {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
+  const { i18n } = useDocusaurusContext()
+  const defaultLocale = i18n.defaultLocale
 
   const switchLocale = (newLocale) => {
     const currentPath = window.location.pathname
-    // 移除现有的语言前缀
-    const pathWithoutLocale = currentPath.replace(/^\/en/, '')
-    // 构建新的路径（中文无前缀，英文有 /en 前缀）
-    const newPath = newLocale === 'zh' ? pathWithoutLocale : `/en${pathWithoutLocale}`
-    window.location.href = newPath
+    // 根据默认语言确定非默认语言的前缀
+    const nonDefaultPrefix = defaultLocale === 'zh' ? '/en' : '/zh'
+    // 移除现有的非默认语言前缀
+    const pathWithoutLocale = currentPath.replace(new RegExp(`^${nonDefaultPrefix}`), '')
+    // 构建新路径：切换到默认语言则无前缀，切换到非默认语言则加前缀
+    const newPath = newLocale === defaultLocale ? pathWithoutLocale : `${nonDefaultPrefix}${pathWithoutLocale}`
+    window.location.href = newPath || '/'
   }
 
   useEffect(() => {

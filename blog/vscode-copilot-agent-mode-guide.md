@@ -3,7 +3,7 @@ title: 启用 VSCode Copilot Agent Mode 实现自动化编程
 description: 详解 VSCode Copilot Agent Mode 的启用方法、工作原理与最佳实践，让 AI 自动执行多步骤编程任务
 date: 2026-03-15
 tags: [VSCode, Copilot, Agent, AI编程]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

@@ -3,7 +3,7 @@ title: 修复 Docusaurus Rspack 构建后 Logo 尺寸异常
 description: Rspack 构建后 Navbar Logo 显示原始尺寸，通过 CSS 显式覆盖解决。
 date: 2026-02-28
 tags: [Docusaurus, Rspack, CSS, Bug修复]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

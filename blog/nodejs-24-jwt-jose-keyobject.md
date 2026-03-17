@@ -3,7 +3,7 @@ title: 修复 Node.js v24 中 jose 库 JWT 密钥格式错误
 description: 升级到 Node.js v24 后 jose 库签名验证失败，使用 crypto.createSecretKey() 将 Uint8Array 转为 KeyObject 解决兼容性问题
 date: 2026-03-07
 tags: [Node.js, JWT, jose, Bug修复, saas-development]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

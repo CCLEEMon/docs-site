@@ -3,7 +3,7 @@ title: 修复 Milvus 混合搜索的四个常见坑
 description: 解决 empty sparse vector、collection not loaded、sparse 格式错误、阈值过高导致的 Milvus Hybrid Search 失败问题
 date: 2026-03-07
 tags: [RAG, Milvus, 向量搜索, Python, Bug修复, vector-db]
-authors: [ccl]
+authors: [cclee]
 schema: FAQPage
 faqs:
   - q: "Milvus 为什么不接受空的稀疏向量？"

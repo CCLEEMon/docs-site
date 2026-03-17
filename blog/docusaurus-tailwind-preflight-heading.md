@@ -3,7 +3,7 @@ title: 修复 Docusaurus 引入 Tailwind 后标题样式丢失
 description: Tailwind Preflight 重置了 Docusaurus markdown 标题样式，通过 CSS 选择器手动恢复即可解决。
 date: 2026-03-01
 tags: [Docusaurus, TailwindCSS, CSS, Bug修复]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

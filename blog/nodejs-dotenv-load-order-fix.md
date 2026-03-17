@@ -3,7 +3,7 @@ title: 修复 Node.js 环境变量读取为 undefined 的问题
 description: dotenv 配置正确但 process.env 读取为 undefined？可能是模块加载顺序问题，用 getter 函数延迟读取解决。
 date: 2026-03-07
 tags: [Node.js, dotenv, Express, Bug修复]
-authors: [ccl]
+authors: [cclee]
 schema: Article
 ---
 

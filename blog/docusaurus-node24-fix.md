@@ -2,7 +2,7 @@
 title: Node 24 升级后 Docusaurus 构建失败的解决方案
 date: 2026-02-28
 tags: [Docusaurus, Node.js, 构建问题]
-authors: [ccl]
+authors: [cclee]
 ---
 
 # Node 24 升级后 Docusaurus 构建失败的解决方案

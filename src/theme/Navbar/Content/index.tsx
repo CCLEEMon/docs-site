@@ -1,4 +1,4 @@
-import React, {type ReactNode, useEffect, useState} from 'react';
+import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import {
   useThemeConfig,
@@ -9,7 +9,7 @@ import {
   splitNavbarItems,
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
-import {useLocation} from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import NavbarItem, {type Props as NavbarItemConfig} from '@theme/NavbarItem';
 import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
@@ -75,13 +75,8 @@ function NavbarContentLayout({
 
 export default function NavbarContent(): ReactNode {
   const mobileSidebar = useNavbarMobileSidebar();
-  const location = useLocation();
-  const [locale, setLocale] = useState('zh');
-
-  useEffect(() => {
-    const match = document.cookie.match(/locale=([^;]+)/);
-    setLocale((match?.[1] === 'en' || location.pathname.startsWith('/en')) ? 'en' : 'zh');
-  }, [location.pathname]);
+  const { i18n } = useDocusaurusContext();
+  const locale = i18n.currentLocale;
 
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);

@@ -3,7 +3,7 @@ title: 修复 Tailwind Preflight 重置 Docusaurus 面包屑样式
 description: Tailwind Preflight 会重置 ul 元素的 list-style、margin、padding，导致 Docusaurus 面包屑显示异常，需要 CSS 覆盖修复
 date: 2026-03-16
 tags: [docs-site, Docusaurus, Tailwind, CSS]
-authors: [ccl]
+authors: [cclee]
 ---
 
 ## TL;DR
