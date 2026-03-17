@@ -2,8 +2,10 @@
 title: Fix FastAPI SSE CancelledError on Client Disconnect
 description: FastAPI StreamingResponse raises asyncio.CancelledError when client disconnects. The correct fix is to catch and re-raise in the generator to prevent resource leaks.
 date: 2026-03-16
-tags: [FastAPI, SSE, asyncio, aigent]
+tags: [FastAPI, SSE, asyncio, ai-agent]
 ---
+
+> Encountered this issue while building an AI customer service automation system for a client. Documenting the root cause and solution.
 
 ## TL;DR
 
@@ -77,3 +79,20 @@ A: The generator won't terminate properly, potentially causing resource leaks (D
 ### Q: How to distinguish normal vs abnormal disconnects?
 
 A: `CancelledError` itself signals a normal disconnect. If you need cleanup logic (e.g., updating status), handle it in the `except` block before re-raising.
+
+import FAQSchema from '@site/src/components/FAQSchema';
+
+<FAQSchema faqs={[
+  {
+    question: "Why does FastAPI SSE throw CancelledError when client disconnects?",
+    answer: "This is by design in Python asyncio. When client disconnects, Starlette cancels the generator task, triggering CancelledError. Handle it by catching and re-raising."
+  },
+  {
+    question: "What happens if I catch CancelledError without re-raising?",
+    answer: "The generator won't terminate properly, potentially causing resource leaks (DB connections, HTTP clients). StreamingResponse will also incorrectly mark the response as complete."
+  },
+  {
+    question: "How to distinguish normal vs abnormal disconnects in FastAPI SSE?",
+    answer: "CancelledError itself signals a normal disconnect. If you need cleanup logic (e.g., updating status), handle it in the except block before re-raising."
+  }
+]} />

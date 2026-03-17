@@ -2,9 +2,11 @@
 title: Fix Four Common Milvus Hybrid Search Pitfalls
 description: Solve empty sparse vector, collection not loaded, sparse format error, and threshold issues in Milvus Hybrid Search
 date: 2026-03-07
-tags: [RAG, Milvus, Vector Search, Python, Bug Fix]
+tags: [RAG, Milvus, Vector Search, rag, enterprise-ai]
 schema: Article
 ---
+
+> Debugging hybrid retrieval scoring issues in a RAG knowledge base project. Here's the complete troubleshooting process.
 
 ## TL;DR
 
@@ -123,3 +125,20 @@ A: Hybrid search scores are weighted combinations (e.g., `0.7 * dense + 0.3 * sp
 ### Q: What format does DashScope sparse embedding return?
 
 A: DashScope returns `{"embeddings": [{"sparse_embedding": [{"index": 123, "value": 0.5}, ...]}]}`. After batch processing, format becomes `{text_index: {dim_index: value}}`. Use `.get(0, {})` to extract the first item's sparse vector for search.
+
+import FAQSchema from '@site/src/components/FAQSchema';
+
+<FAQSchema faqs={[
+  {
+    question: "Why doesn't Milvus accept empty sparse vectors?",
+    answer: "Milvus SPARSE_FLOAT_VECTOR type requires at least one non-zero element per row. Empty dict {} cannot determine vector dimensions. Use {0: 0.0} as placeholder."
+  },
+  {
+    question: "Must I call load_collection before searching in Milvus 2.4?",
+    answer: "Yes. Milvus 2.4+ doesn't auto-load collections into memory. You must explicitly call client.load_collection(collection_name) before searching."
+  },
+  {
+    question: "Why are hybrid search scores typically only 0.3-0.5?",
+    answer: "Hybrid search scores are weighted combinations (e.g., 0.7 * dense + 0.3 * sparse). In practice, dense and sparse scores rarely both reach 1.0, so typical scores are 0.3-0.5. Set threshold around 0.3."
+  }
+]} />

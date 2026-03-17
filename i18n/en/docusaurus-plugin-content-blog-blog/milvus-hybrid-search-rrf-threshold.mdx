@@ -2,9 +2,11 @@
 title: Fix Milvus Hybrid Search RRF Score Incompatibility with Similarity Threshold
 description: Hybrid search weighted fusion scores typically don't exceed 0.7, using 0.7 threshold filters out all results - adjust threshold strategy
 date: 2026-03-08
-tags: [Milvus, RAG, Vector Search, Bug Fix]
+tags: [Milvus, RAG, Vector Search, rag, enterprise-ai]
 schema: Article
 ---
+
+> Debugging hybrid retrieval scoring issues in a RAG knowledge base project. Here's the complete troubleshooting process.
 
 ## TL;DR
 
@@ -119,3 +121,20 @@ A: Test with your business scenario. 0.3 is an empirical value. If quality drops
 1. Raise to 0.4-0.5
 2. Add secondary filtering at application layer
 3. Use LLM to score result relevance
+
+import FAQSchema from '@site/src/components/FAQSchema';
+
+<FAQSchema faqs={[
+  {
+    question: "Why are Milvus hybrid search scores lower than pure semantic search?",
+    answer: "Hybrid search scores are weighted sums (0.7*dense + 0.3*sparse), not pure similarity. Sparse scores are typically lower (0.3-0.5) since keywords rarely match perfectly, causing total scores to be 0.5-0.7."
+  },
+  {
+    question: "What's the difference between RRF and Weighted Fusion in Milvus?",
+    answer: "RRF calculates score based on rank position: score = 1/(k+rank). Weighted fusion directly uses similarity scores with weights. Milvus natively supports weighted fusion; RRF needs custom implementation."
+  },
+  {
+    question: "Will setting hybrid search threshold to 0.3 introduce low-quality results?",
+    answer: "Test with your scenario. 0.3 is empirical. If quality drops, raise to 0.4-0.5, add secondary filtering, or use LLM to score relevance."
+  }
+]} />

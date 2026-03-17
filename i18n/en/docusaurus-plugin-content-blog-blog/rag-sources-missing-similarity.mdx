@@ -2,9 +2,11 @@
 title: Fix RAG Query Sources Missing Similarity Field
 description: RAG query endpoint returns sources array with only metadata, missing per-source similarity scores - merge distances field to fix
 date: 2026-03-08
-tags: [RAG, Python, Bug Fix, API Design]
+tags: [RAG, Python, rag, enterprise-ai]
 schema: Article
 ---
+
+> Encountered this issue while optimizing query response format in a RAG knowledge base project. Here's the complete troubleshooting process.
 
 ## TL;DR
 
@@ -137,3 +139,20 @@ A: Adjust the formula based on distance type:
 - Inner product: `similarity = distance` (already similarity)
 
 Check your vector database configuration to confirm which distance metric is used.
+
+import FAQSchema from '@site/src/components/FAQSchema';
+
+<FAQSchema faqs={[
+  {
+    question: "Why is similarity = 1 - distance in RAG systems?",
+    answer: "Vector databases typically return distance, not similarity. For cosine distance, cosine_distance = 1 - cosine_similarity, so similarity = 1 - distance. For Euclidean distance, use similarity = 1 / (1 + distance)."
+  },
+  {
+    question: "What's the difference between top-level similarity and sources similarity?",
+    answer: "Top-level similarity is the highest score (most relevant source), used to judge overall answer quality. Per-source similarity in sources indicates each source's relevance, used for sorting, highlighting, or filtering."
+  },
+  {
+    question: "How to handle different distance metrics in RAG?",
+    answer: "Adjust the formula based on distance type: Cosine distance uses 1 - distance, Euclidean uses 1 / (1 + distance), Inner product uses distance directly (already similarity)."
+  }
+]} />

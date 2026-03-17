@@ -99,52 +99,67 @@ function buildFAQSchema({ title, description, url, faqs }) {
 module.exports = function pluginJsonLd() {
   const pageSchemaMap = {};
 
+  // 扫描目录并提取 Schema
+  function scanDirectory(dir, urlPrefix) {
+    if (!fs.existsSync(dir)) return;
+
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const { data: frontmatter } = matter(content);
+
+      if (!frontmatter.schema) continue;
+
+      // 从文件名提取 slug（去掉日期前缀）
+      let slug = frontmatter.slug || file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.mdx?$/, '');
+      const url = `https://www.aigent.ren${urlPrefix}${slug}`;
+
+      const base = {
+        title: frontmatter.title || slug,
+        description: frontmatter.description || "",
+        url,
+        date: frontmatter.date,
+        image: frontmatter.image,
+      };
+
+      let schema = null;
+
+      switch (frontmatter.schema) {
+        case 'Article':
+          schema = buildArticleSchema(base);
+          break;
+        case 'HowTo':
+          schema = buildHowToSchema({ ...base, steps: frontmatter.steps || [] });
+          break;
+        case 'FAQPage':
+          schema = buildFAQSchema({ ...base, faqs: frontmatter.faqs || [] });
+          break;
+      }
+
+      if (schema) {
+        pageSchemaMap[`${urlPrefix}${slug}`] = schema;
+      }
+    }
+  }
+
   return {
     name: 'plugin-json-ld',
 
-    // 构建时扫描 docs 目录，读取 frontmatter
+    // 构建时扫描 docs + blog + cases-blog 目录
     async loadContent() {
+      // docs 目录
       const docsDir = path.resolve(__dirname, '..', 'docs');
-      if (!fs.existsSync(docsDir)) return;
+      scanDirectory(docsDir, '/docs/');
 
-      const files = fs.readdirSync(docsDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+      // blog 目录（中文）
+      const blogDir = path.resolve(__dirname, '..', 'blog');
+      scanDirectory(blogDir, '/blog/');
 
-      for (const file of files) {
-        const filePath = path.join(docsDir, file);
-        const content = fs.readFileSync(filePath, 'utf-8');
-        const { data: frontmatter } = matter(content);
-
-        if (!frontmatter.schema) continue;
-
-        const slug = frontmatter.slug || file.replace(/\.mdx?$/, '');
-        const url = `https://www.aigent.ren/docs/${slug}`;
-
-        const base = {
-          title: frontmatter.title || slug,
-          description: frontmatter.description || "",
-          url,
-          date: frontmatter.date,
-          image: frontmatter.image,
-        };
-
-        let schema = null;
-
-        switch (frontmatter.schema) {
-          case 'Article':
-            schema = buildArticleSchema(base);
-            break;
-          case 'HowTo':
-            schema = buildHowToSchema({ ...base, steps: frontmatter.steps || [] });
-            break;
-          case 'FAQPage':
-            schema = buildFAQSchema({ ...base, faqs: frontmatter.faqs || [] });
-            break;
-        }
-
-        if (schema) {
-          pageSchemaMap[`/docs/${slug}`] = schema;
-        }
-      }
+      // cases-blog 目录（案例）
+      const casesDir = path.resolve(__dirname, '..', 'cases-blog');
+      scanDirectory(casesDir, '/cases/');
     },
 
     // 全局注入 Organization + WebSite

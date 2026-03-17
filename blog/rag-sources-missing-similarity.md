@@ -2,7 +2,7 @@
 title: 修复 RAG 查询返回的 sources 缺少 similarity 字段
 description: RAG 查询接口返回的 sources 数组只有 metadata，缺少每条来源的相似度分数，需合并 distances 字段
 date: 2026-03-08
-tags: [RAG, Python, Bug修复, API设计, enterprise-ai]
+tags: [RAG, Python, Bug修复, API设计, rag, enterprise-ai]
 authors: [ccl]
 schema: Article
 ---

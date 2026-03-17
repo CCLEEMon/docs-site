@@ -2,9 +2,11 @@
 title: Three Pitfalls When Integrating Supabase Auth with FastAPI
 description: Fix JWKS path 404, ES256 signature verification failure, and missing local user records on first login with complete JWT verification code.
 date: 2026-03-14
-tags: [FastAPI, Supabase, JWT, aigent, Authentication]
+tags: [FastAPI, Supabase, JWT, saas-development, Authentication]
 schema: Article
 ---
+
+> Encountered these issues while integrating Supabase Auth with a SaaS application backend. Documenting the root causes and solutions.
 
 ## TL;DR
 
@@ -220,3 +222,20 @@ A: Call `ensure_user_exists()` at API entry points that need user records, extra
 ### Q: Where is user_id in Supabase JWT?
 
 A: The `sub` field contains user UUID, `email` field contains email, and `app_metadata.plan` contains subscription plan (custom field).
+
+import FAQSchema from '@site/src/components/FAQSchema';
+
+<FAQSchema faqs={[
+  {
+    question: "Why does Supabase JWT verification return 404?",
+    answer: "Supabase's JWKS path is /auth/v1/.well-known/jwks.json, not the standard /.well-known/jwks.json. Check your JWKS URL configuration."
+  },
+  {
+    question: "How to fix python-jose ES256 signature verification failure?",
+    answer: "python-jose has incomplete ES256 support. Use cryptography library for manual verification, converting JWT's raw signature (r||s 64 bytes) to DER format."
+  },
+  {
+    question: "How to sync Supabase Auth users to local database in FastAPI?",
+    answer: "Call ensure_user_exists() at API entry points that need user records, extracting user info from JWT and syncing to local table."
+  }
+]} />
