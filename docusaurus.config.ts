@@ -2,7 +2,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'CC.L',
+  title: 'CCLEE',
   tagline: 'AI驱动的电商运营工具平台',
   favicon: 'img/favicon.ico',
 
@@ -18,6 +18,57 @@ const config: Config = {
         ? '806b27c0-695b-4e07-8b75-89a6b4aefc95'
         : '21f40cb0-d661-4bc6-8d50-d3606aaf006c',
     },
+  ],
+
+  // JSON-LD Person Schema（英文版 aidevhub.ai / 中文版 aigent.ren）
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify(process.env.SITE === 'ai' ? {
+        // 英文版
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "CCLEE",
+        "url": "https://aidevhub.ai",
+        "jobTitle": "AI Tool Developer & E-commerce Consultant",
+        "description": "Independent developer with 24 years of e-commerce experience, specializing in building AI-powered tools and systems grounded in real business needs — not technology for its own sake.",
+        "knowsAbout": [
+          "FastAPI",
+          "RAG Systems",
+          "AI Agent Development",
+          "1688 B2B Sourcing",
+          "React",
+          "China Market Entry"
+        ],
+        "sameAs": [
+          "https://www.upwork.com/freelancers/~010ab5ec29d8f4ff3f",
+          "https://github.com/cclee-hub",
+          "https://www.aigent.ren"
+        ]
+      } : {
+        // 中文版
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "CCLEE",
+        "url": "https://www.aigent.ren",
+        "jobTitle": "AI系统开发者 & 电商战略顾问",
+        "description": "拥有24年电商行业实战经验的独立开发者，专注将AI能力落地于真实商业场景，围绕业务需求开发实用工具与系统，拒绝脱离实际的技术堆砌。",
+        "knowsAbout": [
+          "AI工具开发",
+          "RAG知识库系统",
+          "AI Agent开发",
+          "1688全渠道运营",
+          "中国跨境电商",
+          "企业AI增效落地"
+        ],
+        "sameAs": [
+          "https://www.upwork.com/freelancers/~010ab5ec29d8f4ff3f",
+          "https://github.com/cclee-hub",
+          "https://aidevhub.ai"
+        ]
+      })
+    }
   ],
 
   // 静态资源目录，drafts/ 不在此列表中，不参与构建和发布
@@ -82,7 +133,7 @@ const config: Config = {
         blogPostComponent: '@theme/BlogPostPage',
         tagsBasePath: 'cases-tags',
         archiveBasePath: null, // 禁用归档
-        authorsMapPath: 'authors.yaml',
+        authorsMapPath: '../blog/authors.yml',
       },
     ],
   ],
@@ -107,7 +158,7 @@ const config: Config = {
     navbar: {
       title: '',
       logo: {
-        alt: 'CC.L Logo',
+        alt: 'CCLEE Logo',
         src: 'logo.png',
       },
       items: [

@@ -13,7 +13,7 @@ const organizationSchema = {
   "description": "AI驱动的电商运营工具平台 — AI运营 + 电商工具箱，让电商运营更高效",
   "founder": {
     "@type": "Person",
-    "name": "caichen.lee"
+    "name": "CCLEE"
   }
 };
 
@@ -47,7 +47,7 @@ function buildArticleSchema({ title, description, url, date, image }) {
     "dateModified": new Date().toISOString().split('T')[0],
     "author": {
       "@type": "Person",
-      "name": "caichen.lee"
+      "name": "CCLEE"
     },
     "publisher": {
       "@type": "Organization",

@@ -64,4 +64,4 @@ npm run build
 
 ---
 
-MIT © 2026 caichen.lee
+MIT © 2026 CCLEE

@@ -8,7 +8,7 @@ CCLHUB is an independent developer platform providing AI tool development, China
 
 - Website: https://aidevhub.ai
 - Organization: CCLHUB
-- Author: CC.L (caichen.lee)
+- Author: CCLEE
 
 ## Services
 
@@ -37,5 +37,5 @@ CCLHUB is an independent developer platform providing AI tool development, China
 
 ## Contact
 
-- GitHub: https://github.com/CCLEEMon
+- GitHub: https://github.com/cclee-hub
 - Email: leecc1531@gmail.com

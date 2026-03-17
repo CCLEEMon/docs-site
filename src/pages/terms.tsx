@@ -6,7 +6,7 @@ import { FileIcon } from '@site/src/components/Icons';
 
 export default function TermsPage(): React.ReactElement {
   const title = translate({ id: 'terms.title', message: '服务条款' });
-  const description = translate({ id: 'terms.description', message: 'CC.L 服务条款' });
+  const description = translate({ id: 'terms.description', message: 'CCLEE 服务条款' });
 
   return (
     <Layout title={title} description={description}>

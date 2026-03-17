@@ -10,14 +10,14 @@ const UserIcon = User;
 
 export default function AboutPage(): React.ReactElement {
   return (
-    <Layout title="关于我" description="关于 CC.L - 独立开发者，AI工具开发与本地化服务">
+    <Layout title="关于我" description="关于 CCLEE - 独立开发者，AI工具开发与本地化服务">
       <main className="max-w-[1200px] mx-auto px-5 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg ring-4 ring-purple-500/20">
             <img
               src={require('@site/static/images/avatar.jpg').default}
-              alt="CC.L"
+              alt="CCLEE"
               className="w-full h-full object-cover"
             />
           </div>
@@ -99,6 +99,12 @@ export default function AboutPage(): React.ReactElement {
           </div>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             <Translate id="about.cclhub.desc">CCLHUB是我持续迭代的产品体系，技术能力与商业实践的综合体现。</Translate>
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
+            <Translate id="about.cclhub.english">英文技术博客：</Translate>{' '}
+            <a href="https://aidevhub.ai" className="text-purple-600 dark:text-purple-400 hover:underline" target="_blank" rel="noopener noreferrer">
+              aidevhub.ai
+            </a>
           </p>
         </div>
 

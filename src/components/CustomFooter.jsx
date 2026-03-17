@@ -29,7 +29,7 @@ export default function CustomFooter() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* 品牌列 */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-3">CC.L</h3>
+            <h3 className="text-xl font-bold text-white mb-3">CCLEE</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
               <Translate id="footer.tagline">AI驱动的电商运营工具平台</Translate>
             </p>
@@ -155,7 +155,7 @@ export default function CustomFooter() {
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
             {/* 版权信息 */}
-            <div>© {currentYear} CC.L. <Translate id="footer.copyright">All rights reserved.</Translate></div>
+            <div>© {currentYear} CCLEE. <Translate id="footer.copyright">All rights reserved.</Translate></div>
 
             {/* 备案信息 - 仅中文版 */}
             {!isEn && (

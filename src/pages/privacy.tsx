@@ -6,7 +6,7 @@ import { ShieldIcon } from '@site/src/components/Icons';
 
 export default function PrivacyPage(): React.ReactElement {
   const title = translate({ id: 'privacy.title', message: '隐私政策' });
-  const description = translate({ id: 'privacy.description', message: 'CC.L 隐私政策' });
+  const description = translate({ id: 'privacy.description', message: 'CCLEE 隐私政策' });
 
   return (
     <Layout title={title} description={description}>
