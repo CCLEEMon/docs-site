@@ -632,6 +632,12 @@
   "about.contact.wechat": {
     "message": "Scan to add WeChat"
   },
+  "about.contact.copy": {
+    "message": "Copy"
+  },
+  "about.contact.copied": {
+    "message": "Copied"
+  },
   "services.page.title": {
     "message": "Services"
   },

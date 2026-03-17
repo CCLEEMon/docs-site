@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-import Translate from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 import { ZapIcon, MailIcon } from '@site/src/components/Icons';
-import { Award, Target, User } from 'lucide-react';
+import { Award, Target, Copy, Check } from 'lucide-react';
 
 const TargetIcon = Target;
 const AwardIcon = Award;
-const UserIcon = User;
 
 export default function AboutPage(): React.ReactElement {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('leecc1531@gmail.com');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = 'leecc1531@gmail.com';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -135,12 +154,6 @@ export default function AboutPage(): React.ReactElement {
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             <Translate id="about.cclhub.desc">CCLHUB是我持续迭代的产品体系，技术能力与商业实践的综合体现。</Translate>
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
-            <Translate id="about.cclhub.english">英文技术博客：</Translate>{' '}
-            <a href="https://aidevhub.ai" className="text-purple-600 dark:text-purple-400 hover:underline" target="_blank" rel="noopener noreferrer">
-              aidevhub.ai
-            </a>
-          </p>
         </div>
 
         {/* Contact Section */}
@@ -153,9 +166,31 @@ export default function AboutPage(): React.ReactElement {
               <Translate id="about.contact.title">联系方式</Translate>
             </h2>
           </div>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
-            📧 leecc1531@gmail.com
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <a
+              href="mailto:leecc1531@gmail.com"
+              className="text-purple-600 dark:text-purple-400 hover:underline text-lg"
+            >
+              📧 leecc1531@gmail.com
+            </a>
+            <button
+              onClick={handleCopyEmail}
+              className="flex items-center gap-1 px-2 py-1 text-xs rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 transition-colors"
+              title={copied ? translate({ id: 'about.contact.copied', message: '已复制' }) : translate({ id: 'about.contact.copy', message: '复制邮箱' })}
+            >
+              {copied ? (
+                <>
+                  <Check size={12} />
+                  <span><Translate id="about.contact.copied">已复制</Translate></span>
+                </>
+              ) : (
+                <>
+                  <Copy size={12} />
+                  <span><Translate id="about.contact.copy">复制</Translate></span>
+                </>
+              )}
+            </button>
+          </div>
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="w-32 h-32 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center">
               <img
