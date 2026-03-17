@@ -2,6 +2,7 @@
 title: 项目结构
 date: 2026-02-10
 tags: [Docusaurus, 架构]
+authors: [ccl]
 ---
 
 # 项目结构

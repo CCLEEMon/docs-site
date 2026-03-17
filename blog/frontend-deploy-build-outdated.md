@@ -3,6 +3,7 @@ title: 排查前端部署后线上未更新的问题
 description: 新功能本地正常但线上看不到？通过对比构建产物时间戳快速定位服务器构建产物未更新的根因
 date: 2026-03-07
 tags: [前端部署, Nginx, Vite, Bug修复]
+authors: [ccl]
 schema: Article
 ---
 

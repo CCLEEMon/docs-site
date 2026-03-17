@@ -2,6 +2,7 @@
 title: Claude 提示词指南
 date: 2026-02-10
 tags: [Claude, AI, 提示词]
+authors: [ccl]
 ---
 
 # Claude 提示词指南

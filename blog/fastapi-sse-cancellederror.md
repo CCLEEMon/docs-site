@@ -2,8 +2,19 @@
 title: 修复 FastAPI SSE 客户端断开时的 CancelledError
 description: FastAPI StreamingResponse 在客户端断开时会抛出 asyncio.CancelledError，正确处理方式是在生成器中捕获并 re-raise，避免资源泄漏和异常日志。
 date: 2026-03-16
-tags: [FastAPI, SSE, asyncio, aigent]
+tags: [FastAPI, SSE, asyncio, aigent, ai-agent]
+authors: [ccl]
+schema: FAQPage
+faqs:
+  - q: "FastAPI SSE 客户端断开后为什么报 CancelledError？"
+    a: "这是 Python asyncio 的设计行为。客户端断开时，Starlette 取消生成器任务，触发 CancelledError。正确处理方式是捕获并 re-raise。"
+  - q: "捕获 CancelledError 后不 re-raise 会怎样？"
+    a: "生成器无法正确终止，可能导致数据库连接、HTTP 客户端等资源泄漏。同时 StreamingResponse 会误认为响应正常完成。"
+  - q: "如何区分正常断开和异常断开？"
+    a: "CancelledError 本身就是正常断开的信号。如果需要在断开时执行清理逻辑（如更新状态），在 except 块中处理后再 re-raise。"
 ---
+
+> 在为客户构建 AI 客服自动化系统时遇到此问题，记录根因与解法。
 
 ## TL;DR
 

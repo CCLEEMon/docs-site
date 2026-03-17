@@ -3,6 +3,7 @@ title: 修复 Docusaurus 3.9 翻译文件验证错误
 description: 升级 Docusaurus 3.9 后 i18n 翻译文件报 ValidationError，需将字符串格式改为 message 对象格式
 date: 2026-03-01
 tags: [Docusaurus, i18n, Bug修复]
+authors: [ccl]
 schema: Article
 ---
 

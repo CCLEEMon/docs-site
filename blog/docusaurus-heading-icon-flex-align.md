@@ -3,6 +3,7 @@ title: 用 Flex 布局对齐 Docusaurus 文档页标题图标
 description: Docusaurus 标题内联 SVG 图标与文字垂直居中对齐，使用 flex 布局和 .theme-doc-markdown 选择器实现 docs/blog 页面隔离
 date: 2026-03-16
 tags: [docs-site, Docusaurus, CSS, flex]
+authors: [ccl]
 ---
 
 ## TL;DR

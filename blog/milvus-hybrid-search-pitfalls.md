@@ -2,9 +2,19 @@
 title: 修复 Milvus 混合搜索的四个常见坑
 description: 解决 empty sparse vector、collection not loaded、sparse 格式错误、阈值过高导致的 Milvus Hybrid Search 失败问题
 date: 2026-03-07
-tags: [RAG, Milvus, 向量搜索, Python, Bug修复]
-schema: Article
+tags: [RAG, Milvus, 向量搜索, Python, Bug修复, vector-db]
+authors: [ccl]
+schema: FAQPage
+faqs:
+  - q: "Milvus 为什么不接受空的稀疏向量？"
+    a: "Milvus 的 SPARSE_FLOAT_VECTOR 类型要求每行至少有一个非零元素。空字典无法确定向量维度，使用 {0: 0.0} 作为占位符即可绕过。"
+  - q: "混合搜索的分数为什么通常只有 0.3-0.5？"
+    a: "混合搜索分数是加权组合（如 0.7 * dense + 0.3 * sparse）。实际场景中 dense 和 sparse 分数很少同时为 1.0，所以典型分数在 0.3-0.5。阈值应设为 0.3 左右。"
+  - q: "Milvus 2.4 搜索前必须调用 load_collection 吗？"
+    a: "是的。Milvus 2.4+ 默认不自动加载 Collection 到内存，必须显式调用 load_collection 后才能搜索。这是性能优化设计。"
 ---
+
+> 在 RAG 知识库项目中调试混合检索评分问题，以下是完整排查过程。
 
 ## TL;DR
 

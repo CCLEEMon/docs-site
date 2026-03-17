@@ -3,6 +3,7 @@ title: 修复 Docusaurus 英文版页面链接丢失语言前缀问题
 description: 解决 Docusaurus 国际化网站中，英文版页面使用绝对路径链接跳转到中文版的问题，使用 Link 组件和相对路径修复。
 date: 2026-03-03
 tags: [Docusaurus, i18n, Bug修复]
+authors: [ccl]
 schema: Article
 ---
 

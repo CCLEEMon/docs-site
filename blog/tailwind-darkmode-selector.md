@@ -3,6 +3,7 @@ title: 配置 Tailwind CSS 精确匹配 data-theme 深色模式
 description: Tailwind darkMode 使用 selector 模式精确匹配 data-theme="dark"，避免与其他 data-theme 值冲突
 date: 2026-03-01
 tags: [Tailwind CSS, Docusaurus, 深色模式]
+authors: [ccl]
 schema: Article
 ---
 

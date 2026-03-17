@@ -2,9 +2,12 @@
 title: 集成 Supabase Auth 到 FastAPI 的三个坑
 description: 解决 JWKS 路径 404、ES256 签名验证失败、用户首次登录无本地记录的问题，完整 JWT 验证代码。
 date: 2026-03-14
-tags: [FastAPI, Supabase, JWT, aigent, 认证]
+tags: [FastAPI, Supabase, JWT, aigent, 认证, saas-development]
+authors: [ccl]
 schema: Article
 ---
+
+> 在为客户构建 SaaS 认证系统时遇到此问题，记录根因与解法。
 
 ## TL;DR
 

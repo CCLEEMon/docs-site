@@ -2,9 +2,12 @@
 title: 修复 Milvus 混合检索 RRF 分数与相似度阈值不兼容
 description: 混合检索加权融合分数通常不超过 0.7，用 0.7 阈值会导致结果全被过滤，需调整阈值策略
 date: 2026-03-08
-tags: [Milvus, RAG, 向量搜索, Bug修复]
+tags: [Milvus, RAG, 向量搜索, Bug修复, vector-db]
+authors: [ccl]
 schema: Article
 ---
+
+> 在 RAG 知识库项目中调试混合检索评分问题，以下是完整排查过程。
 
 ## TL;DR
 

@@ -3,6 +3,7 @@ title: 在 Docusaurus 中配置多个博客实例
 description: Docusaurus 支持多个博客实例，本文介绍如何配置技术博客 + 案例展示两套独立的博客系统，各自拥有独立的路由和标签管理。
 date: 2026-03-03
 tags: [Docusaurus, 博客配置]
+authors: [ccl]
 schema: Article
 ---
 
