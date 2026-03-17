@@ -2,9 +2,11 @@
 title: Fix jose Library JWT Key Format Error in Node.js v24
 description: After upgrading to Node.js v24, jose library JWT signing fails. Use crypto.createSecretKey() to convert Uint8Array to KeyObject for compatibility.
 date: 2026-03-07
-tags: [Node.js, JWT, jose, Bug Fix]
+tags: [Node.js, JWT, jose, Bug Fix, saas-development]
 schema: Article
 ---
+
+> Encountered this issue while upgrading Node.js version for an enterprise SaaS system. Documenting the root cause and solution.
 
 ## TL;DR
 

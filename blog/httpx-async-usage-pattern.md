@@ -2,10 +2,12 @@
 title: 修复 httpx async with client.post() 的隐藏坑
 description: httpx 异步客户端的正确用法，避免 async with 直接调用 post 导致的连接问题。
 date: 2026-03-15
-tags: [Python, httpx, AsyncIO, aigent, HTTP客户端]
+tags: [Python, httpx, AsyncIO, saas-development, HTTP客户端]
 authors: [ccl]
 schema: Article
 ---
+
+> 在构建多服务协作的 SaaS 系统时遇到此问题，记录根因与解法。
 
 ## TL;DR
 

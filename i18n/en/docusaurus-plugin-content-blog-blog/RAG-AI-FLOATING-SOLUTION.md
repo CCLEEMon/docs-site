@@ -1,12 +1,14 @@
 ---
 title: RAG Knowledge Base and AI Floating Widget Solution
 date: 2026-02-11
-tags: [RAG, AI, Knowledge Base]
+tags: [RAG, AI, Knowledge Base, enterprise-ai]
 ---
 
 # RAG Knowledge Base and AI Floating Widget Solution
 
 <!-- truncate -->
+
+> Designed this RAG floating widget solution while building an intelligent consultation system for enterprise clients. Here's the complete implementation.
 
 ## Architecture
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
@@ -9,8 +10,50 @@ export default function Services(): React.ReactElement {
   const title = translate({ id: 'services.page.title', message: '服务' });
   const description = translate({ id: 'services.page.description', message: 'AI工具开发、中国出海、外企入华专业服务' });
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "AI工具开发服务包含哪些内容？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "从需求分析到落地交付，覆盖客服自动化、数据采集、文案生成、选品分析、广告优化等场景。适合有明确业务痛点、需要定制AI工具或自动化工作流的企业。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "中国出海服务能帮企业做什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "提供选品策略、平台运营、全渠道推广、独立站建设，打通1688、速卖通、独立站等渠道。真实操盘经验：月均销售额增长200%、独立站海外询盘增长30%。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "外企入华服务适合什么企业？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "适合有入华意向、需要本地化执行支持的外国企业。提供中国市场策略、平台选择、本地化推广、内容运营，帮助企业真正落地而不是停留在计划书。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "顾问服务模式是怎样的？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "采用深度介入模式，同期服务企业数量有限，确保每个客户得到充分投入。有24年商业实战背景，懂业务逻辑不只是技术实现。"
+        }
+      }
+    ]
+  };
+
   return (
     <Layout title={title} description={description}>
+      <Head>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Head>
       <main>
         {/* Hero Section */}
         <div className="relative min-h-[40vh] flex flex-col items-center justify-center px-5 pt-[80px] pb-[40px] text-center">

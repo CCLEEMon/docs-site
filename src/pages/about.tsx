@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Translate from '@docusaurus/Translate';
 import { ZapIcon, MailIcon } from '@site/src/components/Icons';
 import { Award, Target, User } from 'lucide-react';
@@ -9,8 +10,42 @@ const AwardIcon = Award;
 const UserIcon = User;
 
 export default function AboutPage(): React.ReactElement {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "CCLEE 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CCLEE 是拥有24年电商行业实战经验的独立开发者，专注将AI能力落地于真实商业场景。主导过多平台电商运营年销售额突破800万元，2024年落地13个AI增效工具节省70%重复性人力工作。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "CCLEE 提供哪些服务？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "提供三类服务：1) AI工具开发 - 客服自动化、数据采集、文案生成、选品分析等定制化AI工具；2) 中国出海 - 1688、速卖通、独立站全渠道运营；3) 外企入华 - 中国市场策略、平台选择、本地化推广。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何联系 CCLEE？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "邮箱：leecc1531@gmail.com，或扫描网站上的微信二维码添加微信联系。"
+        }
+      }
+    ]
+  };
+
   return (
     <Layout title="关于我" description="关于 CCLEE - 独立开发者，AI工具开发与本地化服务">
+      <Head>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Head>
       <main className="max-w-[1200px] mx-auto px-5 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">

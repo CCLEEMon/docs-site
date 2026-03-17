@@ -2,9 +2,11 @@
 title: Fix the Hidden Pitfall of httpx async with client.post()
 description: Correct usage of httpx async client to avoid connection issues from using async with on post() directly.
 date: 2026-03-15
-tags: [Python, httpx, AsyncIO, aigent, HTTP Client]
+tags: [Python, httpx, AsyncIO, saas-development, HTTP Client]
 schema: Article
 ---
+
+> Encountered this issue while building a multi-service SaaS system. Documenting the root cause and solution.
 
 ## TL;DR
 
