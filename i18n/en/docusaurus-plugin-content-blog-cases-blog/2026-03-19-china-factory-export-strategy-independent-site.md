@@ -1,5 +1,5 @@
 ---
-title: China Manufacturer Go-Global Strategy: Independent Site + Google Ads from Zero
+title: "China Manufacturer Go-Global Strategy: Independent Site + Google Ads from Zero"
 description: Developed an overseas customer acquisition strategy for an established industrial manufacturer, selecting independent site + Google Ads over platform-dependent alternatives for maximum B2B lead control.
 date: 2026-03-19
 tags: [Google Ads, WordPress, saas-development, ecommerce]
