@@ -178,5 +178,24 @@ UCL 2024 研究证实 GPT-4 Vision 可零样本提取建筑年代信息，无需
 | LLM Vision | ~$50 |
 | **合计** | **~$125** |
 
+## Research References
+
+**1. Housing Passport — World Bank (2019)**
+
+World Bank-supported project using street view + ML to automatically identify vulnerable buildings and generate a 'Housing Passport' record for each.
+
+- Validates technical feasibility of street view + ML for building material and condition identification
+- Processing speed: ~$1.50 per 300,000 images/hour after training
+- **Key difference:** that project used proprietary street imagery + custom-trained models; this system uses Google Street View + LLM Vision zero-shot (no pre-labeling required, but accuracy must be POC-validated)
+
+**2. UCL — Zero-Shot Building Age Classification Using GPT-4 (ISPRS 2024)**
+
+University College London research using GPT-4 Vision for zero-shot building age classification from facade images, with no labeled training data required.
+
+- Overall accuracy: 39.69% (coarse-grained classification)
+- Mean absolute error: 0.85 decades (~8–9 years)
+- Confirms LLM Vision can extract building age from facade images without training
+- **Glass type recognition has no published benchmark** — accuracy must be measured in POC
+
 ---
 **对类似的 AI 线索生成系统感兴趣？[联系合作](/about)**
