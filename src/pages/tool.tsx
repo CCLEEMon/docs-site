@@ -153,7 +153,6 @@ const sceneGradients: Record<string, string> = {
   coding: 'from-blue-500 to-cyan-500',
   automation: 'from-green-500 to-emerald-500',
   ecommerce: 'from-orange-500 to-amber-500',
-  'ai-api': 'from-indigo-500 to-purple-500',
   hosting: 'from-green-500 to-emerald-500',
 };
 
@@ -163,24 +162,15 @@ const regionLabels: Record<string, { zh: string; en: string }> = {
   overseas: { zh: '🌍 海外', en: '🌍 Global' },
 };
 
-// 工具标签
-const toolTagLabels: Record<string, { zh: string; en: string; color: string }> = {
-  recommended: { zh: '👍 推荐', en: '👍 Recommended', color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300' },
-  hot: { zh: '🔥 热门', en: '🔥 Hot', color: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' },
-  'deep-reasoning': { zh: '🧠 深度推理', en: '🧠 Deep Reasoning', color: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' },
-  coding: { zh: '💻 代码', en: '💻 Coding', color: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300' },
-  multimodal: { zh: '🌐 多模态', en: '🌐 Multimodal', color: 'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300' },
-  efficient: { zh: '⚡ 高效', en: '⚡ Efficient', color: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' },
-  'low-cost': { zh: '🏷️ 低成本', en: '🏷️ Low Cost', color: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' },
-  'long-context': { zh: '📄 长文本', en: '📄 Long Context', color: 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300' },
-  'search-integrated': { zh: '🔍 搜索集成', en: '🔍 Search Integrated', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' },
-  opensource: { zh: '🔓 开源', en: '🔓 Open Source', color: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' },
-  'chinese-optimized': { zh: '🀄 中文优化', en: '🀄 Chinese Optimized', color: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' },
-  enterprise: { zh: '🏢 企业级', en: '🏢 Enterprise', color: 'bg-slate-100 text-slate-700 dark:bg-slate-900/30 dark:text-slate-300' },
-  'cloud-ecosystem': { zh: '☁️ 云生态', en: '☁️ Cloud Ecosystem', color: 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300' },
-  'image-gen': { zh: '🖼️ 图片生成', en: '🖼️ Image Gen', color: 'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300' },
-  'video-gen': { zh: '🎬 视频生成', en: '🎬 Video Gen', color: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' },
-  'digital-human': { zh: '👤 数字人', en: '👤 Digital Human', color: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300' },
+// 场景标签颜色映射（从 JSON 读取图标和名称，这里只保留颜色）
+const sceneTagColors: Record<string, string> = {
+  coding: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
+  writing: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
+  'image-design': 'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300',
+  'video-audio': 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300',
+  automation: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300',
+  ecommerce: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300',
+  hosting: 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300',
 };
 
 // 获取工具首字母
@@ -204,7 +194,6 @@ function ToolCard({
   const gradient = sceneGradients[tool.scenes[0]] || 'from-gray-500 to-gray-600';
   const initial = getInitial(name);
   const regionLabel = tool.region ? (isZh ? regionLabels[tool.region]?.zh : regionLabels[tool.region]?.en) : null;
-  const tags = tool.tags || [];
 
   return (
     <div className="group relative bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 rounded-xl p-5 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300">
@@ -239,23 +228,23 @@ function ToolCard({
           {description}
         </p>
 
-        {/* 标签 */}
-        {tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5">
-            {tags.map((tagId) => {
-              const tag = toolTagLabels[tagId];
-              if (!tag) return null;
-              return (
-                <span
-                  key={tagId}
-                  className={`px-2 py-0.5 rounded text-xs font-medium ${tag.color}`}
-                >
-                  {isZh ? tag.zh : tag.en}
-                </span>
-              );
-            })}
-          </div>
-        )}
+        {/* 标签：场景标签 + 特性标签（统一彩色风格） */}
+        <div className="flex flex-wrap gap-1.5">
+          {/* 场景标签 */}
+          {tool.scenes.map((sceneId) => {
+            const sceneData = toolsData.scenes.find(s => s.id === sceneId);
+            const color = sceneTagColors[sceneId];
+            if (!sceneData || !color) return null;
+            return (
+              <span
+                key={sceneId}
+                className={`px-2 py-0.5 rounded text-xs font-medium ${color}`}
+              >
+                {sceneData.icon} {isZh ? sceneData.name : sceneData.nameEn}
+              </span>
+            );
+          })}
+        </div>
       </a>
 
       {/* 查看评测按钮 - 独立点击区域 */}
