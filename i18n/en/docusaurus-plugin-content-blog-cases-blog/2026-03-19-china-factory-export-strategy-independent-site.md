@@ -4,6 +4,7 @@ description: Developed an overseas customer acquisition strategy for an establis
 date: 2026-03-19
 tags: [Google Ads, WordPress, saas-development, ecommerce]
 authors: [cclee]
+image: /img/cases/china-factory-export-hero.jpg
 schema: FAQPage
 rag: false
 category: client
@@ -21,6 +22,8 @@ Delivered an overseas market entry strategy for an industrial manufacturer with 
 ## Background
 
 The client is a Chinese industrial product manufacturer with a proven domestic operation. Competitors were still spending heavily to figure out overseas channels. B2B overseas customers represent significantly higher order values than domestic ones. The timing was right — the client needed a low-dependency, controllable, long-term viable overseas acquisition strategy.
+
+![Global Trade Shipping](/img/cases/global-shipping-containers.jpg)
 
 ## Challenges
 
