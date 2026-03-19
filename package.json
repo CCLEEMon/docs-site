@@ -19,6 +19,7 @@
   "dependencies": {
     "@docusaurus/core": "^3.9.0",
     "@docusaurus/preset-classic": "^3.9.0",
+    "@docusaurus/theme-mermaid": "^3.9.2",
     "@mdx-js/react": "^3.0.0",
     "dotenv": "^17.2.4",
     "gray-matter": "^4.0.3",

@@ -87,6 +87,7 @@ const config: Config = {
   },
 
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -129,7 +130,7 @@ const config: Config = {
         blogTitle: '项目案例',
         blogDescription: '真实交付案例，覆盖AI工具开发、本地化策略、电商运营',
         postsPerPage: 10,
-        blogListComponent: '@theme/BlogListPage',
+        blogListComponent: '@theme/BlogListPageForCases',
         blogPostComponent: '@theme/BlogPostPage',
         tagsBasePath: 'cases-tags',
         archiveBasePath: null, // 禁用归档
@@ -152,6 +153,8 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
@@ -198,7 +201,7 @@ const config: Config = {
       { charSet: 'utf-8' },
       {
         'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren https://umami.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://umami.aigent.ren; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content; reflected-xss: block; referrer no-referrer",
+        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren https://umami.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://umami.aigent.ren; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content",
       },
     ],
   } satisfies Preset.ThemeConfig,
