@@ -1,6 +1,6 @@
 ---
 title: Fix WordPress FSE Pattern Block Validation Errors - 5 Common Causes
-description: Getting "Block contains unexpected or invalid content" in WordPress block editor? Learn the 5 root causes: undefined color slugs, duplicate JSON keys, Style Variation palette override, HTML attribute mismatch, and global styles conflict.
+description: "Getting 'Block contains unexpected or invalid content' in WordPress block editor? Learn the 5 root causes: undefined color slugs, duplicate JSON keys, Style Variation palette override, HTML attribute mismatch, and global styles conflict."
 date: 2026-03-21
 tags: [WordPress, FSE, Block Editor, Theme Development]
 authors: [cclee]
