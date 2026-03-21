@@ -1,0 +1,40 @@
+---
+title: 为开发者打造的极简 FSE WordPress 主题
+description: 针对企业站和轻电商场景，构建了一个代码可控、无冗余的 WordPress 全站编辑主题，10 个预制区块、3 套配色、AI 辅助写作。
+date: 2026-03-21
+tags: [Self-Initiated, Open Source, WordPress, Full Site Editing]
+authors: [cclee]
+schema: FAQPage
+faqs:
+  - q: "为什么不用市面上的免费 WordPress 主题？"
+    a: "主流免费主题功能堆叠、代码冗余，定制时难以控制体积。这个主题面向开发者，只保留必要功能，代码结构清晰可控。"
+  - q: "FSE 主题和传统主题有什么区别？"
+    a: "FSE 使用 theme.json 统一管理设计 token，模板是纯 HTML 块结构，不写 PHP 模板逻辑，更易于维护和扩展。"
+---
+
+## TL;DR
+
+面向开发者构建了一个极简的 WordPress 全站编辑（FSE）主题，解决市面免费主题功能冗余、代码难控的问题。采用 theme.json 设计系统、10 个预制区块、3 套配色方案，支持 WooCommerce 产品展示，集成 AI 编辑器辅助。首个工业产品展示站已上线运行。
+
+## 项目背景
+
+企业官网和轻量电商场景（产品展示为主）对 WordPress 主题的需求很明确：代码干净、易于定制、性能好。但主流免费主题往往功能堆叠，捆绑大量可视化选项和第三方依赖，导致代码体积大、维护成本高。对于习惯用代码管理项目的开发者来说，这些主题反而增加了负担。
+
+## 解决方案
+
+采用 WordPress 全站编辑（Full Site Editing）架构，以 theme.json 作为唯一设计 token 来源。模板使用纯 HTML 块结构，不写 PHP 模板逻辑，通过 WP-CLI 和代码管理站点内容。
+
+定义了严格的代码约束：functions.php 仅作为入口文件加载模块，不直接写功能代码；样式优先写入 theme.json，CSS 只做必要补充；JS 按需加载，无默认交互脚本。这套约束确保主题结构清晰、体积可控。
+
+预制了 10 个常用区块（Hero、Feature、CTA、Pricing、Team、Testimonial、Contact 等）和 3 套配色方案，开发者可快速搭建企业站骨架。WooCommerce 兼容采用轻量原则，不重写模板，仅通过 CSS 修复布局问题。
+
+集成 AI 编辑器辅助功能，采用后端代理模式：API Key 存储在服务端，前端通过 WordPress nonce 验证身份后调用 REST API 代理，避免密钥暴露。支持段落、标题、列表、CTA、FAQ 等内容类型的 AI 辅助生成。
+
+## 交付成果
+
+主题已在 GitHub 开源，当前版本 v1.1.1，兼容 WordPress 6.7。首个工业产品展示站已上线运行，验证了主题在真实场景中的可用性。
+
+技术亮点包括：完整的 Design Token 系统（10 级中性色、响应式间距、过渡动画变量）、SEO 输出（Open Graph + JSON-LD Schema）、WCAG 无障碍支持（Skip to Content 链接）、4 种块样式变体（Outline Button、Card Group 等）。
+
+---
+**对类似需求感兴趣？[联系合作](/about)**

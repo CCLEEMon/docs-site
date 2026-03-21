@@ -1,0 +1,40 @@
+---
+title: A Minimal FSE WordPress Theme Built for Developers
+description: A code-controllable, bloat-free WordPress Full Site Editing theme for business sites and lightweight e-commerce, featuring 10 block patterns, 3 color schemes, and AI-assisted writing.
+date: 2026-03-21
+tags: [Self-Initiated, Open Source, WordPress, Full Site Editing]
+authors: [cclee]
+schema: FAQPage
+faqs:
+  - q: "Why not use free WordPress themes from the market?"
+    a: "Most free themes come with feature bloat and bundled dependencies, making customization difficult. This theme is built for developers—clean code, minimal footprint, full control."
+  - q: "What's the difference between FSE and traditional themes?"
+    a: "FSE uses theme.json as the single source of design tokens. Templates are pure HTML block structures—no PHP template logic—making them easier to maintain and extend."
+---
+
+## TL;DR
+
+Built a minimal WordPress Full Site Editing (FSE) theme for developers who want control over their codebase. Uses theme.json design system, 10 pre-built block patterns, 3 color variations, WooCommerce support, and AI editor integration. First production deployment—an industrial product showcase site—is live.
+
+## Background
+
+Business websites and lightweight e-commerce (product showcase focus) have clear requirements: clean code, easy customization, good performance. However, mainstream free themes tend to bundle excessive features with visual page builders and third-party dependencies, resulting in large codebases and high maintenance costs. For developers who prefer managing projects through code, these themes become a burden rather than a solution.
+
+## Solution
+
+Adopted WordPress Full Site Editing architecture with theme.json as the single source of design tokens. Templates use pure HTML block markup—no PHP template logic—allowing content management through WP-CLI and version control.
+
+Defined strict code constraints: functions.php serves only as an entry point loading modules; styles go to theme.json first with CSS only for edge cases; JS loads on demand with no default interactions. These constraints ensure clean structure and controlled footprint.
+
+Pre-built 10 common block patterns (Hero, Feature, CTA, Pricing, Team, Testimonial, Contact, etc.) and 3 color schemes, enabling developers to quickly scaffold business sites. WooCommerce compatibility follows a lightweight approach—no template overrides, only CSS fixes for layout issues.
+
+Integrated AI editor assistant using backend proxy mode: API keys stored server-side, frontend authenticates via WordPress nonce and calls REST API proxy, preventing key exposure. Supports AI-assisted generation for paragraphs, headlines, lists, CTAs, and FAQs.
+
+## Deliverables
+
+Theme is open-sourced on GitHub, current version v1.1.1, compatible with WordPress 6.7. First production deployment—an industrial product showcase site—is live, validating real-world usability.
+
+Technical highlights include: complete Design Token system (10-step neutral scale, responsive spacing, transition variables), SEO output (Open Graph + JSON-LD Schema), WCAG accessibility (Skip to Content link), 4 block style variations (Outline Button, Card Group, etc.).
+
+---
+**Interested in similar projects? [Get in touch](/about)**
