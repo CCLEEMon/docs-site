@@ -58,6 +58,7 @@ export default function CustomFooter() {
                 { href: '/docs/ai-analytics', id: 'footer.aiAnalytics', label: 'AI运营' },
                 { href: '/docs/browser-plugin', id: 'footer.browserPlugin', label: '电商工具箱' },
                 { href: '/docs/customer-service', id: 'footer.aiService', label: 'AI客服' },
+                { href: '/cclee-theme', id: 'footer.ccleeTheme', label: 'WordPress 主题' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

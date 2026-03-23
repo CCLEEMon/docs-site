@@ -1,4 +1,4 @@
-import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, ArrowLeft, MessageSquare, Github, Mail, Image, Video, X, Globe, Building, Eye, Key } from 'lucide-react'
+import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, ArrowLeft, MessageSquare, Github, Mail, Image, Video, X, Globe, Building, Eye, Key, Layout } from 'lucide-react'
 
 export const RocketIcon = ({ size = 24, className = '' }) => <Rocket size={size} className={className} />
 
@@ -16,7 +16,7 @@ export const ChartIcon = ({ size = 24 }) => (
 
 export const SearchIcon = ({ size = 24 }) => <Search size={size} />
 
-export const CheckIcon = ({ size = 24 }) => <Check size={size} />
+export const CheckIcon = ({ size = 24, className = '' }) => <Check size={size} className={className} />
 
 export const XIcon = ({ size = 24 }) => <X size={size} />
 
@@ -69,4 +69,6 @@ export const EyeIcon = ({ size = 24, className = '' }) => <Eye size={size} class
 export const KeyIcon = ({ size = 24, className = '' }) => <Key size={size} className={className} strokeWidth={1.5} />
 
 export const BrainIcon = ({ size = 24, className = '' }) => <Brain size={size} className={className} strokeWidth={1.5} />
+
+export const LayoutIcon = ({ size = 24, className = '' }) => <Layout size={size} className={className} strokeWidth={1.5} />
 

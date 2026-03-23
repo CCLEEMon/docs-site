@@ -27,6 +27,11 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'CCLEE Theme',
+      items: ['cclee-theme'],
+    },
   ],
 };
 

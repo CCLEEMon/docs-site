@@ -976,5 +976,162 @@
   "tool.card.readReview": {
     "message": "Read Review",
     "description": "Read review button text"
+  },
+  "homepage.products.ccleeTheme.title": {
+    "message": "CCLEE Theme",
+    "description": "CCLEE Theme product title"
+  },
+  "homepage.products.ccleeTheme.description": {
+    "message": "Free WordPress FSE block theme. 76 lines of JS, zero dependencies, 24 blocks, 5 style variations. Built for developers and site builders.",
+    "description": "CCLEE Theme product description"
+  },
+  "homepage.products.ccleeTheme.cta": {
+    "message": "Open Source on GitHub · Free Forever",
+    "description": "CCLEE Theme CTA text"
+  },
+  "footer.ccleeTheme": {
+    "message": "WordPress Theme",
+    "description": "CCLEE Theme link in footer"
+  },
+  "ccleetheme.hero.badge": {
+    "message": "Free & Open Source"
+  },
+  "ccleetheme.hero.title": {
+    "message": "Free WordPress Block Theme"
+  },
+  "ccleetheme.hero.subtitle": {
+    "message": "Ultra-light architecture · Designer-grade visuals · Ready to use"
+  },
+  "ccleetheme.hero.description": {
+    "message": "Free FSE-based WordPress theme for developers and site builders"
+  },
+  "ccleetheme.hero.github": {
+    "message": "View Source on GitHub"
+  },
+  "ccleetheme.hero.demo": {
+    "message": "View Style Demo"
+  },
+  "ccleetheme.hero.docs": {
+    "message": "Read Docs"
+  },
+  "ccleetheme.hero.jsLines": {
+    "message": "76 lines JS"
+  },
+  "ccleetheme.hero.zeroDeps": {
+    "message": "Zero dependencies"
+  },
+  "ccleetheme.hero.blocks": {
+    "message": "24 blocks"
+  },
+  "ccleetheme.hero.gpl": {
+    "message": "GPLv2 Open Source"
+  },
+  "ccleetheme.pain.title": {
+    "message": "Sound familiar?"
+  },
+  "ccleetheme.pain.item1": {
+    "message": "Open theme code, find unmaintainable spaghetti in functions.php —"
+  },
+  "ccleetheme.pain.item2": {
+    "message": "Install 5 plugins, site gets slower, don't know who to blame when things break —"
+  },
+  "ccleetheme.pain.item3": {
+    "message": "Finally pick a \"pro theme\", something feels off after changing the logo —"
+  },
+  "ccleetheme.pain.item4": {
+    "message": "Want premium feel, either pay a designer or settle for free templates —"
+  },
+  "ccleetheme.pain.conclusion": {
+    "message": "Most themes make you choose between \"works\" and \"works well\"."
+  },
+  "ccleetheme.pain.highlight": {
+    "message": "CCLEE refuses to make you choose."
+  },
+  "ccleetheme.compare.title": {
+    "message": "Compared to mainstream commercial themes"
+  },
+  "ccleetheme.compare.mainstream": {
+    "message": "Mainstream themes"
+  },
+  "ccleetheme.compare.cclee": {
+    "message": "CCLEE"
+  },
+  "ccleetheme.compare.conclusion": {
+    "message": "Same features, 1/10 the code."
+  },
+  "ccleetheme.compare.reason": {
+    "message": "Not because we're better — they just stuff things you'll never use."
+  },
+  "ccleetheme.users.title": {
+    "message": "Value for Three User Types"
+  },
+  "ccleetheme.users.dev.title": {
+    "message": "Developers / Agencies"
+  },
+  "ccleetheme.users.dev.highlight": {
+    "message": "Clean code foundation, not a black box to fight against"
+  },
+  "ccleetheme.users.dev.desc": {
+    "message": "Child-theme friendly, upgrades preserve customizations, handoffs don't cause headaches."
+  },
+  "ccleetheme.users.builder.title": {
+    "message": "Site Builders"
+  },
+  "ccleetheme.users.builder.highlight": {
+    "message": "Professional aesthetics built-in, premium look out of the box"
+  },
+  "ccleetheme.users.builder.desc": {
+    "message": "What's FSE? — Full Site Editing, click to edit anywhere, no code needed."
+  },
+  "ccleetheme.users.advanced.title": {
+    "message": "Advanced Users"
+  },
+  "ccleetheme.users.advanced.highlight": {
+    "message": "Today a website, tomorrow a growth engine"
+  },
+  "ccleetheme.users.advanced.desc": {
+    "message": "Child theme extensible, standard hooks, ready for new features anytime."
+  },
+  "ccleetheme.stats.title": {
+    "message": "Numbers That Matter"
+  },
+  "ccleetheme.stats.js": {
+    "message": "Lines of JS"
+  },
+  "ccleetheme.stats.deps": {
+    "message": "External Dependencies"
+  },
+  "ccleetheme.stats.blocks": {
+    "message": "Designed Blocks"
+  },
+  "ccleetheme.stats.styles": {
+    "message": "Brand Styles"
+  },
+  "ccleetheme.stats.colors": {
+    "message": "Color Palette"
+  },
+  "ccleetheme.stats.size": {
+    "message": "Commercial Theme Size"
+  },
+  "ccleetheme.usecases.title": {
+    "message": "Use Cases"
+  },
+  "ccleetheme.cta.title": {
+    "message": "Start Now, Free Forever"
+  },
+  "ccleetheme.cta.desc": {
+    "message": "No registration, no authorization, fork and use."
+  },
+  "ccleetheme.cta.star": {
+    "message": "Already using it? A Star ⭐ is the best support."
+  },
+  "ccleetheme.cta.github": {
+    "message": "View Source on GitHub"
+  },
+  "ccleetheme.cta.demo": {
+    "message": "Live Demo"
+  },
+  "ccleetheme.cta.docs": {
+    "message": "Read Docs"
   }
 }

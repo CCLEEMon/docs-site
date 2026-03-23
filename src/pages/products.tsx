@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
-import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon, RocketIcon } from '@site/src/components/Icons';
+import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon, RocketIcon, LayoutIcon } from '@site/src/components/Icons';
 import { HeroBackground } from '@site/src/components/HeroSection';
 
 export default function Home(): React.ReactElement {
@@ -139,6 +139,27 @@ export default function Home(): React.ReactElement {
               <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
                 <ZapIcon size={16} />
                 <Translate id="homepage.products.agntc.cta">访问 app.aigent.ren</Translate>
+              </div>
+            </Link>
+
+            <Link
+              to="/cclee-theme"
+              id="cclee-theme"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
+              style={{ animationDelay: '0.5s' }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
+                <LayoutIcon size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
+                <Translate id="homepage.products.ccleeTheme.title">CCLEE Theme</Translate>
+              </h3>
+              <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
+                <Translate id="homepage.products.ccleeTheme.description">免费 WordPress FSE 区块主题。76 行 JS、零依赖、24 区块、5 种风格，开发者与建站者皆宜。</Translate>
+              </div>
+              <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
+                <ZapIcon size={16} />
+                <Translate id="homepage.products.ccleeTheme.cta">GitHub 开源 · 永久免费</Translate>
               </div>
             </Link>
           </div>
