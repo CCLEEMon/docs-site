@@ -9,7 +9,7 @@ faqs:
   - q: "为什么我的 Pattern 在 Site Editor 中显示 Block 验证失败？"
     a: "Gutenberg 升级后，gradient CSS class 命名从 `has-{slug}-gradient` 变为 `has-{slug}-gradient-background`，历史代码与新规则不匹配。"
   - q: "如何批量修复所有受影响的 Pattern 文件？"
-    a: "使用 sed 命令批量替换：`sed -i 's/has-\([a-z0-9-]*\)-gradient /has-\1-gradient-background /g' patterns/*.php`"
+    a: "使用 find + sed 批量替换 pattern 文件中的 gradient class 名称，将旧的 has-X-gradient 替换为 has-X-gradient-background"
 ---
 
 在为客户开发 WordPress FSE 主题时遇到此问题，记录根因与解法。
