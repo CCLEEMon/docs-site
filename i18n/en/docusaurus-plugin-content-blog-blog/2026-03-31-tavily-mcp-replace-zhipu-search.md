@@ -98,12 +98,27 @@ claude mcp list
 
 ## Notes
 
+<InfoBox variant="warning" title="Important Notes">
+
 1. **ZhiPu services are platform-injected** — they may reappear after restart even after removal. Add them to `settings.json` deny list to block permanently.
 2. **Keep `zread`** (GitHub repo reading) — low consumption and unique functionality.
 3. **Keep `doubao-vision`** (image analysis) — Tavily doesn't cover this scenario.
 
+</InfoBox>
+
+## Recommendation
+
+<div className="my-8 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20 text-center">
+  <p className="text-lg font-semibold mb-3">Also using ZhiPu GLM Coding Plan?</p>
+  <a href="https://www.bigmodel.cn/glm-coding?ic=BCT362LRE2"
+     className="button button--primary button--lg"
+     target="_blank" rel="noopener noreferrer">
+    Learn More About ZhiPu GLM Coding Plan
+  </a>
+</div>
+
 ---
 
-If you're also using [ZhiPu GLM Coding Plan](https://www.bigmodel.cn/glm-coding?ic=BCT362LRE2), consider offloading generic capabilities like web search to dedicated tools, and saving your valuable coding quota for tasks that truly need AI reasoning.
-
-**Interested in similar solutions? [Contact us](/about)**
+<div className="text-center my-8">
+  <a href="/about" className="button button--primary button--lg">Contact Us</a>
+</div>
