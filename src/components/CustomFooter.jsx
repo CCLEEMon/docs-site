@@ -37,7 +37,7 @@ export default function CustomFooter() {
             </p>
 
             {/* 特性标签 */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 mb-4">
               {features.map((feature, i) => (
                 <div
                   key={i}
@@ -47,6 +47,61 @@ export default function CustomFooter() {
                   {feature.label}
                 </div>
               ))}
+            </div>
+
+            {/* 社媒图标 */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/cclee-hub/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+
+              {/* 微信 - 仅中文站 */}
+              {!isEn && (
+                <div
+                  className="relative"
+                  onMouseEnter={() => setShowWechat(true)}
+                  onMouseLeave={() => setShowWechat(false)}
+                >
+                  <button
+                    className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200 cursor-pointer"
+                    aria-label="微信"
+                    onClick={() => setShowWechat(v => !v)}
+                  >
+                    <MessageCircle size={18} />
+                  </button>
+                  {showWechat && (
+                    <div className="absolute top-full left-0 mt-2 w-[136px] p-3 bg-white dark:bg-gray-800 rounded-lg shadow-xl z-50">
+                      <img
+                        src="/images/wechat-qr.jpg"
+                        alt="微信二维码"
+                        className="w-full aspect-square rounded"
+                      />
+                      <p className="text-center text-[11px] text-gray-500 dark:text-gray-400 mt-1.5">扫码联系</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Upwork - 仅英文站 */}
+              {isEn && (
+                <a
+                  href="https://www.upwork.com/freelancers/~010ab5ec29d8f4ff3f"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
+                  aria-label="Upwork"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.561 13.158c-1.698 0-3.074-1.376-3.074-3.074s1.376-3.074 3.074-3.074 3.074 1.376 3.074 3.074-1.376 3.074-3.074 3.074zm-6.478-6.479h-2.81v8.372c0 .838-.68 1.518-1.518 1.518s-1.518-.68-1.518-1.518V6.68H5.427v8.372c0 2.392 1.944 4.336 4.336 4.336s4.336-1.944 4.336-4.336V6.68h-.016zm12.892-2.81H22.17v10.645c0 .838-.68 1.518-1.518 1.518-.468 0-.887-.212-1.163-.546 1.023-.973 1.662-2.345 1.662-3.867 0-2.961-2.409-5.37-5.37-5.37s-5.37 2.409-5.37 5.37 2.409 5.37 5.37 5.37c.996 0 1.928-.274 2.732-.747.766 1.027 1.98 1.695 3.35 1.695 2.32 0 4.207-1.887 4.207-4.207V3.868h-.078z"/>
+                  </svg>
+                </a>
+              )}
             </div>
           </div>
 
@@ -159,62 +214,6 @@ export default function CustomFooter() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
             {/* 版权信息 */}
             <div>© {currentYear} CCLEE. <Translate id="footer.copyright">All rights reserved.</Translate></div>
-
-            {/* 社媒图标 */}
-            <div className="flex items-center gap-4">
-              {/* GitHub - 中英文都有 */}
-              <a
-                href="https://github.com/cclee-hub/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <Github size={16} />
-              </a>
-
-              {/* 微信 - 仅中文站 */}
-              {!isEn && (
-                <div
-                  className="relative"
-                  onMouseEnter={() => setShowWechat(true)}
-                  onMouseLeave={() => setShowWechat(false)}
-                >
-                  <button
-                    className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200 cursor-pointer"
-                    aria-label="微信"
-                    onClick={() => setShowWechat(v => !v)}
-                  >
-                    <MessageCircle size={16} />
-                  </button>
-                  {showWechat && (
-                    <div className="absolute bottom-full right-0 mb-2 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl">
-                      <img
-                        src="/images/wechat-qr.jpg"
-                        alt="微信二维码"
-                        className="w-28 h-28 rounded"
-                      />
-                      <p className="text-center text-[10px] text-gray-500 dark:text-gray-400 mt-1">扫码联系</p>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Upwork - 仅英文站 */}
-              {isEn && (
-                <a
-                  href="https://www.upwork.com/freelancers/~010ab5ec29d8f4ff3f"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
-                  aria-label="Upwork"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.561 13.158c-1.698 0-3.074-1.376-3.074-3.074s1.376-3.074 3.074-3.074 3.074 1.376 3.074 3.074-1.376 3.074-3.074 3.074zm-6.478-6.479h-2.81v8.372c0 .838-.68 1.518-1.518 1.518s-1.518-.68-1.518-1.518V6.68H5.427v8.372c0 2.392 1.944 4.336 4.336 4.336s4.336-1.944 4.336-4.336V6.68h-.016zm12.892-2.81H22.17v10.645c0 .838-.68 1.518-1.518 1.518-.468 0-.887-.212-1.163-.546 1.023-.973 1.662-2.345 1.662-3.867 0-2.961-2.409-5.37-5.37-5.37s-5.37 2.409-5.37 5.37 2.409 5.37 5.37 5.37c.996 0 1.928-.274 2.732-.747.766 1.027 1.98 1.695 3.35 1.695 2.32 0 4.207-1.887 4.207-4.207V3.868h-.078z"/>
-                  </svg>
-                </a>
-              )}
-            </div>
 
             {/* 备案信息 - 仅中文版 */}
             {!isEn && (
