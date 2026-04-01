@@ -3,14 +3,12 @@
 import Translate from '@docusaurus/Translate'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import { useState } from 'react'
 import { Zap, Shield, Rocket, Github, MessageCircle } from 'lucide-react'
 
 export default function CustomFooter() {
   const currentYear = new Date().getFullYear()
   const { i18n } = useDocusaurusContext()
   const isEn = i18n.currentLocale === 'en'
-  const [showWechat, setShowWechat] = useState(false)
 
   const features = isEn
     ? [
@@ -63,28 +61,18 @@ export default function CustomFooter() {
 
               {/* 微信 - 仅中文站 */}
               {!isEn && (
-                <div
-                  className="relative"
-                  onMouseEnter={() => setShowWechat(true)}
-                  onMouseLeave={() => setShowWechat(false)}
-                >
-                  <button
-                    className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200 cursor-pointer"
-                    aria-label="微信"
-                    onClick={() => setShowWechat(v => !v)}
-                  >
+                <div className="relative group">
+                  <div className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200 cursor-pointer">
                     <MessageCircle size={18} />
-                  </button>
-                  {showWechat && (
-                    <div className="absolute top-full left-0 mt-2 w-[136px] p-3 bg-white dark:bg-gray-800 rounded-lg shadow-xl z-50">
-                      <img
-                        src="/images/wechat-qr.jpg"
-                        alt="微信二维码"
-                        className="w-full aspect-square rounded"
-                      />
-                      <p className="text-center text-[11px] text-gray-500 dark:text-gray-400 mt-1.5">扫码联系</p>
-                    </div>
-                  )}
+                  </div>
+                  <div className="absolute top-full left-0 mt-2 w-[136px] p-3 bg-white dark:bg-gray-800 rounded-lg shadow-xl z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <img
+                      src="/images/wechat-qr.jpg"
+                      alt="微信二维码"
+                      className="w-full aspect-square rounded"
+                    />
+                    <p className="text-center text-[11px] text-gray-500 dark:text-gray-400 mt-1.5">扫码联系</p>
+                  </div>
                 </div>
               )}
 
