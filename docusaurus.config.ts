@@ -22,6 +22,20 @@ const config: Config = {
 
   // JSON-LD Person Schema（英文版 aidevhub.ai / 中文版 aigent.ren）
   headTags: [
+    // 百度统计（仅中文站）
+    ...(process.env.SITE !== 'ai'
+      ? [{
+          tagName: 'script',
+          attributes: {},
+          innerHTML: `var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b800c86b573c2e47960c54c29042a4ac";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();`,
+        }]
+      : []),
     {
       tagName: 'script',
       attributes: { type: 'application/ld+json' },
