@@ -103,7 +103,7 @@ export default function CustomFooter() {
                     </svg>
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/%E6%8C%AF%E6%8C%AF-%E6%9D%8E-9b0b113bb/"
+                    href="https://www.linkedin.com/in/cc-lee-9b0b113bb/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-500 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
