@@ -32,6 +32,11 @@ const sidebars: SidebarsConfig = {
       label: 'CCLEE Theme',
       items: ['cclee-theme'],
     },
+    {
+      type: 'category',
+      label: 'WooCommerce 物流',
+      items: ['cclee-shipping'],
+    },
   ],
 };
 
