@@ -1,0 +1,72 @@
+---
+title: "SITE123 Custom Function Limitations? Embedded Tools to the Rescue"
+description: "Need custom features on SITE123 or Wix but can't implement them? This case shows how to extend functionality without touching platform settings, enabling teams to maintain content independently."
+date: 2026-04-10
+tags: [Case Study, Website Builder Limitations, SITE123, Custom Functions, Embedded Tools, Event Pages]
+authors: [cclee]
+schema: FAQPage
+faqs:
+  - q: "Can I add custom functions to SITE123?"
+    a: "Not natively. SITE123 has a closed plugin marketplace, and Custom Code can only inject site-wide—not into specific page positions. A custom embedded tool solves this with single-line insertion at exact locations."
+  - q: "Does this approach work for other website builders besides SITE123?"
+    a: "Yes. Any visual builder that restricts custom HTML embedding—including Wix restricted mode and certain enterprise systems—can be extended using the same method."
+  - q: "Can clients update content themselves, or do they need a developer every time?"
+    a: "Clients handle updates independently. The Admin backend manages each embedded module separately, with changes taking effect immediately—no developer involvement required."
+  - q: "What's the typical development timeline for this type of solution?"
+    a: "Depends on complexity. Standard embedded tools like timelines, countdowns, or forms typically deliver within 1-2 days, after which clients can use them immediately."
+---
+
+## TL;DR
+
+Event pages need clear display of key dates, but SITE123 and similar platforms can't insert custom content at specific positions. A custom embedded timeline tool solves this with a single line of code—content updates happen instantly, no developer needed.
+
+## The Universal Constraint of Visual Website Builders
+
+SITE123, Wix, and similar visual builders make website creation accessible, but hit a wall when个性化需求 arise: closed plugin marketplaces with no suitable tools, custom code that only works site-wide, content updates requiring developer involvement each time. These are structural limitations, not configuration issues—platform settings can't resolve them.
+
+## The Case: Displaying Key Dates on an Event Page
+
+A client running an event page on SITE123 needed to display critical dates—early bird deadline, registration cutoff, event date—directly below the hero banner. First-screen visibility of time nodes is standard for event pages.
+
+The platform couldn't deliver: no way to insert content precisely below the hero banner, and no existing timeline plugin available. Every date change meant contacting a developer.
+
+## Solution: Custom Embedded Timeline Tool
+
+To work around platform constraints, a dedicated Timeline service was built and inserted into the target page via embed script. The client adds just one line of code to the desired page—no changes to other platform settings. The Admin backend manages each timeline independently, with edits taking effect immediately, plus optional page-level load control.
+
+Initial design conflicted with the platform's layout, causing misalignment. Switching to a horizontal fishbone layout naturally adapted to the platform's structure, with deadline-style content displaying clearly.
+
+## Results
+
+The timeline service supports multiple event pages with page-level load control. The fishbone layout has proven adaptable across different visual builder platforms, offering cross-platform reuse value. Content updates shifted from contacting developers and waiting for changes, to clients updating instantly on their own.
+
+<picture>
+  <source srcset="/images/site123-timeline-embed-frontend.webp" type="image/webp" />
+  <img src="/images/site123-timeline-embed-frontend.png" alt="Frontend: Horizontal fishbone timeline layout" />
+</picture>
+
+<picture>
+  <source srcset="/images/site123-timeline-embed-admin.webp" type="image/webp" />
+  <img src="/images/site123-timeline-embed-admin.png" alt="Admin backend interface" />
+</picture>
+
+## Applicable Scenarios
+
+The same approach works for other functionality that visual builders can't natively support:
+
+- Event countdowns and registration deadline alerts
+- Embedded custom forms or surveys
+- Dynamic display of prices, inventory, or availability
+- Any personalized module unavailable in the platform's plugin marketplace
+
+If you're using a visual website builder with feature gaps, contact us for a tailored assessment.
+
+## Why Work With Us
+
+Breaking through platform constraints requires deep understanding of website builder architecture combined with precise control over embedded tools. With multi-platform operational experience, we understand what users actually need—tools that actually get used, rather than technically complex solutions.
+
+---
+
+<div className="text-center my-8">
+  <a href="/about" className="button button--primary button--lg">Contact Us</a>
+</div>
