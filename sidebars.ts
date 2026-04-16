@@ -30,7 +30,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'CCLEE Theme',
-      items: ['cclee-theme'],
+      items: ['cclee-theme', 'cclee-toolkit'],
     },
     {
       type: 'category',

@@ -1,0 +1,64 @@
+---
+title: CCLEE Toolkit — An All-in-One Enhancement Plugin for WordPress B2B Sites
+description: A WordPress plugin providing AI-assisted writing, automatic SEO optimization, and case study showcases for B2B corporate websites, modular by design, open-source and free
+date: 2026-04-16
+tags: [Self-Initiated, WordPress, AI Writing, SEO, Case Study, Open Source]
+authors: [cclee]
+image: /images/docs/cclee-toolkit/cs-frontend.webp
+schema: FAQPage
+faqs:
+  - q: "How can I add case study showcases to my WordPress B2B site quickly?"
+    a: "Install CCLEE Toolkit — the Case Study CPT module is enabled by default. After creating a case study, the template auto-renders client info, metrics, and testimonials without manual layout work."
+  - q: "Is there a free WordPress plugin that handles both AI writing and SEO optimization?"
+    a: "CCLEE Toolkit integrates AI content generation (supporting OpenAI/DeepSeek/Anthropic/Custom) and automatic SEO tag output in a single plugin. GPLv2, open-source, and free."
+---
+
+## TL;DR
+
+B2B corporate websites need three things: AI-assisted writing, automatic SEO, and client case study showcases. CCLEE Toolkit solves all three with a single plugin using a modular architecture where each module can be toggled independently — install and go. Built natively for WordPress FSE Block Themes, verified in production, and open-sourced on GitHub.
+
+## Background
+
+B2B website builds share several common needs: content editors want AI assistance to work faster, pages need social tags and structured data for search visibility, and client case studies serve as trust signals. Existing solutions are either heavyweight All-in-One plugins that add bloat, or a patchwork of single-purpose plugins that increase maintenance overhead.
+
+CCLEE Theme users needed a lightweight solution that integrates with the theme — loading only the modules they need, without slowing down the admin panel.
+
+## Solution
+
+The plugin is organized into 4 independent modules, each toggled via the admin settings page. AI Assistant supports four providers (OpenAI, DeepSeek, Anthropic, Custom) and generates paragraphs, headlines, lists, CTAs, and FAQs directly in the Gutenberg editor sidebar. SEO Enhancer automatically injects Open Graph, Twitter Card, and JSON-LD Schema into all front-end pages with zero configuration. Case Study CPT registers a custom post type for case studies, paired with 4 FSE-native dynamic blocks and a dedicated `single-case-study.html` template — after publishing, the front end automatically renders client info, performance metrics, client testimonials, and project details.
+
+The key architectural decision is modular loading: the `plugins_loaded` hook reads each module's option value, and disabled modules incur zero file loading and zero request overhead. This means a site that only needs SEO won't load the AI SDK and scripts.
+
+## Deliverables
+
+The plugin is open-source. Each module solves a specific real-world scenario:
+
+<InfoBox variant="info" title="AI Assistant — Usable Content for Non-Writers">
+
+Operations staff at export companies need to update product pages, blogs, and landing pages regularly — but most aren't professional copywriters. AI Assistant lives inside the Gutenberg editor sidebar: enter a product name and selling points, choose from 5 formats (paragraph, headline, list, CTA, FAQ), and get an editable first draft in seconds. It supports 4 providers (OpenAI, DeepSeek, Anthropic, Custom), so businesses can plug in their existing API accounts without new purchases. For a B2B team where one person wears multiple hats, content production goes from "all morning writing" to "generate and refine in 30 minutes."
+
+</InfoBox>
+
+<InfoBox variant="info" title="SEO Enhancer — Professional Previews on Every Shared Link">
+
+B2B product pages and articles get shared on LinkedIn, Twitter, WeChat, and other platforms. Without Open Graph tags, shared links show random truncated text and a blank thumbnail — they look like spam. SEO Enhancer automatically injects OG tags (title, description, image), Twitter Card tags, and JSON-LD structured data into every page, with zero code and zero configuration. Every shared link displays the correct title, description, and cover image — higher click-through rates are a direct result. Google also uses JSON-LD to identify article type and author info, helping pages earn richer search result snippets.
+
+</InfoBox>
+
+<InfoBox variant="info" title="Case Study CPT — Turn Client Wins into Trust Assets">
+
+B2B sales cycles are long, and prospects review past projects before deciding. Case Study CPT provides structured case entry: client name, company size, project duration, up to 4 performance metrics (e.g., "+200% capacity" / "-45% defect rate"), and client testimonials. After publishing, the front end auto-renders four visual sections — client info, metrics grid, testimonial, and project details — no manual layout or designer needed. A factory completes a big order, and the ops team can publish it as a case study in 10 minutes. Next time a prospect asks "Have you done similar projects?", the answer is a link.
+
+</InfoBox>
+
+Each module is controlled by a backend checkbox, with zero performance cost when disabled. Before every release, Playwright browser automation tests simulate real user operations — from admin login, creating cases, filling Meta Boxes, publishing, to front-end rendering — covering interaction points like the Gutenberg iframe canvas that CLI tools can't detect. Users install and it works, no debugging required.
+
+## Why Us
+
+24 years of e-commerce experience shaped the plugin's feature design — the case study meta field structure (company size, project duration, performance metrics, client testimonials) comes directly from client communication templates used in actual deliveries. Building 13 AI-powered tools in 2024 informed the multi-provider routing architecture in AI Assistant.
+
+---
+
+<div className="text-center my-8">
+  <a href="https://github.com/cclee-hub/cclee-plugins" className="button button--primary button--lg" target="_blank" rel="noopener noreferrer">Download on GitHub</a>
+</div>
