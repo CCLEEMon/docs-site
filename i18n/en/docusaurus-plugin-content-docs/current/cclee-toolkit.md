@@ -37,6 +37,8 @@ An enhancement toolkit for B2B corporate websites. Four modules you can toggle i
 WordPress 6.4+ / PHP 8.0+. SEO and Case Study modules are enabled by default — no extra setup needed.
 </InfoBox>
 
+**Download**: [cclee-plugins (GitHub)](https://github.com/cclee-hub/cclee-plugins)
+
 ---
 
 ## Plugin Settings

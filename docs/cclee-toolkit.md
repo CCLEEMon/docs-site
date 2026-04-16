@@ -37,6 +37,8 @@ B 端企业官网增强工具包，4 个模块可独立开关，按需启用。
 WordPress 6.4+ / PHP 8.0+。插件安装后 SEO 和 Case Study 默认开启，无需额外配置即可使用。
 </InfoBox>
 
+**下载插件**：[cclee-plugins (GitHub)](https://github.com/cclee-hub/cclee-plugins)
+
 ---
 
 ## 插件设置
