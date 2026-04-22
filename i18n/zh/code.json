@@ -406,5 +406,193 @@
   "tool.card.readReview": {
     "message": "查看评测",
     "description": "Read review button text"
+  },
+  "ccleetheme.hero.badge": {
+    "message": "免费 & 开源",
+    "description": "Hero badge text"
+  },
+  "ccleetheme.hero.title": {
+    "message": "免费 WordPress 区块主题",
+    "description": "Hero title"
+  },
+  "ccleetheme.hero.subtitle": {
+    "message": "极简架构 · 设计师级视觉 · 开箱即用",
+    "description": "Hero subtitle"
+  },
+  "ccleetheme.hero.description": {
+    "message": "为开发者和网站搭建者打造的 FSE 区块主题",
+    "description": "Hero description"
+  },
+  "ccleetheme.hero.github": {
+    "message": "在 GitHub 查看源码",
+    "description": "GitHub button"
+  },
+  "ccleetheme.hero.demo": {
+    "message": "查看样式演示",
+    "description": "Demo button"
+  },
+  "ccleetheme.hero.docs": {
+    "message": "阅读文档",
+    "description": "Docs button"
+  },
+  "ccleetheme.hero.jsLines": {
+    "message": "76 行 JS",
+    "description": "JS lines badge"
+  },
+  "ccleetheme.hero.zeroDeps": {
+    "message": "零依赖",
+    "description": "Zero deps badge"
+  },
+  "ccleetheme.hero.blocks": {
+    "message": "24 个区块",
+    "description": "Blocks badge"
+  },
+  "ccleetheme.hero.gpl": {
+    "message": "GPLv2 开源",
+    "description": "GPL badge"
+  },
+  "ccleetheme.pain.title": {
+    "message": "听起来很熟悉？",
+    "description": "Pain points section title"
+  },
+  "ccleetheme.pain.item1": {
+    "message": "打开主题代码，发现 functions.php 是一团难以维护的意大利面——",
+    "description": "Pain point 1"
+  },
+  "ccleetheme.pain.item2": {
+    "message": "装了 5 个插件，网站变慢了，还不知道该怪谁——",
+    "description": "Pain point 2"
+  },
+  "ccleetheme.pain.item3": {
+    "message": "终于选了个「专业主题」，换了 Logo 之后总觉得哪里不对——",
+    "description": "Pain point 3"
+  },
+  "ccleetheme.pain.item4": {
+    "message": "想要专业感，要么请设计师，要么将就免费模板——",
+    "description": "Pain point 4"
+  },
+  "ccleetheme.pain.conclusion": {
+    "message": "大多数主题让你在「能用」和「好用」之间二选一。",
+    "description": "Pain conclusion"
+  },
+  "ccleetheme.pain.highlight": {
+    "message": "CCLEE 拒绝让你将就。",
+    "description": "Pain highlight"
+  },
+  "ccleetheme.compare.title": {
+    "message": "对比主流商业主题",
+    "description": "Comparison section title"
+  },
+  "ccleetheme.compare.mainstream": {
+    "message": "主流主题",
+    "description": "Mainstream column header"
+  },
+  "ccleetheme.compare.conclusion": {
+    "message": "同样的功能，",
+    "description": "Comparison conclusion"
+  },
+  "ccleetheme.compare.highlight": {
+    "message": "只有 1/10 的代码量",
+    "description": "Comparison highlight"
+  },
+  "ccleetheme.compare.reason": {
+    "message": "不是我们更强——只是他们塞了一堆你永远用不到的东西。",
+    "description": "Comparison reason"
+  },
+  "ccleetheme.users.title": {
+    "message": "三类用户的价值",
+    "description": "Users section title"
+  },
+  "ccleetheme.users.dev.title": {
+    "message": "开发者 / 代理商",
+    "description": "Developers title"
+  },
+  "ccleetheme.users.dev.highlight": {
+    "message": "干净的代码基础，不是需要对抗的黑盒",
+    "description": "Developers highlight"
+  },
+  "ccleetheme.users.dev.desc": {
+    "message": "子主题友好，升级保留自定义，交付不头疼。",
+    "description": "Developers description"
+  },
+  "ccleetheme.users.builder.title": {
+    "message": "网站搭建者",
+    "description": "Site Builders title"
+  },
+  "ccleetheme.users.builder.highlight": {
+    "message": "内置专业美学，开箱即有好颜值",
+    "description": "Site Builders highlight"
+  },
+  "ccleetheme.users.builder.desc": {
+    "message": "什么是 FSE？— 全站编辑，随处点击修改，无需代码。",
+    "description": "Site Builders description"
+  },
+  "ccleetheme.users.advanced.title": {
+    "message": "进阶 / 扩展用户",
+    "description": "Advanced users title"
+  },
+  "ccleetheme.users.advanced.highlight": {
+    "message": "今天一个网站，明天增长引擎",
+    "description": "Advanced users highlight"
+  },
+  "ccleetheme.users.advanced.desc": {
+    "message": "子主题可扩展，标准 Hook，随时可接入新功能。",
+    "description": "Advanced users description"
+  },
+  "ccleetheme.stats.title": {
+    "message": "关键数字",
+    "description": "Stats section title"
+  },
+  "ccleetheme.stats.js": {
+    "message": "行 JavaScript",
+    "description": "JS lines stat"
+  },
+  "ccleetheme.stats.deps": {
+    "message": "外部依赖",
+    "description": "Deps stat"
+  },
+  "ccleetheme.stats.blocks": {
+    "message": "设计区块",
+    "description": "Blocks stat"
+  },
+  "ccleetheme.stats.styles": {
+    "message": "品牌样式",
+    "description": "Styles stat"
+  },
+  "ccleetheme.stats.colors": {
+    "message": "调色板",
+    "description": "Colors stat"
+  },
+  "ccleetheme.stats.size": {
+    "message": "商业主题代码量",
+    "description": "Size stat"
+  },
+  "ccleetheme.usecases.title": {
+    "message": "适用场景",
+    "description": "Use cases title"
+  },
+  "ccleetheme.cta.title": {
+    "message": "立即开始，永久免费",
+    "description": "CTA title"
+  },
+  "ccleetheme.cta.desc": {
+    "message": "无需注册，无需授权，Fork 即可使用。",
+    "description": "CTA description"
+  },
+  "ccleetheme.cta.star": {
+    "message": "正在使用？一个 Star ⭐ 是最好的支持。",
+    "description": "CTA star text"
+  },
+  "ccleetheme.cta.github": {
+    "message": "在 GitHub 查看源码",
+    "description": "CTA GitHub button"
+  },
+  "ccleetheme.cta.demo": {
+    "message": "在线演示",
+    "description": "CTA Demo button"
+  },
+  "ccleetheme.cta.docs": {
+    "message": "阅读文档",
+    "description": "CTA Docs button"
   }
 }

@@ -7,8 +7,8 @@ import { GithubIcon, GlobeIcon, ZapIcon, CheckIcon, FileIcon, UserIcon, Building
 export default function CCLEETheme(): React.ReactElement {
   return (
     <Layout
-      title="CCLEE Theme - Free WordPress Block Theme"
-      description="Free WordPress FSE block theme. 76 lines of JS, zero dependencies, 24 blocks, 5 style variations. Built for developers and site builders."
+      title="CCLEE Theme - 免费 WordPress 区块主题"
+      description="轻量级 WordPress FSE 区块主题。76 行 JS、零依赖、24 个区块、5 种样式。为开发者和网站搭建者打造。"
     >
       <main className="min-h-screen">
         {/* Hero Section */}
@@ -131,27 +131,27 @@ export default function CCLEETheme(): React.ReactElement {
                 <ul className="space-y-3 text-purple-600 dark:text-purple-300 leading-relaxed">
                   <li className="flex items-center gap-2">
                     <CheckIcon size={18} className="text-green-500" />
-                    76 lines JS
+                    <Translate>76 行 JS</Translate>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon size={18} className="text-green-500" />
-                    Zero dependencies
+                    <Translate>零依赖</Translate>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon size={18} className="text-green-500" />
-                    No jQuery
+                    <Translate>无 jQuery</Translate>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon size={18} className="text-green-500" />
-                    Modular architecture
+                    <Translate>模块化架构</Translate>
                   </li>
                 </ul>
               </div>
             </div>
 
             <p className="text-center text-lg text-gray-600 dark:text-gray-400 mt-8">
-              <Translate id="ccleetheme.compare.conclusion">Same features,</Translate> <span className="font-bold text-purple-600 dark:text-purple-400"><Translate id="ccleetheme.compare.highlight">1/10 the code</Translate></span>.<br />
-              <Translate id="ccleetheme.compare.reason">Not because we're better — they just stuff things you'll never use.</Translate>
+              <Translate id="ccleetheme.compare.conclusion">同样的功能，</Translate> <span className="font-bold text-purple-600 dark:text-purple-400"><Translate id="ccleetheme.compare.highlight">只有 1/10 的代码量</Translate></span>。<br />
+              <Translate id="ccleetheme.compare.reason">不是我们更强——只是他们塞了一堆你永远用不到的东西。</Translate>
             </p>
           </div>
         </section>
@@ -160,7 +160,7 @@ export default function CCLEETheme(): React.ReactElement {
         <section className="py-16 px-6 bg-gray-50 dark:bg-[#0f0f17]">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
-              <Translate id="ccleetheme.users.title">Value for Three User Types</Translate>
+              <Translate id="ccleetheme.users.title">三类用户的价值</Translate>
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -181,19 +181,19 @@ export default function CCLEETheme(): React.ReactElement {
                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    76 lines JavaScript, no jQuery, no third-party libs
+                    <Translate>76 行 JavaScript，无 jQuery，无第三方库</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    CSS-only WooCommerce, zero template overrides
+                    <Translate>纯 CSS WooCommerce，零模板覆盖</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    theme.json design tokens, change once update everywhere
+                    <Translate>theme.json 设计令牌，改一处全局生效</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    GPLv2 open source, modify, commercial use, redistribute freely
+                    <Translate>GPLv2 开源，可修改，商用可再发布</Translate>
                   </li>
                 </ul>
               </div>
@@ -215,19 +215,19 @@ export default function CCLEETheme(): React.ReactElement {
                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    24 blocks: Hero, pricing, cases, FAQ, team, timeline...
+                    <Translate>24 个区块：Hero、定价、案例、FAQ、团队、时间轴...</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    5 brand styles, one-click switch
+                    <Translate>5 种品牌样式，一键切换</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    Full visual editing, no code needed
+                    <Translate>全可视化编辑，无需代码</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    Install → Pick style → Replace content → Launch
+                    <Translate>安装 → 选样式 → 换内容 → 上线</Translate>
                   </li>
                 </ul>
               </div>
@@ -249,19 +249,19 @@ export default function CCLEETheme(): React.ReactElement {
                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    SEO-friendly: semantic HTML, Core Web Vitals optimized
+                    <Translate>SEO 友好：语义化 HTML、Core Web Vitals 优化</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    GEO-ready: multilingual / multi-region content architecture
+                    <Translate>GEO 就绪：多语言 / 多区域内容架构</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    AI-Ready: pre-configured ai-content-block
+                    <Translate>AI 就绪：预配置 ai-content-block</Translate>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon size={16} className="text-green-500 mt-0.5 shrink-0" />
-                    Conversion built-in: lead forms, countdowns, trust badges
+                    <Translate>内置转化：表单、倒计时、信任徽章</Translate>
                   </li>
                 </ul>
               </div>
@@ -273,7 +273,7 @@ export default function CCLEETheme(): React.ReactElement {
         <section className="py-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-12 text-gray-900 dark:text-gray-100">
-              <Translate id="ccleetheme.stats.title">Numbers That Matter</Translate>
+              <Translate id="ccleetheme.stats.title">关键数字</Translate>
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -305,13 +305,13 @@ export default function CCLEETheme(): React.ReactElement {
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <span className="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium">
-                GitHub Open Source
+                GitHub 开源
               </span>
               <span className="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium">
-                GPLv2 Free for Commercial Use
+                GPLv2 商用免费
               </span>
               <span className="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium">
-                WP 6.4+ Native Support
+                WP 6.4+ 原生支持
               </span>
             </div>
           </div>
@@ -325,7 +325,7 @@ export default function CCLEETheme(): React.ReactElement {
             </h2>
 
             <div className="flex flex-wrap justify-center gap-4">
-              {['B2B Corporate', 'SaaS Landing', 'E-commerce Store', 'Marketing Pages', 'Portfolio', 'Agency Projects'].map((useCase) => (
+              {['B2B 企业', 'SaaS 落地页', '电商商城', '营销页面', '作品集', '代理项目'].map((useCase) => (
                 <span
                   key={useCase}
                   className="px-6 py-3 rounded-full bg-white dark:bg-[#181824] border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium"
