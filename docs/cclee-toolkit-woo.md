@@ -1,5 +1,5 @@
 ---
-title: CCLEE Toolkit WooCommerce 设置指南
+title: WooCommerce
 description: CCLEE Toolkit WooCommerce 选项卡完整指南 — Product Schema 结构化数据输出
 project: cclee-toolkit
 schema: HowTo
@@ -14,7 +14,7 @@ rag_tags: ["WordPress", "CCLEE Toolkit", "WooCommerce", "结构化数据", "SEO"
 
 import StatusTag from '@site/src/components/StatusTag'
 
-# CCLEE Toolkit WooCommerce 设置指南
+# CCLEE Toolkit — WooCommerce
 
 后台路径：**CCLEE Toolkit → WooCommerce**
 
@@ -24,7 +24,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 ## Product Schema
 
-勾选 **Enable WooCommerce Product Schema** 开启（默认开启）。
+勾选 **启用 WooCommerce Product Schema** 开启（默认开启）。
 
 开启后，所有 WooCommerce 产品页自动输出 Product 结构化数据到 `<head>`。
 
@@ -49,23 +49,11 @@ import StatusTag from '@site/src/components/StatusTag'
 
 ### 验证方法
 
-<StepBox title="1. 访问产品页">
+### 验证 Product Schema
 
-访问任意 WooCommerce 产品页。
-
-</StepBox>
-
-<StepBox title="2. 查看页面源代码">
-
-右键 → **查看页面源代码**，搜索 `<script type="application/ld+json">`。
-
-</StepBox>
-
-<StepBox title="3. 确认 Product Schema">
-
-确认 JSON 中包含 `"@type":"Product"`。
-
-</StepBox>
+1. 访问任意 WooCommerce 产品页
+2. 右键 → **查看页面源代码**，搜索 `<script type="application/ld+json">`
+3. 确认 JSON 中包含 `"@type":"Product"`
 
 ---
 

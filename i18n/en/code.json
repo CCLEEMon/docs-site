@@ -392,12 +392,16 @@
     "message": "CCLHUB E-commerce Operations Platform - AI-driven Operations and E-commerce Toolkit"
   },
   "homepage.hero.title": {
-    "message": "AI-Powered E-commerce Operations Tools",
+    "message": "How many parts of your business are still running on manual work?",
     "description": "Hero section title"
   },
   "homepage.hero.subtitle": {
-    "message": "AI Operations + E-commerce Toolkit, Making E-commerce Operations More Efficient",
+    "message": "Repetitive labor, rising costs, growing competition — custom AI tools to cut costs, boost efficiency, and sharpen your edge.",
     "description": "Hero section subtitle"
+  },
+  "homepage.hero.description": {
+    "message": "170+ custom AI tools shipped, across cross-border expansion, market entry, and internal automation. Not off-the-shelf software — built specifically for your business.",
+    "description": "Hero section description"
   },
   "homepage.hero.freeTrial": {
     "message": "Free Trial",
@@ -420,7 +424,7 @@
     "description": "AI support stat"
   },
   "homepage.transition": {
-    "message": "One-stop e-commerce operations solution, from data collection to intelligent analysis, comprehensively improving operational efficiency",
+    "message": "170+ custom AI tools shipped, across cross-border expansion, market entry, and internal automation. Not off-the-shelf software — built specifically for your business.",
     "description": "Transition section text"
   },
   "homepage.products.title": {

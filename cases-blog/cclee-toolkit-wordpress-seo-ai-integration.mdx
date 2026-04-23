@@ -1,0 +1,54 @@
+---
+title: 【WordPress】CCLEE Toolkit — AI 与 SEO 增强插件从0到1
+description: 为 WordPress + WooCommerce 电商站点打造的免费开源工具链，集成 AI 写作、Product Schema、SEO 优化、图片 Alt 自动生成，单插件替代多个付费方案。
+date: 2026-04-23
+tags: [Self-Initiated, WordPress, WooCommerce, AI, SEO, 开源]
+authors: [cclee]
+schema: FAQPage
+faqs:
+  - q: "WordPress 站点如何快速提升 SEO 效果？"
+    a: "CCLEE Toolkit 提供 AI 写作助手和 SEO Enhancer 模块，自动生成优化内容、结构和图片 Alt，兼容主流主题。"
+  - q: "WooCommerce 产品页如何输出结构化数据？"
+    a: "开启 WooCommerce Tab 的 Product Schema 选项，自动在产品页输出符合 Google 规范的 Product 结构化数据。"
+---
+
+## TL;DR
+
+独立电商卖家需要 AI 写作、SEO 优化、产品结构化数据等多个付费插件才能完成基础优化。CCLEE Toolkit 将这些功能集成到一个免费开源插件中，支持多 AI 提供商（OpenAI/DeepSeek/Anthropic），单插件替代多个付费方案。
+
+## 项目背景
+
+WordPress + WooCommerce 是中小型电商的常见技术选型。这类站点面临几个共性问题：
+
+- AI 写作需要付费订阅（Yoast AI、Jasper 等）
+- Product Schema 需要额外插件或主题支持
+- 图片 Alt 属性容易被忽略，影响图片搜索流量
+- 多个插件之间存在冲突或性能问题
+
+## 解决方案
+
+CCLEE Toolkit 采用模块化设计，在单个 WordPress 插件中提供四个独立模块：
+
+**General 模块 — AI 写作助手**
+在 Gutenberg 编辑器侧边栏集成 AI 助手，支持生成段落、标题、列表、CTA、FAQ 等内容类型。连接 OpenAI、DeepSeek、Anthropic 或自定义 API 提供商，自动完成内容生成。
+
+**SEO 模块 — 结构化内容输出**
+自动在页面头部输出 SEO 友好的 Meta 标签，包括 Open Graph、Twitter Card、JSON-LD 结构化数据。提升内容在社交媒体分享和搜索引擎中的展示效果。
+
+**WooCommerce 模块 — Product Schema**
+为产品页自动生成符合 Google 规范的 Product 结构化数据，包含 name、image、description、sku、offers、aggregateRating 等字段。变额产品输出 AggregateOffer 类型，覆盖价格区间。
+
+**Image Alt 模块 — AI 图片描述**
+自动检测文章/产品中的图片，调用 AI 生成描述性的 Alt 属性，提升图片搜索流量和网站无障碍访问能力。
+
+技术选型上，插件完全使用 WordPress 官方 API，不依赖前端框架，确保与任意主题的兼容性。
+
+## 交付成果
+
+插件已在 [GitHub 开源发布](https://github.com/cclee-hub/cclee-plugins)，WordPress 站点可直接安装使用。集成 CCLEE Theme 的 FSE 区块主题后可一键启用全部功能，零配置即可输出完整的 SEO 结构化数据。
+
+---
+
+<div className="text-center my-8">
+  <a href="https://github.com/cclee-hub/cclee-plugins" className="button button--primary button--lg" target="_blank" rel="noopener noreferrer">GitHub 下载</a>
+</div>

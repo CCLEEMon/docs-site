@@ -125,97 +125,29 @@ All front-end pages automatically get these tags in `<head>`:
 
 ### Creating a Case Study
 
-<StepBox title="1. Open Case Study Management">
+### Creating a Case Study
 
-In the admin sidebar, click **"Case Studies"** → **"Add New"**.
+Navigate: **Case Studies → Add New**
 
-![Case Studies list](/images/docs/cclee-toolkit/cs-list.webp)
-
-</StepBox>
-
-<StepBox title="2. Enter the Title">
-
-Type the case study title in the editor's title area (e.g., "Smart Factory Upgrade - TechCorp").
-
-</StepBox>
-
-<StepBox title="3. Fill in Client Information">
-
-In the **"Case Study Details"** Meta Box below the editor:
+Fill in the fields:
 
 | Field | Description | Example |
 |-------|-------------|---------|
-| Client Name | Client company name | TechCorp Manufacturing |
-| Project Duration | Project timeline | 8 months |
-| Company Size | Company scale | 500+ employees |
+| Title | Case study title | Smart Factory Upgrade |
+| Client Name | Client company | TechCorp Manufacturing |
+| Project Duration | Timeline | 8 months |
+| Company Size | Scale | 500+ employees |
+| Metric 1~4 Value/Label | Performance metrics | +200% / Revenue Growth |
+| Testimonial Content | Client quote | The solution significantly improved our production line efficiency |
+| Testimonial Author | Reviewer name | Zhang Wei |
 
-</StepBox>
+Set industry via the **Industries** panel on the right. Click **Publish** when done.
 
-<StepBox title="4. Add Performance Metrics">
+The detail page auto-renders 4 Blocks: Case Hero / Case Metrics / Case Testimonial / Case Meta.
 
-Up to 4 metric groups, each with a Value and a Label:
-
-| Field | Example |
-|-------|---------|
-| Metric 1 Value | +200% |
-| Metric 1 Label | Revenue Growth |
-| Metric 2 Value | -45% |
-| Metric 2 Label | Defect Rate |
-
-Leave unused fields empty — they won't display.
-
-</StepBox>
-
-<StepBox title="5. Add Client Testimonial">
-
-| Field | Description | Example |
-|-------|-------------|---------|
-| Testimonial Content | The quote | The solution significantly improved our production line efficiency |
-| Testimonial Author | Person's name | Zhang Wei |
-| Testimonial Title | Person's role | VP of Operations |
-
-</StepBox>
-
-<StepBox title="6. Set Industry Category">
-
-In the **Industries** panel on the right sidebar, select or create an industry category (e.g., "Manufacturing", "SaaS").
-
-</StepBox>
-
-<StepBox title="7. Publish">
-
-Click **Publish** in the top-right corner → confirm.
+URL: `/case-study/{slug}/`
 
 ![New case study editor](/images/docs/cclee-toolkit/cs-new-editor.webp)
-
-</StepBox>
-
-### Front-End Display
-
-The case study template automatically renders 4 dynamic blocks:
-
-| Block | Display |
-|-------|---------|
-| Case Hero | Client name + company size |
-| Case Metrics | Performance metrics grid (up to 4 groups) |
-| Case Testimonial | Client quote + reviewer info |
-| Case Meta | Project duration + team size |
-
-![Front-end case study page](/images/docs/cclee-toolkit/cs-frontend.webp)
-
-<InfoBox variant="info" title="Automatic Rendering">
-The `single-case-study.html` template includes all 4 blocks. They render automatically after publishing — no need to insert blocks manually.
-</InfoBox>
-
-### URL Structure
-
-| Page | URL Format |
-|------|------------|
-| Single case study | `/case-study/{slug}/` |
-| Industry archive | `/case-industry/{term-slug}/` |
-| All case studies | `/case-study/` (requires pretty permalinks) |
-
-![Case study archive](/images/docs/cclee-toolkit/cs-archive.webp)
 
 ---
 

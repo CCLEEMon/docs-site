@@ -35,7 +35,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'CCLEE Toolkit',
-      items: ['cclee-toolkit', 'cclee-toolkit-seo', 'cclee-toolkit-woo'],
+      items: ['cclee-toolkit', 'cclee-toolkit-image-alt', 'cclee-toolkit-seo', 'cclee-toolkit-woo'],
     },
     {
       type: 'category',

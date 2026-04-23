@@ -3,10 +3,10 @@ import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
-import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon, RocketIcon, LayoutIcon } from '@site/src/components/Icons';
+import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon, RocketIcon, LayoutIcon, ToolIcon } from '@site/src/components/Icons';
 import { HeroBackground } from '@site/src/components/HeroSection';
 
-export default function Home(): React.ReactElement {
+export default function Products(): React.ReactElement {
   const title = translate({ id: 'homepage.title', message: 'CCLHUB - AI驱动的电商运营工具平台' });
   const description = translate({ id: 'homepage.description', message: 'CCLHUB 电商运营工具平台 - AI驱动的AI运营与电商工具箱' });
 
@@ -25,24 +25,13 @@ export default function Home(): React.ReactElement {
           </div>
           <div className="relative z-10 animate-fadeInUp">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-8 bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent tracking-tight">
-              <Translate id="homepage.hero.title">AI 驱动的电商运营工具</Translate>
+              <Translate id="homepage.hero.title">您的业务，还有几个环节在靠人工支撑</Translate>
             </h1>
 
-            <div className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed max-w-[700px] mx-auto text-center">
-              <Translate id="homepage.hero.subtitle">AI运营 + 电商工具箱，让电商运营更高效</Translate>
+            <div className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-[700px] mx-auto text-center">
+              <Translate id="homepage.hero.subtitle">重复人工、成本攀升、竞争加剧——AI定制工具帮您降本增效，重建竞争优势</Translate>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full max-w-[500px] mx-auto mb-16">
-              <Link
-                to="/docs/browser-plugin"
-                className="animate-fadeIn group relative px-10 py-4 rounded-xl text-lg font-semibold inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 border-2 border-purple-500 dark:border-purple-500 text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/50 hover:border-purple-600 dark:hover:border-purple-400 hover:text-purple-800 dark:hover:text-purple-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-auto"
-              >
-                <span className="flex items-center gap-2">
-                  <PluginIcon size={18} />
-                  <Translate id="homepage.hero.getTools">获取工具</Translate>
-                </span>
-              </Link>
-            </div>
           </div>
 
         </div>
@@ -50,14 +39,67 @@ export default function Home(): React.ReactElement {
         {/* Transition Section */}
         <div className="py-16 px-5 text-center">
           <div className="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-[700px] mx-auto leading-relaxed">
-            <Translate id="homepage.transition">一站式电商运营解决方案，从数据采集到智能分析，全方位提升运营效率</Translate>
+            <Translate id="homepage.transition">已落地170+个AI定制工具，覆盖出海、入华、内部流程自动化。非通用软件，专为您的业务场景定制开发</Translate>
           </div>
         </div>
 
         <div className="max-w-[1200px] mx-auto px-5 py-20">
-          <div className="mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-              <Translate id="homepage.products.title">核心产品</Translate>
+          {/* WordPress 生态 - 放第一位 */}
+          <div className="mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+              WordPress 生态
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">免费开源的 WordPress 主题与插件</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            <Link
+              to="/cclee-theme"
+              id="cclee-theme"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
+                <LayoutIcon size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
+                <Translate id="homepage.products.ccleeTheme.title">CCLEE Theme</Translate>
+              </h3>
+              <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
+                <Translate id="homepage.products.ccleeTheme.description">免费 WordPress FSE 区块主题。76 行 JS、零依赖、24 区块、5 种风格，开发者与建站者皆宜。</Translate>
+              </div>
+              <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
+                <ZapIcon size={16} />
+                <Translate id="homepage.products.ccleeTheme.cta">GitHub 开源 · 永久免费</Translate>
+              </div>
+            </Link>
+
+            <Link
+              to="/docs/cclee-toolkit"
+              id="cclee-toolkit"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
+                <ToolIcon size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
+                <Translate id="homepage.products.ccleeToolkit.title">CCLEE Toolkit</Translate>
+              </h3>
+              <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
+                <Translate id="homepage.products.ccleeToolkit.description">WordPress + WooCommerce 增强插件。全系列集成 AI 操作，自动生成 SEO 内容、Product Schema、图片 Alt，显著提升搜索引擎排名。</Translate>
+              </div>
+              <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
+                <ZapIcon size={16} />
+                <Translate id="homepage.products.ccleeToolkit.cta">GitHub 开源 · 永久免费</Translate>
+              </div>
+            </Link>
+          </div>
+
+          {/* 核心产品 */}
+          <div className="mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+              核心产品
             </h2>
           </div>
 
@@ -65,7 +107,7 @@ export default function Home(): React.ReactElement {
             <Link
               to="/docs/browser-plugin"
               id="browser-plugin"
-              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
               style={{ animationDelay: '0.1s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
@@ -75,7 +117,7 @@ export default function Home(): React.ReactElement {
                 <Translate id="homepage.products.toolkit.title">电商工具箱</Translate>
               </h3>
               <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
-                <Translate id="homepage.products.toolkit.description">实时获取商品数据、价格监控、竞品分析。支持淘宝、京东、拼多多等主流电商平台。</Translate>
+                <Translate id="homepage.products.toolkit.description">一站式电商运营解决方案，从数据采集到智能分析，全方位提升运营效率</Translate>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <img src={require('@site/static/images/plugin-sidebar-ecommerce.png').default} alt={toolkitAlt} className="w-full h-full object-cover" />
@@ -85,7 +127,7 @@ export default function Home(): React.ReactElement {
             <Link
               to="/docs/ai-analytics"
               id="ai-analytics"
-              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
               style={{ animationDelay: '0.2s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
@@ -102,8 +144,8 @@ export default function Home(): React.ReactElement {
               </div>
             </Link>
 
-            <div id="ai-support" className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20" style={{ animationDelay: '0.3s' }}>
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
+            <Link to="/docs/customer-service" id="ai-support" className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20" style={{ animationDelay: '0.3s' }}>
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple-500/30 group-hover:rotate-6 transition-all duration-300">
                 <MessageCircleIcon size={32} className="text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
@@ -117,14 +159,14 @@ export default function Home(): React.ReactElement {
               </div>
               <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
                 <ZapIcon size={16} />
-                <Translate id="homepage.products.aiSupport.cta">点击右下角图标开始咨询</Translate>
+                <Translate id="homepage.products.aiSupport.cta">了解更多</Translate>
               </div>
-            </div>
+            </Link>
 
             <Link
               to="/agntc"
               id="agntc"
-              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
+              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
               style={{ animationDelay: '0.4s' }}
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
@@ -141,84 +183,8 @@ export default function Home(): React.ReactElement {
                 <Translate id="homepage.products.agntc.cta">访问 app.aigent.ren</Translate>
               </div>
             </Link>
-
-            <Link
-              to="/cclee-theme"
-              id="cclee-theme"
-              className="animate-enter group p-8 rounded-2xl bg-gray-50 dark:bg-[#181824] border-2 border-gray-200 dark:border-gray-700 text-inherit block shadow-md hover:shadow-xl hover:shadow-purple hover:-translate-y-1 hover:border-purple-400 transition-all duration-300 scroll-mt-20"
-              style={{ animationDelay: '0.5s' }}
-            >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg group-hover:shadow-purple group-hover:rotate-6 transition-all duration-300">
-                <LayoutIcon size={32} className="text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
-                <Translate id="homepage.products.ccleeTheme.title">CCLEE Theme</Translate>
-              </h3>
-              <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-5">
-                <Translate id="homepage.products.ccleeTheme.description">免费 WordPress FSE 区块主题。76 行 JS、零依赖、24 区块、5 种风格，开发者与建站者皆宜。</Translate>
-              </div>
-              <div className="text-purple-700 dark:text-purple-400 font-semibold text-sm flex items-center gap-1.5">
-                <ZapIcon size={16} />
-                <Translate id="homepage.products.ccleeTheme.cta">GitHub 开源 · 永久免费</Translate>
-              </div>
-            </Link>
           </div>
 
-          <div className="border-t border-gray-200 dark:border-gray-700 pt-12 mb-12">
-            <h2 className="text-xl sm:text-2xl font-bold mb-8 text-gray-900 dark:text-gray-100">
-              <Translate id="homepage.whyChoose.title">为什么选择 CCLHUB</Translate>
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="animate-enter" style={{ animationDelay: '0.1s' }}>
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 dark:from-purple-900/50 dark:to-purple-800/50 flex items-center justify-center mb-5 shadow-md">
-                  <ZapIcon size={24} className="text-white dark:text-purple-300" />
-                </div>
-                <h3 className="text-lg font-bold mb-2.5 text-gray-900 dark:text-gray-100">
-                  <Translate id="homepage.features.instant.title">即时可用</Translate>
-                </h3>
-                <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed">
-                  <Translate id="homepage.features.instant.description">无需复杂配置，安装即用。5分钟即可完成数据接入并开始分析。</Translate>
-                </div>
-              </div>
-
-              <div className="animate-enter" style={{ animationDelay: '0.2s' }}>
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 dark:from-purple-900/50 dark:to-purple-800/50 flex items-center justify-center mb-5 shadow-md">
-                  <TrendIcon size={24} className="text-white dark:text-purple-300" />
-                </div>
-                <h3 className="text-lg font-bold mb-2.5 text-gray-900 dark:text-gray-100">
-                  <Translate id="homepage.features.precise.title">精准分析</Translate>
-                </h3>
-                <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed">
-                  <Translate id="homepage.features.precise.description">AI驱动的数据分析，深度洞察市场趋势和用户行为，准确率高达95%以上。</Translate>
-                </div>
-              </div>
-
-              <div className="animate-enter" style={{ animationDelay: '0.3s' }}>
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 dark:from-purple-900/50 dark:to-purple-800/50 flex items-center justify-center mb-5 shadow-md">
-                  <ShieldIcon size={24} className="text-white dark:text-purple-300" />
-                </div>
-                <h3 className="text-lg font-bold mb-2.5 text-gray-900 dark:text-gray-100">
-                  <Translate id="homepage.features.secure.title">数据安全</Translate>
-                </h3>
-                <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed">
-                  <Translate id="homepage.features.secure.description">采用企业级加密技术，本地数据处理，严格保护商业隐私和数据安全。</Translate>
-                </div>
-              </div>
-
-              <div className="animate-enter" style={{ animationDelay: '0.4s' }}>
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 dark:from-purple-900/50 dark:to-purple-800/50 flex items-center justify-center mb-5 shadow-md">
-                  <LightbulbIcon size={24} className="text-white dark:text-purple-300" />
-                </div>
-                <h3 className="text-lg font-bold mb-2.5 text-gray-900 dark:text-gray-100">
-                  <Translate id="homepage.features.updates.title">持续更新</Translate>
-                </h3>
-                <div className="text-base text-gray-700 dark:text-gray-400 leading-relaxed">
-                  <Translate id="homepage.features.updates.description">定期功能更新，AI模型持续优化，始终跟上电商发展趋势和技术前沿。</Translate>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </Layout>

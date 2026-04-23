@@ -143,6 +143,8 @@ const config: Config = {
         routeBasePath: 'cases',
         blogTitle: '项目案例',
         blogDescription: '真实交付案例，覆盖AI工具开发、本地化策略、电商运营',
+        blogSidebarTitle: '最近案例',
+        blogSidebarCount: 'ALL',
         postsPerPage: 10,
         blogListComponent: '@theme/BlogListPageForCases',
         blogPostComponent: '@theme/BlogPostPage',
@@ -215,7 +217,7 @@ const config: Config = {
       { charSet: 'utf-8' },
       {
         'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren https://umami.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://umami.aigent.ren https://hm.baidu.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content",
+        content: "default-src 'self' 'unsafe-inline'; connect-src 'self' https://rag.aigent.ren https://umami.aigent.ren; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://umami.aigent.ren https://hm.baidu.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.aigent.ren https://oss-cn-shenzhen.aliyuncs.com https://hm.baidu.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content",
       },
     ],
   } satisfies Preset.ThemeConfig,

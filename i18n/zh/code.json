@@ -326,6 +326,34 @@
     "message": "标签",
     "description": "The title of the tag list page"
   },
+  "homepage.title": {
+    "message": "CCLHUB - AI驱动的电商运营工具平台",
+    "description": "Products page title"
+  },
+  "homepage.description": {
+    "message": "CCLHUB 电商运营工具平台 - AI驱动的AI运营与电商工具箱",
+    "description": "Products page description"
+  },
+  "homepage.hero.title": {
+    "message": "您的业务，还有几个环节在靠人工支撑",
+    "description": "Hero section main title"
+  },
+  "homepage.hero.subtitle": {
+    "message": "重复人工、成本攀升、竞争加剧——AI定制工具帮您降本增效，重建竞争优势",
+    "description": "Hero section subtitle"
+  },
+  "homepage.hero.description": {
+    "message": "已落地170+个AI定制工具，覆盖出海、入华、内部流程自动化场景。不是现成软件——是专门为你的业务跑的工具。",
+    "description": "Hero section description"
+  },
+  "homepage.transition": {
+    "message": "已落地170+个AI定制工具，覆盖出海、入华、内部流程自动化。非通用软件，专为您的业务场景定制开发",
+    "description": "Transition section text"
+  },
+  "homepage.hero.getTools": {
+    "message": "获取工具",
+    "description": "Get tools button"
+  },
   "footer.tagline": {
     "message": "AI驱动的电商运营工具平台"
   },
