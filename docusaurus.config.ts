@@ -8,6 +8,7 @@ const config: Config = {
 
   url: process.env.SITE === 'ai' ? 'https://aidevhub.ai' : 'https://www.aigent.ren',
   baseUrl: '/',
+  trailingSlash: true,
 
   // Umami 网站分析
   scripts: [
@@ -20,7 +21,7 @@ const config: Config = {
     },
   ],
 
-  // JSON-LD Person Schema（英文版 aidevhub.ai / 中文版 aigent.ren）
+  // JSON-LD Organization + WebSite + Person Schema（英文版 aidevhub.ai / 中文版 aigent.ren）
   headTags: [
     // 百度统计（仅中文站）
     ...(process.env.SITE !== 'ai'
@@ -36,6 +37,71 @@ const config: Config = {
 })();`,
         }]
       : []),
+    // Organization + WebSite Schema（双站条件分支）
+    ...(process.env.SITE === 'ai'
+      ? [
+          {
+            tagName: 'script',
+            attributes: { type: 'application/ld+json' },
+            innerHTML: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CCLHUB",
+              "url": "https://aidevhub.ai",
+              "logo": "https://aidevhub.ai/logo.png",
+              "description": "AI-powered e-commerce operations platform — AI automation + e-commerce tools, making operations more efficient",
+              "founder": { "@type": "Person", "name": "CCLEE" }
+            }),
+          },
+          {
+            tagName: 'script',
+            attributes: { type: 'application/ld+json' },
+            innerHTML: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "CCLHUB",
+              "url": "https://aidevhub.ai",
+              "description": "AI-powered e-commerce operations platform",
+              "publisher": {
+                "@type": "Organization",
+                "name": "CCLHUB",
+                "logo": { "@type": "ImageObject", "url": "https://aidevhub.ai/logo.png" }
+              }
+            }),
+          },
+        ]
+      : [
+          {
+            tagName: 'script',
+            attributes: { type: 'application/ld+json' },
+            innerHTML: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CCLHUB",
+              "url": "https://www.aigent.ren",
+              "logo": "https://www.aigent.ren/logo.png",
+              "description": "AI驱动的电商运营工具平台 — AI运营 + 电商工具箱，让电商运营更高效",
+              "founder": { "@type": "Person", "name": "CCLEE" }
+            }),
+          },
+          {
+            tagName: 'script',
+            attributes: { type: 'application/ld+json' },
+            innerHTML: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "CCLHUB",
+              "url": "https://www.aigent.ren",
+              "description": "AI驱动的电商运营工具平台",
+              "publisher": {
+                "@type": "Organization",
+                "name": "CCLHUB",
+                "logo": { "@type": "ImageObject", "url": "https://www.aigent.ren/logo.png" }
+              }
+            }),
+          },
+        ]),
+    // Person Schema（英文版 aidevhub.ai / 中文版 aigent.ren）
     {
       tagName: 'script',
       attributes: { type: 'application/ld+json' },

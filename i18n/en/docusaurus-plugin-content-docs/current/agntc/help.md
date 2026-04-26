@@ -82,5 +82,5 @@ Having issues? Here's the FAQ and technical support information.
 
 ## Related Docs
 
-- 🚀 [Quick Start](./quick-start) - From registration to first conversation
-- 📖 [Feature Guide](./feature-guide) - Skills system, memory management, and other advanced features
+- 🚀 [Quick Start](../quick-start) - From registration to first conversation
+- 📖 [Feature Guide](../feature-guide) - Skills system, memory management, and other advanced features
