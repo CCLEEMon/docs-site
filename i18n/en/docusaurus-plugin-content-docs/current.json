@@ -13,5 +13,17 @@
   },
   "sidebar.tutorialSidebar.category.AI Agent": {
     "message": "AI Agent"
+  },
+  "sidebar.tutorialSidebar.category.CCLEE Theme": {
+    "message": "CCLEE Theme"
+  },
+  "sidebar.tutorialSidebar.category.CCLEE Toolkit": {
+    "message": "CCLEE Toolkit"
+  },
+  "sidebar.tutorialSidebar.category.CCLEE B2B": {
+    "message": "CCLEE B2B"
+  },
+  "sidebar.tutorialSidebar.category.WooCommerce 物流": {
+    "message": "WooCommerce Shipping"
   }
 }

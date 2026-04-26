@@ -39,6 +39,19 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'CCLEE B2B',
+      items: [
+        'cclee-b2b-general',
+        'cclee-b2b-product',
+        'cclee-b2b-pricing',
+        'cclee-b2b-registration',
+        'cclee-b2b-rfq',
+        'cclee-b2b-ai',
+        'cclee-b2b-pdf',
+      ],
+    },
+    {
+      type: 'category',
       label: 'WooCommerce 物流',
       items: ['cclee-shipping'],
     },
