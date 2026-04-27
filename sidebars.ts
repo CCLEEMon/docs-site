@@ -47,6 +47,7 @@ const sidebars: SidebarsConfig = {
         'cclee-b2b-registration',
         'cclee-b2b-rfq',
         'cclee-b2b-ai',
+        'cclee-b2b-ai-updates',
         'cclee-b2b-pdf',
       ],
     },
