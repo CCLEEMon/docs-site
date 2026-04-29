@@ -33,7 +33,7 @@ CCLHUB is an independent developer platform providing AI tool development, China
 
 ## Sitemap
 
-- https://aidevhub.ai/sitemap.xml
+- https://aidevhub.ai/sitemap.ai.xml
 
 ## Contact
 

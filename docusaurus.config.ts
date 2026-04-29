@@ -232,6 +232,11 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: process.env.SITE === 'ai' ? 'sitemap.ai.xml' : 'sitemap.ren.xml',
+        },
       } satisfies Preset.Options,
     ],
   ],

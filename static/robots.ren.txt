@@ -5,6 +5,6 @@ Disallow: /en/
 Disallow: /assets/
 Disallow: /404.html
 
-Sitemap: https://www.aigent.ren/sitemap.xml
+Sitemap: https://www.aigent.ren/sitemap.ren.xml
 
 # llm.txt: https://www.aigent.ren/llm.txt

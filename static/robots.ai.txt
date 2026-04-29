@@ -5,6 +5,6 @@ Disallow: /zh/
 Disallow: /assets/
 Disallow: /404.html
 
-Sitemap: https://aidevhub.ai/sitemap.xml
+Sitemap: https://aidevhub.ai/sitemap.ai.xml
 
 # llm.txt: https://aidevhub.ai/llm.txt
