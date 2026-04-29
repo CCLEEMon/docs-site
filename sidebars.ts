@@ -54,7 +54,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'WooCommerce 物流',
-      items: ['cclee-shipping'],
+      items: ['cclee-shipping', 'fedex-registration'],
     },
   ],
 };

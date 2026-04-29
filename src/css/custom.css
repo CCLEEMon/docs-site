@@ -714,3 +714,26 @@ a.badge:hover,
   gap: 0.5rem;
 }
 
+/* ========== 侧边栏导航字体缩小 ========== */
+.theme-doc-sidebarContainer {
+  font-size: 13px;
+}
+
+.menu {
+  font-size: 13px;
+}
+
+.menu__link,
+.sidebar-item-label {
+  font-size: 13px !important;
+}
+
+.menu__link--active {
+  font-size: 13px;
+}
+
+/* 分类标题（AI运营、浏览器插件等）*/
+.table-of-contents__link {
+  font-size: 12px;
+}
+
