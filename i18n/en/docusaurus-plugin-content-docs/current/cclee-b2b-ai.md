@@ -9,7 +9,7 @@ steps:
   - name: Enable Chat Bubble
     text: Enable Chat Enabled to show floating chat bubble on frontend
   - name: Upload Knowledge Base Documents
-    text: Upload PDF or TXT documents. AI answers customer questions based on documents
+    text: Upload PDF, TXT, or MD documents. AI answers customer questions based on documents
   - name: Use AI Customer Service
     text: Visitors/customers click chat bubble to ask product, order, or knowledge base questions
 rag: true
@@ -30,7 +30,7 @@ The AI customer service supports **18 common scenarios**, covering product inqui
 
 1. **Configure API**: Fill in AI Base URL, API Key, and select model
 2. **Enable Bubble**: Enable `Chat Enabled` to show floating chat bubble on frontend
-3. **Upload Knowledge Base** (optional): Upload company documents for AI to answer policy questions
+3. **Upload Knowledge Base** (optional): Upload PDF/TXT/MD company documents for AI to answer policy questions
 4. **Start Using**: Visitors click the bubble to start a conversation
 
 ---
@@ -118,10 +118,12 @@ AI responds: "Order tracking requires a logged-in account. Please log in first."
 
 ### 8. Knowledge Base Policy Q&A
 
-AI searches uploaded company documents to answer questions about return policies, warranty terms, shipping instructions, etc.
+AI searches uploaded company documents to answer questions about return policies, warranty terms, shipping instructions, etc. Supports cross-language queries — ask in Chinese and match English documents.
 
 **Example**:
 > User: "What is your return policy?"
+> User: "起订量多大？" (What's the minimum order quantity?)
+> User: "What is the lead time?"
 
 ![Knowledge Base FAQ](/images/docs/cclee-b2b/ai/s08-kb-faq.webp)
 
@@ -274,6 +276,18 @@ AI customer service automatically identifies question types and responds:
 | Chat Enabled | Master switch for floating chat bubble | — |
 | Chat Welcome | Welcome message on first open | `How can I help you?` |
 | Rate Limit | Max messages per IP per 60 seconds | `20` |
+
+### Knowledge Base Settings
+
+| Field | Description |
+|-------|-------------|
+| Enable Knowledge Base | Enable to let AI search uploaded documents for answers |
+| Upload File | Supports PDF, TXT, MD formats, 10MB max per file |
+| Document List | Shows uploaded documents with filename, upload date, and chunk count. Each can be deleted individually |
+
+<InfoBox variant="info" title="Cross-Language Support">
+Knowledge base documents can be written in any language. Customers asking questions in Chinese, English, or other languages can all get answers from the documents. Keep total document size under 50KB for best results.
+</InfoBox>
 
 ### Supported AI Services
 

@@ -1,11 +1,11 @@
 ---
-title: AI Customer Service Updates
-description: CCLEE B2B AI Customer Service feature update log
+title: CCLEE B2B Updates
+description: CCLEE B2B plugin update log
 project: cclee-b2b
 schema: Article
-date: 2026-04-28
+date: 2026-04-29
 rag: true
-rag_tags: ["CCLEE B2B", "AI Customer Service", "Update Log", "Version Update"]
+rag_tags: ["CCLEE B2B", "Plugin Updates", "Update Log", "Version Update"]
 ---
 
 # AI Customer Service — Update Log
@@ -39,3 +39,29 @@ This update expands from **7 basic scenarios to 18 complete scenarios**, coverin
 ### Image Updates
 
 18 new scenario screenshots added, copied to `static/images/docs/cclee-b2b/ai/` directory.
+
+---
+
+## 2026-04-29 Knowledge Base Enhancement
+
+### New Features
+
+| Feature | Description |
+|---------|-------------|
+| MD File Upload | Knowledge base now supports Markdown files. Supported formats: PDF, TXT, MD |
+| Small KB Full Injection | When total KB content is ≤50KB, all documents are injected directly into the AI prompt, no keyword matching needed |
+| Cross-Language Q&A | Customers can ask questions in any language and match documents in another language (e.g., Chinese query "起订量" matches English "MOQ") |
+
+### Improvements
+
+- **Chunking algorithm upgrade**: Adjacent paragraphs are greedily merged, single chunk size increased from 500 to 1500 characters for better context
+- **Upload error feedback**: Specific error messages shown on upload failure (format mismatch, size exceeded, directory not writable, etc.)
+- **Delete permission check**: File permissions verified before deletion to prevent silent failures
+
+### Bug Fixes
+
+- Fixed knowledge base directory permission issue on certain server environments that prevented file uploads
+
+<InfoBox variant="info" title="Cross-Language Q&A Note">
+When total knowledge base content exceeds 50KB, the system automatically switches to keyword search mode. In keyword search mode, cross-language matching may not work — consider using bilingual keywords in documents.
+</InfoBox>
