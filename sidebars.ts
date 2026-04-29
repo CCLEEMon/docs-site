@@ -29,8 +29,13 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'cclee-docusaurus-theme',
+      items: ['cclee-docusaurus-theme'],
+    },
+    {
+      type: 'category',
       label: 'WordPress 生态',
-      items: ['cclee-theme', 'cclee-docusaurus-theme'],
+      items: ['cclee-theme'],
     },
     {
       type: 'category',
