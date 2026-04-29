@@ -1,6 +1,6 @@
 ---
 title: CCLEE Docusaurus Theme — Open Source Documentation Theme
-description: Advanced documentation theme based on Docusaurus 3.x, purple theme + dark mode + Tailwind typography enhancements, production-ready documentation site template out of the box
+description: Open-source documentation theme based on Docusaurus 3.x with purple theme, dark mode, and Tailwind CSS, production-ready out of the box
 project: cclee-docusaurus-theme
 schema: Article
 date: 2026-04-29
@@ -10,190 +10,146 @@ rag_tags: ["Docusaurus", "Open Source", "Documentation Theme"]
 
 # CCLEE Docusaurus Theme
 
+[Live Demo](https://www.aigent.ren) · [中文](https://www.aigent.ren)
+
 <FeatureCard title="Out of the Box">
-Based on Docusaurus 3.x with integrated purple theme, dark mode, and Tailwind CSS typography enhancements. Clone it, configure slightly, and a production-grade documentation site is up and running.
+Based on Docusaurus 3.x with integrated purple theme, dark mode, and Tailwind CSS. Clone and configure to get started.
 </FeatureCard>
 
 ## Features
 
 ### Purple Theme + Dark Mode
 
-The theme uses purple as the brand color, managed through CSS variables:
+CSS variable-based color system:
 
-- **Light mode**: Purple #4C1D95 as primary color
-- **Dark mode**: Light purple #8B5CF6 as primary color, contrast ratio ≥4.5:1 (WCAG AA standard)
-- One-click toggle, styles adapt automatically
+- **Light mode**: #4C1D95 as primary
+- **Dark mode**: #8B5CF6 as primary, WCAG AA compliant (≥4.5:1 contrast)
 
 ### Tailwind CSS Integration
 
-Docusaurus doesn't support Tailwind natively. CCLEE Theme integrates it this way:
+Docusaurus doesn't support Tailwind natively. This theme provides integration:
 
 ```bash
-# Install dependencies
 npm install tailwindcss postcss autoprefixer @tailwindcss/typography
 ```
 
+Add to `src/css/custom.css`:
+
 ```css
-/* src/css/custom.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-After integration, you can:
+### Custom MDX Components
 
-- Use all Tailwind utility classes
-- Customize theme by modifying `tailwind.config.js`
-- Use `@tailwindcss/typography` for better article typography
+Globally registered — use directly in any `.md/.mdx` file without imports:
 
-### Enhanced Documentation Typography
+| Component | Purpose |
+|-----------|---------|
+| `FeatureCard` | Feature card |
+| `InfoBox` | Info/warning/success callouts |
+| `ComparisonTable` | Feature comparison tables |
+| `StepBox` | Step containers |
 
-| Feature | Description |
-|---------|-------------|
-| Title underline | H1 has gradient underline, H2 has purple left border |
-| Blockquote animation | Slide right on hover + purple shadow |
-| Code block styling | Rounded corners, lift + enhanced shadow on hover |
-| Table hover | Row highlight + slight scale |
+### SEO Automation
 
-### Custom Components
+`plugins/plugin-json-ld.js` handles structured data automatically:
 
-The theme provides MDX components out of the box, no manual import needed:
+- Frontmatter `schema: Article | HowTo | FAQPage` maps to Schema.org types
+- Automatic hreflang tags
 
-<InfoBox variant="info" title="Usage Tip">
-These components are globally registered in MDXComponents.tsx, use them directly in any .md/.mdx file.
-</InfoBox>
+### Internationalization
 
-**FeatureCard** - Feature Card
-
-```mdx
-<FeatureCard title="Feature Name" icon={<Icon />}>
-Card content description
-</FeatureCard>
-```
-
-**InfoBox** - Info Box
-
-```mdx
-<InfoBox variant="info|warning|success" title="Title">
-Box content
-</InfoBox>
-```
-
-**ComparisonTable** - Comparison Table
-
-```mdx
-<ComparisonTable
-  headers={["Feature", "Free", "Pro"]}
-  rows={[
-    ["Docs", "Unlimited", "Unlimited"],
-    ["Custom Domain", "Not supported", "Supported"],
-  ]}
-/>
-```
-
-**StepBox** - Step Container
-
-```mdx
-<StepBox title="Step Title">
-Step content
-</StepBox>
-```
-
-### SEO Optimization
-
-#### Automatic Schema Generation
-
-Plugin `plugin-json-ld.js` automatically scans documents and generates structured data:
-
-| Frontmatter schema | Generated Schema |
-|--------------------|-----------------|
-| `schema: Article` | Article |
-| `schema: HowTo` | HowTo + Step |
-| `schema: FAQPage` | FAQPage |
-
-#### Multi-language SEO
-
-- Automatically generate `hreflang` tags
-- Cross-reference between Chinese and English sites (aigent.ren ↔ aidevhub.ai)
-- Auto-generate XML Sitemap
-
-### Internationalization Support
-
-Theme has built-in dual-language routing:
+Dual-language routing out of the box:
 
 ```bash
-# Chinese site
-npm run start          # → www.aigent.ren:3004
-
-# English site
-SITE=ai npm run start  # → aidevhub.ai:3004
+npm run start          # Chinese site
+SITE=ai npm run start  # English site
 ```
 
-Translation files are located in `i18n/` directory, using Docusaurus native i18n system.
+## Tech Stack
+
+| Technology | Version |
+|-----------|---------|
+| Docusaurus | 3.9+ |
+| React | 18.3+ |
+| Tailwind CSS | 3.4+ |
+| TypeScript | 5.7+ |
+| Node.js | ≥20.0 |
 
 ## Quick Start
 
 ### Option 1: Fork the Project
 
 ```bash
-# 1. Fork https://github.com/cclee-hub/docs-site
-
-# 2. Clone your fork
-git clone https://github.com/your-username/docs-site
+git clone https://github.com/cclee-hub/docs-site
 cd docs-site
-
-# 3. Install dependencies
 npm install
-
-# 4. Start dev server
 npm run start
 ```
 
 ### Option 2: Integrate into Existing Project
 
+```
+src/css/custom.css          → your-project/src/css/
+src/theme/MDXComponents.tsx → your-project/src/theme/
+tailwind.config.js          → your-project root/
+```
+
 ```bash
-# 1. Copy necessary files to your Docusaurus project
-cp -r src/css/docs-site/src/css/
-cp -r src/theme/MDXComponents.tsx your-project/src/theme/
-
-# 2. Install Tailwind
 npm install tailwindcss postcss autoprefixer @tailwindcss/typography
-
-# 3. Modify docusaurus.config.ts to enable Tailwind
 ```
 
 ### Configure Theme Colors
 
-Modify in `src/css/custom.css` under `:root` and `[data-theme='dark']`:
+Edit CSS variables in `src/css/custom.css`:
 
 ```css
 :root {
-  --ifm-color-primary: #4C1D95;  /* Light mode primary */
-  --ifm-color-primary-light: #6D28D9;
+  --ifm-color-primary: #4C1D95;
 }
-
 [data-theme='dark'] {
-  --ifm-color-primary: #8B5CF6;  /* Dark mode primary */
-  --ifm-color-primary-light: #A78BFA;
+  --ifm-color-primary: #8B5CF6;
 }
 ```
 
-## Tech Stack
+## Project Structure
 
-| Technology | Version | Description |
-|------------|---------|-------------|
-| Docusaurus | 3.9+ | Documentation framework |
-| React | 18.3+ | UI library |
-| Tailwind CSS | 3.4+ | Styling utility |
-| TypeScript | 5.7+ | Type support |
-| Node.js | ≥20.0 | Runtime |
+```
+docs-site/
+├── docs/                    # Chinese docs
+├── i18n/en/                 # English translations
+├── src/
+│   ├── components/          # React components
+│   ├── css/custom.css       # Tailwind + styles
+│   └── theme/               # Theme overrides
+├── plugins/
+│   └── plugin-json-ld.js    # SEO plugin
+└── tailwind.config.js       # Tailwind config
+```
 
 ## Next Steps
 
 - [CCLEE Theme](/docs/cclee-theme) — WordPress FSE block theme
 - [CCLEE Toolkit](/docs/cclee-toolkit) — WordPress AI enhancement plugin
-- [GitHub Repository](https://github.com/cclee-hub/docs-site) — View source code
+- [GitHub Repository](https://github.com/cclee-hub/docs-site) — View source
 
 <InfoBox variant="success" title="Open Source & Free">
-CCLEE Docusaurus Theme is open source under MIT license, free for personal and commercial projects.
+MIT license. Free for personal and commercial use.
 </InfoBox>
+
+## Changelog
+
+<!-- truncate -->
+
+| Date | Update |
+|------|--------|
+| 2026-04-29 | Initial release of CCLEE Docusaurus Theme documentation |
+
+<details>
+<summary>View full update history</summary>
+
+- **2026-04-29** — Initial release
+
+</details>
