@@ -622,5 +622,17 @@
   "ccleetheme.cta.docs": {
     "message": "阅读文档",
     "description": "CTA Docs button"
+  },
+  "homepage.products.ccleeDocusaurusTheme.title": {
+    "message": "CCLEE Docusaurus Theme",
+    "description": "CCLEE Docusaurus Theme product title"
+  },
+  "homepage.products.ccleeDocusaurusTheme.description": {
+    "message": "基于 Docusaurus 3.x 的高级文档主题，紫色主题 + 深色模式 + Tailwind 排版增强，开箱即用的生产级文档站点模板。",
+    "description": "CCLEE Docusaurus Theme product description"
+  },
+  "homepage.products.ccleeDocusaurusTheme.cta": {
+    "message": "GitHub 开源 · 永久免费",
+    "description": "CCLEE Docusaurus Theme CTA text"
   }
 }

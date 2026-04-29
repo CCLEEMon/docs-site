@@ -1029,6 +1029,18 @@
     "message": "Open Source on GitHub · Free Forever",
     "description": "CCLEE Shipping CTA text"
   },
+  "homepage.products.ccleeDocusaurusTheme.title": {
+    "message": "CCLEE Docusaurus Theme",
+    "description": "CCLEE Docusaurus Theme product title"
+  },
+  "homepage.products.ccleeDocusaurusTheme.description": {
+    "message": "Advanced documentation theme based on Docusaurus 3.x, purple theme + dark mode + Tailwind typography enhancements, production-ready documentation site template out of the box.",
+    "description": "CCLEE Docusaurus Theme product description"
+  },
+  "homepage.products.ccleeDocusaurusTheme.cta": {
+    "message": "Open Source on GitHub · Free Forever",
+    "description": "CCLEE Docusaurus Theme CTA text"
+  },
   "footer.ccleeTheme": {
     "message": "WordPress Theme",
     "description": "CCLEE Theme link in footer"
