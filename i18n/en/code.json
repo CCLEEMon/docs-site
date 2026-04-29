@@ -1041,6 +1041,22 @@
     "message": "Open Source on GitHub · Free Forever",
     "description": "CCLEE Docusaurus Theme CTA text"
   },
+  "homepage.products.wordpress.title": {
+    "message": "WordPress / WooCommerce Themes & Plugins",
+    "description": "WordPress section title"
+  },
+  "homepage.products.wordpress.subtitle": {
+    "message": "Free & open-source WordPress / WooCommerce themes and plugins",
+    "description": "WordPress section subtitle"
+  },
+  "homepage.products.core.title": {
+    "message": "E-commerce Operations",
+    "description": "Core products section title"
+  },
+  "homepage.products.devtools.title": {
+    "message": "Developer Tools",
+    "description": "Developer tools section title"
+  },
   "footer.ccleeTheme": {
     "message": "WordPress Theme",
     "description": "CCLEE Theme link in footer"
