@@ -1,4 +1,4 @@
-import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, ArrowLeft, MessageSquare, Github, Mail, Image, Video, X, Globe, Building, Eye, Key, Layout, Wrench } from 'lucide-react'
+import { Puzzle, Brain, Rocket, Search, Check, Zap, Shield, Lightbulb, TrendingUp, User, Download, FileText, MessageCircle, Clock, ArrowRight, ArrowLeft, MessageSquare, Github, Mail, Image, Video, X, Globe, Building, Eye, Key, Layout, Wrench, Truck } from 'lucide-react'
 
 export const RocketIcon = ({ size = 24, className = '' }) => <Rocket size={size} className={className} />
 
@@ -73,4 +73,6 @@ export const BrainIcon = ({ size = 24, className = '' }) => <Brain size={size} c
 export const LayoutIcon = ({ size = 24, className = '' }) => <Layout size={size} className={className} strokeWidth={1.5} />
 
 export const ToolIcon = ({ size = 24, className = '' }) => <Wrench size={size} className={className} strokeWidth={1.5} />
+
+export const TruckIcon = ({ size = 24, className = '' }) => <Truck size={size} className={className} strokeWidth={1.5} />
 

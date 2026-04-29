@@ -993,6 +993,18 @@
     "message": "Open Source on GitHub · Free Forever",
     "description": "CCLEE Theme CTA text"
   },
+  "homepage.products.ccleeToolkit.title": {
+    "message": "CCLEE Toolkit",
+    "description": "CCLEE Toolkit product title"
+  },
+  "homepage.products.ccleeToolkit.description": {
+    "message": "WordPress + WooCommerce enhancement plugin. Full AI integration — auto-generate SEO content, Product Schema, and image Alt text to boost search rankings.",
+    "description": "CCLEE Toolkit product description"
+  },
+  "homepage.products.ccleeToolkit.cta": {
+    "message": "Open Source on GitHub · Free Forever",
+    "description": "CCLEE Toolkit CTA text"
+  },
   "homepage.products.ccleeB2b.title": {
     "message": "CCLEE B2B",
     "description": "CCLEE B2B product title"
@@ -1004,6 +1016,18 @@
   "homepage.products.ccleeB2b.cta": {
     "message": "Open Source on GitHub · Free Forever",
     "description": "CCLEE B2B CTA text"
+  },
+  "homepage.products.ccleeShipping.title": {
+    "message": "CCLEE Shipping",
+    "description": "CCLEE Shipping product title"
+  },
+  "homepage.products.ccleeShipping.description": {
+    "message": "WooCommerce multi-carrier shipping plugin. Real-time rate quotes from FedEx and SF Express, auto-displayed at checkout.",
+    "description": "CCLEE Shipping product description"
+  },
+  "homepage.products.ccleeShipping.cta": {
+    "message": "Open Source on GitHub · Free Forever",
+    "description": "CCLEE Shipping CTA text"
   },
   "footer.ccleeTheme": {
     "message": "WordPress Theme",
