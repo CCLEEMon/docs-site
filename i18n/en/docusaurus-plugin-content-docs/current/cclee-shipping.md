@@ -128,7 +128,7 @@ SF Express International API requires activation through your SF account manager
 cclee-shipping includes a built-in **Label Test** admin tool for testing the FedEx Ship API in the sandbox environment to verify your API credentials and account configuration.
 
 <InfoBox variant="info" title="When to Use">
-After completing FedEx API registration, use this tool to verify the Ship API works in the sandbox. For the registration process, see the [FedEx Registration Guide](../../docs/fedex-registration.md).
+After completing FedEx API registration, use this tool to verify the Ship API works in the sandbox. For the registration process, see the [FedEx Registration Guide](/docs/fedex-registration/).
 </InfoBox>
 
 ### Open Label Test
