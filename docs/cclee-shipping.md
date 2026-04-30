@@ -123,6 +123,53 @@ WooCommerce 通过**配送区域**来匹配客户地址和运费规则。
 
 ---
 
+## FedEx 沙盒测试工具
+
+cclee-shipping 内置 **Label Test** 管理工具，用于在 FedEx 沙盒环境测试 Ship API 下单，验证 API 凭证和账号配置是否正确。
+
+<InfoBox variant="info" title="适用场景">
+刚完成 FedEx API 注册，需要对接沙盒环境验证 Ship API 是否可用。注册流程参见 [FedEx 注册教程](../docs/fedex-registration.md)。
+</InfoBox>
+
+### 打开 Label Test
+
+1. 进入 WordPress 后台 → **WooCommerce** → **Label Test**
+2. 页面顶部显示 FedEx 连接状态：
+   - **Credentials**：是否已配置（需先在配送区域添加 FedEx 方式并填写凭证）
+   - **Environment**：当前环境（Sandbox 或 Production）
+   - **Account Number**：当前使用的 FedEx 账号
+
+<InfoBox variant="warning" title="前置条件">
+Label Test 使用配送区域中 FedEx 方式的凭证。如显示「Not configured」，请先按 [快速入门](#快速入门) 完成 FedEx 配置。
+</InfoBox>
+
+### 生成测试面单
+
+1. 确认连接状态显示 **Configured**，Environment 为 **Sandbox**
+2. 点击 **Generate Test Label** 按钮
+3. 等待 FedEx Ship API 返回（超时上限 30 秒）
+
+生成成功后会显示：
+- **Tracking Number**：测试运单号
+- **Preview**：查看 ZPL 原始文本内容
+- **Download**：下载 `.zpl` 面单文件（用于热敏打印机）
+- **Print**：ZPL 格式需要热敏打印机，暂不可用
+
+<InfoBox variant="success" title="测试通过">
+成功返回 Tracking Number，说明 FedEx Ship API 对接正常，可申请生产环境权限。切换方法参见下方常见问题「如何切换到生产环境？」。
+</InfoBox>
+
+### 测试失败排查
+
+| 错误信息 | 原因 | 解决方法 |
+|----------|------|----------|
+| FedEx shipping method not configured | 未在配送区域添加 FedEx | 先添加 FedEx 配送方式并填写凭证 |
+| FedEx OAuth authentication failed | API Key 或 Secret 错误 | 检查 Developer Portal 中的 Client ID 和 Secret |
+| FedEx API error (4xx/5xx) | FedEx 拒绝请求 | 查看具体错误消息，检查 API 权限是否已开通 |
+| Label data not found | 响应中无面单数据 | 查看 WooCommerce → 状态 → 日志（source: cclee-shipping-label-test） |
+
+---
+
 ## 运费支付方式说明
 
 ### 运费支付方（Shipping Payment）

@@ -123,6 +123,53 @@ SF Express International API requires activation through your SF account manager
 
 ---
 
+## FedEx Sandbox Testing Tool
+
+cclee-shipping includes a built-in **Label Test** admin tool for testing the FedEx Ship API in the sandbox environment to verify your API credentials and account configuration.
+
+<InfoBox variant="info" title="When to Use">
+After completing FedEx API registration, use this tool to verify the Ship API works in the sandbox. For the registration process, see the [FedEx Registration Guide](../../docs/fedex-registration.md).
+</InfoBox>
+
+### Open Label Test
+
+1. Go to WordPress Admin → **WooCommerce** → **Label Test**
+2. The page displays FedEx connection status at the top:
+   - **Credentials**: Whether configured (requires adding a FedEx method in Shipping Zones with credentials)
+   - **Environment**: Current environment (Sandbox or Production)
+   - **Account Number**: FedEx account in use
+
+<InfoBox variant="warning" title="Prerequisites">
+Label Test uses credentials from the FedEx method in your shipping zones. If it shows "Not configured", complete the FedEx configuration in [Quick Start](#quick-start) first.
+</InfoBox>
+
+### Generate Test Label
+
+1. Confirm connection status shows **Configured** and Environment is **Sandbox**
+2. Click **Generate Test Label**
+3. Wait for the FedEx Ship API response (timeout limit: 30 seconds)
+
+On success, the following is displayed:
+- **Tracking Number**: Test tracking number
+- **Preview**: View raw ZPL text content
+- **Download**: Download `.zpl` label file (for thermal printers)
+- **Print**: Disabled — ZPL format requires a thermal printer
+
+<InfoBox variant="success" title="Test Passed">
+A successful Tracking Number confirms the FedEx Ship API is working. You can now apply for production access. See "How to switch to production environment?" in the FAQ below.
+</InfoBox>
+
+### Troubleshooting Test Failures
+
+| Error Message | Cause | Solution |
+|---------------|-------|----------|
+| FedEx shipping method not configured | FedEx not added to shipping zones | Add FedEx shipping method and fill in credentials |
+| FedEx OAuth authentication failed | API Key or Secret is incorrect | Check Client ID and Secret in Developer Portal |
+| FedEx API error (4xx/5xx) | FedEx rejected the request | Check the specific error message, verify API permissions |
+| Label data not found | No label data in response | Check WooCommerce → Status → Logs (source: cclee-shipping-label-test) |
+
+---
+
 ## Shipping Payment Options
 
 ### Shipping Payer (Shipping Payment)
