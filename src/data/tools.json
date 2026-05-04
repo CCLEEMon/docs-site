@@ -10,10 +10,6 @@
     { "id": "hosting", "name": "建站部署", "nameEn": "Hosting & Deploy", "icon": "🌐" },
     { "id": "ai-api", "name": "AI 模型 API", "nameEn": "AI Model API", "icon": "🔌" }
   ],
-  "costTiers": [
-    { "id": "pro", "name": "专业进阶", "nameEn": "Professional" },
-    { "id": "daily", "name": "日常使用", "nameEn": "Daily Use" }
-  ],
   "tools": [
     {
       "id": "claude",
@@ -22,7 +18,7 @@
       "description": "Anthropic 对话 AI，长文本理解出色，深度推理能力强",
       "descriptionEn": "Anthropic conversational AI, excellent at long context and deep reasoning",
       "scenes": ["coding", "writing", "automation"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://claude.ai"
@@ -34,7 +30,7 @@
       "description": "OpenAI 对话式 AI，多模态能力全面，用户量最大",
       "descriptionEn": "OpenAI conversational AI, comprehensive multimodal capabilities",
       "scenes": ["writing", "coding", "image-design"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://chat.openai.com"
@@ -46,7 +42,7 @@
       "description": "Google 多模态大模型，搜索能力深度集成",
       "descriptionEn": "Google multimodal LLM, deep search integration",
       "scenes": ["writing", "coding", "automation"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://gemini.google.com"
@@ -58,7 +54,7 @@
       "description": "xAI 对话模型，深度推理，超长上下文",
       "descriptionEn": "xAI conversational model, deep reasoning, ultra long context",
       "scenes": ["writing", "coding", "automation"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://x.ai"
@@ -70,7 +66,7 @@
       "description": "深度求索大模型，代码能力出色，开源生态",
       "descriptionEn": "DeepSeek model, excellent coding, open source ecosystem",
       "scenes": ["coding", "writing", "automation"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://platform.deepseek.com/"
@@ -82,7 +78,7 @@
       "description": "百度 AI 产品线：文心一言（大模型）+ 文心一格（图像生成）",
       "descriptionEn": "Baidu AI: Ernie Bot (LLM) + Wenxin Yige (Image Gen)",
       "scenes": ["writing", "coding", "image-design"],
-      "costTier": "pro",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://yiyan.baidu.com"
@@ -94,7 +90,7 @@
       "description": "阿里云 AI 产品线：千问（大模型）+ 万相（图像视频）+ 灵码（编程）",
       "descriptionEn": "Alibaba Cloud AI: Qwen (LLM) + Wanxiang (Image/Video) + Lingma (Coding)",
       "scenes": ["coding", "writing", "image-design"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://www.aliyun.com/minisite/goods?userCode=fvyejhr0"
@@ -106,7 +102,7 @@
       "description": "月之暗面大模型，超长上下文处理能力",
       "descriptionEn": "Moonshot's model, ultra long context processing",
       "scenes": ["writing", "coding", "automation"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://platform.moonshot.cn/"
@@ -118,7 +114,7 @@
       "description": "字节跳动 AI 生态：豆包（文本对话）+ 即梦（图像视频生成），中文理解出色",
       "descriptionEn": "ByteDance AI ecosystem: Doubao (chat) + Jimeng (image & video), excellent Chinese",
       "scenes": ["writing", "image-design", "video-audio"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://www.volcengine.com/"
@@ -130,7 +126,7 @@
       "description": "智谱 AI 产品线：GLM（大模型）+ CogView（图像生成），编程能力强",
       "descriptionEn": "Zhipu AI: GLM (LLM) + CogView (Image Gen), strong coding ability",
       "scenes": ["coding", "writing", "image-design"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://www.bigmodel.cn/glm-coding?ic=BCT362LRE2"
@@ -142,7 +138,7 @@
       "description": "AI 图像生成，艺术创作首选工具",
       "descriptionEn": "AI image generation, top choice for artistic creation",
       "scenes": ["image-design", "ecommerce", "writing"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://midjourney.com"
@@ -154,7 +150,7 @@
       "description": "AI 代码编辑器，编程效率倍增",
       "descriptionEn": "AI code editor, multiply your coding productivity",
       "scenes": ["coding", "automation", "writing"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://cursor.sh"
@@ -166,7 +162,7 @@
       "description": "腾讯大模型，企业微信集成友好，多模态支持",
       "descriptionEn": "Tencent's LLM, WeChat Work integration, multimodal support",
       "scenes": ["writing", "automation", "coding"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://cloud.tencent.com/product/hunyuan"
@@ -178,7 +174,7 @@
       "description": "AI 图像生成，响应速度 <1秒，快速生图首选",
       "descriptionEn": "AI image generation, response <1s, best for fast generation",
       "scenes": ["image-design", "ecommerce", "automation"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://blackforestlabs.ai/"
@@ -190,7 +186,7 @@
       "description": "AI 图像生成，文字渲染出色，Logo 设计首选",
       "descriptionEn": "AI image generation, excellent text rendering, best for logos",
       "scenes": ["image-design", "ecommerce", "writing"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://ideogram.ai/"
@@ -202,10 +198,22 @@
       "description": "AI 一键抠图，电商产品图处理必备",
       "descriptionEn": "AI one-click background removal, essential for e-commerce",
       "scenes": ["image-design", "ecommerce", "automation"],
-      "costTier": "daily",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://www.remove.bg/"
+    },
+    {
+      "id": "upscayl",
+      "name": "Upscayl",
+      "nameEn": "Upscayl",
+      "description": "AI 图像放大增强，开源免费，本地离线运行",
+      "descriptionEn": "AI image upscaler, free & open source, runs locally offline",
+      "scenes": ["image-design", "ecommerce"],
+
+      "region": "overseas",
+      "tags": [],
+      "affiliateUrl": "https://upscayl.org/"
     },
     {
       "id": "klingai",
@@ -214,7 +222,7 @@
       "description": "快手 AI 视频生成，音画同步，功能最全",
       "descriptionEn": "Kuaishou AI video generation, audio-video sync, most features",
       "scenes": ["video-audio", "image-design", "ecommerce"],
-      "costTier": "pro",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://klingai.kuaishou.com/"
@@ -226,7 +234,7 @@
       "description": "AI 视频生成，国外标杆，创意工具丰富",
       "descriptionEn": "AI video generation, global benchmark, rich creative tools",
       "scenes": ["video-audio", "image-design", "automation"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://runwayml.com/"
@@ -238,7 +246,7 @@
       "description": "AI 视频生成，最高 1080p，图生视频出色",
       "descriptionEn": "AI video generation, up to 1080p, excellent image-to-video",
       "scenes": ["video-audio", "image-design", "ecommerce"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://pika.art/"
@@ -250,7 +258,7 @@
       "description": "AI 视频生成，全球首个参考生视频功能",
       "descriptionEn": "AI video generation, world's first reference-to-video",
       "scenes": ["video-audio", "image-design", "ecommerce"],
-      "costTier": "pro",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://www.vidu.studio/"
@@ -262,7 +270,7 @@
       "description": "国内大模型聚合平台，Qwen/DeepSeek/Yi 一站接入",
       "descriptionEn": "China LLM aggregation platform, Qwen/DeepSeek/Yi in one place",
       "scenes": ["ai-api", "coding", "automation"],
-      "costTier": "daily",
+
       "region": "china",
       "tags": [],
       "affiliateUrl": "https://siliconflow.cn/"
@@ -274,7 +282,7 @@
       "description": "高性价比云主机，新手建站首选",
       "descriptionEn": "Affordable cloud hosting, best for beginners",
       "scenes": ["hosting", "automation", "ecommerce"],
-      "costTier": "daily",
+
       "region": "overseas",
       "tags": [],
       "affiliateUrl": "https://hostinger.com",

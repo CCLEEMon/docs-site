@@ -7,7 +7,6 @@ import toolsData from '@site/src/data/tools.json';
 
 type Tool = typeof toolsData.tools[0];
 type Scene = typeof toolsData.scenes[0];
-type CostTier = typeof toolsData.costTiers[0];
 
 export default function ToolPage(): React.ReactElement {
   const [searchQuery, setSearchQuery] = useState('');
@@ -39,28 +38,9 @@ export default function ToolPage(): React.ReactElement {
     });
   }, [searchQuery, selectedScene, isZh]);
 
-  // 按成本层级分组
-  const toolsByCostTier = useMemo(() => {
-    const grouped: Record<string, Tool[]> = {
-      daily: [],
-      pro: [],
-    };
-    filteredTools.forEach((tool) => {
-      if (grouped[tool.costTier]) {
-        grouped[tool.costTier].push(tool);
-      }
-    });
-    return grouped;
-  }, [filteredTools]);
-
   // 获取场景名称
   const getSceneName = (scene: Scene) => {
     return isZh ? scene.name : scene.nameEn;
-  };
-
-  // 获取成本层级名称
-  const getCostTierName = (tier: CostTier) => {
-    return isZh ? tier.name : tier.nameEn;
   };
 
   const title = translate({ id: 'tool.page.title', message: 'AI 工具场景推荐' });
@@ -110,29 +90,12 @@ export default function ToolPage(): React.ReactElement {
           {filteredTools.length} <Translate id="tool.count.tools">个工具</Translate>
         </p>
 
-        {/* 按成本层级展示 */}
-        {toolsData.costTiers.map((tier) => {
-          const tierTools = toolsByCostTier[tier.id];
-          if (tierTools.length === 0) return null;
-
-          return (
-            <div key={tier.id} className="mb-10">
-              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4 flex items-center gap-2">
-                <span className={`px-2 py-1 rounded text-sm ${
-                  tier.id === 'daily' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :
-                  'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300'
-                }`}>
-                  {getCostTierName(tier)}
-                </span>
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {tierTools.map((tool) => (
-                  <ToolCard key={tool.id} tool={tool} isZh={isZh} />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+        {/* 工具列表 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredTools.map((tool) => (
+            <ToolCard key={tool.id} tool={tool} isZh={isZh} />
+          ))}
+        </div>
 
         {/* 无结果提示 */}
         {filteredTools.length === 0 && (
@@ -201,7 +164,7 @@ function ToolCard({
       <a
         href={tool.affiliateUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         className="block"
       >
         {/* Logo + 名称 */}
@@ -251,6 +214,7 @@ function ToolCard({
       {tool.reviewUrl && (
         <a
           href={tool.reviewUrl}
+          rel="nofollow"
           className="mt-4 block text-sm text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium"
         >
           <Translate id="tool.card.readReview">查看评测</Translate> →
