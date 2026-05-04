@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
-import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon, RocketIcon, LayoutIcon, ToolIcon, BuildingIcon, TruckIcon, BookOpenIcon } from '@site/src/components/Icons';
+import { PluginIcon, AIIcon, ZapIcon, TrendIcon, ShieldIcon, LightbulbIcon, MessageCircleIcon, RocketIcon, LayoutIcon, ToolIcon, BuildingIcon, TruckIcon, BookOpenIcon, GlobeIcon } from '@site/src/components/Icons';
 import { HeroBackground } from '@site/src/components/HeroSection';
 import ProductListRow from '@site/src/components/ProductListRow';
 
@@ -149,6 +149,17 @@ export default function Products(): React.ReactElement {
               ctaId="homepage.products.agntc.cta"
               ctaLink="/agntc"
               animationDelay="0.4s"
+            />
+            <ProductListRow
+              icon={<GlobeIcon size={24} className="text-white" />}
+              name="跨境铺货助手"
+              nameId="homepage.products.aiProductListing.title"
+              description="一键采集淘宝/1688商品，AI自动生成英文描述和定价，审核后直接上架WooCommerce，支持多店铺管理。"
+              descriptionId="homepage.products.aiProductListing.description"
+              cta="了解更多"
+              ctaId="homepage.products.aiProductListing.cta"
+              ctaLink="/docs/ai-product-listing"
+              animationDelay="0.5s"
             />
           </div>
 
