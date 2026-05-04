@@ -813,6 +813,18 @@
     "message": "Visit app.aigent.ren",
     "description": "AI Agent CTA text"
   },
+  "homepage.products.aiProductListing.title": {
+    "message": "AI Product Listing",
+    "description": "AI Product Listing product title"
+  },
+  "homepage.products.aiProductListing.description": {
+    "message": "One-click product sourcing from Taobao/1688, AI-powered English descriptions and pricing, review and publish directly to WooCommerce with multi-store support.",
+    "description": "AI Product Listing product description"
+  },
+  "homepage.products.aiProductListing.cta": {
+    "message": "Learn More",
+    "description": "AI Product Listing CTA text"
+  },
   "agntc.title": {
     "message": "AI Agent Platform - Say It, Done",
     "description": "Agntc page title"
