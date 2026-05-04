@@ -58,6 +58,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '跨境铺货助手',
+      items: ['ai-product-listing'],
+    },
+    {
+      type: 'category',
       label: 'WooCommerce 物流',
       items: ['cclee-shipping', 'fedex-registration'],
     },
