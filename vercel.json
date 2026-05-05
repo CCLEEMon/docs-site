@@ -2,5 +2,42 @@
   "buildCommand": "npm run clear && npm run build:ai",
   "outputDirectory": "build",
   "installCommand": "npm install",
-  "framework": "docusaurus"
+  "framework": "docusaurus",
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.aidevhub.ai" }],
+      "destination": "https://aidevhub.ai/$1",
+      "permanent": true
+    }
+  ]
 }

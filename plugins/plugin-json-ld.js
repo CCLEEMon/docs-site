@@ -6,6 +6,7 @@ const matter = require('gray-matter');
 
 // 区分站点：SITE=ai → 英文站 aidevhub.ai，否则中文站 aigent.ren
 const isEn = process.env.SITE === 'ai';
+const siteUrl = isEn ? 'https://aidevhub.ai' : 'https://www.aigent.ren';
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -49,7 +50,7 @@ function buildArticleSchema({ title, description, url, date, image }) {
     "headline": title,
     "description": description || "",
     "url": url,
-    "image": image || "https://www.aigent.ren/logo.png",
+    "image": image || `${siteUrl}/logo.png`,
     "datePublished": date || new Date().toISOString().split('T')[0],
     "dateModified": new Date().toISOString().split('T')[0],
     "author": {
@@ -61,7 +62,7 @@ function buildArticleSchema({ title, description, url, date, image }) {
       "name": "CCLHUB",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.aigent.ren/logo.png"
+        "url": `${siteUrl}/logo.png`
       }
     }
   };
@@ -121,7 +122,7 @@ module.exports = function pluginJsonLd() {
 
       // 从文件名提取 slug（去掉日期前缀）
       let slug = frontmatter.slug || file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.mdx?$/, '');
-      const url = `https://www.aigent.ren${urlPrefix}${slug}`;
+      const url = `${siteUrl}${urlPrefix}${slug}`;
 
       const base = {
         title: frontmatter.title || slug,

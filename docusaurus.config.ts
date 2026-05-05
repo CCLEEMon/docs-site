@@ -233,9 +233,11 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
         sitemap: {
-          changefreq: 'weekly',
-          priority: 0.5,
+          lastmod: 'date',
+          priority: null,
+          changefreq: null,
           filename: process.env.SITE === 'ai' ? 'sitemap.ai.xml' : 'sitemap.ren.xml',
+          ignorePatterns: ['/blog/page/**', '/blog/tags/**', '/cases/cases-tags/**'],
         },
       } satisfies Preset.Options,
     ],
