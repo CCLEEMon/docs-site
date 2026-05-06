@@ -1,14 +1,12 @@
 {
   "name": "docs-site",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 3004",
     "build": "docusaurus build",
     "build:with-api": "sed -i \"s|__RAG_API_URL__|$RAG_API_URL|g\" src/rag-api-config.js && docusaurus build && git checkout src/rag-api-config.js",
-    "build:ren": "cp static/robots.ren.txt static/robots.txt && cp static/llm.ren.txt static/llm.txt && npm run build",
-    "build:ai": "cp static/robots.ai.txt static/robots.txt && cp static/llm.ai.txt static/llm.txt && SITE=ai npm run build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

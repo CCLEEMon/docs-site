@@ -2,21 +2,17 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-// ============ 全局 Schema ============
+const siteUrl = 'https://aidevhub.ai';
 
-// 区分站点：SITE=ai → 英文站 aidevhub.ai，否则中文站 aigent.ren
-const isEn = process.env.SITE === 'ai';
-const siteUrl = isEn ? 'https://aidevhub.ai' : 'https://www.aigent.ren';
+// ============ 全局 Schema ============
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "CCLHUB",
-  "url": isEn ? "https://aidevhub.ai" : "https://www.aigent.ren",
-  "logo": isEn ? "https://aidevhub.ai/logo.png" : "https://www.aigent.ren/logo.png",
-  "description": isEn
-    ? "AI-powered e-commerce operations platform — AI automation + e-commerce tools, making operations more efficient"
-    : "AI驱动的电商运营工具平台 — AI运营 + 电商工具箱，让电商运营更高效",
+  "url": "https://aidevhub.ai",
+  "logo": "https://aidevhub.ai/logo.png",
+  "description": "AI-powered e-commerce operations platform — AI automation + e-commerce tools, making operations more efficient",
   "founder": {
     "@type": "Person",
     "name": "CCLEE"
@@ -27,18 +23,38 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "CCLHUB",
-  "url": isEn ? "https://aidevhub.ai" : "https://www.aigent.ren",
-  "description": isEn
-    ? "AI-powered e-commerce operations platform"
-    : "AI驱动的电商运营工具平台",
+  "url": "https://aidevhub.ai",
+  "description": "AI-powered e-commerce operations platform",
   "publisher": {
     "@type": "Organization",
     "name": "CCLHUB",
     "logo": {
       "@type": "ImageObject",
-      "url": isEn ? "https://aidevhub.ai/logo.png" : "https://www.aigent.ren/logo.png"
+      "url": "https://aidevhub.ai/logo.png"
     }
   }
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "CCLEE",
+  "url": "https://aidevhub.ai",
+  "jobTitle": "AI Tool Developer & E-commerce Consultant",
+  "description": "Independent developer with 24 years of e-commerce experience, specializing in building AI-powered tools and systems grounded in real business needs — not technology for its own sake.",
+  "knowsAbout": [
+    "FastAPI",
+    "RAG Systems",
+    "AI Agent Development",
+    "1688 B2B Sourcing",
+    "React",
+    "China Market Entry"
+  ],
+  "sameAs": [
+    "https://www.upwork.com/freelancers/~010ab5ec29d8f4ff3f",
+    "https://github.com/cclee-hub",
+    "https://www.aigent.ren"
+  ]
 };
 
 // ============ 页面级 Schema 生成器 ============
@@ -157,20 +173,17 @@ module.exports = function pluginJsonLd() {
 
     // 构建时扫描 docs + blog + cases-blog 目录
     async loadContent() {
-      // docs 目录
       const docsDir = path.resolve(__dirname, '..', 'docs');
       scanDirectory(docsDir, '/docs/');
 
-      // blog 目录（中文）
       const blogDir = path.resolve(__dirname, '..', 'blog');
       scanDirectory(blogDir, '/blog/');
 
-      // cases-blog 目录（案例）
       const casesDir = path.resolve(__dirname, '..', 'cases-blog');
       scanDirectory(casesDir, '/cases/');
     },
 
-    // 全局注入 Organization + WebSite
+    // 全局注入 Organization + WebSite + Person
     injectHtmlTags() {
       return {
         headTags: [
@@ -184,41 +197,18 @@ module.exports = function pluginJsonLd() {
             attributes: { type: 'application/ld+json' },
             innerHTML: JSON.stringify(websiteSchema),
           },
+          {
+            tagName: 'script',
+            attributes: { type: 'application/ld+json' },
+            innerHTML: JSON.stringify(personSchema),
+          },
         ],
       };
     },
 
-    // 页面级 Schema 注入 + hreflang 跨域互指
+    // 页面级 Schema 注入 + hreflang（同域 /zh/ 互指）
     async postBuild({ outDir }) {
       const cheerio = require('cheerio');
-
-      // hreflang 配置
-      const zhDomain = 'https://www.aigent.ren';
-      const enDomain = 'https://aidevhub.ai';
-
-      // 从 outDir 路径提取页面的路径部分
-      // outDir 形如 build/ai 或 build/ren
-      function getPagePath(htmlPath, outDir) {
-        const relative = path.relative(outDir, htmlPath);
-        const normalized = '/' + relative.replace(/\\/g, '/').replace(/\/index\.html$/, '');
-        return normalized === '/index' ? '/' : normalized;
-      }
-
-      function injectHreflang($head, pagePath) {
-        const zhHref = `${zhDomain}${pagePath}`;
-        const enHref = `${enDomain}${pagePath}`;
-
-        // zh-CN → aigent.ren，en-US + x-default → aidevhub.ai
-        const tags = [
-          { lang: 'zh-CN', href: zhHref },
-          { lang: 'en-US', href: enHref },
-          { lang: 'x-default', href: enHref },
-        ];
-
-        tags.forEach(({ lang, href }) => {
-          $head.append(`<link rel="hreflang" hreflang="${lang}" href="${href}">`);
-        });
-      }
 
       // 注入页面级 JSON-LD Schema
       for (const [urlPath, schema] of Object.entries(pageSchemaMap)) {
@@ -235,27 +225,7 @@ module.exports = function pluginJsonLd() {
         fs.writeFileSync(htmlPath, $.html());
       }
 
-      // hreflang：遍历 outDir 下所有 index.html
-      const walkDir = (dir) => {
-        const entries = fs.readdirSync(dir, { withFileTypes: true });
-        for (const entry of entries) {
-          const fullPath = path.join(dir, entry.name);
-          if (entry.isDirectory()) {
-            // 跳过 __docusaurus 等内部目录
-            if (!entry.name.startsWith('__')) {
-              walkDir(fullPath);
-            }
-          } else if (entry.name === 'index.html') {
-            const html = fs.readFileSync(fullPath, 'utf-8');
-            const $ = cheerio.load(html);
-            const pagePath = getPagePath(fullPath, outDir);
-            injectHreflang($('head'), pagePath);
-            fs.writeFileSync(fullPath, $.html());
-          }
-        }
-      };
-
-      walkDir(outDir);
+      // hreflang 由 Docusaurus 内置 i18n 自动处理，无需插件注入
     },
   };
 };
