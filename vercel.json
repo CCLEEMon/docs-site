@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run clear && npm run build:ai",
+  "buildCommand": "npm run clear && npm run build",
   "outputDirectory": "build",
   "installCommand": "npm install",
   "framework": "docusaurus",
