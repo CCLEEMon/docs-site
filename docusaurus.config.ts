@@ -144,7 +144,7 @@ const config: Config = {
     ],
   ],
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['./themes/image-zoom', '@docusaurus/theme-mermaid'],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
