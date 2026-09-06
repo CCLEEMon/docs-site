@@ -24,7 +24,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 后台路径：**CCLEE B2B → General**
 
-![General 设置页概览](/images/docs/cclee-b2b/general/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/general/settings-overview.webp" width="400" alt="General 设置页概览" loading="lazy" />
 
 ---
 
@@ -66,19 +66,19 @@ import StatusTag from '@site/src/components/StatusTag'
 - 店铺页：价格区域显示 "Login to view price"
 - 产品页：显示 "Login to view price" 和 "Login" 按钮
 
-![游客店铺页隐藏价格](/images/docs/cclee-b2b/general/guest-shop-hidden-prices.webp)
+<img src="/images/docs/cclee-b2b/general/guest-shop-hidden-prices.webp" width="560" alt="游客店铺页隐藏价格" loading="lazy" />
 
 ### Pending 用户购买限制
 
 开启后，等待审批的企业用户不能直接购买，看到 "Request Quote" 按钮引导进入报价流程。
 
-![Pending 用户产品页报价按钮](/images/docs/cclee-b2b/general/pending-product-quote-cta.webp)
+<img src="/images/docs/cclee-b2b/general/pending-product-quote-cta.webp" width="400" alt="Pending 用户产品页报价按钮" loading="lazy" />
 
 ### 游客产品页登录 CTA
 
 游客访问单个产品页时，看到登录提示而非加入购物车表单。
 
-![游客产品页登录按钮](/images/docs/cclee-b2b/general/guest-product-login-cta.webp)
+<img src="/images/docs/cclee-b2b/general/guest-product-login-cta.webp" width="400" alt="游客产品页登录按钮" loading="lazy" />
 
 ---
 
@@ -105,7 +105,7 @@ Verified 企业用户访问变体产品时，看到矩阵表格而非下拉选�
 - 数量输入框可批量填写
 - 一次选择多个变体，点击 "Add Selected to Cart" 批量加入购物车
 
-![变体矩阵表格](/images/docs/cclee-b2b/general/variation-matrix.webp)
+<img src="/images/docs/cclee-b2b/general/variation-matrix.webp" width="400" alt="变体矩阵表格" loading="lazy" />
 
 ---
 
@@ -122,9 +122,9 @@ Verified 企业用户可以通过粘贴 SKU 和数量快速下单。
 3. 确认产品匹配结果
 4. 点击 **Add All to Cart** 一次性加入购物车
 
-![批量下单页](/images/docs/cclee-b2b/general/bulk-order-page.webp)
+<img src="/images/docs/cclee-b2b/general/bulk-order-page.webp" width="560" alt="批量下单页" loading="lazy" />
 
-![批量下单填写](/images/docs/cclee-b2b/general/bulk-order-filled.webp)
+<img src="/images/docs/cclee-b2b/general/bulk-order-filled.webp" width="560" alt="批量下单填写" loading="lazy" />
 
 <InfoBox variant="info" title="AI 辅助匹配">
 配置 AI 后，未精确匹配的 SKU 会进行 LLM 模糊匹配，低置信度结果会提示确认。

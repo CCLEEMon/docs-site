@@ -34,7 +34,7 @@ zread              → GitHub repo reading (consumes quota)
 
 In my case, searching WooCommerce documentation, reading API pages, and checking marketplace standards during theme development consumed roughly **30% of my monthly MCP quota** in just a few days.
 
-![MCP usage over one week showing search and reader consuming most calls](/images/blog/tavily-replace-zhipu-mcp-usage.png)
+<img src="/images/blog/tavily-replace-zhipu-mcp-usage.png" width="560" alt="MCP usage over one week showing search and reader consuming most calls" loading="lazy" />
 
 The 16% / 30% usage shown above was reached in less than a week, with web search being the primary consumer.
 

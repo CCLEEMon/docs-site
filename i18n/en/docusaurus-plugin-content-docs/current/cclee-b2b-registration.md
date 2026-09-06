@@ -20,7 +20,7 @@ rag_tags: ["CCLEE B2B", "Enterprise Registration", "Approval Workflow", "B2B Use
 
 Admin path: **CCLEE B2B → Registration**
 
-![Registration Settings Overview](/images/docs/cclee-b2b/registration/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/registration/settings-overview.webp" width="400" alt="Registration Settings Overview" loading="lazy" />
 
 ---
 
@@ -59,9 +59,9 @@ Admin path: **CCLEE B2B → Registration**
 
 Visitors/customers fill in enterprise information and submit.
 
-![Registration Form](/images/docs/cclee-b2b/registration/registration-form.webp)
+<img src="/images/docs/cclee-b2b/registration/registration-form.webp" width="400" alt="Registration Form" loading="lazy" />
 
-![Registration Form Filled](/images/docs/cclee-b2b/registration/registration-form-filled.webp)
+<img src="/images/docs/cclee-b2b/registration/registration-form-filled.webp" width="400" alt="Registration Form Filled" loading="lazy" />
 
 ### After Submission
 
@@ -77,7 +77,7 @@ Visitors/customers fill in enterprise information and submit.
 
 Go to **WP Admin → Users**. The new **B2B Status** column shows each user's approval status.
 
-![Users List B2B Status Column](/images/docs/cclee-b2b/registration/users-b2b-status-column.webp)
+<img src="/images/docs/cclee-b2b/registration/users-b2b-status-column.webp" width="400" alt="Users List B2B Status Column" loading="lazy" />
 
 ### Approval Actions
 
@@ -85,7 +85,7 @@ Go to **WP Admin → Users**. The new **B2B Status** column shows each user's ap
 2. Click **Approve** or **Reject** quick action
 3. Or go to user edit page to modify B2B fields and status
 
-![User Profile B2B Fields](/images/docs/cclee-b2b/registration/user-profile-b2b-fields.webp)
+<img src="/images/docs/cclee-b2b/registration/user-profile-b2b-fields.webp" width="400" alt="User Profile B2B Fields" loading="lazy" />
 
 ### Approval Results
 

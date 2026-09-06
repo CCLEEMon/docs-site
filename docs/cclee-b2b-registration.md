@@ -20,7 +20,7 @@ rag_tags: ["CCLEE B2B", "企业注册", "审批工作流", "B2B 用户", "邮件
 
 后台路径：**CCLEE B2B → Registration**
 
-![Registration 设置页概览](/images/docs/cclee-b2b/registration/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/registration/settings-overview.webp" width="400" alt="Registration 设置页概览" loading="lazy" />
 
 ---
 
@@ -59,9 +59,9 @@ rag_tags: ["CCLEE B2B", "企业注册", "审批工作流", "B2B 用户", "邮件
 
 访客/客户填写企业信息后提交。
 
-![注册表单](/images/docs/cclee-b2b/registration/registration-form.webp)
+<img src="/images/docs/cclee-b2b/registration/registration-form.webp" width="400" alt="注册表单" loading="lazy" />
 
-![注册表单填写后](/images/docs/cclee-b2b/registration/registration-form-filled.webp)
+<img src="/images/docs/cclee-b2b/registration/registration-form-filled.webp" width="400" alt="注册表单填写后" loading="lazy" />
 
 ### 提交后流程
 
@@ -77,7 +77,7 @@ rag_tags: ["CCLEE B2B", "企业注册", "审批工作流", "B2B 用户", "邮件
 
 进入 **WP Admin → Users**，新增 **B2B Status** 列显示每个用户的审批状态。
 
-![用户列表 B2B 状态列](/images/docs/cclee-b2b/registration/users-b2b-status-column.webp)
+<img src="/images/docs/cclee-b2b/registration/users-b2b-status-column.webp" width="400" alt="用户列表 B2B 状态列" loading="lazy" />
 
 ### 审批操作
 
@@ -85,7 +85,7 @@ rag_tags: ["CCLEE B2B", "企业注册", "审批工作流", "B2B 用户", "邮件
 2. 点击 **Approve** 或 **Reject** 快捷操作
 3. 或进入用户编辑页面，修改 B2B 相关字段和状态
 
-![用户资料 B2B 字段](/images/docs/cclee-b2b/registration/user-profile-b2b-fields.webp)
+<img src="/images/docs/cclee-b2b/registration/user-profile-b2b-fields.webp" width="400" alt="用户资料 B2B 字段" loading="lazy" />
 
 ### 审批结果
 

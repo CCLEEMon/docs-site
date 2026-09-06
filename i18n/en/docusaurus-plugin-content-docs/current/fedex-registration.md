@@ -96,7 +96,7 @@ After login, the left menu contains the following modules:
 | **Settings** | Settings, account configuration |
 | **Support/FAQs** | Help and support, FAQs |
 
-![API Menu](/images/docs/cclee-shipping/fedex-api-menu.webp)
+<img src="/images/docs/cclee-shipping/fedex-api-menu.webp" width="400" alt="API Menu" loading="lazy" />
 
 Go to **Manage Organization** and fill in:
 
@@ -106,7 +106,7 @@ Go to **Manage Organization** and fill in:
 - **Address**
 - **User ID** (9-digit number received in email)
 
-![Manage Organization](/images/docs/cclee-shipping/fedex-manage-organization.webp)
+<img src="/images/docs/cclee-shipping/fedex-manage-organization.webp" width="480" alt="Manage Organization" loading="lazy" />
 
 ### Step 6: Create App and Apply for API Permissions
 
@@ -118,7 +118,7 @@ Go to **Manage Organization** and fill in:
 - WooCommerce integration must select **Ship, Rate & other APIs**
 </InfoBox>
 
-![Select APIs](/images/docs/cclee-shipping/fedex-select-apis.webp)
+<img src="/images/docs/cclee-shipping/fedex-select-apis.webp" width="560" alt="Select APIs" loading="lazy" />
 
 After selecting **Ship, Rate & other APIs**, you can access 14 APIs. Here are recommendations for WooCommerce integration:
 
@@ -136,7 +136,7 @@ After selecting **Ship, Rate & other APIs**, you can access 14 APIs. Here are re
 
 ### Step 7: Get API Credentials
 
-![My Projects](/images/docs/cclee-shipping/fedex-my-projects.webp)
+<img src="/images/docs/cclee-shipping/fedex-my-projects.webp" width="400" alt="My Projects" loading="lazy" />
 
 After approval, get credentials from **My Projects** project details:
 

@@ -18,7 +18,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 后台路径：**CCLEE Toolkit → WooCommerce**
 
-![WooCommerce 设置页概览](/images/docs/cclee-toolkit/woo-settings-overview.webp)
+<img src="/images/docs/cclee-toolkit/woo-settings-overview.webp" width="560" alt="WooCommerce 设置页概览" loading="lazy" />
 
 ---
 
@@ -45,7 +45,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 **变额产品：** 输出 `AggregateOffer`，包含价格区间（最低价～最高价）和 offer 数量。
 
-![产品页 Schema 示例](/images/docs/cclee-toolkit/woo-product-page.webp)
+<img src="/images/docs/cclee-toolkit/woo-product-page.webp" width="560" alt="产品页 Schema 示例" loading="lazy" />
 
 ### 验证方法
 

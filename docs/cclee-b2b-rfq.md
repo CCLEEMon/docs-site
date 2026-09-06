@@ -22,7 +22,7 @@ rag_tags: ["CCLEE B2B", "RFQ", "报价系统", "询价", "批发谈判"]
 
 后台路径：**CCLEE B2B → RFQ**
 
-![RFQ 设置页概览](/images/docs/cclee-b2b/rfq/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/rfq/settings-overview.webp" width="400" alt="RFQ 设置页概览" loading="lazy" />
 
 ---
 
@@ -64,11 +64,11 @@ rag_tags: ["CCLEE B2B", "RFQ", "报价系统", "询价", "批发谈判"]
 - 通用询价：`[cclee_rfq_form]`
 - 指定产品询价：`[cclee_rfq_form product_id="123"]`
 
-![RFQ 表单](/images/docs/cclee-b2b/rfq/rfq-form.webp)
+<img src="/images/docs/cclee-b2b/rfq/rfq-form.webp" width="400" alt="RFQ 表单" loading="lazy" />
 
 ### 填写提交
 
-![RFQ 表单填写后](/images/docs/cclee-b2b/rfq/rfq-form-filled.webp)
+<img src="/images/docs/cclee-b2b/rfq/rfq-form-filled.webp" width="400" alt="RFQ 表单填写后" loading="lazy" />
 
 ---
 
@@ -78,7 +78,7 @@ rag_tags: ["CCLEE B2B", "RFQ", "报价系统", "询价", "批发谈判"]
 
 进入 **WP Admin → WooCommerce → Quote Requests**
 
-![报价请求列表](/images/docs/cclee-b2b/rfq/admin-rfq-list.webp)
+<img src="/images/docs/cclee-b2b/rfq/admin-rfq-list.webp" width="400" alt="报价请求列表" loading="lazy" />
 
 ### 报价状态
 
@@ -120,7 +120,7 @@ rag_tags: ["CCLEE B2B", "RFQ", "报价系统", "询价", "批发谈判"]
 | Reject | 拒绝报价 |
 | Counter-offer | 还价（消耗谈判轮次） |
 
-![客户我的报价页](/images/docs/cclee-b2b/rfq/my-quotes-page.webp)
+<img src="/images/docs/cclee-b2b/rfq/my-quotes-page.webp" width="400" alt="客户我的报价页" loading="lazy" />
 
 ### 订单转换
 

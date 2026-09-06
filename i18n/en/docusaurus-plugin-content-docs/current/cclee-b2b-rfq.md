@@ -22,7 +22,7 @@ rag_tags: ["CCLEE B2B", "RFQ", "Quote System", "Quote Request", "Wholesale Negot
 
 Admin path: **CCLEE B2B → RFQ**
 
-![RFQ Settings Overview](/images/docs/cclee-b2b/rfq/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/rfq/settings-overview.webp" width="400" alt="RFQ Settings Overview" loading="lazy" />
 
 ---
 
@@ -64,11 +64,11 @@ Add shortcode to page:
 - General inquiry: `[cclee_rfq_form]`
 - Specific product inquiry: `[cclee_rfq_form product_id="123"]`
 
-![RFQ Form](/images/docs/cclee-b2b/rfq/rfq-form.webp)
+<img src="/images/docs/cclee-b2b/rfq/rfq-form.webp" width="400" alt="RFQ Form" loading="lazy" />
 
 ### Fill and Submit
 
-![RFQ Form Filled](/images/docs/cclee-b2b/rfq/rfq-form-filled.webp)
+<img src="/images/docs/cclee-b2b/rfq/rfq-form-filled.webp" width="400" alt="RFQ Form Filled" loading="lazy" />
 
 ---
 
@@ -78,7 +78,7 @@ Add shortcode to page:
 
 Go to **WP Admin → WooCommerce → Quote Requests**
 
-![Quote Requests List](/images/docs/cclee-b2b/rfq/admin-rfq-list.webp)
+<img src="/images/docs/cclee-b2b/rfq/admin-rfq-list.webp" width="400" alt="Quote Requests List" loading="lazy" />
 
 ### Quote Status
 
@@ -120,7 +120,7 @@ After logging in, customer visits My Account → My Quotes to view all quotes an
 | Reject | Reject quote |
 | Counter-offer | Counter-offer (consumes negotiation rounds) |
 
-![My Quotes Page](/images/docs/cclee-b2b/rfq/my-quotes-page.webp)
+<img src="/images/docs/cclee-b2b/rfq/my-quotes-page.webp" width="400" alt="My Quotes Page" loading="lazy" />
 
 ### Order Conversion
 

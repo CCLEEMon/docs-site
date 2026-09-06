@@ -20,7 +20,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 后台路径：**CCLEE Toolkit → 通用设置**
 
-![General 设置页概览](/images/docs/cclee-toolkit/general-settings-overview.webp)
+<img src="/images/docs/cclee-toolkit/general-settings-overview.webp" width="560" alt="General 设置页概览" loading="lazy" />
 
 ---
 
@@ -85,7 +85,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 访问路径：`/case-study/{slug}/`
 
-![案例编辑页](/images/docs/cclee-toolkit/case-study-edit-screen.webp)
+<img src="/images/docs/cclee-toolkit/case-study-edit-screen.webp" width="560" alt="案例编辑页" loading="lazy" />
 
 ---
 

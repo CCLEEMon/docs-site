@@ -45,7 +45,7 @@ WordPress 6.4+ / PHP 8.0+. SEO and Case Study modules are enabled by default —
 
 Navigate to **Settings → CCLEE Toolkit** (`/wp-admin/options-general.php?page=cclee-toolkit`)
 
-![Plugin settings page](/images/docs/cclee-toolkit/s1-settings.png)
+<img src="/images/docs/cclee-toolkit/s1-settings.png" width="400" alt="Plugin settings page" loading="lazy" />
 
 | Setting | Description |
 |---------|-------------|
@@ -88,7 +88,7 @@ Navigate to **Settings → CCLEE Toolkit** (`/wp-admin/options-general.php?page=
 5. Click **Generate Content**
 6. Once generated, click **Copy to Clipboard** and paste into the editor
 
-![AI Assistant panel](/images/docs/cclee-toolkit/s2-ai-panel.png)
+<img src="/images/docs/cclee-toolkit/s2-ai-panel.png" width="560" alt="AI Assistant panel" loading="lazy" />
 
 <InfoBox variant="warning" title="Note">
 If the API Key is missing or invalid, you'll see an error when generating. Make sure your key is valid and has available credits.
@@ -117,7 +117,7 @@ All front-end pages automatically get these tags in `<head>`:
 3. Search for `og:title` or `twitter:card` to confirm tags are present
 4. On a single post page, search for `application/ld+json` to confirm JSON-LD output
 
-![SEO tags in source](/images/docs/cclee-toolkit/s3-seo-source.png)
+<img src="/images/docs/cclee-toolkit/s3-seo-source.png" width="560" alt="SEO tags in source" loading="lazy" />
 
 ---
 
@@ -147,7 +147,7 @@ The detail page auto-renders 4 Blocks: Case Hero / Case Metrics / Case Testimoni
 
 URL: `/case-study/{slug}/`
 
-![New case study editor](/images/docs/cclee-toolkit/cs-new-editor.webp)
+<img src="/images/docs/cclee-toolkit/cs-new-editor.webp" width="560" alt="New case study editor" loading="lazy" />
 
 ---
 

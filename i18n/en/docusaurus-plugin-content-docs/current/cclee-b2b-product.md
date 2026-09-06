@@ -18,7 +18,7 @@ rag_tags: ["CCLEE B2B", "Product Badges", "Internal ID", "Recommended Accessorie
 
 Admin path: **CCLEE B2B → Product Page**
 
-![Product Page Settings Overview](/images/docs/cclee-b2b/product/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/product/settings-overview.webp" width="400" alt="Product Page Settings Overview" loading="lazy" />
 
 ---
 
@@ -49,7 +49,7 @@ OEM & ODM Available
 
 Non-Verified visitors see badge tags displayed below the product title on the product page.
 
-![Product Badges on Frontend](/images/docs/cclee-b2b/product/product-badges-frontend.webp)
+<img src="/images/docs/cclee-b2b/product/product-badges-frontend.webp" width="400" alt="Product Badges on Frontend" loading="lazy" />
 
 <InfoBox variant="info" title="Badge Display Rules">
 Badges are only shown to Pending and Retail users. Verified enterprise users see wholesale pricing by default and don't need badge guidance.
@@ -68,7 +68,7 @@ Set an internal product number in the backend for B2B buyers' reference.
 3. Fill in the **Internal Product ID** field
 4. Update product
 
-![Product Inventory Tab](/images/docs/cclee-b2b/product/source-id-frontend.webp)
+<img src="/images/docs/cclee-b2b/product/source-id-frontend.webp" width="400" alt="Product Inventory Tab" loading="lazy" />
 
 ### Frontend Display
 
@@ -91,7 +91,7 @@ Based on Cross-sell associations, display related accessory recommendations at t
 
 Below the add-to-cart button, a "Recommended Accessories" horizontal card row appears.
 
-![Recommended Accessories on Frontend](/images/docs/cclee-b2b/product/accessories-section.webp)
+<img src="/images/docs/cclee-b2b/product/accessories-section.webp" width="400" alt="Recommended Accessories on Frontend" loading="lazy" />
 
 **Card content:**
 - Accessory product image

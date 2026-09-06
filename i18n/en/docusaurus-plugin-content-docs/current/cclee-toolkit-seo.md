@@ -22,7 +22,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 Admin path: **CCLEE Toolkit → SEO**
 
-![SEO settings overview](/images/docs/cclee-toolkit/seo-settings-overview.webp)
+<img src="/images/docs/cclee-toolkit/seo-settings-overview.webp" width="560" alt="SEO settings overview" loading="lazy" />
 
 <InfoBox variant="success" title="Enabled by Default">
 SEO Enhancer module is enabled by default and takes effect automatically after plugin activation.
@@ -36,7 +36,7 @@ SEO Enhancer module is enabled by default and takes effect automatically after p
 
 When disabled, no meta tags, verification codes, or Indexing requests will be output.
 
-![SEO master switch](/images/docs/cclee-toolkit/seo-master-switch.webp)
+<img src="/images/docs/cclee-toolkit/seo-master-switch.webp" width="560" alt="SEO master switch" loading="lazy" />
 
 ---
 
@@ -50,7 +50,7 @@ After verifying your domain in the respective search engine webmaster tools, pas
 | Bing Webmaster Tools | Verification code | `<meta name="msvalidate.01">` |
 | Yandex Webmaster | Verification code | `<meta name="yandex-verification">` |
 
-![Site verification settings](/images/docs/cclee-toolkit/seo-site-verification.webp)
+<img src="/images/docs/cclee-toolkit/seo-site-verification.webp" width="560" alt="Site verification settings" loading="lazy" />
 
 ---
 
@@ -66,7 +66,7 @@ Check **Enable IndexNow**, click **Generate Key** to generate an API Key (Key fi
 
 Automatically notifies Bing, Yandex, and other IndexNow-compatible search engines when posts are published/updated.
 
-![IndexNow settings](/images/docs/cclee-toolkit/seo-indexing.webp)
+<img src="/images/docs/cclee-toolkit/seo-indexing.webp" width="560" alt="IndexNow settings" loading="lazy" />
 
 ### Google Indexing API
 
@@ -94,7 +94,7 @@ No configuration required, always available when SEO module is enabled.
 2. Check submission channels: IndexNow and/or Google
 3. Click **Submit**
 
-![Manual submission](/images/docs/cclee-toolkit/seo-manual-submit.webp)
+<img src="/images/docs/cclee-toolkit/seo-manual-submit.webp" width="560" alt="Manual submission" loading="lazy" />
 
 ### Submission Log
 
@@ -120,7 +120,7 @@ When checked, all frontend pages output:
 - `og:image` (when featured image exists)
 - Twitter Card: `twitter:card`, `twitter:title`, `twitter:description`
 
-![Open Graph settings](/images/docs/cclee-toolkit/seo-opengraph.webp)
+<img src="/images/docs/cclee-toolkit/seo-opengraph.webp" width="560" alt="Open Graph settings" loading="lazy" />
 
 ### JSON-LD Schema
 
@@ -162,7 +162,7 @@ After saving, visit `/llms.txt` to check the output content.
 
 </StepBox>
 
-![llms.txt settings](/images/docs/cclee-toolkit/seo-llms.webp)
+<img src="/images/docs/cclee-toolkit/seo-llms.webp" width="560" alt="llms.txt settings" loading="lazy" />
 
 ---
 

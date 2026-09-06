@@ -20,7 +20,7 @@ rag_tags: ["CCLEE B2B", "B2B 定价", "阶梯价", "批发价格", "数量折扣
 
 后台路径：**CCLEE B2B → Pricing**
 
-![Pricing 设置页概览](/images/docs/cclee-b2b/pricing/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/pricing/settings-overview.webp" width="400" alt="Pricing 设置页概览" loading="lazy" />
 
 ---
 
@@ -54,7 +54,7 @@ rag_tags: ["CCLEE B2B", "B2B 定价", "阶梯价", "批发价格", "数量折扣
 4. 填写 **Pending Enterprise Price** — Pending 用户看到的价格
 5. 更新产品
 
-![产品 B2B Pricing Tab](/images/docs/cclee-b2b/pricing/product-b2b-pricing-tab.webp)
+<img src="/images/docs/cclee-b2b/pricing/product-b2b-pricing-tab.webp" width="400" alt="产品 B2B Pricing Tab" loading="lazy" />
 
 ---
 
@@ -80,7 +80,7 @@ rag_tags: ["CCLEE B2B", "B2B 定价", "阶梯价", "批发价格", "数量折扣
 
 开启 **Show Tier Pricing Table** 后，产品页显示阶梯价格表格。
 
-![前台阶梯价表格](/images/docs/cclee-b2b/pricing/tier-pricing-table-frontend.webp)
+<img src="/images/docs/cclee-b2b/pricing/tier-pricing-table-frontend.webp" width="400" alt="前台阶梯价表格" loading="lazy" />
 
 **效果说明：**
 - Verified 用户在产品页看到阶梯价格表
@@ -93,7 +93,7 @@ rag_tags: ["CCLEE B2B", "B2B 定价", "阶梯价", "批发价格", "数量折扣
 
 在产品编辑页 Inventory 标签中，还可以设置内控产品 ID，供 B2B 采购参考。
 
-![产品 Inventory Tab 内控 ID](/images/docs/cclee-b2b/pricing/product-inventory-source-id.webp)
+<img src="/images/docs/cclee-b2b/pricing/product-inventory-source-id.webp" width="400" alt="产品 Inventory Tab 内控 ID" loading="lazy" />
 
 ---
 

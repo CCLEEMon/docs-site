@@ -22,7 +22,7 @@ rag_tags: ["CCLEE B2B", "PDF 目录", "产品目录", "品牌定制", "批发文
 
 后台路径：**CCLEE B2B → PDF**
 
-![PDF 设置页概览](/images/docs/cclee-b2b/pdf/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/pdf/settings-overview.webp" width="400" alt="PDF 设置页概览" loading="lazy" />
 
 ---
 
@@ -111,13 +111,13 @@ rag_tags: ["CCLEE B2B", "PDF 目录", "产品目录", "品牌定制", "批发文
 
 单个产品页显示 "Download PDF" 按钮，下载该产品 PDF。
 
-![产品页 PDF 下载按钮](/images/docs/cclee-b2b/pdf/product-pdf-button.webp)
+<img src="/images/docs/cclee-b2b/pdf/product-pdf-button.webp" width="400" alt="产品页 PDF 下载按钮" loading="lazy" />
 
 ### 店铺页 PDF
 
 店铺页和分类页显示 "Download Full Catalog (PDF)" 或 "Download Category Catalog (PDF)" 按钮。
 
-![店铺页 PDF 下载按钮](/images/docs/cclee-b2b/pdf/shop-pdf-button.webp)
+<img src="/images/docs/cclee-b2b/pdf/shop-pdf-button.webp" width="560" alt="店铺页 PDF 下载按钮" loading="lazy" />
 
 ---
 

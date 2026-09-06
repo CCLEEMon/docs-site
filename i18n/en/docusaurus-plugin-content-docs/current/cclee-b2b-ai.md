@@ -22,7 +22,7 @@ Admin path: **CCLEE B2B → AI & KB**
 
 The AI customer service supports **18 common scenarios**, covering product inquiries, order tracking, stock checks, quote requests, and knowledge base Q&A. Both visitors and logged-in customers receive instant responses.
 
-![AI Customer Service Overview](/images/docs/cclee-b2b/ai/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/ai/settings-overview.webp" width="400" alt="AI Customer Service Overview" loading="lazy" />
 
 ---
 
@@ -44,7 +44,7 @@ Any visitor can search products using natural language. AI searches the product 
 **Example**:
 > User: "Do you have any desktop soldering stations?"
 
-![Product Keyword Search](/images/docs/cclee-b2b/ai/s01-product-keyword.webp)
+<img src="/images/docs/cclee-b2b/ai/s01-product-keyword.webp" width="400" alt="Product Keyword Search" loading="lazy" />
 
 ---
 
@@ -55,7 +55,7 @@ Logged-in B2B customers can search by SKU code (e.g., `8586`) for precise produc
 **Example**:
 > User: "8586"
 
-![SKU Search](/images/docs/cclee-b2b/ai/s02-product-sku.webp)
+<img src="/images/docs/cclee-b2b/ai/s02-product-sku.webp" width="400" alt="SKU Search" loading="lazy" />
 
 ---
 
@@ -66,7 +66,7 @@ Logged-in B2B customers can ask about bulk pricing. AI looks up tiered pricing t
 **Example**:
 > User: "If I order 100 units of this product, what's the price?"
 
-![Tiered Pricing](/images/docs/cclee-b2b/ai/s03-tiered-pricing.webp)
+<img src="/images/docs/cclee-b2b/ai/s03-tiered-pricing.webp" width="400" alt="Tiered Pricing" loading="lazy" />
 
 ---
 
@@ -77,7 +77,7 @@ Visitors can check stock status for any product. AI returns in-stock or out-of-s
 **Example**:
 > User: "Is this in stock?"
 
-![Stock Check](/images/docs/cclee-b2b/ai/s04-stock-check.webp)
+<img src="/images/docs/cclee-b2b/ai/s04-stock-check.webp" width="400" alt="Stock Check" loading="lazy" />
 
 ---
 
@@ -88,7 +88,7 @@ Logged-in users can query recent orders. AI returns order status, date, item lis
 **Example**:
 > User: "What's the status of my recent orders?"
 
-![Order Status](/images/docs/cclee-b2b/ai/s05-order-status.webp)
+<img src="/images/docs/cclee-b2b/ai/s05-order-status.webp" width="400" alt="Order Status" loading="lazy" />
 
 ---
 
@@ -99,7 +99,7 @@ Logged-in users can query a specific order by its number. AI returns order detai
 **Example**:
 > User: "Where's order 387?"
 
-![Order Tracking](/images/docs/cclee-b2b/ai/s06-order-tracking.webp)
+<img src="/images/docs/cclee-b2b/ai/s06-order-tracking.webp" width="400" alt="Order Tracking" loading="lazy" />
 
 ---
 
@@ -112,7 +112,7 @@ Guests (non-logged-in users) asking about orders are prompted to log in. AI expl
 
 AI responds: "Order tracking requires a logged-in account. Please log in first."
 
-![Guest Order](/images/docs/cclee-b2b/ai/s07-order-guest.webp)
+<img src="/images/docs/cclee-b2b/ai/s07-order-guest.webp" width="400" alt="Guest Order" loading="lazy" />
 
 ---
 
@@ -125,7 +125,7 @@ AI searches uploaded company documents to answer questions about return policies
 > User: "起订量多大？" (What's the minimum order quantity?)
 > User: "What is the lead time?"
 
-![Knowledge Base FAQ](/images/docs/cclee-b2b/ai/s08-kb-faq.webp)
+<img src="/images/docs/cclee-b2b/ai/s08-kb-faq.webp" width="400" alt="Knowledge Base FAQ" loading="lazy" />
 
 ---
 
@@ -136,7 +136,7 @@ When a question falls outside the chat's scope (products, orders, company polici
 **Example**:
 > User: "Can you recommend a restaurant nearby?"
 
-![Out of Scope](/images/docs/cclee-b2b/ai/s09-out-of-scope.webp)
+<img src="/images/docs/cclee-b2b/ai/s09-out-of-scope.webp" width="400" alt="Out of Scope" loading="lazy" />
 
 ---
 
@@ -147,7 +147,7 @@ When a user is on the Request for Quote page, AI provides contextual guidance on
 **Example**:
 > User: "What information do I need to provide?"
 
-![RFQ Guidance](/images/docs/cclee-b2b/ai/s10-rfq-guidance.webp)
+<img src="/images/docs/cclee-b2b/ai/s10-rfq-guidance.webp" width="400" alt="RFQ Guidance" loading="lazy" />
 
 ---
 
@@ -158,7 +158,7 @@ Logged-in customers who have submitted RFQs can query their status. AI returns t
 **Example**:
 > User: "Did you receive my quote request?"
 
-![RFQ Status](/images/docs/cclee-b2b/ai/s11-rfq-status.webp)
+<img src="/images/docs/cclee-b2b/ai/s11-rfq-status.webp" width="400" alt="RFQ Status" loading="lazy" />
 
 ---
 
@@ -171,7 +171,7 @@ AI maintains context across multiple messages. Users can ask follow-up questions
 > Turn 2: "What's the warranty on this?"
 > Turn 3: "I want to request a quote for 100 units with extended warranty"
 
-![Multi-turn Conversation](/images/docs/cclee-b2b/ai/s12-multi-turn.webp)
+<img src="/images/docs/cclee-b2b/ai/s12-multi-turn.webp" width="400" alt="Multi-turn Conversation" loading="lazy" />
 
 ---
 
@@ -182,7 +182,7 @@ AI automatically detects the user's message language and responds in the same la
 **Example**:
 > User: "你们有支持无铅焊接的设备吗？"
 
-![Chinese Conversation](/images/docs/cclee-b2b/ai/s13-chinese.webp)
+<img src="/images/docs/cclee-b2b/ai/s13-chinese.webp" width="400" alt="Chinese Conversation" loading="lazy" />
 
 ---
 
@@ -216,7 +216,7 @@ Besides the floating bubble, the chat panel can be embedded directly into any pa
 
 This creates an always-visible chat panel within the page content, suitable for dedicated "Live Support" pages.
 
-![Shortcode Embed](/images/docs/cclee-b2b/ai/s16-inline-shortcode.webp)
+<img src="/images/docs/cclee-b2b/ai/s16-inline-shortcode.webp" width="400" alt="Shortcode Embed" loading="lazy" />
 
 ---
 
@@ -226,11 +226,11 @@ Logged-in users' conversation history is saved to the database. After switching 
 
 **Before closing browser** — Conversation about product questions:
 
-![Before Close](/images/docs/cclee-b2b/ai/s17-history-before-close.webp)
+<img src="/images/docs/cclee-b2b/ai/s17-history-before-close.webp" width="400" alt="Before Close" loading="lazy" />
 
 **After reopening site** — Messages restored from database:
 
-![History Restored](/images/docs/cclee-b2b/ai/s17-history-restored.webp)
+<img src="/images/docs/cclee-b2b/ai/s17-history-restored.webp" width="400" alt="History Restored" loading="lazy" />
 
 ---
 
@@ -240,11 +240,11 @@ Users can manually clear their chat history by clicking the "Clear History" butt
 
 **Before clearing** — Existing conversation:
 
-![Before Clear](/images/docs/cclee-b2b/ai/s18-before-clear.webp)
+<img src="/images/docs/cclee-b2b/ai/s18-before-clear.webp" width="400" alt="Before Clear" loading="lazy" />
 
 **After clearing** — Welcome message shown:
 
-![After Clear](/images/docs/cclee-b2b/ai/s18-after-clear.webp)
+<img src="/images/docs/cclee-b2b/ai/s18-after-clear.webp" width="400" alt="After Clear" loading="lazy" />
 
 ---
 

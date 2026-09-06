@@ -22,7 +22,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 后台路径：**CCLEE Toolkit → SEO**
 
-![SEO 设置页概览](/images/docs/cclee-toolkit/seo-settings-overview.webp)
+<img src="/images/docs/cclee-toolkit/seo-settings-overview.webp" width="560" alt="SEO 设置页概览" loading="lazy" />
 
 <InfoBox variant="success" title="默认开启">
 SEO Enhancer 模块默认开启，激活插件后自动生效。
@@ -36,7 +36,7 @@ SEO Enhancer 模块默认开启，激活插件后自动生效。
 
 关闭后不输出任何 meta 标签、验证代码、Indexing 请求。
 
-![SEO 总开关](/images/docs/cclee-toolkit/seo-master-switch.webp)
+<img src="/images/docs/cclee-toolkit/seo-master-switch.webp" width="560" alt="SEO 总开关" loading="lazy" />
 
 ---
 
@@ -50,7 +50,7 @@ SEO Enhancer 模块默认开启，激活插件后自动生效。
 | Bing Webmaster Tools | 验证码 | `<meta name="msvalidate.01">` |
 | Yandex Webmaster | 验证码 | `<meta name="yandex-verification">` |
 
-![站点验证设置](/images/docs/cclee-toolkit/seo-site-verification.webp)
+<img src="/images/docs/cclee-toolkit/seo-site-verification.webp" width="560" alt="站点验证设置" loading="lazy" />
 
 ---
 
@@ -66,7 +66,7 @@ SEO Enhancer 模块默认开启，激活插件后自动生效。
 
 发布/更新文章时自动通知 Bing、Yandex 等 IndexNow 兼容搜索引擎。
 
-![IndexNow 设置](/images/docs/cclee-toolkit/seo-indexing.webp)
+<img src="/images/docs/cclee-toolkit/seo-indexing.webp" width="560" alt="IndexNow 设置" loading="lazy" />
 
 ### Google Indexing API
 
@@ -94,7 +94,7 @@ Service Account 必须在 Google Search Console 中被授予 Site owner 权限�
 2. 勾选发送通道：IndexNow 和/或 Google
 3. 点击 **Submit**
 
-![手动提交](/images/docs/cclee-toolkit/seo-manual-submit.webp)
+<img src="/images/docs/cclee-toolkit/seo-manual-submit.webp" width="560" alt="手动提交" loading="lazy" />
 
 ### 提交日志
 
@@ -120,7 +120,7 @@ IndexNow 和 Google Indexing API 的提交记录显示在 SEO Tab 底部表格�
 - `og:image`（有特色图时）
 - Twitter Card：`twitter:card`、`twitter:title`、`twitter:description`
 
-![Open Graph 设置](/images/docs/cclee-toolkit/seo-opengraph.webp)
+<img src="/images/docs/cclee-toolkit/seo-opengraph.webp" width="560" alt="Open Graph 设置" loading="lazy" />
 
 ### JSON-LD Schema
 
@@ -162,7 +162,7 @@ IndexNow 和 Google Indexing API 的提交记录显示在 SEO Tab 底部表格�
 
 </StepBox>
 
-![llms.txt 设置](/images/docs/cclee-toolkit/seo-llms.webp)
+<img src="/images/docs/cclee-toolkit/seo-llms.webp" width="560" alt="llms.txt 设置" loading="lazy" />
 
 ---
 

@@ -18,7 +18,7 @@ rag_tags: ["CCLEE B2B", "产品徽章", "内控 ID", "推荐配件", "Cross-sell
 
 后台路径：**CCLEE B2B → Product Page**
 
-![Product Page 设置页概览](/images/docs/cclee-b2b/product/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/product/settings-overview.webp" width="400" alt="Product Page 设置页概览" loading="lazy" />
 
 ---
 
@@ -49,7 +49,7 @@ OEM & ODM 可定制
 
 非 Verified 访客在产品页标题下方看到徽章标签。
 
-![产品徽章前台展示](/images/docs/cclee-b2b/product/product-badges-frontend.webp)
+<img src="/images/docs/cclee-b2b/product/product-badges-frontend.webp" width="400" alt="产品徽章前台展示" loading="lazy" />
 
 <InfoBox variant="info" title="徽章显示规则">
 徽章仅对 Pending 和 Retail 用户显示，Verified 企业用户默认看到批发价格，不需要徽章引导。
@@ -68,7 +68,7 @@ OEM & ODM 可定制
 3. 填写 **Internal Product ID** 字段
 4. 更新产品
 
-![产品编辑页 Inventory Tab](/images/docs/cclee-b2b/product/source-id-frontend.webp)
+<img src="/images/docs/cclee-b2b/product/source-id-frontend.webp" width="400" alt="产品编辑页 Inventory Tab" loading="lazy" />
 
 ### 前台效果
 
@@ -91,7 +91,7 @@ OEM & ODM 可定制
 
 产品页加入购物车按钮下方，显示 "Recommended Accessories" 横滑卡片区域。
 
-![推荐配件前台展示](/images/docs/cclee-b2b/product/accessories-section.webp)
+<img src="/images/docs/cclee-b2b/product/accessories-section.webp" width="400" alt="推荐配件前台展示" loading="lazy" />
 
 **卡片内容：**
 - 配件产品图片

@@ -18,7 +18,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 Admin path: **CCLEE Toolkit → WooCommerce**
 
-![WooCommerce settings overview](/images/docs/cclee-toolkit/woo-settings-overview.webp)
+<img src="/images/docs/cclee-toolkit/woo-settings-overview.webp" width="560" alt="WooCommerce settings overview" loading="lazy" />
 
 ---
 
@@ -45,7 +45,7 @@ When enabled, all WooCommerce product pages automatically output Product structu
 
 **Variable products:** Outputs `AggregateOffer`, including price range (lowest~highest) and offer count.
 
-![Product page Schema example](/images/docs/cclee-toolkit/woo-product-page.webp)
+<img src="/images/docs/cclee-toolkit/woo-product-page.webp" width="560" alt="Product page Schema example" loading="lazy" />
 
 ### Verification Method
 

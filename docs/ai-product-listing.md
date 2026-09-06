@@ -131,7 +131,7 @@ ACF 自定义字段同步填充：灯头接口 E27/E14、颜色 Brass、尺寸 6
 
 ### 一、配置 WooCommerce 店铺
 
-![Settings 页面](/images/docs/lightct/page-settings.webp)
+<img src="/images/docs/lightct/page-settings.webp" width="560" alt="Settings 页面" loading="lazy" />
 
 首次使用需先配置 WooCommerce 店铺凭据和 AI 供应商。
 
@@ -146,7 +146,7 @@ ACF 自定义字段同步填充：灯头接口 E27/E14、颜色 Brass、尺寸 6
 
 ### 二、配置 AI 供应商
 
-![AI 配置](/images/docs/lightct/page-settings-ai.webp)
+<img src="/images/docs/lightct/page-settings-ai.webp" width="480" alt="AI 配置" loading="lazy" />
 
 支持所有兼容 OpenAI API 格式的模型，分为两个模型执行不同任务：
 
@@ -157,11 +157,11 @@ ACF 自定义字段同步填充：灯头接口 E27/E14、颜色 Brass、尺寸 6
 
 ### 三、采集商品
 
-![浏览器插件](/images/docs/lightct/extension-popup.webp)
+<img src="/images/docs/lightct/extension-popup.webp" width="560" alt="浏览器插件" loading="lazy" />
 
 在淘宝/天猫/1688 商品页点击插件图标弹出，一键采集当前商品。
 
-![采集中](/images/docs/lightct/extension-collecting.webp)
+<img src="/images/docs/lightct/extension-collecting.webp" width="400" alt="采集中" loading="lazy" />
 
 采集模拟人类行为，过程中呼吸灯闪烁提示进度，直到提示「完成」即采集结束。商品数据（标题、规格、变体、价格、图片）已自动发送到后端，数据出现在 Raw 页面等待 AI 处理。
 
@@ -169,7 +169,7 @@ ACF 自定义字段同步填充：灯头接口 E27/E14、颜色 Brass、尺寸 6
 
 ### 四、AI 处理
 
-![Raw 页面](/images/docs/lightct/page-raw.webp)
+<img src="/images/docs/lightct/page-raw.webp" width="560" alt="Raw 页面" loading="lazy" />
 
 采集完成后数据自动出现在 Raw 页面。
 
@@ -180,7 +180,7 @@ ACF 自定义字段同步填充：灯头接口 E27/E14、颜色 Brass、尺寸 6
 
 ### 五、审核产品
 
-![Products 页面](/images/docs/lightct/page-products.webp)
+<img src="/images/docs/lightct/page-products.webp" width="560" alt="Products 页面" loading="lazy" />
 
 AI 处理完成后产品进入 Products 页面等待人工审核。分栏布局：左侧产品列表，右侧详情编辑，无需跳页。
 
@@ -230,7 +230,7 @@ AI 处理完成后产品进入 Products 页面等待人工审核。分栏布局�
 
 ### 七、查看历史记录
 
-![History 页面](/images/docs/lightct/page-history.webp)
+<img src="/images/docs/lightct/page-history.webp" width="560" alt="History 页面" loading="lazy" />
 
 已审核产品在 History 页面以只读表格展示，按状态 Tab 筛选查看。
 

@@ -24,7 +24,7 @@ import StatusTag from '@site/src/components/StatusTag'
 
 Admin path: **CCLEE B2B → General**
 
-![General Settings Overview](/images/docs/cclee-b2b/general/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/general/settings-overview.webp" width="400" alt="General Settings Overview" loading="lazy" />
 
 ---
 
@@ -66,19 +66,19 @@ When enabled, guest visitors cannot see product prices and see a login prompt in
 - Shop page: Price area shows "Login to view price"
 - Product page: Shows "Login to view price" and "Login" button
 
-![Guest Shop Hidden Prices](/images/docs/cclee-b2b/general/guest-shop-hidden-prices.webp)
+<img src="/images/docs/cclee-b2b/general/guest-shop-hidden-prices.webp" width="560" alt="Guest Shop Hidden Prices" loading="lazy" />
 
 ### Block Purchase for Pending Users
 
 When enabled, pending enterprise users cannot purchase directly. They see a "Request Quote" button directing them to the RFQ workflow.
 
-![Pending Product Quote CTA](/images/docs/cclee-b2b/general/pending-product-quote-cta.webp)
+<img src="/images/docs/cclee-b2b/general/pending-product-quote-cta.webp" width="400" alt="Pending Product Quote CTA" loading="lazy" />
 
 ### Guest Product Page Login CTA
 
 Guest visitors to a product page see a login prompt instead of the add-to-cart form.
 
-![Guest Product Login CTA](/images/docs/cclee-b2b/general/guest-product-login-cta.webp)
+<img src="/images/docs/cclee-b2b/general/guest-product-login-cta.webp" width="400" alt="Guest Product Login CTA" loading="lazy" />
 
 ---
 
@@ -105,7 +105,7 @@ Verified enterprise users see a matrix table instead of variation dropdowns when
 - Quantity input fields for batch entry
 - Select multiple variants and click "Add Selected to Cart" to add all at once
 
-![Variation Matrix Table](/images/docs/cclee-b2b/general/variation-matrix.webp)
+<img src="/images/docs/cclee-b2b/general/variation-matrix.webp" width="400" alt="Variation Matrix Table" loading="lazy" />
 
 ---
 
@@ -122,9 +122,9 @@ Verified enterprise users can quickly order multiple products by pasting SKUs an
 3. Confirm product matching results
 4. Click **Add All to Cart** to add all to cart at once
 
-![Bulk Order Page](/images/docs/cclee-b2b/general/bulk-order-page.webp)
+<img src="/images/docs/cclee-b2b/general/bulk-order-page.webp" width="560" alt="Bulk Order Page" loading="lazy" />
 
-![Bulk Order Filled](/images/docs/cclee-b2b/general/bulk-order-filled.webp)
+<img src="/images/docs/cclee-b2b/general/bulk-order-filled.webp" width="560" alt="Bulk Order Filled" loading="lazy" />
 
 <InfoBox variant="info" title="AI-Assisted Matching">
 With AI configured, non-exact SKU matches will use LLM fuzzy matching. Low confidence results will prompt for confirmation.

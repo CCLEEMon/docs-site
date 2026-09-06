@@ -100,7 +100,7 @@ rag_tags: ["FedEx", "WooCommerce", "物流", "API注册"]
 | **Settings** | 设置，账户配置 |
 | **Support/FAQs** | 帮助支持，常见问题 |
 
-![API Menu](/images/docs/cclee-shipping/fedex-api-menu.webp)
+<img src="/images/docs/cclee-shipping/fedex-api-menu.webp" width="400" alt="API Menu" loading="lazy" />
 
 进入 **Manage Organization**，填写以下信息：
 
@@ -110,7 +110,7 @@ rag_tags: ["FedEx", "WooCommerce", "物流", "API注册"]
 - **地址**（Address）
 - **邮件内接收的用户 ID**（User ID，9 位数字）
 
-![Manage Organization](/images/docs/cclee-shipping/fedex-manage-organization.webp)
+<img src="/images/docs/cclee-shipping/fedex-manage-organization.webp" width="480" alt="Manage Organization" loading="lazy" />
 
 ### 第六步：创建应用并申请 API 权限
 
@@ -122,7 +122,7 @@ rag_tags: ["FedEx", "WooCommerce", "物流", "API注册"]
 - WooCommerce 集成必须选择 **Ship, Rate & other APIs**
 </InfoBox>
 
-![Select APIs](/images/docs/cclee-shipping/fedex-select-apis.webp)
+<img src="/images/docs/cclee-shipping/fedex-select-apis.webp" width="560" alt="Select APIs" loading="lazy" />
 
 勾选 **Ship, Rate & other APIs** 后，可对接以下 14 个 API。以下是 WooCommerce 集成建议：
 
@@ -140,7 +140,7 @@ rag_tags: ["FedEx", "WooCommerce", "物流", "API注册"]
 
 ### 第七步：获取 API 凭证
 
-![My Projects](/images/docs/cclee-shipping/fedex-my-projects.webp)
+<img src="/images/docs/cclee-shipping/fedex-my-projects.webp" width="400" alt="My Projects" loading="lazy" />
 
 审批通过后，在 **My Projects** 项目详情页获取：
 

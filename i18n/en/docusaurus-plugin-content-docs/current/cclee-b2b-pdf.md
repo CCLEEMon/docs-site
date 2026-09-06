@@ -22,7 +22,7 @@ rag_tags: ["CCLEE B2B", "PDF Catalog", "Product Catalog", "Brand Customization",
 
 Admin path: **CCLEE B2B → PDF**
 
-![PDF Settings Overview](/images/docs/cclee-b2b/pdf/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/pdf/settings-overview.webp" width="400" alt="PDF Settings Overview" loading="lazy" />
 
 ---
 
@@ -111,13 +111,13 @@ Each extra page uses a rich text editor where you can add text, images, and link
 
 Single product page shows "Download PDF" button to download that product's PDF.
 
-![Product Page PDF Button](/images/docs/cclee-b2b/pdf/product-pdf-button.webp)
+<img src="/images/docs/cclee-b2b/pdf/product-pdf-button.webp" width="400" alt="Product Page PDF Button" loading="lazy" />
 
 ### Shop Page PDF
 
 Shop and category pages show "Download Full Catalog (PDF)" or "Download Category Catalog (PDF)" button.
 
-![Shop Page PDF Button](/images/docs/cclee-b2b/pdf/shop-pdf-button.webp)
+<img src="/images/docs/cclee-b2b/pdf/shop-pdf-button.webp" width="560" alt="Shop Page PDF Button" loading="lazy" />
 
 ---
 

@@ -18,7 +18,7 @@ rag_tags: ["WordPress", "CCLEE Toolkit", "图片Alt", "SEO", "无障碍"]
 
 后台路径：**CCLEE Toolkit → 图片 Alt 管理**
 
-![Image Alt 设置区域](/images/docs/cclee-toolkit/general-image-alt-section.webp)
+<img src="/images/docs/cclee-toolkit/general-image-alt-section.webp" width="560" alt="Image Alt 设置区域" loading="lazy" />
 
 ---
 

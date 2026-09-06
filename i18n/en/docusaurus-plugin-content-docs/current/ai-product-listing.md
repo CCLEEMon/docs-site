@@ -131,7 +131,7 @@ ACF custom fields auto-filled: light fitting E27/E14, color Brass, size 65cm, ma
 
 ### 1. Configure WooCommerce Store
 
-![Settings page](/images/docs/lightct/page-settings.webp)
+<img src="/images/docs/lightct/page-settings.webp" width="560" alt="Settings page" loading="lazy" />
 
 First-time setup requires configuring WooCommerce store credentials and AI provider.
 
@@ -146,7 +146,7 @@ Click **Add Store** and fill in Store ID, WC URL, CK/CS, WP User, WP App Passwor
 
 ### 2. Configure AI Provider
 
-![AI configuration](/images/docs/lightct/page-settings-ai.webp)
+<img src="/images/docs/lightct/page-settings-ai.webp" width="480" alt="AI configuration" loading="lazy" />
 
 Supports all models compatible with the OpenAI API format. Two models handle different tasks:
 
@@ -157,11 +157,11 @@ Fill in API Key, Base URL, and model names, then click **Save AI Config**. Takes
 
 ### 3. Scrape Products
 
-![Browser extension](/images/docs/lightct/extension-popup.webp)
+<img src="/images/docs/lightct/extension-popup.webp" width="560" alt="Browser extension" loading="lazy" />
 
 Click the extension icon on any Taobao/Tmall/1688 product page to scrape the current product.
 
-![Scraping in progress](/images/docs/lightct/extension-collecting.webp)
+<img src="/images/docs/lightct/extension-collecting.webp" width="400" alt="Scraping in progress" loading="lazy" />
 
 Scraping simulates human browsing behavior. A breathing light indicator shows progress until "Done" appears. Product data (title, specs, variants, prices, images) is automatically sent to the backend and appears on the Raw page for AI processing.
 
@@ -169,7 +169,7 @@ If you scrape the same product again (same platform + product ID), the system au
 
 ### 4. AI Processing
 
-![Raw page](/images/docs/lightct/page-raw.webp)
+<img src="/images/docs/lightct/page-raw.webp" width="560" alt="Raw page" loading="lazy" />
 
 After scraping, data automatically appears on the Raw page.
 
@@ -180,7 +180,7 @@ After scraping, data automatically appears on the Raw page.
 
 ### 5. Review Products
 
-![Products page](/images/docs/lightct/page-products.webp)
+<img src="/images/docs/lightct/page-products.webp" width="560" alt="Products page" loading="lazy" />
 
 After AI processing, products appear on the Products page for human review. Split-panel layout: product list on the left, detail editing on the right, no page navigation needed.
 
@@ -230,7 +230,7 @@ Make sure product information is fully reviewed before publishing, especially pr
 
 ### 7. View History
 
-![History page](/images/docs/lightct/page-history.webp)
+<img src="/images/docs/lightct/page-history.webp" width="560" alt="History page" loading="lazy" />
 
 Reviewed products are displayed in a read-only table on the History page, filterable by status tab.
 

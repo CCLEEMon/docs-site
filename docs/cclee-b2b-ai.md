@@ -22,7 +22,7 @@ rag_tags: ["CCLEE B2B", "AI 客服", "智能问答", "浮动气泡", "多轮对�
 
 AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪、库存查询、报价请求、知识库问答。无论访客还是已登录客户，都能获得即时回复。
 
-![AI 客服概览](/images/docs/cclee-b2b/ai/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/ai/settings-overview.webp" width="400" alt="AI 客服概览" loading="lazy" />
 
 ---
 
@@ -44,7 +44,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 **示例对话**：
 > 用户：「你们有台式焊接台吗？」
 
-![产品关键词查询](/images/docs/cclee-b2b/ai/s01-product-keyword.webp)
+<img src="/images/docs/cclee-b2b/ai/s01-product-keyword.webp" width="400" alt="产品关键词查询" loading="lazy" />
 
 ---
 
@@ -55,7 +55,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 **示例对话**：
 > 用户：「8586」
 
-![SKU 查询](/images/docs/cclee-b2b/ai/s02-product-sku.webp)
+<img src="/images/docs/cclee-b2b/ai/s02-product-sku.webp" width="400" alt="SKU 查询" loading="lazy" />
 
 ---
 
@@ -66,7 +66,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 **示例对话**：
 > 用户：「如果我订购 100 个这件产品，价格是多少？」
 
-![阶梯定价](/images/docs/cclee-b2b/ai/s03-tiered-pricing.webp)
+<img src="/images/docs/cclee-b2b/ai/s03-tiered-pricing.webp" width="400" alt="阶梯定价" loading="lazy" />
 
 ---
 
@@ -77,7 +77,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 **示例对话**：
 > 用户：「这件有货吗？」
 
-![库存查询](/images/docs/cclee-b2b/ai/s04-stock-check.webp)
+<img src="/images/docs/cclee-b2b/ai/s04-stock-check.webp" width="400" alt="库存查询" loading="lazy" />
 
 ---
 
@@ -88,7 +88,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 **示例对话**：
 > 用户：「我最近的订单状态怎么样了？」
 
-![订单状态](/images/docs/cclee-b2b/ai/s05-order-status.webp)
+<img src="/images/docs/cclee-b2b/ai/s05-order-status.webp" width="400" alt="订单状态" loading="lazy" />
 
 ---
 
@@ -99,7 +99,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 **示例对话**：
 > 用户：「订单 387 到哪了？」
 
-![订单追踪](/images/docs/cclee-b2b/ai/s06-order-tracking.webp)
+<img src="/images/docs/cclee-b2b/ai/s06-order-tracking.webp" width="400" alt="订单追踪" loading="lazy" />
 
 ---
 
@@ -112,7 +112,7 @@ AI 客服功能支持 **18 个常用场景**，涵盖产品咨询、订单追踪
 
 AI 回复：「查询订单需要登录账号，请先登录。」
 
-![访客订单](/images/docs/cclee-b2b/ai/s07-order-guest.webp)
+<img src="/images/docs/cclee-b2b/ai/s07-order-guest.webp" width="400" alt="访客订单" loading="lazy" />
 
 ---
 
@@ -125,7 +125,7 @@ AI 从已上传的公司文档中搜索答案，回复关于退换货政策、�
 > 用户：「起订量多大？」
 > 用户：「What is the lead time?」
 
-![知识库 FAQ](/images/docs/cclee-b2b/ai/s08-kb-faq.webp)
+<img src="/images/docs/cclee-b2b/ai/s08-kb-faq.webp" width="400" alt="知识库 FAQ" loading="lazy" />
 
 ---
 
@@ -136,7 +136,7 @@ AI 从已上传的公司文档中搜索答案，回复关于退换货政策、�
 **示例对话**：
 > 用户：「附近有推荐的餐厅吗？」
 
-![超出范围](/images/docs/cclee-b2b/ai/s09-out-of-scope.webp)
+<img src="/images/docs/cclee-b2b/ai/s09-out-of-scope.webp" width="400" alt="超出范围" loading="lazy" />
 
 ---
 
@@ -147,7 +147,7 @@ AI 从已上传的公司文档中搜索答案，回复关于退换货政策、�
 **示例对话**：
 > 用户：「我需要填写什么信息？」
 
-![RFQ 引导](/images/docs/cclee-b2b/ai/s10-rfq-guidance.webp)
+<img src="/images/docs/cclee-b2b/ai/s10-rfq-guidance.webp" width="400" alt="RFQ 引导" loading="lazy" />
 
 ---
 
@@ -158,7 +158,7 @@ AI 从已上传的公司文档中搜索答案，回复关于退换货政策、�
 **示例对话**：
 > 用户：「你们收到我的报价请求了吗？」
 
-![RFQ 状态](/images/docs/cclee-b2b/ai/s11-rfq-status.webp)
+<img src="/images/docs/cclee-b2b/ai/s11-rfq-status.webp" width="400" alt="RFQ 状态" loading="lazy" />
 
 ---
 
@@ -171,7 +171,7 @@ AI 跨消息记忆上下文，用户可以追问、跟进，自然地探索产�
 > 第二轮：「这个保修多久？」
 > 第三轮：「我想申请报价，100 台，带延保」
 
-![多轮对话](/images/docs/cclee-b2b/ai/s12-multi-turn.webp)
+<img src="/images/docs/cclee-b2b/ai/s12-multi-turn.webp" width="400" alt="多轮对话" loading="lazy" />
 
 ---
 
@@ -182,7 +182,7 @@ AI 自动检测用户消息语言并使用相同语言回复。支持中文、�
 **示例对话**：
 > 用户：「你们有支持无铅焊接的设备吗？」
 
-![中文对话](/images/docs/cclee-b2b/ai/s13-chinese.webp)
+<img src="/images/docs/cclee-b2b/ai/s13-chinese.webp" width="400" alt="中文对话" loading="lazy" />
 
 ---
 
@@ -216,7 +216,7 @@ AI 自动检测用户消息语言并使用相同语言回复。支持中文、�
 
 这会创建一个页面内常驻的聊天面板，适合专用的「在线咨询」页面。
 
-![短代码嵌入](/images/docs/cclee-b2b/ai/s16-inline-shortcode.webp)
+<img src="/images/docs/cclee-b2b/ai/s16-inline-shortcode.webp" width="400" alt="短代码嵌入" loading="lazy" />
 
 ---
 
@@ -226,11 +226,11 @@ AI 自动检测用户消息语言并使用相同语言回复。支持中文、�
 
 **关闭浏览器前** — 与客服聊产品问题：
 
-![关闭前对话](/images/docs/cclee-b2b/ai/s17-history-before-close.webp)
+<img src="/images/docs/cclee-b2b/ai/s17-history-before-close.webp" width="400" alt="关闭前对话" loading="lazy" />
 
 **重新打开网站** — 消息从数据库恢复：
 
-![恢复对话](/images/docs/cclee-b2b/ai/s17-history-restored.webp)
+<img src="/images/docs/cclee-b2b/ai/s17-history-restored.webp" width="400" alt="恢复对话" loading="lazy" />
 
 ---
 
@@ -240,11 +240,11 @@ AI 自动检测用户消息语言并使用相同语言回复。支持中文、�
 
 **清除前** — 现有对话：
 
-![清除前](/images/docs/cclee-b2b/ai/s18-before-clear.webp)
+<img src="/images/docs/cclee-b2b/ai/s18-before-clear.webp" width="400" alt="清除前" loading="lazy" />
 
 **清除后** — 显示欢迎语：
 
-![清除后](/images/docs/cclee-b2b/ai/s18-after-clear.webp)
+<img src="/images/docs/cclee-b2b/ai/s18-after-clear.webp" width="400" alt="清除后" loading="lazy" />
 
 ---
 

@@ -18,7 +18,7 @@ rag_tags: ["WordPress", "CCLEE Toolkit", "Image Alt", "SEO", "Accessibility"]
 
 Navigate to: **CCLEE Toolkit → Image Alt Auto**
 
-![Image Alt settings](/images/docs/cclee-toolkit/general-image-alt-section.webp)
+<img src="/images/docs/cclee-toolkit/general-image-alt-section.webp" width="560" alt="Image Alt settings" loading="lazy" />
 
 ---
 

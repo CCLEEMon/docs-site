@@ -20,7 +20,7 @@ rag_tags: ["CCLEE B2B", "B2B Pricing", "Tier Pricing", "Wholesale Price", "Volum
 
 Admin path: **CCLEE B2B → Pricing**
 
-![Pricing Settings Overview](/images/docs/cclee-b2b/pricing/settings-overview.webp)
+<img src="/images/docs/cclee-b2b/pricing/settings-overview.webp" width="400" alt="Pricing Settings Overview" loading="lazy" />
 
 ---
 
@@ -54,7 +54,7 @@ Set exclusive B2B prices for individual products.
 4. Fill in **Pending Enterprise Price** — Price for Pending users
 5. Update product
 
-![Product B2B Pricing Tab](/images/docs/cclee-b2b/pricing/product-b2b-pricing-tab.webp)
+<img src="/images/docs/cclee-b2b/pricing/product-b2b-pricing-tab.webp" width="400" alt="Product B2B Pricing Tab" loading="lazy" />
 
 ---
 
@@ -80,7 +80,7 @@ Provide tiered pricing based on purchase quantity to encourage bulk purchasing.
 
 With **Show Tier Pricing Table** enabled, the product page displays a tier pricing table.
 
-![Tier Pricing Table on Frontend](/images/docs/cclee-b2b/pricing/tier-pricing-table-frontend.webp)
+<img src="/images/docs/cclee-b2b/pricing/tier-pricing-table-frontend.webp" width="400" alt="Tier Pricing Table on Frontend" loading="lazy" />
 
 **Effect:**
 - Verified users see a tier pricing table on the product page
@@ -93,7 +93,7 @@ With **Show Tier Pricing Table** enabled, the product page displays a tier prici
 
 You can also set the internal product ID in the product Inventory tab for B2B procurement reference.
 
-![Product Inventory Tab Internal ID](/images/docs/cclee-b2b/pricing/product-inventory-source-id.webp)
+<img src="/images/docs/cclee-b2b/pricing/product-inventory-source-id.webp" width="400" alt="Product Inventory Tab Internal ID" loading="lazy" />
 
 ---
 
