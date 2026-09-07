@@ -149,3 +149,7 @@ Same account, same data. The mini program is for quick logging; the [web version
 
 **How can friends open it?**
 The home, records, check-up, and assets pages can be shared to WeChat friends or Moments; they sign in and start using it (opening from Moments shows a read-only preview).
+
+## Learn more
+
+Curious about the ideas behind Life - why the design is restrained, how privacy is protected, and how AI avoids inventing numbers? See [About Life (CCL.AI记账)](../product).
