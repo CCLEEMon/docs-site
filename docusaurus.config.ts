@@ -37,7 +37,7 @@ const config: Config = {
     // 谷歌分析 GA4 仅英文站（SITE=ai）加载（Docusaurus scripts 不支持纯 content 项，走静态文件）
     ...(gaId ? [{src: '/js/ga4.js', async: true}] : []),
     // 百度统计仅中文站（SITE=zh）加载
-    ...(site === 'zh' ? [{src: '/js/baidu-tongji.js', async: true}] : []),
+    ...(site === 'zh' ? [{src: '/js/baidu-tongji.js?v=2', async: true}] : []),
   ],
 
   // 静态资源目录，drafts/ 不在此列表中，不参与构建和发布
