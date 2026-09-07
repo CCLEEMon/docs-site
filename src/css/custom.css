@@ -751,3 +751,33 @@ a.badge:hover,
   font-size: 12px;
 }
 
+/* ========== 侧边栏一级分类：图标 + 排版层级 ========== */
+/* 分类行 flex 化以容纳图标；caret 伪元素由 label 的 flex:1 推至右侧（上游机制） */
+.theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link {
+  display: flex;
+  align-items: center;
+  font-size: 12px !important; /* 覆盖上方全局 13px !important，与子条目拉开一档 */
+  font-weight: 500;
+  letter-spacing: 0.08em; /* 中文标签拉开字距，形成疏朗的分组感 */
+}
+
+/* 非激活分类用 muted 灰（图标 stroke=currentColor 一同变色）；激活态保持主题紫 */
+.theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link:not(.menu__link--active) {
+  color: var(--color-text-muted);
+}
+
+.theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link:not(.menu__link--active):hover {
+  color: var(--color-text-secondary);
+}
+
+.sidebar-category-icon {
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
