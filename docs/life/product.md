@@ -43,7 +43,7 @@ Life 是自我管理工具，不是医疗工具：自评结果仅供自我评估
 | 危机信号守护 | 自评触发关注阈值时，安静地提供心理援助热线，不评判不打扰 |
 | 双端同源 | 微信小程序 + 网页版（life.ccleeai.com）同一账号、同一份数据 |
 
-![Life 小程序首页（深色模式）：一句话记账输入条、收支柱 KPI、情绪与压力入口、最近记录](/images/docs/life/product-home.jpg)
+<img src="/images/docs/life/product-home.jpg" alt="Life 小程序首页（深色模式）：一句话记账输入条、收支柱 KPI、情绪与压力入口、最近记录" width="400" loading="lazy" />
 
 ## 为什么做 Life：一个亲历者的故事
 

@@ -43,7 +43,7 @@ In one sentence: **you talk, it logs; you confirm, it writes.**
 | Crisis-signal care | When a self-check crosses a threshold of concern, help-line info appears quietly — no judgment, no nagging |
 | One account everywhere | WeChat mini program + web app (life.ccleeai.com) share the same account and the same data |
 
-![Life mini program home (dark mode): one-sentence input bar, spending KPIs, mood & stress entry, recent records](/images/docs/life/product-home.jpg)
+<img src="/images/docs/life/product-home.jpg" alt="Life mini program home (dark mode): one-sentence input bar, spending KPIs, mood & stress entry, recent records" width="400" loading="lazy" />
 
 ## Why I built Life: a founder's story
 
