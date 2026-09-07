@@ -1,6 +1,6 @@
 ---
 title: About Life (CCL.AI Finance)
-description: Meet Life (CCL.AI Finance, WeChat mini program "Life 记账健康助手") — an AI bookkeeping & wellbeing companion that makes peace with your emotions, keeps mood and spending side by side, and never preaches
+description: Meet Life (CCL.AI Finance, WeChat mini program "CCL.AI记账") — an AI bookkeeping & wellbeing companion that makes peace with your emotions, keeps mood and spending side by side, and never preaches
 project: life
 schema: Article
 date: 2026-09-07
@@ -13,14 +13,14 @@ import InfoBox from '@site/src/components/InfoBox'
 
 # CCL.AI Finance — An AI Bookkeeping & Wellbeing Companion That Makes Peace With Your Emotions
 
-**CCL.AI Finance** (search "**Life 记账健康助手**" on WeChat to open it; referred to as **Life** below) is a "natural-language-driven" bookkeeping and wellbeing companion.
+**CCL.AI Finance** (search "**CCL.AI记账**" on WeChat to open it; referred to as **Life** below) is a "natural-language-driven" bookkeeping and wellbeing companion.
 
 You say a sentence, and it records it for you: "Took a taxi today, spent 23, feeling a bit tired" — the AI automatically splits this into an expense entry and a mood entry. Snap a photo of a receipt, and every line item is recognized one by one. It only speaks to what actually happened in your ledger — if a number can't be verified, it simply won't be mentioned.
 
 Scan the QR code on WeChat to open it directly:
 
 <p align="center">
-  <img src="/images/docs/life/product-qrcode.jpg" alt="Life 记账健康助手 mini program code" width="180" loading="lazy" />
+  <img src="/images/docs/life/product-qrcode.jpg" alt="CCL.AI记账 mini program code" width="180" loading="lazy" />
 </p>
 
 <InfoBox variant="info" title="To be clear upfront">
@@ -158,7 +158,7 @@ If you need someone to talk to, the "Me" page in the Mini Program provides a men
 
 ## Get Started
 
-- Search "**Life 记账健康助手**" on WeChat, or scan the QR code above to open it directly.
+- Search "**CCL.AI记账**" on WeChat, or scan the QR code above to open it directly.
 - For guidance, see the [WeChat Mini Program manual](../miniprogram-guide).
 - The full feature set — statistics charts, chat mode, and more — is available on the [web version](../web-guide) (life.ccleeai.com); you can copy the link from the "Me" page in the Mini Program.
 

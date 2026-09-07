@@ -32,7 +32,7 @@ The mini program interface is in Chinese - key on-screen terms are kept in Chine
 ## Quick Start
 
 <StepBox title="1. Open and go">
-Search for "Life 记账健康助手" in WeChat or scan its code to open. You are signed in automatically - no registration step, just start logging.
+Search for "CCL.AI记账" in WeChat or scan its code to open. You are signed in automatically - no registration step, just start logging.
 </StepBox>
 
 <StepBox title="2. Bind your phone number (recommended)">

@@ -1,6 +1,6 @@
 ---
 title: 产品介绍：CCL.AI记账（Life）
-description: CCL.AI记账（微信小程序「Life 记账健康助手」）产品介绍 —— 一句话记账、拍照识记、情绪与消费同框、隐私加密守护，与情绪和解的 AI 记账健康助手
+description: CCL.AI记账（微信小程序，搜索「CCL.AI记账」打开）产品介绍 —— 一句话记账、拍照识记、情绪与消费同框、隐私加密守护，与情绪和解的 AI 记账健康助手
 project: life
 schema: Article
 date: 2026-09-07
@@ -13,14 +13,14 @@ import InfoBox from '@site/src/components/InfoBox'
 
 # CCL.AI记账 —— 与情绪和解的 AI 记账健康助手
 
-**CCL.AI记账**（微信搜索「**Life 记账健康助手**」即可打开，下文以 **Life** 指代）是一款「自然语言驱动」的记账健康助手。
+**CCL.AI记账**（微信搜索「**CCL.AI记账**」即可打开，下文以 **Life** 指代）是一款「自然语言驱动」的记账健康助手。
 
 你说一句话，它替你记下：「今天打车花了 23，感觉有点累」，AI 会自动拆成一笔支出和一条情绪记录；拍一张小票，多笔明细逐条识别。它只说账本里真实发生过的事——不核实的数字，宁可不说。
 
 微信扫码，直接打开：
 
 <p align="center">
-  <img src="/images/docs/life/product-qrcode.jpg" alt="Life 记账健康助手小程序码" width="180" loading="lazy" />
+  <img src="/images/docs/life/product-qrcode.jpg" alt="CCL.AI记账小程序码" width="180" loading="lazy" />
 </p>
 
 <InfoBox variant="info" title="先说清楚">
@@ -158,7 +158,7 @@ Life 就是这么来的，我自己作为亲历者真正想要、也敢放心用
 
 ## 开始使用
 
-- 微信搜索「**Life 记账健康助手**」，或扫描上方二维码直接打开；
+- 微信搜索「**CCL.AI记账**」，或扫描上方二维码直接打开；
 - 操作指引见[微信小程序使用手册](../miniprogram-guide)；
 - 统计图表、聊天模式等完整功能在[网页版](../web-guide)（life.ccleeai.com），小程序「我的」页可复制网址。
 

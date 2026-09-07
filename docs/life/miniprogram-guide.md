@@ -6,7 +6,7 @@ schema: HowTo
 sidebar_position: 7
 steps:
   - name: 打开小程序
-    text: 微信搜索或扫码打开 Life 记账健康助手，自动登录，无需注册
+    text: 微信搜索「CCL.AI记账」或扫码打开，自动登录，无需注册
   - name: 绑定手机号
     text: 首页横幅点「去绑定」，手机号 + 短信验证码，之后可在任何设备查看历史数据
   - name: 记下第一笔
@@ -30,7 +30,7 @@ import StepBox from '@site/src/components/StepBox'
 ## 快速开始
 
 <StepBox title="1. 打开即用">
-微信中搜索「Life 记账健康助手」或扫码打开，自动登录。无需注册步骤，打开就能记。
+微信中搜索「CCL.AI记账」或扫码打开，自动登录。无需注册步骤，打开就能记。
 </StepBox>
 
 <StepBox title="2. 绑定手机号（推荐）">
