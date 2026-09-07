@@ -24,8 +24,8 @@ import StepBox from '@site/src/components/StepBox'
 
 # 微信小程序使用手册
 
-本手册对应 **Life 微信小程序版**。小程序与 [Web 版](../quick-start)功能略有不同：
-小程序主打随手记与查看，完整功能（含统计图表、聊天模式）在 Web 端。
+本手册对应 **Life 微信小程序版**。小程序与[网页版](/docs/life/web-guide)功能略有不同：
+小程序主打随手记与查看，完整功能（含统计图表、聊天模式）在网页版。
 
 ## 快速开始
 
@@ -67,11 +67,11 @@ import StepBox from '@site/src/components/StepBox'
 - **没找到**：在卡片下方补充说明，如输入「是昨天那笔」，帮你重新定位
 - **没识别**：换个更具体的说法（带上时间、金额、对象）再试
 
-![首页输入条：一句话记账](/images/docs/life/home-input.jpg)
+<img src="/images/docs/life/home-input.jpg" alt="首页输入条：一句话记账" width="400" loading="lazy" />
 
 说一句「吃饭46」，结果卡立即给出识别结果——确认前不写入，可随时撤销或改类目：
 
-![一句话记账结果卡](/images/docs/life/quick-log-result.jpg)
+<img src="/images/docs/life/quick-log-result.jpg" alt="一句话记账结果卡" width="400" loading="lazy" />
 
 ### 拍照批量记录
 
@@ -83,7 +83,7 @@ import StepBox from '@site/src/components/StepBox'
 
 建议票面清晰、一次拍一张。非记账、健康类图片会提示无法识别，改用一句话记录即可。
 
-![拍照识别：逐条勾选后确认录入](/images/docs/life/photo-batch.jpg)
+<img src="/images/docs/life/photo-batch.jpg" alt="拍照识别：逐条勾选后确认录入" width="400" loading="lazy" />
 
 ### 看板与明细
 
@@ -102,7 +102,7 @@ import StepBox from '@site/src/components/StepBox'
 
 三份自评的题目来自国际通行的标准化量表：**情绪自评**对应 PHQ-9、**压力自评**对应 GAD-7、**情绪速测**（PHQ-4）是两者的简短组合。它们被广泛用于情绪与压力状况的初步自我评估；计分与结果分级由服务端统一计算，不受设备影响。
 
-![情绪自评：一屏一题](/images/docs/life/mood-check.jpg)
+<img src="/images/docs/life/mood-check.jpg" alt="情绪自评：一屏一题" width="400" loading="lazy" />
 
 <InfoBox variant="warning" title="请阅读">
 
